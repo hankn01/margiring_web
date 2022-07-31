@@ -1,0 +1,622 @@
+<!DOCTYPE html><html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="MainFrame">
+            <div class="Header">
+                <div class="LogoDiv">
+                    <span class="LogoText">Logo</span>
+                </div>
+                <div class="LogoutDiv">
+                    <button class="LogoutText">logout</span>
+                </div>
+            </div>
+            
+            <div class="ListDiv">
+                <div class="ListContentDiv">
+                    <span class="ListContentText">Strategy 1</span>
+                    <span class="ListValueText">Return : 000% , Volatility: 000%</span>
+                    <button class="ModifyButton">수정하기</span>
+            
+                    <button class="DeleteButton">삭제하기</span>
+                        
+                    
+                     <button class="TestExecuteButton">전략 검증하기</span>
+                    
+                    
+                </div>
+                <button class="CreateStrategyButton">
+                    (+)Create New Strategy
+                </button>
+                </div>
+
+                    <div class="NewsDiv">
+                    <span class="NewsTitle">News</span>
+                    <div class="NewsContentDiv"></div>
+                    </div>
+                    <div class="RankDiv">
+                    <span class="RankTitle">대표 암호화폐 순위</span>
+                    <div class="RankContent">
+    
+                    </div>
+                    </div>
+
+
+            </div>
+            
+            
+            
+            
+           
+            
+    
+    
+    
+    
+    </div>
+    </body>
+    </html> 
+    <br/>
+    <br/>
+     <style>* {
+      box-sizing: border-box;
+    }
+    body {
+      font-size: 14px;
+    }
+    .MainFrame {
+      width: 100%;
+      height: 720px;
+      background: rgba(255,255,255,1);
+      opacity: 1;
+      position: relative;
+      top: 0px;
+      left: 0px;
+      overflow: hidden;
+    }
+    .Header {
+      width: 100%;
+      height: 100px;
+      background: rgba(50,255,0,1);
+      opacity: 1;
+      position: relative;
+      top: 0px;
+      left: 0px;
+      overflow: hidden;
+    }
+    .LogoDiv {
+      width: 101px;
+      height: 70px;
+      background: rgba(255,0,0,1);
+      opacity: 1;
+      position: absolute;
+      top: 10px;
+      left: 35px;
+      overflow: hidden;
+    }
+    .LogoutDiv {
+      width: 115px;
+      height: 45px;
+      background: rgba(255,0,0,1);
+      opacity: 1;
+      position: absolute;
+      top: 38px;
+      
+      right: 60px;
+      overflow: hidden;
+    }
+    .LogoutText {
+      width: 115px;
+      height: 45px;
+      /*color: rgba(255,255,255,1);*/
+      position: absolute;
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 30px;
+      opacity: 1;
+      text-align: left;
+    }
+    .LogoText {
+      width: 71px;
+      color: rgba(255,255,255,1);
+      position: absolute;
+    
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 30px;
+      opacity: 1;
+      text-align: left;
+    }
+    .ListDiv {
+      width: 100%;
+      height: 221px;
+      background: rgba(217,217,217,1);
+      opacity: 1;
+      position: absolute;
+      top: 123px;
+      left: 0px;
+      overflow: hidden;
+      text-align: center;
+    }
+    .ListContentDiv {
+      width: 97%;
+      height: 43px;
+      background: rgba(26,25,53,0.38999998569488525);
+      opacity: 1;
+      position: absolute;
+      top: 19px;
+      left: 18px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+    }
+    .ListContentText {
+      width: 58px;
+      color: rgba(255,255,255,1);
+      position: absolute;
+      top: 14px;
+      left: 35px;
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 12px;
+      opacity: 1;
+      text-align: left;
+    }
+    .ListValueText{
+        color: rgba(255, 255, 255, 1);
+        text-align: center;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: -30%;
+
+        
+    }
+    .CryptoContentDiv{
+      width: 100%;
+      height: 280px;
+      opacity: 1;
+      position: absolute;
+      top: 440px;
+      left: 0px;
+      overflow: hidden;
+      text-align: center;
+    }
+    .v42_39 {
+      width: 58px;
+      color: rgba(0,0,0,1);
+      position: absolute;
+      top: 206px;
+      left: 106px;
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 12px;
+      opacity: 1;
+      text-align: left;
+    }
+    .v42_36 {
+      width: 100%;
+      height: 75px;
+      background: rgba(26,25,53,0.38999998569488525);
+      opacity: 1;
+      position: absolute;
+      top: 159px;
+      left: 70px;
+    }
+    .v42_40 {
+      width: 100%;
+      height: 75px;
+      background: rgba(26,25,53,0.38999998569488525);
+      opacity: 1;
+      position: absolute;
+      top: 159px;
+      left: 70px;
+    }
+    .v42_37 {
+      width: 100%;
+      height: 43px;
+      background: rgba(26,25,53,0.38999998569488525);
+      opacity: 1;
+      position: absolute;
+      top: 242px;
+      left: 70px;
+      overflow: hidden;
+    }
+    .v42_41 {
+      width: 58px;
+      color: rgba(255,255,255,1);
+      position: absolute;
+      top: 260px;
+      left: 105px;
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 12px;
+      opacity: 1;
+      text-align: left;
+    }
+    .v42_43 {
+      width: 177px;
+      color: rgba(255,255,255,1);
+      position: absolute;
+      top: 206px;
+      left: 536px;
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 12px;
+      opacity: 1;
+      text-align: left;
+    }
+    .v42_44 {
+      width: 177px;
+      color: rgba(255,255,255,1);
+      position: absolute;
+      top: 257px;
+      left: 536px;
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 12px;
+      opacity: 1;
+      text-align: left;
+    }
+    .TestExecuteDiv {
+      width: 133px;
+      height: 33px;
+      background: rgba(217,217,217,1);
+      opacity: 1;
+      position: absolute;
+      
+      right: 20px;
+      overflow: hidden;
+    }
+    .TestExecuteButton {
+      width: 135px;
+      height: 33px;
+      margin-top: 5px;
+      margin-right: 10px;
+      right: 20px;
+      background-color: rgba(217,217,217,1);;
+      color: rgba(0,0,0,1);
+      position: absolute;
+      
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 12px;
+      opacity: 1;
+      text-align: left;
+    }
+    .v42_47 {
+      width: 133px;
+      height: 33px;
+      background: rgba(217,217,217,1);
+      opacity: 1;
+      position: absolute;
+      top: 198px;
+      left: 1028px;
+      overflow: hidden;
+    }
+    .v42_48 {
+      width: 70px;
+      color: rgba(0,0,0,1);
+      position: absolute;
+      top: 203px;
+      left: 1064px;
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 12px;
+      opacity: 1;
+      text-align: left;
+    }
+    .v42_49 {
+      width: 133px;
+      height: 33px;
+      background: rgba(217,217,217,1);
+      opacity: 1;
+      position: absolute;
+      top: 247px;
+      left: 1028px;
+      overflow: hidden;
+    }
+    .v42_50 {
+      width: 70px;
+      color: rgba(0,0,0,1);
+      position: absolute;
+      top: 252px;
+      left: 1064px;
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 12px;
+      opacity: 1;
+      text-align: left;
+    }
+    .CreateStrategyButton {
+      width: 153px;
+      height: 33px;
+      background: rgba(17,13,45,0.7400000095367432);
+      color: rgba(255, 255, 255, 1);
+      opacity: 1;
+      position: absolute;
+      bottom: 10px;
+      
+      overflow: hidden;
+      display: inline-block;
+    }
+    .v42_52 {
+      width: 120px;
+      color: rgba(255,255,255,1);
+      position: absolute;
+      top: 301px;
+      left: 597px;
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 12px;
+      opacity: 1;
+      text-align: center;
+    }
+    .RankDiv {
+        width: 35%;
+        top: 375px;
+        right: 0px;
+        position: absolute;
+        
+
+    }
+    .RankTitle {
+      
+      color: rgba(0,0,0,1);
+      
+      
+      
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 30px;
+      opacity: 1;
+      text-align: left;
+    }
+    .RankContent {
+        
+        top: 37.5px;
+     position: absolute;
+      height: 280px;
+      width: 100%;
+      background: rgba(217,217,217,1);
+      opacity: 1;
+      
+      
+      right: 0px;
+      overflow: hidden;
+    }
+    .NewsTitle {
+        
+
+
+      
+      color: rgba(0,0,0,1);
+     
+      
+      
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 30px;
+      opacity: 1;
+      text-align: left;
+    }
+    .v42_62 {
+      width: 359px;
+      height: 280px;
+      background: rgba(217,217,217,1);
+      opacity: 1;
+      position: absolute;
+      top: 411px;
+      left: 70px;
+      overflow: hidden;
+    }
+    .v42_59 {
+      width: 150px;
+      color: rgba(0,0,0,1);
+      position: absolute;
+      top: 434px;
+      left: 878px;
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 16px;
+      opacity: 1;
+      text-align: left;
+    }
+    .v42_60 {
+      width: 69px;
+      color: rgba(0,0,0,1);
+      position: absolute;
+      top: 438px;
+      left: 1078px;
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 16px;
+      opacity: 1;
+      text-align: left;
+    }
+    .ModifyDiv {
+      width: 71px;
+      height: 33px;
+      
+      
+      background: rgba(217,217,217,1);
+      opacity: 1;
+      position: absolute;
+      
+      
+      overflow: hidden;
+    }
+    .ModifyButton {
+      width: 71px;
+      height: 33px;
+      margin-top: 5px;
+      background-color: rgba(217,217,217,1);
+      color: rgba(0,0,0,1);
+      position: absolute;
+      text-align: center;
+      
+      /*
+      top: 155px;
+      left: 863px;
+      */
+      right: 240px;
+      line-height:inherit;
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 12px;
+      opacity: 1;
+      text-align: left;
+    }
+    .DeleteDiv {
+      width: 71px;
+      height: 33px;
+      background: rgba(217,217,217,1);
+      opacity: 1;
+      position: absolute;
+      
+      right: 173px;
+      overflow: hidden;
+    }
+    .DeleteButton {
+        margin-top: 5px;
+        
+      width: 71px;
+      height: 33px;
+      right: 167px;
+      background-color: rgba(217,217,217,1);
+      position: absolute;
+      
+      
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 12px;
+      opacity: 1;
+      text-align: left;
+    }
+    .v42_67 {
+      width: 71px;
+      height: 33px;
+      background: rgba(217,217,217,1);
+      opacity: 1;
+      position: absolute;
+      top: 197px;
+      left: 847px;
+      overflow: hidden;
+    }
+    .v42_68 {
+      width: 45px;
+      color: rgba(0,0,0,1);
+      position: absolute;
+      top: 205px;
+      left: 863px;
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 12px;
+      opacity: 1;
+      text-align: left;
+    }
+    .v42_69 {
+      width: 71px;
+      height: 33px;
+      background: rgba(217,217,217,1);
+      opacity: 1;
+      position: absolute;
+      top: 197px;
+      left: 934px;
+      overflow: hidden;
+    }
+    .v42_70 {
+      width: 45px;
+      color: rgba(0,0,0,1);
+      position: absolute;
+      top: 205px;
+      left: 950px;
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 12px;
+      opacity: 1;
+      text-align: left;
+    }
+    .v42_71 {
+      width: 71px;
+      height: 33px;
+      background: rgba(217,217,217,1);
+      opacity: 1;
+      position: absolute;
+      top: 247px;
+      left: 847px;
+      overflow: hidden;
+    }
+    .v42_72 {
+      width: 45px;
+      color: rgba(0,0,0,1);
+      position: absolute;
+      top: 252px;
+      left: 863px;
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 12px;
+      opacity: 1;
+      text-align: left;
+    }
+    .v42_73 {
+      width: 71px;
+      height: 33px;
+      background: rgba(217,217,217,1);
+      opacity: 1;
+      position: absolute;
+      top: 247px;
+      left: 934px;
+      overflow: hidden;
+    }
+    .v42_74 {
+      width: 45px;
+      color: rgba(0,0,0,1);
+      position: absolute;
+      top: 252px;
+      left: 950px;
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 12px;
+      opacity: 1;
+      text-align: left;
+    }
+    .v42_78 {
+      width: 585px;
+      height: 293px;
+      background: url("../images/v42_78.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      opacity: 1;
+      position: absolute;
+      top: 411px;
+      left: 744px;
+      overflow: hidden;
+    }
+    .NewsDiv{
+        width: 62.5%;
+        
+        top:375px;
+        left: 0px;
+        position: absolute;
+
+       
+    }
+    .NewsContentDiv {
+
+     
+     top: 37.5px;
+     position: absolute;
+
+      width: 100%;
+      height: 280px;
+      background: rgba(217,217,217,1);
+      
+      
+      opacity: 1;
+      
+      left: 0px;
+      overflow: hidden;
+    }
+    </style>
