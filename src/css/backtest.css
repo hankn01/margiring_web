@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    font-size: 14px;
+  }
+  .BacktestMiddleDiv {
+    width: 900px;
+    height: 640px;
+    background: rgba(253,255,185,1);
+    opacity: 1;
+    position: absolute;
+    top: 155px;
+    left: 0px;
+    overflow: hidden;
+  }
+  .BacktestUpperDiv {
+    width: 900px;
+    height: 155px;
+    background: rgba(217,217,217,1);
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+  }
+  .InvestAmountCaption {
+    width: 56px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 15px;
+    opacity: 1;
+    text-align: left;
+  }
+  .InvestFeeCaption {
+    width: 83px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 67.5px;
+    left: 60%;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 15px;
+    opacity: 1;
+    text-align: left;
+  }
+  .InvestSlippageCaption {
+    width: 56px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    bottom: 20%;
+    left: 60%;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 15px;
+    opacity: 1;
+    text-align: left;
+  }
+  .InvestTaxCaption {
+    width: 56px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 15px;
+    opacity: 1;
+    text-align: left;
+  }
+  .InvestTermCaption {
+    width: 56px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 15px;
+    opacity: 1;
+    text-align: left;
+  }
+  .InvestAmountInput {
+    width: 228px;
+    height: 35px;
+    text-align: right;
+    font-size:20px;
+    opacity: 1;
+    position: absolute;
+    top: 17.5%;
+    left: 17.5%;
+    overflow: hidden;
+  }
+  .WeeklyButton {
+    width: 72px;
+    height: 35px;
+    opacity: 1;
+    position: absolute;
+    bottom: 15%;
+    left: 17.5%;
+    overflow: hidden;
+  }
+  .MonthlyButton {
+    width: 72px;
+    height: 35px;
+    left: 26%;
+    bottom: 15%;
+    opacity: 1;
+    position: absolute;
+    overflow: hidden;
+  }
+  .ThreeMonthButton {
+    width: 72px;
+    height: 35px;
+    bottom: 15%;
+    left: 34.5%;
+    opacity: 1;
+    position: absolute;
+    overflow: hidden;
+  }
+  .OtherTermButton {
+    width: 72px;
+    height: 35px;
+    bottom: 15%;
+    left: 43%;
+    opacity: 1;
+    position: absolute;
+    overflow: hidden;
+  }
+  .TaxInput {
+    width: 15%;
+    height: 35px;
+    opacity: 1;
+    position: absolute;
+    top: 17.5%;
+    left: 70%;
+    overflow: hidden;
+  }
+  .FeeInput {
+    width: 15%;
+    height: 35px;
+    opacity: 1;
+    position: absolute;
+    top: 40%;
+    left: 70%;
+    overflow: hidden;
+  }
+  .TenThousandWonCaption {
+    width: 32px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 28%;
+    left: 43.5%;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 15px;
+    opacity: 1;
+    text-align: left;
+  }
+  .TapDiv {
+    width: 400px;
+    height: 30px;
+    background: rgba(217,217,217,1);
+    opacity: 1;
+    position: absolute;
+    top: 652px;
+    left: 25%;
+    overflow: hidden;
+  }
+  .name {
+    color: #fff;
+  }
+  .BackTestExecuteButton {
+    width: 111px;
+    height: 36px;
+    background: rgba(116,20,131,1);
+    opacity: 1;
+    position: absolute;
+    top: 3%;
+    right: 2.5%;
+  }

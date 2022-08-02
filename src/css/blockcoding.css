@@ -1,0 +1,263 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    font-size: 14px;
+  }
+  .MainFrame {
+    width: 100%;
+    height: 720px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+  }
+  .Header {
+    width: 100%;
+    height: 100px;
+    background: rgba(50,255,0,1);
+    opacity: 1;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+}
+    .LogoDiv {
+    width: 101px;
+    height: 70px;
+    background: rgba(255,0,0,1);
+    opacity: 1;
+    position: absolute;
+    top: 10px;
+    left: 35px;
+    overflow: hidden;  
+}
+    .LogoutDiv {
+    width: 115px;
+    height: 45px;
+    background: rgba(255,0,0,1);
+    opacity: 1;
+    position: absolute;
+    top: 38px;  
+    right: 60px;
+    overflow: hidden;
+}
+    .LogoutText {
+    width: 115px;
+    height: 45px;
+    position: absolute;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 30px;
+    opacity: 1;
+    text-align: left;
+}
+    .LogoText {
+    width: 71px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    margin: auto;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 30px;
+    opacity: 1;
+    text-align: center;
+}
+  .AlgorithmName {
+    width: 165px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 124px;
+    left: 35px;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 12px;
+    opacity: 1;
+    text-align: left;
+  }
+  .BlockCodingDiv {
+    width: 70%;
+    height: 556px;
+    background: rgba(134,46,46,1);
+    opacity: 1;
+    position: absolute;
+    top: 164px;
+    left: 0px;
+    overflow: hidden;
+  }
+  .CoinInfoUpperDiv {
+    width: 30%;
+    height: 318px;
+    background: rgba(217,217,217,1);
+    opacity: 1;
+    position: absolute;
+    top: 164px;
+    right: 0px;
+    overflow: hidden;
+  }
+  .CoinListDiv {
+    width: 30%;
+    height: 238px;
+    background: rgba(193,53,53,1);
+    opacity: 1;
+    position: absolute;
+    top: 482px;
+    right: 0px;
+    overflow: hidden;
+  }
+  .StrategyTestButton {
+    width: 130px;
+    height: 45px;
+    text-align: center;
+    background: rgba(217,217,217,1);
+    opacity: 1;
+    position: absolute;
+    top: 110px;
+    right: 0px;
+    overflow: hidden;
+  }
+  .CoinInfoUpperInnerDiv {
+    left: 20px;
+    right: 20px;
+    top: 20px;
+    height: 265px;
+    opacity: 1;
+    position: relative;
+    overflow: hidden;
+  }
+  .CompareYesterday {
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 9px;
+    right: 30px;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 16px;
+    opacity: 1;
+    text-align: left;
+  }
+  .CoinImage {
+    width: 42px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 9px;
+    left: 3px;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 12px;
+    opacity: 1;
+    text-align: left;
+  }
+  .CoinName {
+    width: 37px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 0px;
+    left: 51px;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 20px;
+    opacity: 1;
+    text-align: left;
+  }
+  .CoinID {
+    width: 31px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 9px;
+    left: 95px;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 12px;
+    opacity: 1;
+    text-align: left;
+  }
+  .PlusMinus {
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 16px;
+    opacity: 1;
+    text-align: left;
+  }
+  .CurrentPrice {
+    width: 45px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 46px;
+    left: 3px;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 16px;
+    opacity: 1;
+    text-align: left;
+  }
+  .MarketCap {
+    width: 59px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 87px;
+    left: 3px;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 16px;
+    opacity: 1;
+    text-align: left;
+  }
+  .CoinDescription {
+    width: 64px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 16px;
+    opacity: 1;
+    text-align: left;
+  }
+  .CoinNews {
+    width: 64px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 16px;
+    opacity: 1;
+    text-align: left;
+  }
+  .CoinNewsDiv {
+    width: 90%;
+    height: 82px;
+    opacity: 1;
+    position: absolute;
+    top: 183px;
+    left: 0px;
+    border: 1px solid rgba(0,0,0,1);
+    overflow: hidden;
+  }
+  .CoinDescriptionDiv {
+    width: 90%;
+    height: 59px;
+    opacity: 1;
+    position: absolute;
+    top: 114px;
+    left: 0px;
+    border: 1px solid rgba(0,0,0,1);
+    overflow: hidden;
+  }
+  .BlockCodingTempMsg {
+    width: 290px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 16px;
+    opacity: 1;
+    text-align: left;
+  }
