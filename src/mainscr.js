@@ -1,5 +1,5 @@
 import React from 'react';
-//import ReactDOM from 'react-dom';
+import {Link} from 'react-router-dom';
 import styles from './css/Mainscr.module.css';
 
 class Mainscr extends React.Component {
@@ -28,9 +28,11 @@ class Mainscr extends React.Component {
                     
                     
                 </div>
+                <Link to ="./block">
                 <button className={`${styles.CreateStrategyButton}`}>
                     (+)Create New Strategy
                 </button>
+                </Link>
                 </div>
 
                     <div className={`${styles.NewsDiv}`}>
