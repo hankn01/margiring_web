@@ -1,9 +1,11 @@
+// @ts-nocheck
+// Blockly의 원활한 활용을 위해 Type Check를 비활성화하였습니다.
+
 import React, { useEffect } from 'react';
 import Blockly from "blockly";
 //주의: BlocklyWorkspace와 이름 혼동하지 않도록 개발 시 주의하시기 바랍니다.
 
 function BlockWorkspace() {
-// TODO: Typescript로 향후 전환 예정
     useEffect(() => {
         Blockly.inject("blocklyDiv", {
             toolbox: document.getElementById("toolbox")

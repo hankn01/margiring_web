@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; //VSCode에서 필요없다고 표시되더라도 지우지 마세요. Routes 구현에 필요합니다.
 import {Routes, Route} from 'react-router-dom';
 import Blockcoding from './Blockcoding'; //블록코딩 화면 컴포넌트(SPA 구현용)
 import Mainscr from './Mainscr'; //메인 화면 컴포넌트(SPA 구현용)
