@@ -1,0 +1,52 @@
+.Header {
+    width: 100%;
+    height: 100px;
+    background: rgba(50,255,0,1);
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+  }
+#LogoDiv {
+    width: 101px;
+    height: 70px;
+    background: rgba(255,0,0,1);
+    opacity: 1;
+    position: absolute;
+    top: 10px;
+    left: 35px;
+    overflow: hidden;
+}
+#LogoutDiv {
+    width: 115px;
+    height: 45px;
+    background: rgba(255,0,0,1);
+    opacity: 1;
+    position: absolute;
+    top: 38px;
+    right: 60px;
+    overflow: hidden;
+}
+#LogoutText {
+    width: 115px;
+    height: 45px;
+    left: 0px;
+    position: absolute;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 30px;
+    opacity: 1;
+    text-align: left;
+}
+#LogoText {
+    width: 71px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    margin: auto;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 30px;
+    opacity: 1;
+    text-align: center;
+}

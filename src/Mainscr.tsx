@@ -1,21 +1,14 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import Header from './Header';
 import styles from './css/Mainscr.module.css';
 
 class Mainscr extends React.Component {
     render() {
-        // TODO: 헤더 부분 컴포넌트 분리(8월 2-3주차까지)
         return (
+            
             <div className={`${styles.Mainscr}`}> {/* 스크린 전체 div */}
-                <div className={`${styles.Header}`}> {/* 헤더 부분 div(위쪽), 컴포넌트 분리 에정 */}
-                    <div className={`${styles.LogoDiv}`}> {/* 로고 아이콘(이미지) 들어갈 부분 */}
-                        <span className={`${styles.LogoText}`}>Logo</span>
-                    </div>
-                    <div className={`${styles.LogoutDiv}`}> {/* 로그아웃 버튼 div */}
-                        <button className={`${styles.LogoutText}`}>logout</button>
-                    </div>
-                </div>
-
+                <Header /> {/* 헤더 부분 */}
                 <div className={`${styles.ListDiv}`}> {/* 알고리즘 리스트 div */}
                     <div className={`${styles.ListContentDiv}`}> 
                         <span className={`${styles.ListContentText}`}>Strategy 1</span>

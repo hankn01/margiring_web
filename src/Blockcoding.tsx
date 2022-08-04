@@ -1,37 +1,21 @@
 import React from 'react';
 import BlockWorkspace from './BlockWorkspace';
+import Header from './Header';
 import styles from './css/Blockcoding.module.css';
 
 class Blockcoding extends React.Component {
     render() {
         return (
             <div className={`${styles.MainFrame}`}>
-                <div className={`${styles.Header}`}>
-                    <div className={`${styles.LogoDiv}`}>
-                        <span className={`${styles.LogoText}`}>Logo</span>
-                    </div>
-                    <div className={`${styles.LogoutDiv}`}>
-                        <button className={`${styles.LogoutText}`}>logout</button>
-                    </div>
-                </div>
-
-
-
-                <span className={`${styles.AlgorithmName}`}>알고리즘명이 들어갈 부분</span>
-                
-                
-                
+                <Header /> {/* 헤더 부분 */}
+                <span className={`${styles.AlgorithmName}`}>알고리즘명이 들어갈 부분</span> 
                 <button className={`${styles.StrategyTestButton}`}>전략 검증하기</button>
-                
-               
                 <div className={`${styles.MiddleContentDiv}`}>
-                    
                     <div className={`${styles.BlockCodingDiv}`}>
-                        <BlockWorkspace />
+                        <BlockWorkspace /> {/* Blockly Toolbox 및 블록 부분 */}
                         <span className={`${styles.BlockCodingTempMsg}`}>이 화면에서 특정 코인의 한글명을 선택하게 되면 위의 화면과 같이 코인에 대한 증감과 설명이 표시되며, 현재가를 클릭할 경우 차트가 표시되게 설계할 예정입니다.</span>
                     </div>
-
-                    <div className={`${styles.CoinInfoUpperDiv}`}>
+                    <div className={`${styles.CoinInfoUpperDiv}`}> {/* 코인 정보가 표시되는 오른쪽 위 부분 */}
                         <div className={`${styles.CoinInfoUpperInnerDiv}`}>
                             <span className={`${styles.CompareYesterday}`}>전일대비</span>
                             <span className={`${styles.CoinImage}`}>(이미지)</span>
@@ -45,13 +29,12 @@ class Blockcoding extends React.Component {
                             </div>
                             <div className={`${styles.CoinNewsDiv}`}>
                                 <span className={`${styles.CoinNews}`}>코인 뉴스</span>
-                            </div>
-                            
-                            </div>
+                            </div>    
+                        </div>
                     </div>
-                    <div className={`${styles.CoinListDiv}`}></div>
+                    <div className={`${styles.CoinListDiv}`}></div> {/* 코인 목록이 표시되는 오른쪽 아래 부분 */}
                 </div>
-                </div>
+            </div>
         );
 
     }
