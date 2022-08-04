@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    </head>
+    <body>
+        
+            <div class="BacktestMiddleDiv">위쪽 화면에는 투자금액을 input box로, 투자기간을 버튼으로 하되, 투자기간은 직접 입력 가능한 옵션 추가 세금 및 수수료는 직접 입력도 가능하고 +-버튼으로 조작 가능 슬리피지의 경우 오른쪽 버튼으로 조작 가능 아래쪽 화면은 분할하여 성과 요약을 표로 표시하고 그 아래에는 간단하게 차트를 표시합니다.
+                <button class="BackTestExecuteButton">백테스트 실행</button>
+            </div>
+            <div class="BacktestUpperDiv">
+                <span class="InvestAmountCaption">투자금액</span>
+                <span class="InvestTermCaption">투자기간</span>
+            <span class="InvestFeeCaption">거래소수수료</span>
+            <span class="InvestSlippageCaption">슬리피지</span>
+            <span class="InvestTaxCaption">세금고려</span>
+            
+            <input class="InvestAmountInput"></input>
+            <button class="WeeklyButton">1주</button>
+            <button class="MonthlyButton">1개월</button>
+            <button class="ThreeMonthButton">3개월</button>
+            <button class="OtherTermButton">직접 입력</button>
+                <span class="TenThousandWonCaption">만 원</span>
+
+
+
+            <input class="TaxInput"></input>
+            <input class="FeeInput"></input>
+            
+           
+
+            </div>
+
+            
+            
+            
+            
+            </div>
+            
+            <div class="TapDiv"></div>
+            
+            <div class="name"></div>
+           
+            
+            
+           
+            
+           
+
+     </div>
+     
+     </body>
+     </html>
+      <br/>
+      <br/> 
+      <style>* {
+      box-sizing: border-box;
+    }
+    body {
+      font-size: 14px;
+    }
+    .v4_10 {
+      width: 100%;
+      height: 720px;
+      background: rgba(255,255,255,1);
+      opacity: 1;
+      position: relative;
+      top: 0px;
+      left: 0px;
+      overflow: hidden;
+    }
+    .BacktestMiddleDiv {
+      width: 900px;
+      height: 640px;
+      background: rgba(253,255,185,1);
+      opacity: 1;
+      position: absolute;
+      top: 155px;
+      left: 0px;
+      overflow: hidden;
+    }
+    .BacktestUpperDiv {
+      width: 900px;
+      height: 155px;
+      background: rgba(217,217,217,1);
+      opacity: 1;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      overflow: hidden;
+    }
+    .InvestAmountCaption {
+      width: 56px;
+      color: rgba(0,0,0,1);
+      position: absolute;
+      top: 20%;
+      left: 10%;
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 15px;
+      opacity: 1;
+      text-align: left;
+    }
+    .InvestFeeCaption {
+      width: 83px;
+      color: rgba(0,0,0,1);
+      position: absolute;
+      top: 67.5px;
+      left: 60%;
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 15px;
+      opacity: 1;
+      text-align: left;
+    }
+    .InvestSlippageCaption {
+      width: 56px;
+      color: rgba(0,0,0,1);
+      position: absolute;
+      bottom: 20%;
+      left: 60%;
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 15px;
+      opacity: 1;
+      text-align: left;
+    }
+    .InvestTaxCaption {
+      width: 56px;
+      color: rgba(0,0,0,1);
+      position: absolute;
+      top: 20%;
+      left: 60%;
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 15px;
+      opacity: 1;
+      text-align: left;
+    }
+    .InvestTermCaption {
+      width: 56px;
+      color: rgba(0,0,0,1);
+      position: absolute;
+      
+      bottom: 20%;
+      left: 10%;
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 15px;
+      opacity: 1;
+      text-align: left;
+    }
+    .InvestAmountInput {
+      width: 228px;
+      height: 35px;
+      
+      text-align: right;
+      font-size:20px;
+      opacity: 1;
+      position: absolute;
+      top: 17.5%;
+      left: 17.5%;
+      overflow: hidden;
+
+    }
+    .WeeklyButton {
+      width: 72px;
+      height: 35px;
+     
+    
+      opacity: 1;
+      position: absolute;
+      
+      bottom: 15%;
+      left: 17.5%;
+      overflow: hidden;
+    }
+    .v56_15 {
+      width: 21px;
+      color: rgba(255,255,255,1);
+      position: absolute;
+      top: 134px;
+      left: 341px;
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 15px;
+      opacity: 1;
+      text-align: left;
+    }
+    .MonthlyButton {
+      width: 72px;
+      height: 35px;
+      
+      left: 26%;
+      bottom: 15%;
+      opacity: 1;
+      position: absolute;
+      
+      overflow: hidden;
+    }
+    .ThreeMonthButton {
+      width: 72px;
+      height: 35px;
+      bottom: 15%;
+      left: 34.5%;
+     
+      opacity: 1;
+      position: absolute;
+      
+      overflow: hidden;
+    }
+    .OtherTermButton {
+      width: 72px;
+      height: 35px;
+
+      bottom: 15%;
+      left: 43%;
+      
+      opacity: 1;
+      position: absolute;
+      
+      overflow: hidden;
+    }
+    .TaxInput {
+      width: 15%;
+      height: 35px;
+      
+      opacity: 1;
+      position: absolute;
+      top: 17.5%;
+      left: 70%;
+      overflow: hidden;
+    }
+    .FeeInput {
+      width: 15%;
+      height: 35px;
+      
+      opacity: 1;
+      position: absolute;
+      top: 40%;
+      left: 70%;
+      overflow: hidden;
+    }
+    .v7_49 {
+      width: 66px;
+      height: 35px;
+      background: rgba(255,0,183,1);
+      opacity: 1;
+      position: absolute;
+      top: 102px;
+      left: 917px;
+      overflow: hidden;
+    }
+    .v7_50 {
+      width: 66px;
+      height: 35px;
+      background: rgba(255,0,183,1);
+      opacity: 1;
+      position: absolute;
+      top: 102px;
+      left: 993px;
+      overflow: hidden;
+    }
+    .v7_47 {
+      width: 66px;
+      height: 35px;
+      background: rgba(255,0,183,1);
+      opacity: 1;
+      position: absolute;
+      top: 143px;
+      left: 841px;
+      overflow: hidden;
+    }
+    .v7_51 {
+      width: 66px;
+      height: 35px;
+      background: rgba(255,0,183,1);
+      opacity: 1;
+      position: absolute;
+      top: 143px;
+      left: 917px;
+      overflow: hidden;
+    }
+    .v7_52 {
+      width: 66px;
+      height: 35px;
+      background: rgba(255,0,183,1);
+      opacity: 1;
+      position: absolute;
+      top: 143px;
+      left: 993px;
+      overflow: hidden;
+    }
+    .v7_26 {
+      width: 60px;
+      color: rgba(0,0,0,1);
+      position: absolute;
+      top: 133px;
+      left: 559px;
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 15px;
+      opacity: 1;
+      text-align: left;
+    }
+    .v7_45 {
+      width: 28px;
+      color: rgba(0,0,0,1);
+      position: absolute;
+      top: 70px;
+      left: 860px;
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 15px;
+      opacity: 1;
+      text-align: left;
+    }
+    .TenThousandWonCaption {
+      width: 32px;
+      color: rgba(0,0,0,1);
+      position: absolute;
+      top: 28%;
+      left: 43.5%;
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 15px;
+      opacity: 1;
+      text-align: left;
+    }
+    .TapDiv {
+      width: 400px;
+      height: 30px;
+      background: rgba(217,217,217,1);
+      opacity: 1;
+      position: absolute;
+      top: 652px;
+      left: 25%;
+      overflow: hidden;
+    }
+    .v7_55 {
+      height: 30px;
+      background: url("../images/v7_55.png");
+      opacity: 1;
+      position: absolute;
+      top: 652px;
+      left: 602px;
+      border: 1px solid rgba(0,0,0,1);
+    }
+    .v7_56 {
+      height: 30px;
+      background: url("../images/v7_56.png");
+      opacity: 1;
+      position: absolute;
+      top: 652px;
+      left: 744px;
+      border: 1px solid rgba(0,0,0,1);
+    }
+    .name {
+      color: #fff;
+    }
+    .BackTestExecuteButton {
+      width: 111px;
+      height: 36px;
+      background: rgba(116,20,131,1);
+      opacity: 1;
+      position: absolute;
+      top: 3%;
+      right: 2.5%;
+    }
+    .v42_85 {
+      width: 88px;
+      color: rgba(255,255,255,1);
+      position: absolute;
+      top: 215px;
+      left: 998px;
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 15px;
+      opacity: 1;
+      text-align: left;
+    }
+    .v42_87 {
+      width: 364px;
+      height: 36px;
+      background: url("../images/v42_87.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      opacity: 1;
+      position: absolute;
+      top: 101px;
+      left: 717px;
+      overflow: hidden;
+    }
+    .v42_89 {
+      width: 364px;
+      height: 42px;
+      background: url("../images/v42_89.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      opacity: 1;
+      position: absolute;
+      top: 55px;
+      left: 717px;
+      overflow: hidden;
+    }
+    .v42_96 {
+      width: 28px;
+      color: rgba(0,0,0,1);
+      position: absolute;
+      top: 659px;
+      left: 521px;
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 15px;
+      opacity: 1;
+      text-align: left;
+    }
+    .v42_97 {
+      width: 56px;
+      color: rgba(0,0,0,1);
+      position: absolute;
+      top: 658px;
+      left: 645px;
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 15px;
+      opacity: 1;
+      text-align: left;
+    }
+    .v42_98 {
+      width: 56px;
+      color: rgba(0,0,0,1);
+      position: absolute;
+      top: 659px;
+      left: 785px;
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 15px;
+      opacity: 1;
+      text-align: left;
+    }
+    .v56_17 {
+      width: 35px;
+      color: rgba(255,255,255,1);
+      position: absolute;
+      top: 134px;
+      left: 408px;
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 15px;
+      opacity: 1;
+      text-align: left;
+    }
+    .v56_18 {
+      width: 38px;
+      color: rgba(255,255,255,1);
+      position: absolute;
+      top: 130px;
+      left: 488px;
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 15px;
+      opacity: 1;
+      text-align: left;
+    }
+    .v62_11 {
+      width: 475px;
+      height: 251px;
+      background: url("../images/v62_11.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      opacity: 1;
+      position: absolute;
+      top: 391px;
+      left: 441px;
+      overflow: hidden;
+    }
+    .v62_12 {
+      width: 244px;
+      color: rgba(0,0,0,1);
+      position: absolute;
+      top: 405px;
+      left: 211px;
+      font-family: Inter;
+      font-weight: Regular;
+      font-size: 15px;
+      opacity: 1;
+      text-align: left;
+    }
+    .v61_7 {
+      width: 712px;
+      height: 140px;
+      background: url("../images/v61_7.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      opacity: 1;
+      position: absolute;
+      top: 220px;
+      left: 244px;
+      overflow: hidden;
+    }
+    </style>
