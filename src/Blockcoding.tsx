@@ -3,8 +3,7 @@ import BlockWorkspace from './BlockWorkspace';
 import Header from './Header';
 import styles from './css/Blockcoding.module.css';
 
-class Blockcoding extends React.Component {
-    render() {
+function Blockcoding() {
         return (
             <div className={`${styles.MainFrame}`}>
                 <Header /> {/* 헤더 부분 */}
@@ -36,9 +35,6 @@ class Blockcoding extends React.Component {
                 </div>
             </div>
         );
-
-    }
-
 }
 
 export default Blockcoding;
