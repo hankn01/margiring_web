@@ -6,11 +6,13 @@
       "dom.iterable",
       "esnext"
     ],
+    "noImplicitAny": true, //묵시적 Any 허용 안함
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
+    "strictNullChecks": true, // Null 타입이 적합하지 않은 변수에 대입 금지
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
