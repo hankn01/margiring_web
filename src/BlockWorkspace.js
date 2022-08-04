@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import Blockly from "blockly";
-//import { BlocklyWorkspace } from 'react-blockly';
+//주의: BlocklyWorkspace와 이름 혼동하지 않도록 개발 시 주의하시기 바랍니다.
 
 function BlockWorkspace() {
+// TODO: Typescript로 향후 전환 예정
     useEffect(() => {
         Blockly.inject("blocklyDiv", {
             toolbox: document.getElementById("toolbox")
