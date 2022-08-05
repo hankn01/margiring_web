@@ -1,5 +1,6 @@
 import React from 'react';
 import BlockWorkspace from './BlockWorkspace';
+import CoinList from './CoinList';
 import Header from './Header';
 import styles from './css/Blockcoding.module.css';
 
@@ -24,14 +25,14 @@ function Blockcoding() {
                             <span className={`${styles.CurrentPrice}`}>현재가</span>
                             <span className={`${styles.MarketCap}`}>거래대금</span>
                             <div className={`${styles.CoinDescriptionDiv}`}>
-                            <span className={`${styles.CoinDescription}`}>코인 설명</span>
+                                <span className={`${styles.CoinDescription}`}>코인 설명</span>
                             </div>
                             <div className={`${styles.CoinNewsDiv}`}>
                                 <span className={`${styles.CoinNews}`}>코인 뉴스</span>
-                            </div>    
+                            </div>
                         </div>
                     </div>
-                    <div className={`${styles.CoinListDiv}`}></div> {/* 코인 목록이 표시되는 오른쪽 아래 부분 */}
+                    <CoinList />
                 </div>
             </div>
         );
