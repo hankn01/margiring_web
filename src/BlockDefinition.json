@@ -1,0 +1,351 @@
+{
+    "kind": "categoryToolbox",
+    "contents": [
+      {
+        "kind": "category",
+        "name": "시작",
+        "colour": "#27ae60",
+        "contents": [
+          {
+            "kind": "block",
+            "type": "text_print",
+            "message0": "프로그램이 시작될 때",
+            "nextStatement": null,
+            "colour": 230,
+            "tooltip": "프로그램이 가동될 때 한 번 실행됩니다.",
+            "helpUrl": ""
+          },
+          {
+            "kind": "block",
+            "type": "text_print"
+          },
+          {
+            "kind": "block",
+            "type": "text_print"
+          },
+          {
+            "kind": "block",
+            "type": "text_print"
+          },
+          {
+            "kind": "block",
+            "type": "text_print"
+          },
+          {
+            "kind": "sep",
+            "gap": "48"
+          },
+          {
+            "kind": "block",
+            "type": "text_print"
+          },
+          {
+            "kind": "block",
+            "type": "text_print"
+          },
+          {
+            "kind": "block",
+            "type": "text_print"
+          }
+        ]
+      },
+      {
+        "kind": "category",
+        "name": "흐름",
+        "colour": "#70a1ff",
+        "contents": [
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "sep",
+              "gap": "48"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            }
+        ]
+      },
+      {
+        "kind": "category",
+        "name": "거래",
+        "colour": "#f39c12",
+        "contents": [
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "sep",
+              "gap": "48"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "sep",
+              "gap": "48"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            }
+        ]
+      },
+      {
+        "kind": "category",
+        "name": "판단",
+        "colour": "#3742fa",
+        "contents": [
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "sep",
+              "gap": "48"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "sep",
+              "gap": "48"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            }
+        ]
+      },
+      {
+        "kind": "category",
+        "name": "계산/시간",
+        "colour": "#f1c40f",
+        "contents": [
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "sep",
+              "gap": "48"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "sep",
+              "gap": "48"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            }
+        ]
+      },
+      {
+        "kind": "category",
+        "name": "자료",
+        "colour": "#58B19F",
+        "contents": [
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "sep",
+              "gap": "48"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "sep",
+              "gap": "48"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            }
+        ]
+      },
+      {
+        "kind": "category",
+        "name": "함수",
+        "colour": "#9b59b6",
+        "contents": [
+            {
+              "kind": "block",
+              "type": "text_print"
+            },
+            {
+              "kind": "block",
+              "type": "text_print"
+            }
+        ]
+      }
+    ]
+  }
