@@ -8,12 +8,7 @@
         "contents": [
           {
             "kind": "block",
-            "type": "text_print",
-            "message0": "프로그램이 시작될 때",
-            "nextStatement": null,
-            "colour": 230,
-            "tooltip": "프로그램이 가동될 때 한 번 실행됩니다.",
-            "helpUrl": ""
+            "type": "event_program_started"
           },
           {
             "kind": "block",
