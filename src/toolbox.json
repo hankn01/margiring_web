@@ -12,19 +12,19 @@
           },
           {
             "kind": "block",
-            "type": "text_print"
+            "type": "event_program_on_working"
           },
           {
             "kind": "block",
-            "type": "text_print"
+            "type": "event_signal_recieved"
           },
           {
             "kind": "block",
-            "type": "text_print"
+            "type": "event_send_signal"
           },
           {
             "kind": "block",
-            "type": "text_print"
+            "type": "event_await_signal"
           },
           {
             "kind": "sep",
@@ -32,15 +32,15 @@
           },
           {
             "kind": "block",
-            "type": "text_print"
+            "type": "event_selling"
           },
           {
             "kind": "block",
-            "type": "text_print"
+            "type": "event_buying"
           },
           {
             "kind": "block",
-            "type": "text_print"
+            "type": "event_trade_info"
           }
         ]
       },
@@ -51,31 +51,27 @@
         "contents": [
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "flow_if"
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "flow_if_else"
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "flow_await"
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "flow_repeat_times"
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "flow_repeat"
             },
             {
               "kind": "block",
-              "type": "text_print"
-            },
-            {
-              "kind": "block",
-              "type": "text_print"
+              "type": "flow_while"
             },
             {
               "kind": "sep",
@@ -83,7 +79,7 @@
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "flow_break"
             }
         ]
       },
@@ -94,11 +90,11 @@
         "contents": [
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "trade_buy"
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "trade_sell"
             },
             {
               "kind": "sep",
@@ -106,11 +102,11 @@
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "trade_is_selling"
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "trade_is_settled"
             },
             {
               "kind": "sep",
@@ -118,19 +114,19 @@
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "trade_my_budget"
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "trade_my_coin"
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "trade_trade_info"
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "trade_stock_info"
             }
         ]
       },
@@ -141,11 +137,11 @@
         "contents": [
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "bool_true"
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "bool_false"
             },
             {
               "kind": "sep",
@@ -153,27 +149,27 @@
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "bool_eq"
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "bool_ne"
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "bool_gt"
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "bool_lt"
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "bool_ge"
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "bool_le"
             },
             {
               "kind": "sep",
@@ -181,15 +177,15 @@
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "bool_and"
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "bool_or"
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "bool_not"
             }
         ]
       },
@@ -200,15 +196,15 @@
         "contents": [
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "time_now"
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "time_minutes_ago"
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "time_specific"
             },
             {
               "kind": "sep",
@@ -216,27 +212,31 @@
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "calc_number"
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "calc_plus"
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "calc_minus"
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "calc_times"
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "calc_divided_by"
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "calc_share_remainder"
+            },
+            {
+              "kind": "block",
+              "type": "calc_random"
             },
             {
               "kind": "sep",
@@ -244,19 +244,19 @@
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "calc_string"
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "calc_string_concat"
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "calc_string_index"
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "calc_string_slice"
             }
         ]
       },
@@ -267,19 +267,15 @@
         "contents": [
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "data_variable"
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "data_variable_set"
             },
             {
               "kind": "block",
-              "type": "text_print"
-            },
-            {
-              "kind": "block",
-              "type": "text_print"
+              "type": "data_variable_add"
             },
             {
               "kind": "sep",
@@ -287,43 +283,31 @@
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "data_list_index"
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "data_list_append"
             },
             {
               "kind": "block",
-              "type": "text_print"
-            },
-            {
-              "kind": "sep",
-              "gap": "48"
+              "type": "data_list_pop"
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "data_list_put_in"
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "data_list_set_index"
             },
             {
               "kind": "block",
-              "type": "text_print"
+              "type": "data_list_length"
             },
             {
               "kind": "block",
-              "type": "text_print"
-            },
-            {
-              "kind": "block",
-              "type": "text_print"
-            },
-            {
-              "kind": "block",
-              "type": "text_print"
+              "type": "data_list_have"
             }
         ]
       },
@@ -334,11 +318,7 @@
         "contents": [
             {
               "kind": "block",
-              "type": "text_print"
-            },
-            {
-              "kind": "block",
-              "type": "text_print"
+              "type": "function_call"
             }
         ]
       }
