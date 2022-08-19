@@ -1,3 +1,16 @@
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-SemiBold';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
 .CoinInfoUpperDiv {
     width: 480px;
     height: 1080px;
@@ -81,7 +94,7 @@
 }
 .CoinName {
     color: rgba(0,0,0,1);
-    font-family: Inter;
+    font-family: Pretendard-SemiBold;
     font-weight: Regular;
     font-size: 20px;
     opacity: 1;
@@ -140,7 +153,7 @@
     position: relative;
     bottom: 8px;
     left: 0px;
-    font-family: Pretendard;
+    font-family: Pretendard-SemiBold;
   font-size: 32px;
   font-weight: 600;
   font-stretch: normal;
@@ -253,5 +266,35 @@
     left: 0px;
     width: 480px;
     height: 473.5px;
-    background-color: red;
+    
+}
+#CoinNameSymbolSearchInput {
+    position: absolute;
+    top: 23.5px;
+    left: 25px;
+    width: 429px;
+    height: 48px;
+    border-radius: 2px;
+  background-color: #f1f5f9;
+  border-style: none;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #838ea0;
+  padding-left: 16px;
+  padding-top: 14px;
+  padding-bottom: 15px;
+}
+#SEHR {
+  position: absolute;
+  top: 476.5px;
+    width: 480px;
+  height: 1px;
+  background-color: #dbdde0;
+
 }
