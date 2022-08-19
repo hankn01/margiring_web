@@ -41,8 +41,11 @@ function CoinInfo()
 
 
             </div>
+            <div id={`${styles.SEHR}`}></div>
             <div id={`${styles.CoinListSearchDiv}`}>
-                <input id="CoinNameSymbolSearchInput"></input>
+                <input id={`${styles.CoinNameSymbolSearchInput}`}>
+                
+                </input>
             </div>
         </div>
     );
