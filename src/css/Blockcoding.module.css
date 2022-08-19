@@ -24,6 +24,32 @@
     left: 0px;
     overflow: hidden;
 }
+#AlgoNameBar{
+  position: absolute;
+width: 100%;
+height: 64px;
+left: 0px;
+top: 64px;
+
+background: #1B1F24;
+}
+
+#AlgoNameText{
+  
+  position: absolute;
+  left: 24px;
+  top: 20px;
+  bottom: 19px;
+  font-family: Pretendard;
+  font-size: 18px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
     .LogoDiv {
     width: 101px;
     height: 70px;
@@ -83,7 +109,7 @@
     background: rgba(134,46,46,1);
     opacity: 1;
     position: absolute;
-    top: 164px;
+    top: 128px;
     left: 0px;
     overflow: hidden;
   }
@@ -93,20 +119,31 @@
     background: rgba(193,53,53,1);
     opacity: 1;
     position: absolute;
-    top: 482px;
+    top: 446px;
     right: 0px;
     overflow: hidden;
   }
-  .StrategyTestButton {
-    width: 130px;
-    height: 45px;
+  #StrategyTestButton {
+
+    width: 120px;
+  height: 42px;
+  flex-grow: 0;
+  
+  border-radius: 4px;
+  background-color: #1e78ff;
+    border-style: hidden;
     text-align: center;
-    background: rgba(217,217,217,1);
-    opacity: 1;
     position: absolute;
-    top: 110px;
-    right: 0px;
-    overflow: hidden;
+    right:24px;
+   top:11px;
+   bottom: 11px;
+    color: #fff;
+    font-family: Pretendard;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+
   }
   .BlockCodingTempMsg {
     width: 290px;
