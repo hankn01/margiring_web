@@ -1,20 +1,21 @@
 .CoinInfoUpperDiv {
-    width: 25%;
-    height: 318px;
-    background: rgba(217,217,217,1);
+    width: 480px;
+    height: 1080px;
     opacity: 1;
     position: absolute;
     top: 128px;
     right: 0px;
     overflow: hidden;
 
-    
+    flex-grow: 0;
+    margin: 1px 0 0;
+    background-color: #fff;  
+    box-shadow: -3px 0px 10px rgba(0,0,0,0.25);
 }
 .CoinInfoUpperInnerDiv {
-    left: 20px;
-    right: 20px;
-    top: 20px;
-    height: 265px;
+    left: 0px;
+    top: 0px;
+    height: 480px;
     opacity: 1;
     position: relative;
     overflow: hidden;
@@ -22,32 +23,64 @@
 .CompareYesterday {
     color: rgba(0,0,0,1);
     position: absolute;
-    top: 9px;
-    right: 30px;
-    font-family: Inter;
-    font-weight: Regular;
-    font-size: 16px;
-    opacity: 1;
+    
+    left: 0px;
+    top:5px;
+    width: 49px;
+    height: 21px;
+    flex-grow: 0;
+    
+    font-family: Pretendard;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
     text-align: left;
+    color: #787a80;
+  }
+#ComparePercent {
+    position: absolute;
+    left: 57px;
+    top: 3px;
+    width: 60px;
+    height: 23px;
+    background-color:#edf4ff;
+    border-radius: 4px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #0040e4;
 }
 .CoinImage {
-    width: 42px;
+    width: 24px;
+    height: 24px;
     color: rgba(0,0,0,1);
     position: absolute;
-    top: 9px;
-    left: 3px;
+    top: 26px;
+    left: 24px;
     font-family: Inter;
     font-weight: Regular;
     font-size: 12px;
     opacity: 1;
     text-align: left;
 }
-.CoinName {
-    width: 37px;
-    color: rgba(0,0,0,1);
+#CoinNameDiv {
+    top: 26px;
+    left: 58px;
     position: absolute;
-    top: 0px;
-    left: 51px;
+}
+.CoinName {
+    color: rgba(0,0,0,1);
     font-family: Inter;
     font-weight: Regular;
     font-size: 20px;
@@ -56,90 +89,169 @@
 }
 .CoinID {
     width: 31px;
-    color: rgba(0,0,0,1);
-    position: absolute;
-    top: 9px;
-    left: 95px;
-    font-family: Inter;
-    font-weight: Regular;
-    font-size: 12px;
+    color: #787a80;
+    left: 8px;
+    position: relative;
+    font-family: Pretendard;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
     opacity: 1;
     text-align: left;
+}
+#CoinPMDiv {
+    position: absolute;
+    top: 126px;
+    left: 24px;
+    height: 25px;
+    width: 432px;
+
 }
 .PlusMinus {
     color: rgba(0,0,0,1);
     position: absolute;
-    top: 50px;
-    right: 30px;
-    font-family: Inter;
-    font-weight: Regular;
-    font-size: 16px;
-    opacity: 1;
-    text-align: left;
+    bottom: -2px;
+    left: 137px;
+    font-family: Pretendard;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+  text-align: left;
+  color: #0040e4;
+}
+#PriceDiv {
+    left: 24px;
+    top: 68px;
+    height: 48px;
+    position: absolute;
 }
 .CurrentPrice {
-    width: 45px;
+    width: 103px;
+  height: 48px;
+  
     color: rgba(0,0,0,1);
-    position: absolute;
-    top: 46px;
-    left: 3px;
-    font-family: Inter;
-    font-weight: Regular;
-    font-size: 16px;
-    opacity: 1;
-    text-align: left;
+    position: relative;
+    bottom: 8px;
+    left: 0px;
+    font-family: Pretendard;
+  font-size: 32px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #0040e4;
 }
+
+
 .MarketCap {
     width: 59px;
     color: rgba(0,0,0,1);
     position: absolute;
-    top: 87px;
-    left: 3px;
-    font-family: Inter;
-    font-weight: Regular;
-    font-size: 16px;
-    opacity: 1;
-    text-align: left;
+    top: 5px;
+    left: 228px;
+    font-family: Pretendard;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #787a80;
+
+}
+#MarketCapValue {
+    position: absolute;
+    left: 285px;
+    top: 5px;
+    font-family: Pretendard;
+    font-size: 14px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.6;
+    letter-spacing: normal;
+    text-align: right;
+    color: #4c4d50;
 }
 .CoinDescriptionDiv {
-    width: 90%;
-    height: 59px;
+    width: 432px;
     opacity: 1;
     position: absolute;
-    top: 114px;
-    left: 0px;
-    border: 1px solid rgba(0,0,0,1);
+    top: 187px;
+    left: 24px;
+    height: 119.5px;
     overflow: hidden;
+    
 }
 .CoinDescription {
-    width: 64px;
+    
     color: rgba(0,0,0,1);
     position: absolute;
     
-    font-family: Inter;
-    font-weight: Regular;
-    font-size: 16px;
-    opacity: 1;
-    text-align: left;
+    font-family: Pretendard;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: normal;
+  text-align: left;
+  color: #4c4d50;
+}
+#DNHR {
+    position: absolute;
+    top: 306.5px;
+    left: 24.5px;
+    width: 431.5px;
+    height: 1px;
+    background-color: #f2f4f6;
+    
 }
 .CoinNewsDiv {
     width: 90%;
     height: 82px;
     opacity: 1;
     position: absolute;
-    top: 183px;
-    left: 0px;
-    border: 1px solid rgba(0,0,0,1);
+    top: 330px;
+    left: 26px;
     overflow: hidden;
 }
 .CoinNews {
-    width: 64px;
+    
     color: rgba(0,0,0,1);
     position: absolute;
     
-    font-family: Inter;
-    font-weight: Regular;
-    font-size: 16px;
-    opacity: 1;
-    text-align: left;
+    font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2a323f;
+}
+#MoneyCurrency {
+    position:relative;
+    left: 10px;
+    bottom: 8px;
+    color: #0040e4;
+}
+#CoinListSearchDiv{
+    position: absolute;
+    top: 476.5px;
+    left: 0px;
+    width: 480px;
+    height: 473.5px;
+    background-color: red;
 }
