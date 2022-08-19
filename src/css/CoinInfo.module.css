@@ -1,12 +1,14 @@
 .CoinInfoUpperDiv {
-    width: 30%;
+    width: 25%;
     height: 318px;
     background: rgba(217,217,217,1);
     opacity: 1;
     position: absolute;
-    top: 164px;
+    top: 128px;
     right: 0px;
     overflow: hidden;
+
+    
 }
 .CoinInfoUpperInnerDiv {
     left: 20px;
