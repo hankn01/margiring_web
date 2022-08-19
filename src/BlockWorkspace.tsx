@@ -16,7 +16,7 @@ function BlockWorkspace() {
 
     return (
         <div>
-            <div id="blocklyDiv" style={{width: "1024px", height: "600px"}}></div>
+            <div id="blocklyDiv" style={{width: "1024px", height: "1080px"}}></div>
             <xml id="toolbox" style={{display: "none"}}></xml>
         </div>
     );
