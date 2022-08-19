@@ -298,3 +298,9 @@
   background-color: #dbdde0;
 
 }
+
+#SearchOptionLogo{
+    position: absolute;
+    right: 48px;
+    top: 37.5px;
+}
