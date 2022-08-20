@@ -19,9 +19,10 @@
     height: 100px;
     background: rgba(50,255,0,1);
     opacity: 1;
-    position: relative;
+    position: absolute;
     top: 0px;
-    left: 0px;
+    
+    right: 0px;
     overflow: hidden;
 }
 #AlgoNameBar{
@@ -104,8 +105,8 @@ background: #1B1F24;
     text-align: left;
   }
   .BlockCodingDiv {
-    width: 70%;
-    height: 556px;
+    width: calc(inherit-480px);
+    height: 1080px;
   
     opacity: 1;
     position: absolute;

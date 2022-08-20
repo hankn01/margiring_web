@@ -272,13 +272,14 @@ height: 670px;
     background-color: #fff;
   }
   #MiddleContentWrap {
-    position: absolute;
-    left: 3.1%;
     
     
-    top: 366px;
-    width: 93.75%;
+    
+    
+    width: calc(inherit-120px);
+    margin-right: 3.125%;
+    margin-left: 3.125%;
     display: grid;
-    grid-template-columns: 6.7% 6.7% 6.7% 6.7% 6.7% 6.7% 6.7% 6.7% 6.7% 6.7% 6.7% 6.7%;
+    grid-template-columns: 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667%;
     grid-column-gap: 24px;
   }

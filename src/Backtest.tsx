@@ -3,9 +3,12 @@ import styles from './css/Backtest.module.css';
 
 function Backtest() {
     return (
-            <><div className={`${styles.BacktestMiddleDiv}`}>
+            <>
+            <div id={`${styles.BackTestWrapper}`}>
+            <div className={`${styles.BacktestMiddleDiv}`}>
            
         </div><div className={`${styles.BacktestUpperDiv}`}>
+                <h1 id={`${styles.StrategyTitleCaption}`}>전략 검증하기</h1>
                 <span className={`${styles.InvestAmountCaption}`}>투자금액</span>
                 <span className={`${styles.InvestTermCaption}`}>투자기간</span>
                 <span className={`${styles.InvestFeeCaption}`}>거래소수수료</span>
@@ -21,7 +24,8 @@ function Backtest() {
                 <input className={`${styles.FeeInput}`}></input>
             </div>
            
-            <div className={`${styles.name}`}></div></>
+            <div className={`${styles.name}`}></div>
+            </div></>
     );
 }
 

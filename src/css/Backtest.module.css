@@ -1,8 +1,17 @@
 * {
     box-sizing: border-box;
   }
-  body {
+  #BackTestWrapper {
     font-size: 14px;
+    width: 888px;
+    height: 982px;
+    border-radius: 8px;
+    background-color: #fff;
+    position: absolute;
+    left: 32px;
+    right: 32px;
+    top: 30px;
+
   }
   .BacktestMiddleDiv {
     width: 900px;
@@ -17,7 +26,7 @@
   .BacktestUpperDiv {
     width: 900px;
     height: 155px;
-    background: rgba(217,217,217,1);
+    background: #fff;
     opacity: 1;
     position: absolute;
     top: 0px;
@@ -28,13 +37,20 @@
     width: 56px;
     color: rgba(0,0,0,1);
     position: absolute;
-    top: 20%;
-    left: 10%;
-    font-family: Inter;
-    font-weight: Regular;
-    font-size: 15px;
+    top: 68px;
+    left: 26px;
+    
     opacity: 1;
-    text-align: left;
+    z-index: 1;
+    font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2a323f;
   }
   .InvestFeeCaption {
     width: 83px;
@@ -85,16 +101,49 @@
     text-align: left;
   }
   .InvestAmountInput {
-    width: 228px;
-    height: 35px;
+    width: 400px;
+    height: 48px;
     text-align: right;
     font-size:20px;
     opacity: 1;
     position: absolute;
-    top: 17.5%;
-    left: 17.5%;
+    top: 54px;
+    left: 0px;
     overflow: hidden;
+    border-radius: 2px;
+    border: solid 1px #dbdde0;
   }
+  .InvestAmountInput:hover {
+    width: 400px;
+    height: 48px;
+    text-align: right;
+    font-size:20px;
+    opacity: 1;
+    position: absolute;
+    top: 54px;
+    left: 0px;
+    overflow: hidden;
+    border-radius: 2px;
+    border: solid 1px #dbdde0;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.04);
+  }
+  .InvestAmountInput:focus {
+    width: 400px;
+    height: 48px;
+    text-align: right;
+    font-size:20px;
+    opacity: 1;
+    position: absolute;
+    top: 54px;
+    left: 0px;
+    overflow: hidden;
+    border-radius: 2px;
+    border: solid 1px #dbdde0;
+    border-radius: 2px;
+  border: solid 1px #2a323f;
+  outline: none;
+  }
+
   .WeeklyButton {
     width: 72px;
     height: 35px;
@@ -133,11 +182,11 @@
   }
   .TaxInput {
     width: 15%;
-    height: 35px;
+    height: 46px;
     opacity: 1;
     position: absolute;
-    top: 17.5%;
-    left: 70%;
+    top: 85px;
+    left: 723.5px;
     overflow: hidden;
   }
   .FeeInput {
@@ -183,3 +232,21 @@
     top: 3%;
     right: 2.5%;
   }
+#StrategyTitleCaption {
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   
+   height: 29px;
+   margin: 0px;
+   padding: 0px;
+   font-family: Pretendard;
+  font-size: 24px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2a323f;
+}
