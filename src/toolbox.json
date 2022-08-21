@@ -51,19 +51,50 @@
         "contents": [
             {
               "kind": "block",
-              "type": "flow_if"
+              "type": "flow_if",
+              "inputs": {
+                "CONDITION": {
+                  "shadow": {
+                    "type": "bool_true"
+                  }
+                }
+              }
             },
             {
               "kind": "block",
-              "type": "flow_if_else"
+              "type": "flow_if_else",
+              "inputs": {
+                "CONDITION": {
+                  "shadow": {
+                    "type": "bool_true"
+                  }
+                }
+              }
             },
             {
               "kind": "block",
-              "type": "flow_await"
+              "type": "flow_await",
+              "inputs": {
+                "CONDITION": {
+                  "shadow": {
+                    "type": "bool_true"
+                  }
+                }
+              }
             },
             {
               "kind": "block",
-              "type": "flow_repeat_times"
+              "type": "flow_repeat_times",
+              "inputs": {
+                "COUNT": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": 10
+                    }
+                  }
+                }
+              }
             },
             {
               "kind": "block",
@@ -71,7 +102,14 @@
             },
             {
               "kind": "block",
-              "type": "flow_while"
+              "type": "flow_while",
+              "inputs": {
+                "CONDITION": {
+                  "shadow": {
+                    "type": "bool_true"
+                  }
+                }
+              }
             },
             {
               "kind": "sep",
@@ -90,11 +128,51 @@
         "contents": [
             {
               "kind": "block",
-              "type": "trade_buy"
+              "type": "trade_buy",
+              "inputs": {
+                "INVESTMENT": {
+                  "shadow": {
+                    "type": "calc_string",
+                    "VALUE": "현재 종목"
+                  }
+                },
+                "VOLUME": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "VALUE": 10
+                  }
+                },
+                "CONDITION": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "VALUE": 10
+                  }
+                }
+              }
             },
             {
               "kind": "block",
-              "type": "trade_sell"
+              "type": "trade_sell",
+              "inputs": {
+                "INVESTMENT": {
+                  "shadow": {
+                    "type": "calc_string",
+                    "VALUE": "현재 종목"
+                  }
+                },
+                "VOLUME": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "VALUE": 10
+                  }
+                },
+                "CONDITION": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "VALUE": 10
+                  }
+                }
+              }
             },
             {
               "kind": "sep",
@@ -102,11 +180,25 @@
             },
             {
               "kind": "block",
-              "type": "trade_is_selling"
+              "type": "trade_is_selling",
+              "inputs": {
+                "TRADEINFO": {
+                  "block": {
+                    "type": "event_trade_info"
+                  }
+                }
+              }
             },
             {
               "kind": "block",
-              "type": "trade_is_settled"
+              "type": "trade_is_settled",
+              "inputs": {
+                "TRADEINFO": {
+                  "block": {
+                    "type": "event_trade_info"
+                  }
+                }
+              }
             },
             {
               "kind": "sep",
@@ -122,11 +214,31 @@
             },
             {
               "kind": "block",
-              "type": "trade_trade_info"
+              "type": "trade_trade_info",
+              "inputs": {
+                "TRADEINFO": {
+                  "block": {
+                    "type": "event_trade_info"
+                  }
+                }
+              }
             },
             {
               "kind": "block",
-              "type": "trade_stock_info"
+              "type": "trade_stock_info",
+              "inputs": {
+                "STOCK": {
+                  "block": {
+                    "type": "calc_string",
+                    "VALUE": "현재 종목"
+                  }
+                },
+                "TIME": {
+                  "block": {
+                    "type": "time_now"
+                  }
+                }
+              }
             }
         ]
       },
@@ -149,27 +261,135 @@
             },
             {
               "kind": "block",
-              "type": "bool_eq"
+              "type": "bool_eq",
+              "inputs": {
+                "VALUE1": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "10"
+                    }
+                  }
+                },
+                "VALUE2": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "10"
+                    }
+                  }
+                }
+              }
             },
             {
               "kind": "block",
-              "type": "bool_ne"
+              "type": "bool_ne",
+              "inputs": {
+                "VALUE1": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "10"
+                    }
+                  }
+                },
+                "VALUE2": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "10"
+                    }
+                  }
+                }
+              }
             },
             {
               "kind": "block",
-              "type": "bool_gt"
+              "type": "bool_gt",
+              "inputs": {
+                "VALUE1": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "10"
+                    }
+                  }
+                },
+                "VALUE2": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "10"
+                    }
+                  }
+                }
+              }
             },
             {
               "kind": "block",
-              "type": "bool_lt"
+              "type": "bool_lt",
+              "inputs": {
+                "VALUE1": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "10"
+                    }
+                  }
+                },
+                "VALUE2": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "10"
+                    }
+                  }
+                }
+              }
             },
             {
               "kind": "block",
-              "type": "bool_ge"
+              "type": "bool_ge",
+              "inputs": {
+                "VALUE1": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "10"
+                    }
+                  }
+                },
+                "VALUE2": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "10"
+                    }
+                  }
+                }
+              }
             },
             {
               "kind": "block",
-              "type": "bool_le"
+              "type": "bool_le",
+              "inputs": {
+                "VALUE1": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "10"
+                    }
+                  }
+                },
+                "VALUE2": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "10"
+                    }
+                  }
+                }
+              }
             },
             {
               "kind": "sep",
@@ -177,15 +397,46 @@
             },
             {
               "kind": "block",
-              "type": "bool_and"
+              "type": "bool_and",
+              "inputs": {
+                "VALUE1": {
+                  "shadow": {
+                    "type": "bool_true"
+                  }
+                },
+                "VALUE2": {
+                  "shadow": {
+                    "type": "bool_false"
+                  }
+                }
+              }
             },
             {
               "kind": "block",
-              "type": "bool_or"
+              "type": "bool_or",
+              "inputs": {
+                "VALUE1": {
+                  "shadow": {
+                    "type": "bool_true"
+                  }
+                },
+                "VALUE2": {
+                  "shadow": {
+                    "type": "bool_false"
+                  }
+                }
+              }
             },
             {
               "kind": "block",
-              "type": "bool_not"
+              "type": "bool_not",
+              "inputs": {
+                "VALUE": {
+                  "shadow": {
+                    "type": "bool_true"
+                  }
+                }
+              }
             }
         ]
       },
@@ -200,7 +451,17 @@
             },
             {
               "kind": "block",
-              "type": "time_minutes_ago"
+              "type": "time_minutes_ago",
+              "inputs": {
+                "VALUE": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "10"
+                    }
+                  }
+                }
+              }
             },
             {
               "kind": "block",
@@ -216,27 +477,135 @@
             },
             {
               "kind": "block",
-              "type": "calc_plus"
+              "type": "calc_plus",
+              "inputs": {
+                "VALUE1": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "10"
+                    }
+                  }
+                },
+                "VALUE2": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "10"
+                    }
+                  }
+                }
+              }
             },
             {
               "kind": "block",
-              "type": "calc_minus"
+              "type": "calc_minus",
+              "inputs": {
+                "VALUE1": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "10"
+                    }
+                  }
+                },
+                "VALUE2": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "10"
+                    }
+                  }
+                }
+              }
             },
             {
               "kind": "block",
-              "type": "calc_times"
+              "type": "calc_times",
+              "inputs": {
+                "VALUE1": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "10"
+                    }
+                  }
+                },
+                "VALUE2": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "10"
+                    }
+                  }
+                }
+              }
             },
             {
               "kind": "block",
-              "type": "calc_divided_by"
+              "type": "calc_divided_by",
+              "inputs": {
+                "VALUE1": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "10"
+                    }
+                  }
+                },
+                "VALUE2": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "10"
+                    }
+                  }
+                }
+              }
             },
             {
               "kind": "block",
-              "type": "calc_share_remainder"
+              "type": "calc_share_remainder",
+              "inputs": {
+                "VALUE1": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "10"
+                    }
+                  }
+                },
+                "VALUE2": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "10"
+                    }
+                  }
+                }
+              }
             },
             {
               "kind": "block",
-              "type": "calc_random"
+              "type": "calc_random",
+              "inputs": {
+                "VALUE1": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "0"
+                    }
+                  }
+                },
+                "VALUE2": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "10"
+                    }
+                  }
+                }
+              }
             },
             {
               "kind": "sep",
@@ -248,15 +617,77 @@
             },
             {
               "kind": "block",
-              "type": "calc_string_concat"
+              "type": "calc_string_concat",
+              "inputs": {
+                "VALUE1": {
+                  "shadow": {
+                    "type": "calc_string",
+                    "fields": {
+                      "VALUE": "안녕"
+                    }
+                  }
+                },
+                "VALUE2": {
+                  "shadow": {
+                    "type": "calc_string",
+                    "fields": {
+                      "VALUE": "하세요!"
+                    }
+                  }
+                }
+              }
             },
             {
               "kind": "block",
-              "type": "calc_string_index"
+              "type": "calc_string_index",
+              "inputs": {
+                "VALUE": {
+                  "shadow": {
+                    "type": "calc_string",
+                    "fields": {
+                      "VALUE": "안녕하세요!"
+                    }
+                  }
+                },
+                "INDEX": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "10"
+                    }
+                  }
+                }
+              }
             },
             {
               "kind": "block",
-              "type": "calc_string_slice"
+              "type": "calc_string_slice",
+              "inputs": {
+                "VALUE": {
+                  "shadow": {
+                    "type": "calc_string",
+                    "fields": {
+                      "VALUE": "안녕하세요!"
+                    }
+                  }
+                },
+                "INDEX1": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "1"
+                    }
+                  }
+                },
+                "INDEX2": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "3"
+                    }
+                  }
+                }
+              }
             }
         ]
       },
@@ -267,15 +698,53 @@
         "contents": [
             {
               "kind": "block",
-              "type": "data_variable"
+              "type": "data_variable",
+              "inputs": {
+                "VARIABLE": {
+                  "shadow": {
+                    "type": "calc_string",
+                    "fields": {
+                      "VALUE": "변수"
+                    }
+                  }
+                }
+              }
             },
             {
               "kind": "block",
-              "type": "data_variable_set"
+              "type": "data_variable_set",
+              "inputs": {
+                "VARIABLE": {
+                  "shadow": {
+                    "type": "calc_string",
+                    "fields": {
+                      "VALUE": "변수"
+                    }
+                  }
+                }
+              }
             },
             {
               "kind": "block",
-              "type": "data_variable_add"
+              "type": "data_variable_add",
+              "inputs": {
+                "VARIABLE": {
+                  "shadow": {
+                    "type": "calc_string",
+                    "fields": {
+                      "VALUE": "변수"
+                    }
+                  }
+                },
+                "VALUE": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "10"
+                    }
+                  }
+                }
+              }
             },
             {
               "kind": "sep",
@@ -283,31 +752,133 @@
             },
             {
               "kind": "block",
-              "type": "data_list_index"
+              "type": "data_list_index",
+              "inputs": {
+                "LIST": {
+                  "shadow": {
+                    "type": "calc_string",
+                    "fields": {
+                      "VALUE": "리스트"
+                    }
+                  }
+                },
+                "INDEX": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "10"
+                    }
+                  }
+                }
+              }
             },
             {
               "kind": "block",
-              "type": "data_list_append"
+              "type": "data_list_append",
+              "inputs": {
+                "LIST": {
+                  "shadow": {
+                    "type": "calc_string",
+                    "fields": {
+                      "VALUE": "리스트"
+                    }
+                  }
+                }
+              }
             },
             {
               "kind": "block",
-              "type": "data_list_pop"
+              "type": "data_list_pop",
+              "inputs": {
+                "LIST": {
+                  "shadow": {
+                    "type": "calc_string",
+                    "fields": {
+                      "VALUE": "리스트"
+                    }
+                  }
+                },
+                "INDEX": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "10"
+                    }
+                  }
+                }
+              }
             },
             {
               "kind": "block",
-              "type": "data_list_put_in"
+              "type": "data_list_put_in",
+              "inputs": {
+                "LIST": {
+                  "shadow": {
+                    "type": "calc_string",
+                    "fields": {
+                      "VALUE": "리스트"
+                    }
+                  }
+                },
+                "INDEX": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "10"
+                    }
+                  }
+                }
+              }
             },
             {
               "kind": "block",
-              "type": "data_list_set_index"
+              "type": "data_list_set_index",
+              "inputs": {
+                "LIST": {
+                  "shadow": {
+                    "type": "calc_string",
+                    "fields": {
+                      "VALUE": "리스트"
+                    }
+                  }
+                },
+                "INDEX": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "10"
+                    }
+                  }
+                }
+              }
             },
             {
               "kind": "block",
-              "type": "data_list_length"
+              "type": "data_list_length",
+              "inputs": {
+                "LIST": {
+                  "shadow": {
+                    "type": "calc_string",
+                    "fields": {
+                      "VALUE": "리스트"
+                    }
+                  }
+                }
+              }
             },
             {
               "kind": "block",
-              "type": "data_list_have"
+              "type": "data_list_have",
+              "inputs": {
+                "LIST": {
+                  "shadow": {
+                    "type": "calc_string",
+                    "fields": {
+                      "VALUE": "리스트"
+                    }
+                  }
+                }
+              }
             }
         ]
       },
@@ -318,7 +889,17 @@
         "contents": [
             {
               "kind": "block",
-              "type": "function_call"
+              "type": "function_call",
+              "inputs": {
+                "FUNCTION": {
+                  "shadow": {
+                    "type": "calc_string",
+                    "fields": {
+                      "VALUE": "함수"
+                    }
+                  }
+                }
+              }
             }
         ]
       }
