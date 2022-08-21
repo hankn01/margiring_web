@@ -22,6 +22,8 @@ function BlockWorkspace() {
         <div>
             <div id="blocklyDiv" style={{width: "1024px", height: "600px"}}></div>
             <div id="toolbox" style={{display: "none"}}></div>
+            <script src="blockly_compressed.js"></script>
+            <script src="python_compressed.js"></script>
         </div>
     );
 }

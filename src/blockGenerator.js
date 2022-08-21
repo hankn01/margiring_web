@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-return */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/restrict-plus-operands */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
-import Blockly from "blockly"
-import "blockly/python"
+import Blockly from "blockly";
 
 // TODO: Assemble Python into code variable.
 
@@ -49,15 +50,12 @@ export function defineBlockGenerator() {
   };
   // 흐름 블록
   Blockly.Python['flow_if'] = function(block) {
-    let code = 'if ' + block.getFieldValue('CONDITION') + ':';
+    let code = 'print(\'random code!\')\n';
     return code;
   };
 
   Blockly.Python['flow_if_else'] = function(block) {
-    let code = 'if ' + block.getFieldValue('CONDITION') + ':'
-              + block.getFieldValue('IF_STATEMENT')
-              + 'else:'
-              + block.getFieldValue('ELSE_STATEMENT');
+    let code = 'print(\'random code!\')\n';
     return code;
   };
 
@@ -127,58 +125,75 @@ export function defineBlockGenerator() {
   };
   // 판단 블록
   Blockly.Python['bool_true'] = function(block) {
-    let code = 'print(\'random code!\')\n';
-    return code;
+    let code = 'True';
+    return [code, Blockly.Python.ORDER_ATOMIC];
   };
 
   Blockly.Python['bool_false'] = function(block) {
-    let code = 'print(\'random code!\')\n';
-    return code;
+    let code = 'False';
+    return [code, Blockly.Python.ORDER_ATOMIC];
   };
 
   Blockly.Python['bool_eq'] = function(block) {
-    let code = 'print(\'random code!\')\n';
-    return code;
+    const value1 = Blockly.Python.valueToCode(block, 'VALUE1', Blockly.Python.ORDER_ATOMIC);
+    const value2 = Blockly.Python.valueToCode(block, 'VALUE2', Blockly.Python.ORDER_NONE);
+    const code = value1 + ' == ' + value2;
+    return [code, Blockly.Python.ORDER_EQUALITY];
   };
 
   Blockly.Python['bool_ne'] = function(block) {
-    let code = 'print(\'random code!\')\n';
-    return code;
+    const value1 = Blockly.Python.valueToCode(block, 'VALUE1', Blockly.Python.ORDER_ATOMIC);
+    const value2 = Blockly.Python.valueToCode(block, 'VALUE2', Blockly.Python.ORDER_NONE);
+    const code = value1 + ' != ' + value2;
+    return [code, Blockly.Python.ORDER_EQUALITY];
   };
 
   Blockly.Python['bool_gt'] = function(block) {
-    let code = 'print(\'random code!\')\n';
-    return code;
+    const value1 = Blockly.Python.valueToCode(block, 'VALUE1', Blockly.Python.ORDER_ATOMIC);
+    const value2 = Blockly.Python.valueToCode(block, 'VALUE2', Blockly.Python.ORDER_NONE);
+    const code = value1 + ' > ' + value2;
+    return [code, Blockly.Python.ORDER_RELATIONAL];
   };
 
   Blockly.Python['bool_lt'] = function(block) {
-    let code = 'print(\'random code!\')\n';
-    return code;
+    const value1 = Blockly.Python.valueToCode(block, 'VALUE1', Blockly.Python.ORDER_ATOMIC);
+    const value2 = Blockly.Python.valueToCode(block, 'VALUE2', Blockly.Python.ORDER_NONE);
+    const code = value1 + ' < ' + value2;
+    return [code, Blockly.Python.ORDER_RELATIONAL];
   };
 
   Blockly.Python['bool_ge'] = function(block) {
-    let code = 'print(\'random code!\')\n';
-    return code;
+    const value1 = Blockly.Python.valueToCode(block, 'VALUE1', Blockly.Python.ORDER_ATOMIC);
+    const value2 = Blockly.Python.valueToCode(block, 'VALUE2', Blockly.Python.ORDER_NONE);
+    const code = value1 + ' >= ' + value2;
+    return [code, Blockly.Python.ORDER_RELATIONAL];
   };
 
   Blockly.Python['bool_le'] = function(block) {
-    let code = 'print(\'random code!\')\n';
-    return code;
+    const value1 = Blockly.Python.valueToCode(block, 'VALUE1', Blockly.Python.ORDER_ATOMIC);
+    const value2 = Blockly.Python.valueToCode(block, 'VALUE2', Blockly.Python.ORDER_NONE);
+    const code = value1 + ' <= ' + value2;
+    return [code, Blockly.Python.ORDER_RELATIONAL];
   };
 
   Blockly.Python['bool_and'] = function(block) {
-    let code = 'print(\'random code!\')\n';
-    return code;
+    const value1 = Blockly.Python.valueToCode(block, 'VALUE1', Blockly.Python.ORDER_ATOMIC);
+    const value2 = Blockly.Python.valueToCode(block, 'VALUE2', Blockly.Python.ORDER_NONE);
+    const code = value1 + ' and ' + value2;
+    return [code, Blockly.Python.ORDER_LOGICAL_AND];
   };
 
   Blockly.Python['bool_or'] = function(block) {
-    let code = 'print(\'random code!\')\n';
-    return code;
+    const value1 = Blockly.Python.valueToCode(block, 'VALUE1', Blockly.Python.ORDER_ATOMIC);
+    const value2 = Blockly.Python.valueToCode(block, 'VALUE2', Blockly.Python.ORDER_NONE);
+    const code = value1 + ' or ' + value2;
+    return [code, Blockly.Python.ORDER_LOGICAL_OR];
   };
 
   Blockly.Python['bool_not'] = function(block) {
-    let code = 'print(\'random code!\')\n';
-    return code;
+    const value = Blockly.Python.valueToCode(block, 'VALUE1', Blockly.Python.NONE);
+    const code = 'not ' + value;
+    return [code, Blockly.Python.ORDER_LOGICAL_NOT];
   };
   // 계산/시간 블록
   Blockly.Python['time_now'] = function(block) {
