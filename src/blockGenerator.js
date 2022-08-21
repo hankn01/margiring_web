@@ -1,291 +1,297 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/restrict-plus-operands */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import Blockly from "blockly"
+import "blockly/python"
 
-// TODO: Assemble JavaScript into code variable.
+// TODO: Assemble Python into code variable.
 
 export function defineBlockGenerator() {
   // 시작 블록
-  Blockly.JavaScript['event_program_started'] = function(block) {
+  Blockly.Python['event_program_started'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['event_program_on_working'] = function(block) {
+  Blockly.Python['event_program_on_working'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['event_signal_recieved'] = function(block) {
+  Blockly.Python['event_signal_recieved'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['event_send_signal'] = function(block) {
+  Blockly.Python['event_send_signal'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['event_await_signal'] = function(block) {
+  Blockly.Python['event_await_signal'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['event_selling'] = function(block) {
+  Blockly.Python['event_selling'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
   
-  Blockly.JavaScript['event_buying'] = function(block) {
+  Blockly.Python['event_buying'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['event_trade_info'] = function(block) {
+  Blockly.Python['event_trade_info'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
   // 흐름 블록
-  Blockly.JavaScript['flow_if'] = function(block) {
+  Blockly.Python['flow_if'] = function(block) {
+    let code = 'if ' + block.getFieldValue('CONDITION') + ':';
+    return code;
+  };
+
+  Blockly.Python['flow_if_else'] = function(block) {
+    let code = 'if ' + block.getFieldValue('CONDITION') + ':'
+              + block.getFieldValue('IF_STATEMENT')
+              + 'else:'
+              + block.getFieldValue('ELSE_STATEMENT');
+    return code;
+  };
+
+  Blockly.Python['flow_await'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['flow_if_else'] = function(block) {
+  Blockly.Python['flow_repeat_times'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['flow_await'] = function(block) {
+  Blockly.Python['flow_repeat'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['flow_repeat_times'] = function(block) {
+  Blockly.Python['flow_while'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['flow_repeat'] = function(block) {
-    let code = 'print(\'random code!\')\n';
-    return code;
-  };
-
-  Blockly.JavaScript['flow_while'] = function(block) {
-    let code = 'print(\'random code!\')\n';
-    return code;
-  };
-
-  Blockly.JavaScript['flow_break'] = function(block) {
+  Blockly.Python['flow_break'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
   // 거래 블록
-  Blockly.JavaScript['trade_buy'] = function(block) {
+  Blockly.Python['trade_buy'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['trade_sell'] = function(block) {
+  Blockly.Python['trade_sell'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['trade_is_selling'] = function(block) {
+  Blockly.Python['trade_is_selling'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['trade_is_settled'] = function(block) {
+  Blockly.Python['trade_is_settled'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['trade_my_budget'] = function(block) {
+  Blockly.Python['trade_my_budget'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['trade_my_coin'] = function(block) {
+  Blockly.Python['trade_my_coin'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['trade_trade_info'] = function(block) {
+  Blockly.Python['trade_trade_info'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['trade_stock_info'] = function(block) {
+  Blockly.Python['trade_stock_info'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
   // 판단 블록
-  Blockly.JavaScript['bool_true'] = function(block) {
+  Blockly.Python['bool_true'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['bool_false'] = function(block) {
+  Blockly.Python['bool_false'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['bool_eq'] = function(block) {
+  Blockly.Python['bool_eq'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['bool_ne'] = function(block) {
+  Blockly.Python['bool_ne'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['bool_gt'] = function(block) {
+  Blockly.Python['bool_gt'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['bool_lt'] = function(block) {
+  Blockly.Python['bool_lt'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['bool_ge'] = function(block) {
+  Blockly.Python['bool_ge'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['bool_le'] = function(block) {
+  Blockly.Python['bool_le'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['bool_and'] = function(block) {
+  Blockly.Python['bool_and'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['bool_or'] = function(block) {
+  Blockly.Python['bool_or'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['bool_not'] = function(block) {
+  Blockly.Python['bool_not'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
   // 계산/시간 블록
-  Blockly.JavaScript['time_now'] = function(block) {
+  Blockly.Python['time_now'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['time_minutes_ago'] = function(block) {
+  Blockly.Python['time_minutes_ago'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['time_specific'] = function(block) {
+  Blockly.Python['time_specific'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['calc_plus'] = function(block) {
+  Blockly.Python['calc_plus'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['calc_minus'] = function(block) {
+  Blockly.Python['calc_minus'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['calc_times'] = function(block) {
+  Blockly.Python['calc_times'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['calc_divided_by'] = function(block) {
+  Blockly.Python['calc_divided_by'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['calc_share_remainder'] = function(block) {
+  Blockly.Python['calc_share_remainder'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['calc_random'] = function(block) {
+  Blockly.Python['calc_random'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['calc_string_concat'] = function(block) {
+  Blockly.Python['calc_string_concat'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['calc_string_index'] = function(block) {
+  Blockly.Python['calc_string_index'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['calc_string_slice'] = function(block) {
+  Blockly.Python['calc_string_slice'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
   // 자료 블록
-  Blockly.JavaScript['data_variable'] = function(block) {
+  Blockly.Python['data_variable'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['data_variable_set'] = function(block) {
+  Blockly.Python['data_variable_set'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['data_variable_add'] = function(block) {
+  Blockly.Python['data_variable_add'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['data_list_index'] = function(block) {
+  Blockly.Python['data_list_index'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['data_list_append'] = function(block) {
+  Blockly.Python['data_list_append'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['data_list_pop'] = function(block) {
+  Blockly.Python['data_list_pop'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['data_list_put_in'] = function(block) {
+  Blockly.Python['data_list_put_in'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['data_list_set_index'] = function(block) {
+  Blockly.Python['data_list_set_index'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['data_list_length'] = function(block) {
+  Blockly.Python['data_list_length'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['data_list_have'] = function(block) {
+  Blockly.Python['data_list_have'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   };
 
-  Blockly.JavaScript['function_call'] = function(block) {
+  Blockly.Python['function_call'] = function(block) {
     let code = 'print(\'random code!\')\n';
     return code;
   }
