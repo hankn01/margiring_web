@@ -1,0 +1,56 @@
+#MenuDiv {
+    position: absolute;
+    top: 549px;
+    left: 0px;
+}
+
+#CoinTabContents{
+    position: absolute;
+    top: 600px;
+    left: 25px;
+    background-color: #f1f5f9;
+    width: 432px;
+    height: 351px;
+}
+li {
+    display: inline;
+}
+.tabs{
+    position: absolute;
+    top: -10px;
+    width: 465px;
+    left: -12px;
+}
+
+ul li {
+    padding-top: 10px;
+    float: left;
+    width: 20%;
+    height: 48px;
+    color: #1e78ff;
+    font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+  text-align: center;
+  color: #63696d;
+}
+
+ul li:active {
+    float: left;
+    width: 20%;
+    height: 48px;
+    text-align: center;
+    font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+  color: #1e78ff;
+    border-bottom: 3px solid #1e78ff;
+}
