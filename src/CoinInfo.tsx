@@ -7,7 +7,12 @@ function CoinInfo()
         <div className={`${styles.CoinInfoUpperDiv}`}> {/* 코인 정보가 표시되는 오른쪽 위 부분 */}
             <div className={`${styles.CoinInfoUpperInnerDiv}`}>
                 
-                <span className={`${styles.CoinImage}`}>(I)</span>
+                <span className={`${styles.CoinImage}`}>
+                    <img src="https://cryptologos.cc/logos/flow-flow-logo.png?v=023" width="100%" height="100%"></img>
+
+
+
+                </span>
                 <div id={`${styles.CoinNameDiv}`}>
                     <span className={`${styles.CoinName}`}>플로우</span>
                     <span className={`${styles.CoinID}`}>FLOW</span>
@@ -36,7 +41,9 @@ function CoinInfo()
 
 
             </div>
-            <div id={`${styles.CoinListSearchDiv}`}></div>
+            <div id={`${styles.CoinListSearchDiv}`}>
+                <input id="CoinNameSymbolSearchInput"></input>
+            </div>
         </div>
     );
 }
