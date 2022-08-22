@@ -1,0 +1,46 @@
+#CoinTHead {
+    width: 432px;
+    height: 32px;
+    flex-grow: 0;
+    background-color: #f1f5f9;
+    font-family: Pretendard;
+  font-size: 12px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+  text-align: center;
+  color: #495262;
+  
+}
+tbody > tr{
+    height: 58.5px;
+    font-family: Pretendard;
+  font-size: 12px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #0b0b0b;
+}
+
+thead > tr{
+    height: 32px;
+    background-color: #f1f5f9;
+    
+}
+thead > tr > th{
+    border: 5px solid #f1f5f9;
+}
+
+table{
+    border-collapse: collapse;
+    width: 432px;
+}
+
+.CoinTableRightText{
+    text-align: right;
+}
