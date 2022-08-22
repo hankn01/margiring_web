@@ -153,7 +153,8 @@ export function defineBlockInfo() {
         "args0": [
           {
             "type": "input_value",
-            "name": "CONDITION"
+            "name": "CONDITION",
+            "check": "Boolean"
           },
           {
             "type": "input_dummy"
@@ -177,7 +178,8 @@ export function defineBlockInfo() {
         "args0": [
           {
             "type": "input_value",
-            "name": "CONDITION"
+            "name": "CONDITION",
+            "check": "Boolean"
           },
           {
             "type": "input_dummy"
@@ -211,7 +213,8 @@ export function defineBlockInfo() {
         "args0": [
           {
             "type": "input_value",
-            "name": "CONDITION"
+            "name": "CONDITION",
+            "check": "Boolean"
           },
           {
             "type": "input_dummy"
@@ -235,7 +238,8 @@ export function defineBlockInfo() {
         "args0": [
           {
             "type": "input_value",
-            "name": "COUNT"
+            "name": "COUNT",
+            "check": "Number"
           },
           {
             "type": "input_dummy"
@@ -279,19 +283,20 @@ export function defineBlockInfo() {
         "args0": [
           {
             "type": "input_value",
-            "name": "NAME"
+            "name": "CONDITION",
+            "check": "Boolean"
           },
           {
             "type": "field_dropdown",
-            "name": "NAME",
+            "name": "CASE",
             "options": [
               [
                 "될 때까지",
-                "OPTIONNAME"
+                "OPTION1"
               ],
               [
                 "참인 동안",
-                "OPTIONNAME"
+                "OPTION2"
               ]
             ]
           },
@@ -328,15 +333,18 @@ export function defineBlockInfo() {
         "args0": [
           {
             "type": "input_value",
-            "name": "INVESTMENT"
+            "name": "INVESTMENT",
+            "check": "String"
           },
           {
             "type": "input_value",
-            "name": "VOLUME"
+            "name": "VOLUME",
+            "check": "Number"
           },
           {
             "type": "input_value",
-            "name": "CONDITION"
+            "name": "CONDITION",
+            "check": "Number"
           }
         ],
         "previousStatement": null,
@@ -352,11 +360,13 @@ export function defineBlockInfo() {
         "args0": [
           {
             "type": "input_value",
-            "name": "INVESTMENT"
+            "name": "INVESTMENT",
+            "check": "String"
           },
           {
             "type": "input_value",
-            "name": "VOLUME"
+            "name": "VOLUME",
+            "check": "Number"
           },
           {
             "type": "input_value",
@@ -375,19 +385,20 @@ export function defineBlockInfo() {
         "args0": [
           {
             "type": "input_value",
-            "name": "NAME"
+            "name": "TRADEINFO",
+            "check": "TradeInfo"
           },
           {
             "type": "field_dropdown",
-            "name": "NAME",
+            "name": "VALUE",
             "options": [
               [
                 "매수",
-                "OPTIONNAME"
+                "OPTION1"
               ],
               [
                 "매도",
-                "OPTIONNAME"
+                "OPTION2"
               ]
             ]
           }
@@ -403,7 +414,8 @@ export function defineBlockInfo() {
         "args0": [
           {
             "type": "input_value",
-            "name": "NAME"
+            "name": "TRADEINFO",
+            "check": "TradeInfo"
           }
         ],
         "output": "Boolean",
@@ -441,11 +453,12 @@ export function defineBlockInfo() {
         "args0": [
           {
             "type": "input_value",
-            "name": "NAME"
+            "name": "TRADEINFO",
+            "check": "TradeInfo"
           },
           {
             "type": "field_dropdown",
-            "name": "NAME",
+            "name": "VALUE",
             "options": [
               [
                 "종목 정보",
@@ -477,15 +490,17 @@ export function defineBlockInfo() {
         "args0": [
           {
             "type": "input_value",
-            "name": "NAME"
+            "name": "STOCK",
+            "check": "String"
           },
           {
             "type": "input_value",
-            "name": "NAME"
+            "name": "TIME",
+            "check": "Time"
           },
           {
             "type": "field_dropdown",
-            "name": "NAME",
+            "name": "VALUE",
             "options": [
               [
                 "코드",
@@ -596,14 +611,16 @@ export function defineBlockInfo() {
         "args0": [
           {
             "type": "input_value",
-            "name": "VALUE1"
+            "name": "VALUE1",
+            "check": "Number"
           },
           {
             "type": "input_dummy"
           },
           {
             "type": "input_value",
-            "name": "VALUE2"
+            "name": "VALUE2",
+            "check": "Number"
           }
         ],
         "output": "Boolean",
@@ -617,14 +634,16 @@ export function defineBlockInfo() {
         "args0": [
           {
             "type": "input_value",
-            "name": "VALUE1"
+            "name": "VALUE1",
+            "check": "Number"
           },
           {
             "type": "input_dummy"
           },
           {
             "type": "input_value",
-            "name": "VALUE2"
+            "name": "VALUE2",
+            "check": "Number"
           }
         ],
         "output": "Boolean",
@@ -638,14 +657,16 @@ export function defineBlockInfo() {
         "args0": [
           {
             "type": "input_value",
-            "name": "VALUE1"
+            "name": "VALUE1",
+            "check": "Number"
           },
           {
             "type": "input_dummy"
           },
           {
             "type": "input_value",
-            "name": "VALUE2"
+            "name": "VALUE2",
+            "check": "Number"
           }
         ],
         "output": "Boolean",
@@ -659,14 +680,16 @@ export function defineBlockInfo() {
         "args0": [
           {
             "type": "input_value",
-            "name": "VALUE1"
+            "name": "VALUE1",
+            "check": "Number"
           },
           {
             "type": "input_dummy"
           },
           {
             "type": "input_value",
-            "name": "VALUE2"
+            "name": "VALUE2",
+            "check": "Number"
           }
         ],
         "output": "Boolean",
@@ -680,14 +703,16 @@ export function defineBlockInfo() {
         "args0": [
           {
             "type": "input_value",
-            "name": "VALUE1"
+            "name": "VALUE1",
+            "check": "Boolean"
           },
           {
             "type": "input_dummy"
           },
           {
             "type": "input_value",
-            "name": "VALUE2"
+            "name": "VALUE2",
+            "check": "Boolean"
           }
         ],
         "output": "Boolean",
@@ -701,14 +726,16 @@ export function defineBlockInfo() {
         "args0": [
           {
             "type": "input_value",
-            "name": "VALUE1"
+            "name": "VALUE1",
+            "check": "Boolean"
           },
           {
             "type": "input_dummy"
           },
           {
             "type": "input_value",
-            "name": "VALUE2"
+            "name": "VALUE2",
+            "check": "Boolean"
           }
         ],
         "output": "Boolean",
@@ -722,7 +749,8 @@ export function defineBlockInfo() {
         "args0": [
           {
             "type": "input_value",
-            "name": "VALUE1"
+            "name": "VALUE",
+            "check": "Boolean"
           }
         ],
         "output": "Boolean",
@@ -745,7 +773,8 @@ export function defineBlockInfo() {
         "args0": [
           {
             "type": "input_value",
-            "name": "NAME"
+            "name": "VALUE",
+            "check": "Number"
           }
         ],
         "output": "Time",
@@ -759,7 +788,7 @@ export function defineBlockInfo() {
         "args0": [
           {
             "type": "field_input",
-            "name": "NAME",
+            "name": "TIME",
             "text": "\bYYYY/MM/DD HH:mm"
           }
         ],
@@ -888,7 +917,7 @@ export function defineBlockInfo() {
           },
           {
             "type": "field_dropdown",
-            "name": "NAME",
+            "name": "VALUE",
             "options": [
               [
                 "몫",
@@ -973,12 +1002,12 @@ export function defineBlockInfo() {
         "args0": [
           {
             "type": "input_value",
-            "name": "VALUE1",
+            "name": "VALUE",
             "check": "String"
           },
           {
             "type": "input_value",
-            "name": "VALUE2",
+            "name": "INDEX",
             "check": "Number"
           }
         ],
@@ -995,17 +1024,17 @@ export function defineBlockInfo() {
         "args0": [
           {
             "type": "input_value",
-            "name": "VALUE1",
+            "name": "VALUE",
             "check": "String"
           },
           {
             "type": "input_value",
-            "name": "VALUE2",
+            "name": "INDEX1",
             "check": "Number"
           },
           {
             "type": "input_value",
-            "name": "VALUE3",
+            "name": "INDEX2",
             "check": "Number"
           }
         ],
@@ -1022,7 +1051,7 @@ export function defineBlockInfo() {
         "args0": [
           {
             "type": "input_value",
-            "name": "NAME"
+            "name": "VARIABLE"
           }
         ],
         "output": null,
@@ -1083,7 +1112,8 @@ export function defineBlockInfo() {
           },
           {
             "type": "input_value",
-            "name": "INDEX"
+            "name": "INDEX",
+            "check": "Number"
           }
         ],
         "inputsInline": true,
@@ -1125,7 +1155,8 @@ export function defineBlockInfo() {
           },
           {
             "type": "input_value",
-            "name": "INDEX"
+            "name": "INDEX",
+            "check": "Number"
           }
         ],
         "colour": DATA_COLOUR,
@@ -1143,7 +1174,8 @@ export function defineBlockInfo() {
           },
           {
             "type": "input_value",
-            "name": "INDEX"
+            "name": "INDEX",
+            "check": "Number"
           },
           {
             "type": "input_value",
@@ -1168,7 +1200,8 @@ export function defineBlockInfo() {
           },
           {
             "type": "input_value",
-            "name": "INDEX"
+            "name": "INDEX",
+            "check": "Number"
           },
           {
             "type": "input_value",
