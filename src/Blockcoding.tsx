@@ -25,7 +25,6 @@ function Blockcoding() {
                         <BlockWorkspace /> {/* Blockly Toolbox 및 블록 부분 */}
                     </div>
                     <CoinInfo />
-               
                 </div>
             </div>
         );
