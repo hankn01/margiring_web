@@ -17,8 +17,8 @@ function BlockWorkspace() {
     useEffect(() => {
         const handelResize = () => {
             console.log("width height", window.innerWidth, window.innerHeight);
-            debounce(() => {setWidth(window.innerWidth);
-            }, 1000);
+            setWidth(window.innerWidth);
+        
         };
 
         
@@ -29,6 +29,7 @@ function BlockWorkspace() {
           length: 2,
           colour: '#ccc',
           snap: true},
+          trashcan: true
         });
         
        window.addEventListener("resize", handelResize);
@@ -39,7 +40,7 @@ function BlockWorkspace() {
 
     return (
         <div>
-            <div id="blocklyDiv" style={{width: width, height: "1080px"}}></div>
+            <div id="blocklyDiv" style={{width: (width-480)+"px", height: "952px"}}></div>
             <xml id="toolbox" style={{display: "none"}}></xml>
         </div>
     );
