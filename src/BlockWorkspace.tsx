@@ -17,7 +17,8 @@ function BlockWorkspace() {
     useEffect(() => {
         const handelResize = () => {
             console.log("width height", window.innerWidth, window.innerHeight);
-            setWidth(window.innerWidth);
+            debounce(() => {setWidth(window.innerWidth);
+            }, 1000);
         };
 
         
