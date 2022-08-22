@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-function WonCoinList() {
-    return (
-        <div>
-            원화 목록 테스트입니다.
-=======
 /* eslint-disable */
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
@@ -36,7 +28,6 @@ function WonCoinList() {
     return (
         <div>
             <div>{ETHPrice}</div>
->>>>>>> react-backtest-style
         </div>
     )
 }

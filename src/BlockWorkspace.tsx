@@ -5,9 +5,10 @@
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import Blockly from "blockly";
-import toolbox from "./BlockDefinition.json";
 import { debounce } from 'lodash';
-
+import { defineBlockInfo } from "./blockDefinition"
+import { defineBlockGenerator } from "./blockGenerator";
+import toolbox from "./toolbox.json"
 
 
 //주의: BlocklyWorkspace와 이름 혼동하지 않도록 개발 시 주의하시기 바랍니다.
@@ -15,6 +16,8 @@ import { debounce } from 'lodash';
 function BlockWorkspace() {
     const [width, setWidth] = useState(window.innerWidth);
     useEffect(() => {
+        defineBlockInfo();
+        defineBlockGenerator();
         const handelResize = () => {
             console.log("width height", window.innerWidth, window.innerHeight);
             setWidth(window.innerWidth);
