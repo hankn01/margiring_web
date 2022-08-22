@@ -10,7 +10,12 @@
     "@types/node": "^16.11.45",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
+<<<<<<< HEAD
     "blockly": "^8.0.5",
+=======
+    "axios": "^0.27.2",
+    "blockly": "^8.0.4",
+>>>>>>> react-backtest-style
     "bootstrap": "^5.2.0",
     "cypress": "^10.4.0",
     "react": "^18.2.0",

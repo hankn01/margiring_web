@@ -1,9 +1,20 @@
 * {
     box-sizing: border-box;
   }
-  body {
+
+  #BackTestWrapper {
     font-size: 14px;
+    width: 888px;
+    height: 982px;
+    border-radius: 8px;
+    background-color: #fff;
+    position: absolute;
+    left: 32px;
+    right: 32px;
+    top: 30px;
+
   }
+
   .BacktestMiddleDiv {
     width: 900px;
     height: 640px;
@@ -11,30 +22,41 @@
     opacity: 1;
     position: absolute;
     top: 155px;
+
     left: 0px;
+
     overflow: hidden;
   }
   .BacktestUpperDiv {
     width: 900px;
-    height: 155px;
-    background: rgba(217,217,217,1);
+    height: 347.5px;
+    background: #fff;
     opacity: 1;
     position: absolute;
     top: 0px;
     left: 0px;
     overflow: hidden;
   }
+
   .InvestAmountCaption {
     width: 56px;
     color: rgba(0,0,0,1);
     position: absolute;
-    top: 20%;
-    left: 10%;
-    font-family: Inter;
-    font-weight: Regular;
-    font-size: 15px;
+
+    top: 68px;
+    left: 26px;
+    
     opacity: 1;
-    text-align: left;
+    z-index: 1;
+    font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2a323f;
   }
   .InvestFeeCaption {
     width: 83px;
@@ -76,68 +98,205 @@
     width: 56px;
     color: rgba(0,0,0,1);
     position: absolute;
-    bottom: 20%;
-    left: 10%;
-    font-family: Inter;
-    font-weight: Regular;
-    font-size: 15px;
+    top: 14px;
+    left: 26px;
+    
     opacity: 1;
-    text-align: left;
+    z-index: 1;
+    font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2a323f;
   }
   .InvestAmountInput {
-    width: 228px;
-    height: 35px;
+    width: 400px;
+    height: 48px;
+    padding-right: 52px;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
     text-align: right;
-    font-size:20px;
-    opacity: 1;
+    color: #8d8f93;
     position: absolute;
-    top: 17.5%;
-    left: 17.5%;
+    top: 54px;
+    left: 0px;
     overflow: hidden;
+    border-radius: 2px;
+    border: solid 1px #dbdde0;
+    
   }
+  .InvestAmountInput:hover {
+    width: 400px;
+    height: 48px;
+    padding-right: 52px;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: #8d8f93;
+    position: absolute;
+    top: 54px;
+    left: 0px;
+    overflow: hidden;
+    border-radius: 2px;
+    border: solid 1px #dbdde0;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.04);
+  }
+  .InvestAmountInput:focus {
+    width: 400px;
+    height: 48px;
+    padding-right: 52px;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: #8d8f93;
+    position: absolute;
+    top: 54px;
+    left: 0px;
+    overflow: hidden;
+    border-radius: 2px;
+    border: solid 1px #dbdde0;
+    border-radius: 2px;
+  border: solid 1px #2a323f;
+  outline: none;
+  }
+#InvestTermDiv {
+  width: 400px;
+  height: 48px;
+  border-radius: 2px;
+  border: solid 1px #dbdde0;
+  background-color: #fff;
+  position: absolute;
+  top: 118px;
+}
   .WeeklyButton {
-    width: 72px;
-    height: 35px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 64px;
+    height: 46px;
+    border: none;
+    outline: none;
+    z-index: 1;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #2a323f;
+    background-color: #fff;
+  }
+  #WeeklyButtonDiv {
+    width: 66px;
+    height: 48px;
     opacity: 1;
     position: absolute;
-    bottom: 15%;
-    left: 17.5%;
+    top: -1px;
+    left: 103.5px;
     overflow: hidden;
+    border: 1px solid #dbdde0;
+    outline: none;
+    z-index: 1;
   }
   .MonthlyButton {
-    width: 72px;
-    height: 35px;
-    left: 26%;
-    bottom: 15%;
+    width: 66px;
+    height: 48px;
+    position: absolute;
+    
+    top: 0px;
+    left: -1px;
+    opacity: 1;
+    overflow: hidden;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #2a323f;
+    border: none;
+    background-color: #fff;
+  }
+  #MonthlyButtonDiv {
+    width: 66px;
+    height: 48px;
     opacity: 1;
     position: absolute;
+    top: -1px;
+    left: 169.5px;
     overflow: hidden;
+    border: 1px solid #dbdde0;
+    outline: none;
+    z-index: 1;
   }
   .ThreeMonthButton {
-    width: 72px;
-    height: 35px;
-    bottom: 15%;
-    left: 34.5%;
-    opacity: 1;
+    width: 66px;
+    height: 48px;
     position: absolute;
+    left: 235.5px;
+    top: 0px;
+    opacity: 1;
     overflow: hidden;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #2a323f;
+    background-color: #fff;
   }
   .OtherTermButton {
-    width: 72px;
-    height: 35px;
-    bottom: 15%;
-    left: 43%;
-    opacity: 1;
+    width: 97.5px;
+    height: 48px;
     position: absolute;
+    left: 301.5px;
+    top: 0px;
+    opacity: 1;
     overflow: hidden;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #2a323f;
+    background-color: #fff;
   }
   .TaxInput {
     width: 15%;
-    height: 35px;
+    height: 46px;
     opacity: 1;
     position: absolute;
-    top: 17.5%;
-    left: 70%;
+    top: 85px;
+    left: 723.5px;
     overflow: hidden;
   }
   .FeeInput {
@@ -153,13 +312,18 @@
     width: 32px;
     color: rgba(0,0,0,1);
     position: absolute;
-    top: 28%;
-    left: 43.5%;
-    font-family: Inter;
-    font-weight: Regular;
-    font-size: 15px;
-    opacity: 1;
-    text-align: left;
+    top: 68px;
+    left: 356px;
+    z-index: 2;
+    font-family: Pretendard;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: #8d8f93;
   }
   .TapDiv {
     width: 400px;
@@ -183,3 +347,21 @@
     top: 3%;
     right: 2.5%;
   }
+#StrategyTitleCaption {
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   
+   height: 29px;
+   margin: 0px;
+   padding: 0px;
+   font-family: Pretendard;
+  font-size: 24px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2a323f;
+}
