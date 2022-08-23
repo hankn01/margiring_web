@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {Link} from 'react-router-dom';
 import Header from './Header';
 import styles from './css/Mainscr.module.css';
 
 function Mainscr() {
+    useEffect(() => {
+
+
+    });
+
+    
     return (    
         <div className={`${styles.MainFrame}`}> {/* 스크린 전체 div */}
             <Header /> {/* 헤더 부분 */}
@@ -29,10 +35,15 @@ function Mainscr() {
             <div id={`${styles.MiddleContentWrap}`}>
                 {/* 암호화폐 뉴스 표시 div */}
                     
-                    <div className={`${styles.NewsContentDiv}`}></div>
+                    <div className={`${styles.NewsContentDiv}`}>
+                    <iframe src="https://www.coindesk.com/" width="100%" height="850" scrolling="yes" frameBorder="0"></iframe>
+                    
+                    </div>
                 
                  {/* 암호화폐 순위 표시 div */}
-                    <div className={`${styles.RankContent}`}></div>
+                    <div className={`${styles.RankContent}`}>
+                    <iframe src="https://cryptorank.io/" width="100%" height="850" scrolling="yes" frameBorder="0"></iframe>
+                    </div>
                 
             </div>
         </div>
