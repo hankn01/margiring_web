@@ -12,16 +12,18 @@ function Mainscr() {
             <span id={`${styles.StrategyCountCaption}`}>0</span>
             
                 <div className={`${styles.ListContentDiv}`}> 
-                    <span className={`${styles.ListContentText}`}>Strategy 1</span>
+                    {/*<span className={`${styles.ListContentText}`}>Strategy 1</span>*/}
                     
-                    <button className={`${styles.ModifyButton}`}>수정하기</button>
+                    {/*<button className={`${styles.ModifyButton}`}>수정하기</button>
                     <button className={`${styles.DeleteButton}`}>삭제하기</button>
-                    <button className={`${styles.TestExecuteButton}`}>전략 검증하기</button>
+    <button className={`${styles.TestExecuteButton}`}>전략 검증하기</button>*/}
                 </div>
                 <Link to ="./block"> {/* Create New Strategy 버튼을 누르면 블록코딩 화면으로 연결 */}
-                    <button className={`${styles.CreateStrategyButton}`}>
-                        (+)Create New Strategy
-                    </button>
+                   
+                    <div className={`${styles.CreateStrategyButton}`}>
+                        Create New Strategy
+                    </div>
+                    
                 </Link>
             </div>
             <div id={`${styles.MiddleContentWrap}`}>
