@@ -7,10 +7,10 @@ import Blockly from "blockly"
 import Python from "blockly/python_compressed"
 
 export function generateBlockToCode() {
-    let code = "import random"
+    let code = "import random\n"
                 + "import datetime\n"
                 + "import zipline\n"
                 + "import pandas\n\n";
     code += Python.workspaceToCode(Blockly.common.getMainWorkspace());
-    alert(code);
+    console.log(code);
 }
