@@ -1,6 +1,4 @@
-* {
-    box-sizing: border-box;
-  }
+
 
   #BackTestWrapper {
     font-size: 14px;
@@ -16,19 +14,19 @@
   }
 
   .BacktestMiddleDiv {
-    width: 900px;
+    width: 856px;
     height: 640px;
-    background: rgba(253,255,185,1);
+    background: #fff;
     opacity: 1;
     position: absolute;
-    top: 155px;
-
+    top: 347.5px;
+    border-top: 2px solid #dbdde0;
     left: 0px;
 
     overflow: hidden;
   }
   .BacktestUpperDiv {
-    width: 900px;
+    width: 856px;
     height: 347.5px;
     background: #fff;
     opacity: 1;
@@ -62,37 +60,65 @@
     width: 83px;
     color: rgba(0,0,0,1);
     position: absolute;
-    top: 67.5px;
-    left: 60%;
-    font-family: Inter;
-    font-weight: Regular;
-    font-size: 15px;
+    top: 131px;
+    left: 440px;
     opacity: 1;
-    text-align: left;
+    z-index: 1;
+    font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2a323f;
   }
   .InvestSlippageCaption {
-    width: 56px;
+    
     color: rgba(0,0,0,1);
     position: absolute;
-    bottom: 20%;
-    left: 60%;
-    font-family: Inter;
-    font-weight: Regular;
-    font-size: 15px;
-    opacity: 1;
-    text-align: left;
+    left: 440px;
+    top: 192px;
+    z-index: 1;
+    font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2a323f;
+  }
+  #InvestSlippageInput {
+    position: absolute;
+    top: 178px;
+    left: 424px;
+    width: 400px;
+    height: 46px;
+    text-align: right;
+    color: #8d8f93;
+    border-radius: 2px;
+    border: solid 1px #dbdde0;
   }
   .InvestTaxCaption {
     width: 56px;
     color: rgba(0,0,0,1);
     position: absolute;
-    top: 20%;
-    left: 60%;
-    font-family: Inter;
-    font-weight: Regular;
-    font-size: 15px;
+    top: 68px;
+    left: 440px;
     opacity: 1;
-    text-align: left;
+    z-index: 1;
+    font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2a323f;
   }
   .InvestTermCaption {
     width: 56px;
@@ -124,12 +150,13 @@
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    text-align: right;
-    color: #8d8f93;
+   
     position: absolute;
     top: 54px;
     left: 0px;
     overflow: hidden;
+     text-align: right;
+    color: #8d8f93;
     border-radius: 2px;
     border: solid 1px #dbdde0;
     
@@ -252,12 +279,22 @@
     outline: none;
     z-index: 1;
   }
+  #ThreeMonthButtonDiv {
+    width: 66px;
+    height: 48px;
+    opacity: 1;
+    overflow: hidden;
+    position: absolute;
+    left: 235.5px;
+    top: -1px;
+    border: 1px solid #dbdde0;
+    outline: none;
+    z-index: 1;
+  }
   .ThreeMonthButton {
     width: 66px;
     height: 48px;
-    position: absolute;
-    left: 235.5px;
-    top: 0px;
+    border: none;
     opacity: 1;
     overflow: hidden;
     font-family: Pretendard;
@@ -291,22 +328,30 @@
     background-color: #fff;
   }
   .TaxInput {
-    width: 15%;
+    width: 400px;
     height: 46px;
     opacity: 1;
     position: absolute;
-    top: 85px;
-    left: 723.5px;
+    top: 54px;
+    left: 424px;
     overflow: hidden;
+    text-align: right;
+    color: #8d8f93;
+    border-radius: 2px;
+    border: solid 1px #dbdde0;
   }
   .FeeInput {
-    width: 15%;
-    height: 35px;
+    width: 400px;
+    height: 46px;
     opacity: 1;
     position: absolute;
-    top: 40%;
-    left: 70%;
+    top: 118px;
+    left: 424px;
     overflow: hidden;
+    text-align: right;
+    color: #8d8f93;
+    border-radius: 2px;
+    border: solid 1px #dbdde0;
   }
   .TenThousandWonCaption {
     width: 32px;
@@ -364,4 +409,98 @@
   letter-spacing: normal;
   text-align: left;
   color: #2a323f;
+}
+#ExecuteButton {
+  position: absolute;
+  right: 32px;
+  width: 135px;
+  height: 48px;
+  top: 240px;
+  border-radius: 4px;
+  border:none;
+  outline: none;
+  background-color: #1e78ff;
+
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #fff;
+}
+#SummaryCaption{
+  position:absolute;
+  top: 99.5px;
+  left: 32px;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2a323f;
+}
+
+#SummaryDesc{
+  position: absolute;
+  top: 136.5px;
+  left: 32px;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: normal;
+  text-align: left;
+  color: #495262;
+}
+#SummaryTable {
+  position: absolute;
+  top: 176.5px;
+  left: 32px;
+  width: 824px;
+
+  }
+#SummaryTableHead {
+  background-color: #f1f5f9;
+  height: 32px;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #495262;
+}
+#SummaryTableBody {
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: right;
+}
+#AccTableCaption{
+  font-family: Pretendard;
+  font-size: 24px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2a323f;
+  position: absolute;
+  top: 316.5px;
+  left: 32px;
 }
