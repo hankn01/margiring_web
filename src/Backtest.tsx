@@ -1,8 +1,33 @@
-import React from 'react';
+/* eslint-disable */
+
+
+import React, {useEffect, useState} from 'react';
+import axios from 'axios';
+import {generateDummyCode} from './codeGenerator';
 import styles from './css/Backtest.module.css';
 
 function Backtest() {
+    const [TestCode, setTestCode] = useState("");
+    const [ReceivedData, setReceivedData] = useState({"cumulative_yield": "백테스트 전", "annualized_yield": "백테스트 전", "annualized_volatility": "백테스트 전", "sharpe_ratio": "백테스트 전", "MDD": "백테스트 전"});
+    useEffect(() => {
+        const GeneratedCode = generateDummyCode();
+        setTestCode(GeneratedCode);
+    });
+    function ExecuteBacktest() {
+        console.log('Button Test');
+    
+        axios
+            .post("http://backendserver-env.eba-gg774wd2.ap-northeast-2.elasticbeanstalk.com/runpy", TestCode,{headers: { "Content-Type": "text/plain" }})
+            .then(response=>{
+                setReceivedData(JSON.parse(response.data.result));
+                console.log(ReceivedData);
+            });
+        
+        
+    }
+   
     return (
+        
             <>
             <div id={`${styles.BackTestWrapper}`}>
             <div className={`${styles.BacktestUpperDiv}`}>
@@ -33,7 +58,7 @@ function Backtest() {
 
                     <input className={`${styles.TaxInput}`}></input>
                     <input className={`${styles.FeeInput}`}></input>
-                    <button id={`${styles.ExecuteButton}`}>백테스팅 수행</button>
+                    <button id={`${styles.ExecuteButton}`} onClick={ExecuteBacktest}>백테스팅 수행</button>
                 </div>
             </div>
             <div className={`${styles.BacktestMiddleDiv}`}>
@@ -68,19 +93,19 @@ function Backtest() {
                                전략
                             </td>
                             <td>
-                                테스트
+                            {Number(ReceivedData.cumulative_yield)*100+"%"}
                             </td>
                             <td>
-                                테스트
+                            {Number(ReceivedData.annualized_yield)*100+"%"}
                             </td>
                             <td>
-                                테스트
+                            {Number(ReceivedData.annualized_volatility)*100+"%"}
                             </td>
                             <td>
-                                테스트
+                            {ReceivedData.sharpe_ratio}
                             </td>
                             <td>
-                                테스트
+                            {Number(ReceivedData.MDD)*100+"%"}
                             </td>
                         </tr>
                     </tbody>
