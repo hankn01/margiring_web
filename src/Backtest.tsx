@@ -114,7 +114,7 @@ function Backtest() {
                             {(Math.round(Number(ReceivedData.sharpe_ratio)*100)/100).toFixed(2)}
                             </td>
                             <td>
-                            {Math.round(Number(ReceivedData.MDD)*10000)/10000*100+"%"}
+                            {(Math.round(Number(ReceivedData.MDD)*10000)/10000*100).toFixed(2)+"%"}
                             </td>
                         </tr>
                     </tbody>
