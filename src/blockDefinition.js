@@ -161,7 +161,7 @@ export function defineBlockInfo() {
           },
           {
             "type": "input_statement",
-            "name": "IF_STATEMENT"
+            "name": "STATEMENT"
           }
         ],
         "inputsInline": true,
@@ -305,7 +305,7 @@ export function defineBlockInfo() {
           },
           {
             "type": "input_statement",
-            "name": "IF_STATEMENT"
+            "name": "STATEMENT"
           }
         ],
         "inputsInline": true,
@@ -917,7 +917,7 @@ export function defineBlockInfo() {
           },
           {
             "type": "field_dropdown",
-            "name": "VALUE",
+            "name": "OPTION",
             "options": [
               [
                 "몫",

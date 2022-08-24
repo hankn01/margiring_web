@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import BlockWorkspace from './BlockWorkspace';
 import CoinInfo from './CoinInfo';
 import Header from './Header';
+import { generateBlockToCode } from './codeGenerator';
 import styles from './css/Blockcoding.module.css';
 
 function Blockcoding() {
@@ -14,7 +15,7 @@ function Blockcoding() {
                         알고리즘 트레이딩 프로젝트 이름 (예시)
                     </span>
                     <Link to ="/backtest" target="_blank" rel="noopener noreferrer">
-                    <button id={`${styles.StrategyTestButton}`}>전략 검증하기</button>
+                    <button id={`${styles.StrategyTestButton}`} onClick={generateBlockToCode}>전략 검증하기</button>
                     </Link>
                     
                 </div>

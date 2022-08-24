@@ -653,7 +653,7 @@
                   "shadow": {
                     "type": "calc_number",
                     "fields": {
-                      "VALUE": "10"
+                      "VALUE": "3"
                     }
                   }
                 }
