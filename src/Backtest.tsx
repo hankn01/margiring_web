@@ -5,25 +5,31 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import {generateDummyCode} from './codeGenerator';
 import styles from './css/Backtest.module.css';
+import Loading from './Loading';
 
 function Backtest() {
     const [TestCode, setTestCode] = useState("");
-    const [ReceivedData, setReceivedData] = useState({"cumulative_yield": "백테스트 전", "annualized_yield": "백테스트 전", "annualized_volatility": "백테스트 전", "sharpe_ratio": "백테스트 전", "MDD": "백테스트 전"});
+    const [ReceivedData, setReceivedData] = useState({"cumulative_yield": 0, "annualized_yield": 0, "annualized_volatility": 0, "sharpe_ratio": "백테스트 전", "MDD": 0});
+    const [LoadingState, setLoadingState] = useState(false);
+    const [BacktestComplete, setBacktestComplete] = useState(false);
+    
     useEffect(() => {
         const GeneratedCode = generateDummyCode();
         setTestCode(GeneratedCode);
+        //setReceivedData({"cumulative_yield": "백테스트 전", "annualized_yield": "백테스트 전", "annualized_volatility": "백테스트 전", "sharpe_ratio": "백테스트 전", "MDD": "백테스트 전"});
     });
     function ExecuteBacktest() {
         console.log('Button Test');
-    
+        setLoadingState(true);
+        setInterval(()=>console.log("kk"), 3000);
         axios
             .post("http://backendserver-env.eba-gg774wd2.ap-northeast-2.elasticbeanstalk.com/runpy", TestCode,{headers: { "Content-Type": "text/plain" }})
             .then(response=>{
                 setReceivedData(JSON.parse(response.data.result));
                 console.log(ReceivedData);
             });
-        
-        
+        setLoadingState(false);
+        setBacktestComplete(true);
     }
    
     return (
@@ -64,7 +70,9 @@ function Backtest() {
             <div className={`${styles.BacktestMiddleDiv}`}>
                 <span id={`${styles.SummaryCaption}`}>성과 요약</span>
                 <span id={`${styles.SummaryDesc}`}>전략의 성과는 동일 비중 투자 방식으로 계산되었습니다.</span>
+                {BacktestComplete?
                 <table id={`${styles.SummaryTable}`}>
+                    
                     <thead id={`${styles.SummaryTableHead}`}>
                         <tr>
                             <th>
@@ -88,12 +96,13 @@ function Backtest() {
                         </tr>
                     </thead>
                     <tbody id={`${styles.SummaryTableBody}`}>
-                        <tr>
+                       <tr>
                             <td>
                                전략
                             </td>
                             <td>
-                            {Number(ReceivedData.cumulative_yield)*100+"%"}
+                                {Number(ReceivedData.cumulative_yield)*100+"%"}
+                            
                             </td>
                             <td>
                             {Number(ReceivedData.annualized_yield)*100+"%"}
@@ -111,6 +120,16 @@ function Backtest() {
                     </tbody>
 
                 </table>
+
+                :
+                <table id={`${styles.SummaryTable}`}>
+                    
+                    <thead id={`${styles.SummaryTableHead}`}>
+                        <tr>
+                            <th>"백테스트 전입니다. 먼저 백테스트 수행 버튼을 눌러주세요"</th>
+                        </tr>
+                    </thead>
+                    </table>    }
                 <span id={`${styles.AccTableCaption}`}>누적 수익률</span>
         </div>
            
