@@ -101,20 +101,20 @@ function Backtest() {
                                전략
                             </td>
                             <td>
-                                {Number(ReceivedData.cumulative_yield)*100+"%"}
+                                {(Math.round(Number(ReceivedData.cumulative_yield)*10000)/10000*100).toFixed(2)+"%"}
                             
                             </td>
                             <td>
-                            {Number(ReceivedData.annualized_yield)*100+"%"}
+                            {(Math.round(Number(ReceivedData.annualized_yield)*10000)/10000*100).toFixed(2)+"%"}
                             </td>
                             <td>
-                            {Number(ReceivedData.annualized_volatility)*100+"%"}
+                            {(Math.round(Number(ReceivedData.annualized_volatility)*10000)/10000*100).toFixed(2)+"%"}
                             </td>
                             <td>
-                            {ReceivedData.sharpe_ratio}
+                            {(Math.round(Number(ReceivedData.sharpe_ratio)*100)/100).toFixed(2)}
                             </td>
                             <td>
-                            {Number(ReceivedData.MDD)*100+"%"}
+                            {Math.round(Number(ReceivedData.MDD)*10000)/10000*100+"%"}
                             </td>
                         </tr>
                     </tbody>
