@@ -16,7 +16,7 @@ export function generateBlockToCode() {
     return code;
 }
 
-export function testCode() {
+export function generateDummyCode() {
     let code1 = 
 `from json import dumps
 from random import uniform
