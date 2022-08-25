@@ -1,9 +1,55 @@
-import React from 'react';
+/* eslint-disable */
+// @ts-nocheck
+
+import React, {useEffect, useState} from 'react';
 import CoinTab from './CoinTab';
 import styles from './css/CoinInfo.module.css';
+import axios from 'axios';
+
 
 function CoinInfo()
 {
+    const [FLOWPrice, setFLOWPrice] = useState(0);
+    const [FLOWChange, setFLOWChange] = useState([]);
+    const [FLOWAccTradePrice, setFLOWAccTradePrice] = useState(0);
+    useEffect(() => {
+        axios("https://api.upbit.com/v1/ticker?markets=KRW-FLOW").then((FLOWres)=>{ //FLOW 가격 로드 및 저장
+       
+        console.log(FLOWres.data[0].trade_price);
+        if(FLOWres.data!==null)
+        {
+       setFLOWPrice(FLOWres.data[0].trade_price);
+        }
+
+        
+        let PlusMinus = '+';
+        if(FLOWres.data[0].change==="RISE")
+        {
+           PlusMinus = '+';
+        }
+        else if(FLOWres.data[0].change==="FALL")
+        {
+           PlusMinus = '-';
+        }
+        else
+        {
+           PlusMinus = '';
+        }
+        setFLOWChange([PlusMinus, FLOWres.data[0].change_price, FLOWres.data[0].change_rate]);
+        setFLOWAccTradePrice(FLOWres.data[0].acc_trade_price);
+ 
+
+
+       })
+       .catch((err)=> {
+        console.error("Fetch Error", err);
+        setError(err);
+       })
+
+
+    
+
+    }, []);
     return (
         <div className={`${styles.CoinInfoUpperDiv}`}> {/* 코인 정보가 표시되는 오른쪽 위 부분 */}
             <div className={`${styles.CoinInfoUpperInnerDiv}`}>
@@ -20,14 +66,14 @@ function CoinInfo()
                 </div>
                 <div id={`${styles.CoinPMDiv}`}>
                     <span className={`${styles.CompareYesterday}`}>전일대비</span>
-                    <div id={`${styles.ComparePercent}`}>-3.74%</div>
-                    <span className={`${styles.PlusMinus}`}>-140</span>
+                    <div id={`${styles.ComparePercent}`}>{FLOWChange[0]+(Math.round(Number(FLOWChange[2])*10000)/10000*100).toFixed(2)+'%'}</div>
+                    <span className={`${styles.PlusMinus}`}>{FLOWChange[0]+FLOWChange[1]}</span>
                     <span className={`${styles.MarketCap}`}>거래대금</span>
-                    <span id={`${styles.MarketCapValue}`}>139,262,025,593 KRW</span>
+                    <span id={`${styles.MarketCapValue}`}>{Math.round(Number(FLOWAccTradePrice)).toLocaleString('ko-KR')} KRW</span>
                 </div>
                 
                 <div id={`${styles.PriceDiv}`}>
-                <span className={`${styles.CurrentPrice}`}>313.59</span>
+                <span className={`${styles.CurrentPrice}`}>{FLOWPrice.toLocaleString('ko-KR')}</span>
                 <span id={`${styles.MoneyCurrency}`}>KRW</span>
                 </div>
                

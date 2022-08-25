@@ -6,6 +6,8 @@ import Header from './Header';
 import { generateBlockToCode } from './codeGenerator';
 import styles from './css/Blockcoding.module.css';
 
+
+
 function Blockcoding() {
         return (
             <div className={`${styles.MainFrame}`}>
