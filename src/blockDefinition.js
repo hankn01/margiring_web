@@ -15,8 +15,17 @@ export function defineBlockInfo() {
       {
         "kind": "block",
         "type": "event_program_started",
-        "message0": "프로그램이 시작될 때",
-        "nextStatement": null,
+        "message0": "프로그램이 시작될 때 %1 %2",
+        "args0": [
+          {
+            "type": "input_dummy"
+          },
+          {
+            "type": "input_statement",
+            "name": "STATEMENT"
+          }
+        ],
+        "inputsInline": true,
         "colour": EVENT_COLOUR,
         "tooltip": "프로그램이 가동될 때 한 번 실행됩니다.",
         "helpUrl": ""
@@ -24,8 +33,17 @@ export function defineBlockInfo() {
       {
         "kind": "block",
         "type": "event_program_on_working",
-        "message0": "프로그램이 작동되는 동안",
-        "nextStatement": null,
+        "message0": "프로그램이 작동되는 동안 %1 %2",
+        "args0": [
+          {
+            "type": "input_dummy"
+          },
+          {
+            "type": "input_statement",
+            "name": "STATEMENT"
+          }
+        ],
+        "inputsInline": true,
         "colour": EVENT_COLOUR,
         "tooltip": "프로그램이 가동 중일 때 계속 실행됩니다.",
         "helpUrl": ""
@@ -33,7 +51,7 @@ export function defineBlockInfo() {
       {
         "kind": "block",
         "type": "event_signal_recieved",
-        "message0": "%1 신호를 받았을 때",
+        "message0": "%1 신호를 받았을 때 %2 %3",
         "args0": [
           {
             "type": "field_dropdown",
@@ -44,9 +62,16 @@ export function defineBlockInfo() {
                 "OPTION1"
               ]
             ]
+          },
+          {
+            "type": "input_dummy"
+          },
+          {
+            "type": "input_statement",
+            "name": "STATEMENT"
           }
         ],
-        "nextStatement": null,
+        "inputsInline": true,
         "colour": EVENT_COLOUR,
         "tooltip": "사전에 정한 신호를 받았을 경우 실행됩니다.",
         "helpUrl": ""
@@ -98,7 +123,7 @@ export function defineBlockInfo() {
       {
         "kind": "block",
         "type": "event_selling",
-        "message0": "%1 매도 시",
+        "message0": "%1 매도 시 %2 %3",
         "args0": [
           {
             "type": "field_dropdown",
@@ -109,9 +134,16 @@ export function defineBlockInfo() {
                 "OPTION1"
               ]
             ]
+          },
+          {
+            "type": "input_dummy"
+          },
+          {
+            "type": "input_statement",
+            "name": "STATEMENT"
           }
         ],
-        "nextStatement": null,
+        "inputsInline": true,
         "colour": EVENT_COLOUR,
         "tooltip": "특정 종목이 매도되었을 때 실행됩니다.",
         "helpUrl": ""
@@ -119,7 +151,7 @@ export function defineBlockInfo() {
       {
         "kind": "block",
         "type": "event_buying",
-        "message0": "%1 매수 시",
+        "message0": "%1 매수 시 %2 %3",
         "args0": [
           {
             "type": "field_dropdown",
@@ -130,9 +162,16 @@ export function defineBlockInfo() {
                 "OPTION1"
               ]
             ]
+          },
+          {
+            "type": "input_dummy"
+          },
+          {
+            "type": "input_statement",
+            "name": "STATEMENT"
           }
         ],
-        "nextStatement": null,
+        "inputsInline": true,
         "colour": EVENT_COLOUR,
         "tooltip": "특정 종목이 매수되었을 때 실행됩니다.",
         "helpUrl": ""

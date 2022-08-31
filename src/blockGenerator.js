@@ -11,43 +11,44 @@ import Python from "blockly/python_compressed"
 
 export function defineBlockGenerator() {
   // 시작 블록
-  Python['event_program_started'] = function() {
-    const code = 'print(\'random code!\')\n';
+  Python['event_program_started'] = function(block) {
+    const code = 'print(\'initialize\')\n';
+    console.log(block);
     return code;
   };
 
   Python['event_program_on_working'] = function() {
-    const code = 'print(\'random code!\')\n';
+    const code = 'print(\'handle_data\')\n';
     return code;
   };
 
   Python['event_signal_recieved'] = function() {
-    const code = 'print(\'random code!\')\n';
+    const code = 'print(\'signal recieved\')\n';
     return code;
   };
 
   Python['event_send_signal'] = function() {
-    const code = 'print(\'random code!\')\n';
+    const code = 'print(\'send signal\')\n';
     return code;
   };
 
   Python['event_await_signal'] = function() {
-    const code = 'print(\'random code!\')\n';
+    const code = 'print(\'await signal\')\n';
     return code;
   };
 
   Python['event_selling'] = function() {
-    const code = 'print(\'random code!\')\n';
+    const code = 'print(\'selling\')\n';
     return [code, Python.ORDER_NONE]
   };
   
   Python['event_buying'] = function() {
-    const code = 'print(\'random code!\')\n';
+    const code = 'print(\'buying\')\n';
     return [code, Python.ORDER_NONE]
   };
 
   Python['event_trade_info'] = function() {
-    const code = 'print(\'random code!\')\n';
+    const code = 'print(\'trade information\')\n';
     return code;
   };
   // 흐름 블록
@@ -67,7 +68,7 @@ export function defineBlockGenerator() {
     const else_statement = Python.statementToCode(block, 'ELSE_STATEMENT')
                         || Python.INDENT + 'pass';
     const code = 'if ' + condition + ':\n'
-                + if_statement
+                + if_statement + '\n'
                 + 'else:\n'
                 + else_statement;
     return code;
@@ -97,7 +98,7 @@ export function defineBlockGenerator() {
 
   Python['flow_while'] = function(block) {
     const condition = Python.valueToCode(block, 'CONDITION', Python.ORDER_ATOMIC);
-    const statement = Python.statementToCode(block, 'IF_STATEMENT')
+    const statement = Python.statementToCode(block, 'STATEMENT')
                         || Python.INDENT + 'pass';
     const code = 'while ' + condition + ':\n'
                 + statement;
@@ -109,43 +110,55 @@ export function defineBlockGenerator() {
     return code;
   };
   // 거래 블록
-  Python['trade_buy'] = function() {
-    const code = 'print(\'random code!\')\n';
+  Python['trade_buy'] = function(block) {
+    const investment = Python.valueToCode(block, 'INVESTMENT', Python.ORDER_ATOMIC);
+    const volume = Python.valueToCode(block, 'VOLUME', Python.ORDER_ATOMIC);
+    const condition = Python.valueToCode(block, 'CONDITION', Python.ORDER_ATOMIC);
+    const code = 'order(symbol('
+                  + investment + '), '
+                  + volume + ')\n'
+                  + 'condition = ' + condition;
     return code;
   };
 
-  Python['trade_sell'] = function() {
-    const code = 'print(\'random code!\')\n';
+  Python['trade_sell'] = function(block) {
+    const investment = Python.valueToCode(block, 'INVESTMENT', Python.ORDER_ATOMIC);
+    const volume = Python.valueToCode(block, 'VOLUME', Python.ORDER_ATOMIC);
+    const condition = Python.valueToCode(block, 'CONDITION', Python.ORDER_ATOMIC);
+    const code = 'order(symbol('
+                  + investment + '), -'
+                  + volume + ')\n'
+                  + 'condition = ' + condition;
     return code;
   };
 
   Python['trade_is_selling'] = function() {
-    const code = 'print(\'random code!\')\n';
+    const code = 'print(\'trade is selling?\')\n';
     return code;
   };
 
   Python['trade_is_settled'] = function() {
-    const code = 'print(\'random code!\')\n';
+    const code = 'True\n';
     return code;
   };
 
   Python['trade_my_budget'] = function() {
-    const code = 'print(\'random code!\')\n';
+    const code = 'print(\'my budget\')\n';
     return code;
   };
 
   Python['trade_my_coin'] = function() {
-    const code = 'print(\'random code!\')\n';
+    const code = 'print(\'my coin\')\n';
     return code;
   };
 
   Python['trade_trade_info'] = function() {
-    const code = 'print(\'random code!\')\n';
+    const code = 'print(\'trade information\')\n';
     return code;
   };
 
   Python['trade_stock_info'] = function() {
-    const code = 'print(\'random code!\')\n';
+    const code = 'print(\'stock information\')\n';
     return code;
   };
   // 판단 블록
@@ -328,58 +341,79 @@ export function defineBlockGenerator() {
     return [code, Python.ORDER_MEMBER]
   };
   // 자료 블록
-  Python['data_variable'] = function() {
-    const code = 'print(\'random code!\')\n';
+  Python['data_variable'] = function(block) {
+    const variable = Python.valueToCode(block, 'VARIABLE', Python.ORDER_ATOMIC);
+    const code = variable;
+    return [code, Python.ORDER_ATOMIC]
+  };
+
+  Python['data_variable_set'] = function(block) {
+    const variable = Python.valueToCode(block, 'VARIABLE', Python.ORDER_ATOMIC);
+    const value = Python.valueToCode(block, 'VALUE', Python.ORDER_ATOMIC);
+    const code = variable + ' = ' + value;
     return [code, Python.ORDER_NONE]
   };
 
-  Python['data_variable_set'] = function() {
-    const code = 'print(\'random code!\')\n';
+  Python['data_variable_add'] = function(block) {
+    const variable = Python.valueToCode(block, 'VARIABLE', Python.ORDER_ATOMIC);
+    const value = Python.valueToCode(block, 'VALUE', Python.ORDER_ATOMIC);
+    const code = variable + ' += ' + value;
     return [code, Python.ORDER_NONE]
   };
 
-  Python['data_variable_add'] = function() {
-    const code = 'print(\'random code!\')\n';
+  Python['data_list_index'] = function(block) {
+    const list = Python.valueToCode(block, 'LIST', Python.ORDER_ATOMIC);
+    const index = Python.valueToCode(block, 'INDEX', Python.ORDER_ATOMIC);
+    const code = list + '[' + index + ']';
+    return [code, Python.ORDER_MEMBER]
+  };
+
+  Python['data_list_append'] = function(block) {
+    const list = Python.valueToCode(block, 'LIST', Python.ORDER_ATOMIC);
+    const value = Python.valueToCode(block, 'VALUE', Python.ORDER_ATOMIC);
+    const code = list + '.append(' + value + ')';
+    return [code, Python.ORDER_FUNCTION_CALL]
+  };
+
+  Python['data_list_pop'] = function(block) {
+    const list = Python.valueToCode(block, 'LIST', Python.ORDER_ATOMIC);
+    const index = Python.valueToCode(block, 'INDEX', Python.ORDER_ATOMIC);
+    const code = list + '.append(' + index + ')';
+    return [code, Python.ORDER_FUNCTION_CALL]
+  };
+
+  Python['data_list_put_in'] = function(block) {
+    const list = Python.valueToCode(block, 'LIST', Python.ORDER_ATOMIC);
+    const index = Python.valueToCode(block, 'INDEX', Python.ORDER_ATOMIC);
+    const value = Python.valueToCode(block, 'VALUE', Python.ORDER_ATOMIC);
+    const code = list + '.insert(' + index + ', ' + value + ')';
+    return [code, Python.ORDER_FUNCTION_CALL]
+  };
+
+  Python['data_list_set_index'] = function(block) {
+    const list = Python.valueToCode(block, 'LIST', Python.ORDER_ATOMIC);
+    const index = Python.valueToCode(block, 'INDEX', Python.ORDER_ATOMIC);
+    const value = Python.valueToCode(block, 'VALUE', Python.ORDER_ATOMIC);
+    const code = list + '[' + index + '] = ' + value;
     return [code, Python.ORDER_NONE]
   };
 
-  Python['data_list_index'] = function() {
-    const code = 'print(\'random code!\')\n';
+  Python['data_list_length'] = function(block) {
+    const list = Python.valueToCode(block, 'LIST', Python.ORDER_ATOMIC);
+    const code = 'len(' + list + ')';
+    return [code, Python.ORDER_FUNCTION_CALL]
+  };
+
+  Python['data_list_have'] = function(block) {
+    const list = Python.valueToCode(block, 'LIST', Python.ORDER_ATOMIC);
+    const value = Python.valueToCode(block, 'VALUE', Python.ORDER_ATOMIC);
+    const code = value + ' in ' + list;
     return [code, Python.ORDER_NONE]
   };
 
-  Python['data_list_append'] = function() {
-    const code = 'print(\'random code!\')\n';
-    return [code, Python.ORDER_NONE]
-  };
-
-  Python['data_list_pop'] = function() {
-    const code = 'print(\'random code!\')\n';
-    return [code, Python.ORDER_NONE]
-  };
-
-  Python['data_list_put_in'] = function() {
-    const code = 'print(\'random code!\')\n';
-    return [code, Python.ORDER_NONE]
-  };
-
-  Python['data_list_set_index'] = function() {
-    const code = 'print(\'random code!\')\n';
-    return [code, Python.ORDER_NONE]
-  };
-
-  Python['data_list_length'] = function() {
-    const code = 'print(\'random code!\')\n';
-    return [code, Python.ORDER_NONE]
-  };
-
-  Python['data_list_have'] = function() {
-    const code = 'print(\'random code!\')\n';
-    return [code, Python.ORDER_NONE]
-  };
-
-  Python['function_call'] = function() {
-    const code = 'print(\'random code!\')\n';
+  Python['function_call'] = function(block) {
+    const function_ = Python.valueToCode(block, 'FUNCTION', Python.ORDER_ATOMIC);
+    const code = function_ + '()';
     return [code, Python.ORDER_NONE]
   }
 }
