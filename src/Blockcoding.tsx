@@ -1,5 +1,6 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React, {useState} from 'react';
+//import {Link} from 'react-router-dom';
+import Backtest from './Backtest';
 import BlockWorkspace from './BlockWorkspace';
 import CoinInfo from './CoinInfo';
 import Header from './Header';
@@ -9,16 +10,17 @@ import styles from './css/Blockcoding.module.css';
 
 
 function Blockcoding() {
+        const [ShowModal, setShowModal] = useState(false);
         return (
+            <>
             <div className={`${styles.MainFrame}`}>
                 <Header /> {/* 헤더 부분 */}
                 <div id={`${styles.AlgoNameBar}`}>
                     <span id={`${styles.AlgoNameText}`}>
                         알고리즘 트레이딩 프로젝트 이름 (예시)
                     </span>
-                    <Link to ="/backtest" target="_blank" rel="noopener noreferrer">
-                    <button id={`${styles.StrategyTestButton}`} onClick={generateBlockToCode}>전략 검증하기</button>
-                    </Link>
+                    <button id={`${styles.StrategyTestButton}`} onClick={() => {generateBlockToCode(); setShowModal(true)}}>전략 검증하기</button>
+                    
                     
                 </div>
                 
@@ -29,7 +31,14 @@ function Blockcoding() {
                     </div>
                     <CoinInfo />
                 </div>
+                
             </div>
+            <div className={`${styles.ModalWrapper}`}>
+            {ShowModal?<Backtest /> : null}
+            </div>
+            
+            </>
+            
         );
 }
 

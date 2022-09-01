@@ -200,3 +200,9 @@ background: #1B1F24;
     opacity: 1;
     text-align: left;
   }
+  .ModalWrapper {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    z-index: 999;
+  }
