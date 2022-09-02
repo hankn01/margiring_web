@@ -7,10 +7,13 @@
     border-radius: 8px;
     background-color: #fff;
     position: absolute;
-    left: 32px;
-    right: 32px;
-    top: 30px;
+    left: 64px;
+    top: 60px;
 
+  }
+  #CloseButton {
+    position: absolute;
+    right: 32px;
   }
 
   .BacktestMiddleDiv {
@@ -31,8 +34,8 @@
     background: #fff;
     opacity: 1;
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 30px;
+    left: 32px;
     border-radius: 8px;
     overflow: hidden;
   }
@@ -505,3 +508,4 @@
   top: 316.5px;
   left: 32px;
 }
+

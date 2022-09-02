@@ -7,7 +7,7 @@ import {generateDummyCode} from './codeGenerator';
 import styles from './css/Backtest.module.css';
 import Loading from './Loading';
 
-function Backtest() {
+function Backtest({ModalClose}: any) {
     const [TestCode, setTestCode] = useState("");
     const [ReceivedData, setReceivedData] = useState({"cumulative_yield": 0, "annualized_yield": 0, "annualized_volatility": 0, "sharpe_ratio": "백테스트 전", "MDD": 0});
     const [LoadingState, setLoadingState] = useState(false);
@@ -39,6 +39,11 @@ function Backtest() {
             <div className={`${styles.BacktestUpperDiv}`}>
                 <div id={`${styles.BacktestPanel}`}>
                     <h1 id={`${styles.StrategyTitleCaption}`}>전략 검증하기</h1>
+    <div id={`${styles.CloseButton}`} onClick={ModalClose}>
+    <svg x="100" y="30" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path id="CloseButton" d="m4 4 16 16M4 20 20 4" stroke="#495262" stroke-width="1.5"/>
+    </svg>
+    </div>
                     <span className={`${styles.InvestAmountCaption}`}>투자금액</span>
                     <span className={`${styles.TenThousandWonCaption}`}>만 원</span>
                     <div id={`${styles.InvestTermDiv}`}>

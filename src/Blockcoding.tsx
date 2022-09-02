@@ -11,6 +11,9 @@ import styles from './css/Blockcoding.module.css';
 
 function Blockcoding() {
         const [ShowModal, setShowModal] = useState(false);
+        const ModalClose = () => {
+            setShowModal(false);
+        }
         return (
             <>
             <div className={`${styles.MainFrame}`}>
@@ -34,7 +37,7 @@ function Blockcoding() {
                 
             </div>
             <div className={`${styles.ModalWrapper}`}>
-            {ShowModal?<Backtest /> : null}
+            {ShowModal?<Backtest ModalClose = {ModalClose}/> : null}
             </div>
             
             </>
