@@ -32,11 +32,11 @@
           },
           {
             "kind": "block",
-            "type": "event_selling"
+            "type": "event_buying"
           },
           {
             "kind": "block",
-            "type": "event_buying"
+            "type": "event_selling"
           },
           {
             "kind": "block",
@@ -133,19 +133,25 @@
                 "INVESTMENT": {
                   "shadow": {
                     "type": "calc_string",
-                    "VALUE": "현재 종목"
+                    "fields": {
+                      "VALUE": "현재 종목"
+                    }
                   }
                 },
                 "VOLUME": {
                   "shadow": {
                     "type": "calc_number",
-                    "VALUE": 10
+                    "fields": {
+                      "VALUE": 10
+                    }
                   }
                 },
                 "CONDITION": {
                   "shadow": {
                     "type": "calc_number",
-                    "VALUE": 10
+                    "fields": {
+                      "VALUE": 10
+                    }
                   }
                 }
               }
@@ -157,19 +163,25 @@
                 "INVESTMENT": {
                   "shadow": {
                     "type": "calc_string",
-                    "VALUE": "현재 종목"
+                    "fields": {
+                      "VALUE": "현재 종목"
+                    }
                   }
                 },
                 "VOLUME": {
                   "shadow": {
                     "type": "calc_number",
-                    "VALUE": 10
+                    "fields": {
+                      "VALUE": 10
+                    }
                   }
                 },
                 "CONDITION": {
                   "shadow": {
                     "type": "calc_number",
-                    "VALUE": 10
+                    "fields": {
+                      "VALUE": 10
+                    }
                   }
                 }
               }
@@ -719,6 +731,14 @@
                     "type": "calc_string",
                     "fields": {
                       "VALUE": "변수"
+                    }
+                  }
+                },
+                "VALUE": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "10"
                     }
                   }
                 }

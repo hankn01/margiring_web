@@ -122,34 +122,6 @@ export function defineBlockInfo() {
       },
       {
         "kind": "block",
-        "type": "event_selling",
-        "message0": "%1 매도 시 %2 %3",
-        "args0": [
-          {
-            "type": "field_dropdown",
-            "name": "INVESTMENT",
-            "options": [
-              [
-                "현재 종목",
-                "OPTION1"
-              ]
-            ]
-          },
-          {
-            "type": "input_dummy"
-          },
-          {
-            "type": "input_statement",
-            "name": "STATEMENT"
-          }
-        ],
-        "inputsInline": true,
-        "colour": EVENT_COLOUR,
-        "tooltip": "특정 종목이 매도되었을 때 실행됩니다.",
-        "helpUrl": ""
-      },
-      {
-        "kind": "block",
         "type": "event_buying",
         "message0": "%1 매수 시 %2 %3",
         "args0": [
@@ -174,6 +146,34 @@ export function defineBlockInfo() {
         "inputsInline": true,
         "colour": EVENT_COLOUR,
         "tooltip": "특정 종목이 매수되었을 때 실행됩니다.",
+        "helpUrl": ""
+      },
+      {
+        "kind": "block",
+        "type": "event_selling",
+        "message0": "%1 매도 시 %2 %3",
+        "args0": [
+          {
+            "type": "field_dropdown",
+            "name": "INVESTMENT",
+            "options": [
+              [
+                "현재 종목",
+                "OPTION1"
+              ]
+            ]
+          },
+          {
+            "type": "input_dummy"
+          },
+          {
+            "type": "input_statement",
+            "name": "STATEMENT"
+          }
+        ],
+        "inputsInline": true,
+        "colour": EVENT_COLOUR,
+        "tooltip": "특정 종목이 매도되었을 때 실행됩니다.",
         "helpUrl": ""
       },
       {
@@ -359,7 +359,6 @@ export function defineBlockInfo() {
         "type": "flow_break",
         "message0": "반복 중단하기",
         "previousStatement": null,
-        "nextStatement": null,
         "colour": FLOW_COLOUR,
         "tooltip": "반복 블록들 안에 쓰여, 반복을 중단하고 다음 블록으로 넘어갑니다.",
         "helpUrl": ""

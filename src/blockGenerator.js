@@ -12,50 +12,67 @@ import Python from "blockly/python_compressed"
 export function defineBlockGenerator() {
   // 시작 블록
   Python['event_program_started'] = function(block) {
-    const code = 'print(\'initialize\')\n';
-    console.log(block);
+    const statement = Python.statementToCode(block, 'STATEMENT')
+                    || Python.INDENT + 'pass\n';
+    const code = 'def program_started():\n'
+                  + statement + '\n';
     return code;
   };
 
-  Python['event_program_on_working'] = function() {
-    const code = 'print(\'handle_data\')\n';
+  Python['event_program_on_working'] = function(block) {
+    const statement = Python.statementToCode(block, 'STATEMENT')
+                    || Python.INDENT + 'pass\n';
+    const code = 'def program_on_working():\n'
+                  + statement + '\n';
     return code;
   };
 
-  Python['event_signal_recieved'] = function() {
-    const code = 'print(\'signal recieved\')\n';
+  Python['event_signal_recieved'] = function(block) {
+    const signal = block.getFieldValue('SIGNAL');
+    const statement = Python.statementToCode(block, 'STATEMENT')
+                    || Python.INDENT + 'pass\n';
+    const code = 'def signal_recieved(' + signal + '):\n'
+                  + statement + '\n';
     return code;
   };
 
-  Python['event_send_signal'] = function() {
-    const code = 'print(\'send signal\')\n';
+  Python['event_send_signal'] = function(block) {
+    const signal = block.getFieldValue('SIGNAL');
+    const code = 'send_signal(' + signal + ')';
     return code;
   };
 
-  Python['event_await_signal'] = function() {
-    const code = 'print(\'await signal\')\n';
+  Python['event_await_signal'] = function(block) {
+    const signal = block.getFieldValue('SIGNAL');
+    const code = 'await_signal(' + signal + ')';
     return code;
   };
 
-  Python['event_selling'] = function() {
-    const code = 'print(\'selling\')\n';
-    return [code, Python.ORDER_NONE]
+  Python['event_buying'] = function(block) {
+    const statement = Python.statementToCode(block, 'STATEMENT')
+                    || Python.INDENT + 'pass\n';
+    const code = 'def buying():\n'
+                  + statement + '\n';
+    return code
   };
-  
-  Python['event_buying'] = function() {
-    const code = 'print(\'buying\')\n';
-    return [code, Python.ORDER_NONE]
+
+  Python['event_selling'] = function(block) {
+    const statement = Python.statementToCode(block, 'STATEMENT')
+                    || Python.INDENT + 'pass\n';
+    const code = 'def selling():\n'
+                  + statement + '\n';
+    return code
   };
 
   Python['event_trade_info'] = function() {
-    const code = 'print(\'trade information\')\n';
-    return code;
+    const code = 'trade_info';
+    return [code, Python.ORDER_ATOMIC];
   };
   // 흐름 블록
   Python['flow_if'] = function(block) {
     const condition = Python.valueToCode(block, 'CONDITION', Python.ORDER_ATOMIC);
     const statement = Python.statementToCode(block, 'STATEMENT')
-                        || Python.INDENT + 'pass';
+                        || Python.INDENT + 'pass\n';
     const code = 'if ' + condition + ':\n'
                 + statement;
     return code;
@@ -64,11 +81,11 @@ export function defineBlockGenerator() {
   Python['flow_if_else'] = function(block) {
     const condition = Python.valueToCode(block, 'CONDITION', Python.ORDER_ATOMIC);
     const if_statement = Python.statementToCode(block, 'IF_STATEMENT')
-                        || Python.INDENT + 'pass';
+                        || Python.INDENT + 'pass\n';
     const else_statement = Python.statementToCode(block, 'ELSE_STATEMENT')
-                        || Python.INDENT + 'pass';
+                        || Python.INDENT + 'pass\n';
     const code = 'if ' + condition + ':\n'
-                + if_statement + '\n'
+                + if_statement
                 + 'else:\n'
                 + else_statement;
     return code;
@@ -82,7 +99,7 @@ export function defineBlockGenerator() {
   Python['flow_repeat_times'] = function(block) {
     const count = Python.valueToCode(block, 'COUNT', Python.ORDER_ATOMIC);
     const statement = Python.statementToCode(block, 'STATEMENT')
-                    || Python.INDENT + 'pass';
+                    || Python.INDENT + 'pass\n';
     const code = 'for _ in range(' + count + '):\n'
                 + statement;
     return code;
@@ -90,7 +107,7 @@ export function defineBlockGenerator() {
 
   Python['flow_repeat'] = function(block) {
     const statement = Python.statementToCode(block, 'STATEMENT')
-                    || Python.INDENT + 'pass';
+                    || Python.INDENT + 'pass\n';
     const code = 'while True:\n'
                 + statement;
     return code;
@@ -98,10 +115,18 @@ export function defineBlockGenerator() {
 
   Python['flow_while'] = function(block) {
     const condition = Python.valueToCode(block, 'CONDITION', Python.ORDER_ATOMIC);
+    const case_ = block.getFieldValue('CASE');
     const statement = Python.statementToCode(block, 'STATEMENT')
-                        || Python.INDENT + 'pass';
-    const code = 'while ' + condition + ':\n'
-                + statement;
+                        || Python.INDENT + 'pass\n';
+    let code;
+    if (case_ == 'OPTION1') { // 될 때까지
+      code = 'while not ' + condition + ':\n'
+            + statement;
+    }
+    else { // 참인 동안
+      code = 'while ' + condition + ':\n'
+            + statement;
+    }
     return code;
   };
 
@@ -117,7 +142,8 @@ export function defineBlockGenerator() {
     const code = 'order(symbol('
                   + investment + '), '
                   + volume + ')\n'
-                  + 'condition = ' + condition;
+                  + 'condition = ' + condition + '\n'
+                  + 'buying()';
     return code;
   };
 
@@ -128,7 +154,8 @@ export function defineBlockGenerator() {
     const code = 'order(symbol('
                   + investment + '), -'
                   + volume + ')\n'
-                  + 'condition = ' + condition;
+                  + 'condition = ' + condition + '\n'
+                  + 'selling()';
     return code;
   };
 
@@ -153,13 +180,13 @@ export function defineBlockGenerator() {
   };
 
   Python['trade_trade_info'] = function() {
-    const code = 'print(\'trade information\')\n';
-    return code;
+    const code = 'trade_information';
+    return [code, Python.ORDER_ATOMIC];
   };
 
   Python['trade_stock_info'] = function() {
-    const code = 'print(\'stock information\')\n';
-    return code;
+    const code = 'stock_information';
+    return [code, Python.ORDER_ATOMIC];
   };
   // 판단 블록
   Python['bool_true'] = function() {
@@ -350,15 +377,15 @@ export function defineBlockGenerator() {
   Python['data_variable_set'] = function(block) {
     const variable = Python.valueToCode(block, 'VARIABLE', Python.ORDER_ATOMIC);
     const value = Python.valueToCode(block, 'VALUE', Python.ORDER_ATOMIC);
-    const code = variable + ' = ' + value;
-    return [code, Python.ORDER_NONE]
+    const code = variable + ' = ' + value + '\n';
+    return code;
   };
 
   Python['data_variable_add'] = function(block) {
     const variable = Python.valueToCode(block, 'VARIABLE', Python.ORDER_ATOMIC);
     const value = Python.valueToCode(block, 'VALUE', Python.ORDER_ATOMIC);
-    const code = variable + ' += ' + value;
-    return [code, Python.ORDER_NONE]
+    const code = variable + ' += ' + value + '\n';
+    return code;
   };
 
   Python['data_list_index'] = function(block) {
