@@ -9,23 +9,32 @@ import { debounce } from 'lodash';
 import { defineBlockInfo } from "./blockDefinition"
 import { defineBlockGenerator } from "./blockGenerator";
 import toolbox from "./toolbox.json"
+import { BlocklyWorkspace } from 'react-blockly';
 
 
 //주의: BlocklyWorkspace와 이름 혼동하지 않도록 개발 시 주의하시기 바랍니다.
 
 function BlockWorkspace() {
+    const [BWorkspace, setBWorkspace] = useState();
     const [width, setWidth] = useState(window.innerWidth);
+    const [height, setHeight] = useState(window.innerHeight);
+    const [Area, setArea] = useState();
+    const [BlocklyDiv, setBlocklyDiv] = useState();
     useEffect(() => {
         defineBlockInfo();
         defineBlockGenerator();
         const handelResize = () => {
             console.log("width height", window.innerWidth, window.innerHeight);
             setWidth(window.innerWidth);
-        
+            setHeight(window.innerHeight);
+            
+            Blockly.svgResize(BWorkspace);
+
+          
         };
 
         
-        Blockly.inject("blocklyDiv", {
+        setBWorkspace(Blockly.inject("blocklyDiv", {
             toolbox: toolbox,
             grid:
          {spacing: 20,
@@ -33,7 +42,7 @@ function BlockWorkspace() {
           colour: '#ccc',
           snap: true},
           trashcan: true
-        });
+        }));
         
        window.addEventListener("resize", handelResize);
        return () => {
@@ -43,7 +52,7 @@ function BlockWorkspace() {
 
     return (
         <div>
-            <div id="blocklyDiv" style={{width: (width-480)+"px", height: "952px"}}></div>
+            <div id="blocklyDiv" style={{width: (width-480)+"px", height: (height-120)+"px"}}></div>
             <xml id="toolbox" style={{display: "none"}}></xml>
         </div>
     );

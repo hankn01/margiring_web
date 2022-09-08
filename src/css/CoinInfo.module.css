@@ -13,12 +13,12 @@
 
 .CoinInfoUpperDiv {
     width: 480px;
-    height: 1080px;
+    height: calc(100% - 120px);
     opacity: 1;
     position: absolute;
     top: 128px;
     right: 0px;
-    overflow: hidden;
+    overflow: scroll;
 
     flex-grow: 0;
     margin: 1px 0 0;
@@ -265,7 +265,7 @@
     top: 476.5px;
     left: 0px;
     width: 480px;
-    height: 473.5px;
+    height: calc(100% - 480px);
     
 }
 #CoinNameSymbolSearchInput {

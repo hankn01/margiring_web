@@ -32,7 +32,9 @@ function Blockcoding() {
                     <div className={`${styles.BlockCodingDiv}`}>
                         <BlockWorkspace /> {/* Blockly Toolbox 및 블록 부분 */}
                     </div>
+                    <div id={`${styles.CoinInfoDiv}`}>
                     <CoinInfo />
+                    </div>
                 </div>
                 
             </div>

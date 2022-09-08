@@ -1,16 +1,20 @@
 #MenuDiv {
     position: absolute;
-    top: 549px;
+    top: 71.5px;
     left: 0px;
 }
 
 #CoinTabContents{
     position: absolute;
-    top: 600px;
+    overflow: auto;
+    overflow-x: hidden;
+    top: 122.5px;
     left: 25px;
     background-color: #fff;
     width: 432px;
-    height: 351px;
+    height: 100%;
+    margin-bottom: 22.5px;
+    
 }
 li {
     display: inline;
@@ -25,7 +29,7 @@ li {
 ul li {
     padding-top: 10px;
     float: left;
-    width: 33.3333%;
+    width: 25%;
     height: 48px;
     color: #1e78ff;
     font-family: Pretendard;
@@ -41,7 +45,7 @@ ul li {
 
 ul li:active {
     float: left;
-    width: 33.3333%;
+    width: 25%;
     height: 48px;
     text-align: center;
     font-family: Pretendard;
