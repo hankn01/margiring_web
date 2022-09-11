@@ -211,8 +211,9 @@ background: #1B1F24;
   }
   .ModalWrapper {
     position: absolute;
-    top: 10%;
-    left: 10%;
+    top: 4vh;
+    left: 20vw;
+    
     z-index: 999;
   }
   #CoinInfoDiv{
