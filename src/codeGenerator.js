@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
@@ -7,11 +8,41 @@ import Blockly from "blockly"
 import Python from "blockly/python_compressed"
 
 export function generateBlockToCode() {
-    let code = "import random\n"
-                + "import datetime\n"
-                + "import zipline\n"
-                + "import pandas\n\n";
+    let code = 
+`import random
+import datetime
+import zipline
+import pandas
+
+def program_started():
+${Python.INDENT}pass
+
+def program_on_working():
+${Python.INDENT}pass
+
+def signal_recieved():
+${Python.INDENT}pass
+
+def buying():
+${Python.INDENT}pass
+
+def selling():
+${Python.INDENT}pass
+
+
+`
     code += Python.workspaceToCode(Blockly.common.getMainWorkspace());
+    code +=
+`
+def initialize(context):
+    # code
+    program_started()
+
+def handle_data(context):
+    # code
+    program_on_working()
+`
+
     console.log(code);
     return code;
 }
