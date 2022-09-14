@@ -1,8 +1,5 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-unsafe-return */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/restrict-plus-operands */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import Blockly from "blockly"
 import Python from "blockly/python_compressed"
@@ -48,7 +45,7 @@ def handle_data(context):
 }
 
 export function generateDummyCode() {
-    let code1 = 
+    const code1 = 
 `from json import dumps
 from random import uniform
 
