@@ -1,4 +1,21 @@
-
+#LoginCaption {
+  width: 131px;
+  height: 29px;
+  flex-grow: 0;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #2a323f;
+  position: absolute;
+  top: 30px;
+  left: 32px;
+}
+  
+  
   #BackTestWrapper {
     font-size: 14px;
     width: 888px;
@@ -11,4 +28,53 @@
     overflow: scroll;
     overflow-x: hidden;
 
+  }
+  #IDInput{
+    width: 824px;
+    height: 48px;
+    padding-right: 52px;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+   
+    position: absolute;
+    top: 84px;
+    left: 32px;
+    overflow: hidden;
+     text-align: right;
+    color: #8d8f93;
+    border-radius: 2px;
+    border: solid 1px #dbdde0;
+  }
+
+  #PasswordInput {
+    width: 824px;
+    height: 48px;
+    padding-right: 52px;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+   
+    position: absolute;
+    top: 148px;
+    left: 32px;
+    overflow: hidden;
+     text-align: right;
+    color: #8d8f93;
+    border-radius: 2px;
+    border: solid 1px #dbdde0;
+  }
+
+  #CloseButton{
+    position: absolute;
+    right: 32px;
+    top: 32px;
   }

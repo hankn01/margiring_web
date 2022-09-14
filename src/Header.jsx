@@ -22,7 +22,7 @@ function Header() {
                 
                     <LoginModalContext.Consumer>
                         {value=> (
-                             <button id={`${styles.LogoutText}`} onClick={() => {value.setShowModal(true)}}>로그아웃</button>
+                             <button id={`${styles.LogoutText}`} onClick={() => {value.setShowModal(true)}}>로그인</button>
                         )}
                     </LoginModalContext.Consumer>
                 

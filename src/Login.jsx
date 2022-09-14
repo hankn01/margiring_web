@@ -4,7 +4,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import {generateDummyCode} from './codeGenerator';
-import styles from './css/Backtest.module.css';
+import styles from './css/Login.module.css';
 import Loading from './Loading';
 import LoginModalContext from './contexts/LoginModalContext';
 
@@ -23,12 +23,33 @@ function Backtest({ModalClose}: any) {
         
             <>
             <div id={`${styles.BackTestWrapper}`}>
-                TEST 문구입니다.
+                <h1 id={`${styles.LoginCaption}`}>로그인</h1>
                 <LoginModalContext.Consumer>
                         {value=> (
-                             <button onClick={() => {value.setShowModal(false)}}>창 닫기 시험용 버튼</button>
+                             <button id={`${styles.CloseButton}`} onClick={() => {value.setShowModal(false)}}>창 닫기 시험용 버튼</button>
                         )}
                     </LoginModalContext.Consumer>
+                    <br></br>
+                    ID: 
+                    <input id={`${styles.IDInput}`}>
+                    
+                    </input>
+                    <br></br>
+                    PASSWORD:
+                    <input id={`${styles.PasswordInput}`}>
+                    </input>
+                    <br>
+                    </br>
+                    <button>
+                        로그인
+                    </button>
+                    <button>
+                        회원가입
+                    </button>
+                    <br>
+                    
+                    </br>
+                    비밀번호 찾기
             </div>
 
 

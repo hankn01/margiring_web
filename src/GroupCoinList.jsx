@@ -6,7 +6,7 @@ import styles from './css/GroupCoinList.module.css';
 
 function GroupCoinList() {
     return (
-        <div>
+        <>
           <GridTree
     data={[
         {
@@ -70,7 +70,7 @@ function GroupCoinList() {
  </tbody>
 </table>
   */}
-   </div>
+   </>
     )
 }
 

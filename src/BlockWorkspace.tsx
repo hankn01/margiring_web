@@ -48,7 +48,7 @@ function BlockWorkspace() {
        return () => {
         window.removeEventListener("resize", handelResize);
        }
-    });
+    }, []);
 
     return (
         <div>
