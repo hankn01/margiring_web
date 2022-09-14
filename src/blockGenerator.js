@@ -134,60 +134,7 @@ export function defineBlockGenerator() {
     const code = 'break';
     return code;
   };
-  // 거래 블록
-  Python['trade_buy'] = function(block) {
-    const investment = Python.valueToCode(block, 'INVESTMENT', Python.ORDER_ATOMIC);
-    const volume = Python.valueToCode(block, 'VOLUME', Python.ORDER_ATOMIC);
-    const condition = Python.valueToCode(block, 'CONDITION', Python.ORDER_ATOMIC);
-    const code = 'order(symbol('
-                  + investment + '), '
-                  + volume + ')\n'
-                  + 'condition = ' + condition + '\n'
-                  + 'buying()';
-    return code;
-  };
-
-  Python['trade_sell'] = function(block) {
-    const investment = Python.valueToCode(block, 'INVESTMENT', Python.ORDER_ATOMIC);
-    const volume = Python.valueToCode(block, 'VOLUME', Python.ORDER_ATOMIC);
-    const condition = Python.valueToCode(block, 'CONDITION', Python.ORDER_ATOMIC);
-    const code = 'order(symbol('
-                  + investment + '), -'
-                  + volume + ')\n'
-                  + 'condition = ' + condition + '\n'
-                  + 'selling()';
-    return code;
-  };
-
-  Python['trade_is_selling'] = function() {
-    const code = 'print(\'trade is selling?\')\n';
-    return code;
-  };
-
-  Python['trade_is_settled'] = function() {
-    const code = 'True\n';
-    return code;
-  };
-
-  Python['trade_my_budget'] = function() {
-    const code = 'print(\'my budget\')\n';
-    return code;
-  };
-
-  Python['trade_my_coin'] = function() {
-    const code = 'print(\'my coin\')\n';
-    return code;
-  };
-
-  Python['trade_trade_info'] = function() {
-    const code = 'trade_information';
-    return [code, Python.ORDER_ATOMIC];
-  };
-
-  Python['trade_stock_info'] = function() {
-    const code = 'stock_information';
-    return [code, Python.ORDER_ATOMIC];
-  };
+  
   // 판단 블록
   Python['bool_true'] = function() {
     const code = 'True';
@@ -340,6 +287,11 @@ export function defineBlockGenerator() {
     return [code, Python.ORDER_FUNCTION_CALL]
   };
 
+  Python['calc_percentage'] = function() {
+    const code = 'print(\'hi there\')';
+    return code;
+  };
+
   Python['calc_string'] = function(block) {
     const value = block.getFieldValue('VALUE');
     const code = '\'' + value + '\'';
@@ -443,4 +395,229 @@ export function defineBlockGenerator() {
     const code = function_ + '()';
     return [code, Python.ORDER_NONE]
   }
+
+  // 거래 블록
+  Python['trade_buy'] = function(block) {
+    const investment = Python.valueToCode(block, 'INVESTMENT', Python.ORDER_ATOMIC);
+    const volume = Python.valueToCode(block, 'VOLUME', Python.ORDER_ATOMIC);
+    const condition = Python.valueToCode(block, 'CONDITION', Python.ORDER_ATOMIC);
+    const code = 'order(symbol('
+                  + investment + '), '
+                  + volume + ')\n'
+                  + 'condition = ' + condition + '\n'
+                  + 'buying()';
+    return code;
+  };
+
+  Python['trade_sell'] = function(block) {
+    const investment = Python.valueToCode(block, 'INVESTMENT', Python.ORDER_ATOMIC);
+    const volume = Python.valueToCode(block, 'VOLUME', Python.ORDER_ATOMIC);
+    const condition = Python.valueToCode(block, 'CONDITION', Python.ORDER_ATOMIC);
+    const code = 'order(symbol('
+                  + investment + '), -'
+                  + volume + ')\n'
+                  + 'condition = ' + condition + '\n'
+                  + 'selling()';
+    return code;
+  };
+
+  Python['trade_rebalance'] = function() {
+    const code = 'print(\'random code!\')';
+    return code;
+  }
+
+  Python['trade_is_selling'] = function() {
+    const code = 'print(\'trade is selling?\')\n';
+    return code;
+  };
+
+  Python['trade_my_budget'] = function() {
+    const code = 'print(\'my budget\')\n';
+    return code;
+  };
+
+  Python['trade_my_coin'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_trade_info'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_trade_calc_mid'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_trade_calc'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_calc_time_value'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_calc_SMA'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_calc_EMA'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_calc_sum'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_calc_diff_amount'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_calc_rate'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_calc_max'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_calc_min'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_momentum_RSI'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_momentum_STO_OSC'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_momentum_RSI_STO'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_moving_MACD'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_moving_MACD_SIG'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_moving_MACD_OSC'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_moving_ADX'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_moving_MDI'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_moving_PDI'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_moving_CCI'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_moving_DPO'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_moving_STC'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_moving_ichimoku_conversion'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_moving_ichimoku_base'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_moving_ichimoku_span1'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_moving_ichimoku_span2'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_VIX_bollinger_ubb'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_VIX_bollinger_dbb'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_VIX_bollinger_mdd'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_VIX_bollinger_bandwidth'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_VIX_bollinger_position'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_volume_ADI'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_volume_OBV'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_volume_CMF'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
+
+  Python['trade_volume_VWAP'] = function() {
+    const code = 'print(\'my coin\')\n';
+    return code;
+  };
 }
