@@ -16,21 +16,21 @@
 }
   
   
-  #BackTestWrapper {
+  #LoginWrapper {
     font-size: 14px;
-    width: 888px;
+    width: 550px;
     height: 90vh;
     border-radius: 8px;
     background-color: #fff;
     position: absolute;
     top: 0px;
     left: 0px;
-    overflow: scroll;
-    overflow-x: hidden;
+    overflow: hidden;
+    
 
   }
   #IDInput{
-    width: 824px;
+    width: 486px;
     height: 48px;
     padding-right: 52px;
     font-family: Pretendard;
@@ -52,7 +52,7 @@
   }
 
   #PasswordInput {
-    width: 824px;
+    width: 486px;
     height: 48px;
     padding-right: 52px;
     font-family: Pretendard;
@@ -77,4 +77,20 @@
     position: absolute;
     right: 32px;
     top: 32px;
+  }
+
+  #SignUpButton{
+    position: absolute;
+    left: 32px;
+    top: 350px;
+    width: 486px;
+    height: 48px;
+  }
+
+  #SignInButton{
+    position: absolute;
+    left: 32px;
+    top: 276px;
+    width: 486px;
+    height: 48px;
   }

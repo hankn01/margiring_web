@@ -22,7 +22,7 @@ function Backtest({ModalClose}: any) {
     return (
         
             <>
-            <div id={`${styles.BackTestWrapper}`}>
+            <div id={`${styles.LoginWrapper}`}>
                 <h1 id={`${styles.LoginCaption}`}>로그인</h1>
                 <LoginModalContext.Consumer>
                         {value=> (
@@ -30,26 +30,26 @@ function Backtest({ModalClose}: any) {
                         )}
                     </LoginModalContext.Consumer>
                     <br></br>
-                    ID: 
+                    
                     <input id={`${styles.IDInput}`}>
                     
                     </input>
                     <br></br>
-                    PASSWORD:
+                   
                     <input id={`${styles.PasswordInput}`}>
                     </input>
                     <br>
                     </br>
-                    <button>
+                    <button id={`${styles.SignInButton}`}>
                         로그인
                     </button>
-                    <button>
+                    <button id={`${styles.SignUpButton}`}>
                         회원가입
                     </button>
                     <br>
                     
                     </br>
-                    비밀번호 찾기
+                    
             </div>
 
 

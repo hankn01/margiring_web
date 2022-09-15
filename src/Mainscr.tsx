@@ -23,7 +23,8 @@ function Mainscr() {
             <div className={`${styles.ListDiv}`}> {/* 알고리즘 리스트 div */}
             
             <span id={`${styles.MyStrategyCaption}`}>My Strategy</span>
-            <span id={`${styles.StrategyCountCaption}`}>0</span>
+            {//<span id={`${styles.StrategyCountCaption}`}>0</span>
+            }
             
                 <div className={`${styles.ListContentDiv}`}> 
                     {/*<span className={`${styles.ListContentText}`}>Strategy 1</span>*/}
