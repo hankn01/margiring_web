@@ -32,11 +32,11 @@
           },
           {
             "kind": "block",
-            "type": "event_selling"
+            "type": "event_buying"
           },
           {
             "kind": "block",
-            "type": "event_buying"
+            "type": "event_selling"
           },
           {
             "kind": "block",
@@ -118,127 +118,6 @@
             {
               "kind": "block",
               "type": "flow_break"
-            }
-        ]
-      },
-      {
-        "kind": "category",
-        "name": "거래",
-        "colour": "#f39c12",
-        "contents": [
-            {
-              "kind": "block",
-              "type": "trade_buy",
-              "inputs": {
-                "INVESTMENT": {
-                  "shadow": {
-                    "type": "calc_string",
-                    "VALUE": "현재 종목"
-                  }
-                },
-                "VOLUME": {
-                  "shadow": {
-                    "type": "calc_number",
-                    "VALUE": 10
-                  }
-                },
-                "CONDITION": {
-                  "shadow": {
-                    "type": "calc_number",
-                    "VALUE": 10
-                  }
-                }
-              }
-            },
-            {
-              "kind": "block",
-              "type": "trade_sell",
-              "inputs": {
-                "INVESTMENT": {
-                  "shadow": {
-                    "type": "calc_string",
-                    "VALUE": "현재 종목"
-                  }
-                },
-                "VOLUME": {
-                  "shadow": {
-                    "type": "calc_number",
-                    "VALUE": 10
-                  }
-                },
-                "CONDITION": {
-                  "shadow": {
-                    "type": "calc_number",
-                    "VALUE": 10
-                  }
-                }
-              }
-            },
-            {
-              "kind": "sep",
-              "gap": "48"
-            },
-            {
-              "kind": "block",
-              "type": "trade_is_selling",
-              "inputs": {
-                "TRADEINFO": {
-                  "block": {
-                    "type": "event_trade_info"
-                  }
-                }
-              }
-            },
-            {
-              "kind": "block",
-              "type": "trade_is_settled",
-              "inputs": {
-                "TRADEINFO": {
-                  "block": {
-                    "type": "event_trade_info"
-                  }
-                }
-              }
-            },
-            {
-              "kind": "sep",
-              "gap": "48"
-            },
-            {
-              "kind": "block",
-              "type": "trade_my_budget"
-            },
-            {
-              "kind": "block",
-              "type": "trade_my_coin"
-            },
-            {
-              "kind": "block",
-              "type": "trade_trade_info",
-              "inputs": {
-                "TRADEINFO": {
-                  "block": {
-                    "type": "event_trade_info"
-                  }
-                }
-              }
-            },
-            {
-              "kind": "block",
-              "type": "trade_stock_info",
-              "inputs": {
-                "STOCK": {
-                  "block": {
-                    "type": "calc_string",
-                    "VALUE": "현재 종목"
-                  }
-                },
-                "TIME": {
-                  "block": {
-                    "type": "time_now"
-                  }
-                }
-              }
             }
         ]
       },
@@ -608,6 +487,10 @@
               }
             },
             {
+              "kind": "block",
+              "type": "calc_percentage"
+            },
+            {
               "kind": "sep",
               "gap": "48"
             },
@@ -719,6 +602,14 @@
                     "type": "calc_string",
                     "fields": {
                       "VALUE": "변수"
+                    }
+                  }
+                },
+                "VALUE": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": "10"
                     }
                   }
                 }
@@ -900,6 +791,302 @@
                   }
                 }
               }
+            }
+        ]
+      },
+      {
+        "kind": "category",
+        "name": "거래",
+        "colour": "#f39c12",
+        "contents": [
+            {
+              "kind": "block",
+              "type": "trade_buy",
+              "inputs": {
+                "INVESTMENT": {
+                  "shadow": {
+                    "type": "calc_string",
+                    "fields": {
+                      "VALUE": "현재 종목"
+                    }
+                  }
+                },
+                "VOLUME": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": 10
+                    }
+                  }
+                },
+                "CONDITION": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": 10
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "trade_sell",
+              "inputs": {
+                "INVESTMENT": {
+                  "shadow": {
+                    "type": "calc_string",
+                    "fields": {
+                      "VALUE": "현재 종목"
+                    }
+                  }
+                },
+                "VOLUME": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": 10
+                    }
+                  }
+                },
+                "CONDITION": {
+                  "shadow": {
+                    "type": "calc_number",
+                    "fields": {
+                      "VALUE": 10
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "trade_rebalance"
+            },
+            {
+              "kind": "block",
+              "type": "trade_is_selling",
+              "inputs": {
+                "TRADEINFO": {
+                  "block": {
+                    "type": "event_trade_info"
+                  }
+                }
+              }
+            },
+            {
+              "kind": "sep",
+              "gap": "48"
+            },
+            {
+              "kind": "block",
+              "type": "trade_my_budget"
+            },
+            {
+              "kind": "block",
+              "type": "trade_my_cash"
+            },
+            {
+              "kind": "block",
+              "type": "trade_my_coin"
+            },
+            {
+              "kind": "sep",
+              "gap": "48"
+            },
+            {
+              "kind": "category",
+              "name": "거래 지표",
+              "colour": "#f39c12",
+              "contents": [
+                {
+                  "kind": "label",
+                  "text": "기본 지표"
+                },
+                {
+                  "kind": "block",
+                  "type": "trade_trade_info"
+                },
+                {
+                  "kind": "label",
+                  "text": "계산 지표"
+                },
+                {
+                  "kind": "block",
+                  "type": "trade_trade_calc_mid"
+                },
+                {
+                  "kind": "block",
+                  "type": "trade_trade_calc"
+                }
+              ]
+            },
+            {
+              "kind": "category",
+              "name": "거래 연산자",
+              "colour": "#f39c12",
+              "contents": [
+                {
+                  "kind": "block",
+                  "type": "trade_calc_time_value"
+                },
+                {
+                  "kind": "block",
+                  "type": "trade_calc_SMA"
+                },
+                {
+                  "kind": "block",
+                  "type": "trade_calc_EMA"
+                },
+                {
+                  "kind": "block",
+                  "type": "trade_calc_sum"
+                },
+                {
+                  "kind": "block",
+                  "type": "trade_calc_diff_amount"
+                },
+                {
+                  "kind": "block",
+                  "type": "trade_calc_diff_rate"
+                },
+                {
+                  "kind": "block",
+                  "type": "trade_calc_max"
+                },
+                {
+                  "kind": "block",
+                  "type": "trade_calc_min"
+                }
+              ]
+            },
+            {
+              "kind": "category",
+              "name": "모멘텀 지표",
+              "colour": "#f39c12",
+              "contents": [
+                {
+                  "kind": "block",
+                  "type": "trade_momentum_RSI"
+                },
+                {
+                  "kind": "block",
+                  "type": "trade_momentum_STO_OSC"
+                },
+                {
+                  "kind": "block",
+                  "type": "trade_momentum_RSI_STO"
+                }
+              ]
+            },
+            {
+              "kind": "category",
+              "name": "추세 지표",
+              "colour": "#f39c12",
+              "contents": [
+                {
+                  "kind": "block",
+                  "type": "trade_moving_MACD"
+                },
+                {
+                  "kind": "block",
+                  "type": "trade_moving_MACD_SIG"
+                },
+                {
+                  "kind": "block",
+                  "type": "trade_moving_MACD_OSC"
+                },
+                {
+                  "kind": "block",
+                  "type": "trade_moving_ADX"
+                },
+                {
+                  "kind": "block",
+                  "type": "trade_moving_MDI"
+                },
+                {
+                  "kind": "block",
+                  "type": "trade_moving_PDI"
+                },
+                {
+                  "kind": "block",
+                  "type": "trade_moving_CCI"
+                },
+                {
+                  "kind": "block",
+                  "type": "trade_moving_DPO"
+                },
+                {
+                  "kind": "block",
+                  "type": "trade_moving_STC"
+                },
+                {
+                  "kind": "block",
+                  "type": "trade_moving_ichimoku_conversion"
+                },
+                {
+                  "kind": "block",
+                  "type": "trade_moving_ichimoku_base"
+                },
+                {
+                  "kind": "block",
+                  "type": "trade_moving_ichimoku_span1"
+                },
+                {
+                  "kind": "block",
+                  "type": "trade_moving_ichimoku_span2"
+                }
+              ]
+            },
+            {
+              "kind": "category",
+              "name": "변동성 지표",
+              "colour": "#f39c12",
+              "contents": [
+                {
+                  "kind": "block",
+                  "type": "trade_VIX_bollinger_ubb"
+                },
+                {
+                  "kind": "block",
+                  "type": "trade_VIX_bollinger_dbb"
+                },
+                {
+                  "kind": "block",
+                  "type": "trade_VIX_bollinger_mbb"
+                },
+                {
+                  "kind": "block",
+                  "type": "trade_VIX_bollinger_bandwidth"
+                },
+                {
+                  "kind": "block",
+                  "type": "trade_VIX_bollinger_position"
+                }
+              ]
+            },
+            {
+              "kind": "category",
+              "name": "볼륨 지표",
+              "colour": "#f39c12",
+              "contents": [
+                {
+                  "kind": "block",
+                  "type": "trade_volume_ADI"
+                },
+                {
+                  "kind": "block",
+                  "type": "trade_volume_OBV"
+                },
+                {
+                  "kind": "block",
+                  "type": "trade_volume_CMF"
+                },
+                {
+                  "kind": "block",
+                  "type": "trade_volume_VWAP"
+                }
+              ]
             }
         ]
       }
