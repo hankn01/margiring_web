@@ -19,7 +19,7 @@
   #LoginWrapper {
     font-size: 14px;
     width: 550px;
-    height: 90vh;
+    height: 370px;
     border-radius: 8px;
     background-color: #fff;
     position: absolute;
@@ -45,7 +45,7 @@
     top: 84px;
     left: 32px;
     overflow: hidden;
-     text-align: right;
+    text-align: left;
     color: #8d8f93;
     border-radius: 2px;
     border: solid 1px #dbdde0;
@@ -54,7 +54,7 @@
   #PasswordInput {
     width: 486px;
     height: 48px;
-    padding-right: 52px;
+
     font-family: Pretendard;
     font-size: 16px;
     font-weight: normal;
@@ -67,7 +67,7 @@
     top: 148px;
     left: 32px;
     overflow: hidden;
-     text-align: right;
+    text-align: left;
     color: #8d8f93;
     border-radius: 2px;
     border: solid 1px #dbdde0;
@@ -82,7 +82,7 @@
   #SignUpButton{
     position: absolute;
     left: 32px;
-    top: 350px;
+    top: 330px;
     width: 486px;
     height: 48px;
   }
@@ -90,7 +90,37 @@
   #SignInButton{
     position: absolute;
     left: 32px;
-    top: 276px;
+    top: 250px;
     width: 486px;
     height: 48px;
+    border-radius: 4px;
+    background-color: #1e78ff;
+    border: 0px;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    color: #fff;
+  }
+  #SignInButton:hover{
+    border-radius: 4px;
+    background-color: #3c8aff;
+  }
+  #SignInButton:disabled{
+    border-radius: 4px;
+    background-color: #1e78ff;
+  }
+  #FindPassword{
+    position: absolute;
+    right: 32px;
+    top: 210px;
+  }
+
+  #SignUpCaption{
+    position: absolute;
+    right: 32px;
+    top: 310px;
+
+
   }

@@ -25,9 +25,16 @@ function Backtest({ModalClose}: any) {
             <div id={`${styles.LoginWrapper}`}>
                 <h1 id={`${styles.LoginCaption}`}>로그인</h1>
                 <LoginModalContext.Consumer>
-                        {value=> (
-                             <button id={`${styles.CloseButton}`} onClick={() => {value.setShowModal(false)}}>창 닫기 시험용 버튼</button>
-                        )}
+                        {value=> (   
+                            <>     
+                            
+                             <div id={`${styles.CloseButton}`} onClick={() => {value.setShowModal(false)}}>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="m4 4 16 16M4 20 20 4" stroke="#495262" stroke-width="1.5"/>
+                                </svg>
+                             </div>
+                            </>)
+                        }
                     </LoginModalContext.Consumer>
                     <br></br>
                     
@@ -36,19 +43,18 @@ function Backtest({ModalClose}: any) {
                     </input>
                     <br></br>
                    
-                    <input id={`${styles.PasswordInput}`}>
+                    <input type="password" id={`${styles.PasswordInput}`}>
                     </input>
                     <br>
                     </br>
+                    <div id={`${styles.FindPassword}`}>비밀번호 찾기</div>
                     <button id={`${styles.SignInButton}`}>
                         로그인
-                    </button>
-                    <button id={`${styles.SignUpButton}`}>
-                        회원가입
                     </button>
                     <br>
                     
                     </br>
+                    <div id={`${styles.SignUpCaption}`}><a>마지링이 처음이신가요?</a> <a>회원가입</a></div>
                     
             </div>
 
