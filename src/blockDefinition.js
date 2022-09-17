@@ -976,8 +976,14 @@ export function defineBlockInfo() {
         "message0": "%1 의 값",
         "args0": [
           {
-            "type": "input_value",
-            "name": "VARIABLE"
+            "type": "field_dropdown",
+            "name": "VARIABLE",
+            "options": [
+              [
+                "변수",
+                "OPTION1"
+              ]
+            ]
           }
         ],
         "output": null,
@@ -991,8 +997,14 @@ export function defineBlockInfo() {
         "message0": "%1 의 값을 %2 으로 정하기",
         "args0": [
           {
-            "type": "input_value",
-            "name": "VARIABLE"
+            "type": "field_dropdown",
+            "name": "VARIABLE",
+            "options": [
+              [
+                "변수",
+                "OPTION1"
+              ]
+            ]
           },
           {
             "type": "input_value",
@@ -1012,8 +1024,14 @@ export function defineBlockInfo() {
         "message0": "%1 의 값을 %2 만큼 더하기",
         "args0": [
           {
-            "type": "input_value",
-            "name": "VARIABLE"
+            "type": "field_dropdown",
+            "name": "VARIABLE",
+            "options": [
+              [
+                "변수",
+                "OPTION1"
+              ]
+            ]
           },
           {
             "type": "input_value",
@@ -1033,8 +1051,14 @@ export function defineBlockInfo() {
         "message0": "%1 의 %2 번째 항목",
         "args0": [
           {
-            "type": "input_value",
-            "name": "LIST"
+            "type": "field_dropdown",
+            "name": "LIST",
+            "options": [
+              [
+                "리스트",
+                "OPTION1"
+              ]
+            ]
           },
           {
             "type": "input_value",
@@ -1055,8 +1079,14 @@ export function defineBlockInfo() {
         "message0": "%1 에 %2 항목을 추가하기",
         "args0": [
           {
-            "type": "input_value",
-            "name": "LIST"
+            "type": "field_dropdown",
+            "name": "LIST",
+            "options": [
+              [
+                "리스트",
+                "OPTION1"
+              ]
+            ]
           },
           {
             "type": "input_value",
@@ -1076,8 +1106,14 @@ export function defineBlockInfo() {
         "message0": "%1 에서 %2 번째 항목을 삭제하기",
         "args0": [
           {
-            "type": "input_value",
-            "name": "LIST"
+            "type": "field_dropdown",
+            "name": "LIST",
+            "options": [
+              [
+                "리스트",
+                "OPTION1"
+              ]
+            ]
           },
           {
             "type": "input_value",
@@ -1095,8 +1131,14 @@ export function defineBlockInfo() {
         "message0": "%1 의 %2 번째에 %3 항목을 넣기",
         "args0": [
           {
-            "type": "input_value",
-            "name": "LIST"
+            "type": "field_dropdown",
+            "name": "LIST",
+            "options": [
+              [
+                "리스트",
+                "OPTION1"
+              ]
+            ]
           },
           {
             "type": "input_value",
@@ -1121,8 +1163,14 @@ export function defineBlockInfo() {
         "message0": "%1 의 %2 번째 항목을 %3 (으)로 바꾸기",
         "args0": [
           {
-            "type": "input_value",
-            "name": "LIST"
+            "type": "field_dropdown",
+            "name": "LIST",
+            "options": [
+              [
+                "리스트",
+                "OPTION1"
+              ]
+            ]
           },
           {
             "type": "input_value",
@@ -1147,9 +1195,15 @@ export function defineBlockInfo() {
         "message0": "%1 항목 수",
         "args0": [
           {
-            "type": "input_value",
-            "name": "LIST"
-          }
+            "type": "field_dropdown",
+            "name": "LIST",
+            "options": [
+              [
+                "리스트",
+                "OPTION1"
+              ]
+            ]
+          },
         ],
         "output": "Number",
         "colour": DATA_COLOUR,
@@ -1162,8 +1216,14 @@ export function defineBlockInfo() {
         "message0": "%1 에 %2 (이)가 포함되어 있는가?",
         "args0": [
           {
-            "type": "input_value",
-            "name": "LIST"
+            "type": "field_dropdown",
+            "name": "LIST",
+            "options": [
+              [
+                "리스트",
+                "OPTION1"
+              ]
+            ]
           },
           {
             "type": "input_value",
@@ -1182,8 +1242,14 @@ export function defineBlockInfo() {
         "colour": FUNCTION_COLOUR,
         "args0": [
           {
-            "type": "input_value",
-            "name": "FUNCTION"
+            "type": "field_dropdown",
+            "name": "FUNCTION",
+            "options": [
+              [
+                "함수",
+                "OPTION1"
+              ]
+            ]
           }
         ],
         "inputsInline": true,
@@ -1341,7 +1407,7 @@ export function defineBlockInfo() {
       },
       {
         "type": "trade_calc_time_value",
-        "message0": "%1 의 %2 의 값",
+        "message0": "%1 의 %2 분 전의 값",
         "args0": [
           {
             "type": "input_value",
@@ -1351,7 +1417,7 @@ export function defineBlockInfo() {
           {
             "type": "input_value",
             "name": "TIME",
-            "check": "Time"
+            "check": "Number"
           }
         ],
         "output": "Number",
