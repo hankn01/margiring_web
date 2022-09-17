@@ -397,27 +397,13 @@ export function defineBlockGenerator() {
   }
 
   // 거래 블록
-  Python['trade_buy'] = function(block) {
-    const investment = Python.valueToCode(block, 'INVESTMENT', Python.ORDER_ATOMIC);
-    const volume = Python.valueToCode(block, 'VOLUME', Python.ORDER_ATOMIC);
-    const condition = Python.valueToCode(block, 'CONDITION', Python.ORDER_ATOMIC);
-    const code = 'order(symbol('
-                  + investment + '), '
-                  + volume + ')\n'
-                  + 'condition = ' + condition + '\n'
-                  + 'buying()';
+  Python['trade_buy'] = function() {
+    const code = 'print(\'my coin\')\n';
     return code;
   };
 
-  Python['trade_sell'] = function(block) {
-    const investment = Python.valueToCode(block, 'INVESTMENT', Python.ORDER_ATOMIC);
-    const volume = Python.valueToCode(block, 'VOLUME', Python.ORDER_ATOMIC);
-    const condition = Python.valueToCode(block, 'CONDITION', Python.ORDER_ATOMIC);
-    const code = 'order(symbol('
-                  + investment + '), -'
-                  + volume + ')\n'
-                  + 'condition = ' + condition + '\n'
-                  + 'selling()';
+  Python['trade_sell'] = function() {
+    const code = 'print(\'my coin\')\n';
     return code;
   };
 

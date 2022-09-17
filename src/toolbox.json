@@ -814,23 +814,7 @@
           "kind": "block",
           "type": "trade_buy",
           "inputs": {
-            "INVESTMENT": {
-              "shadow": {
-                "type": "calc_string",
-                "fields": {
-                  "VALUE": "현재 종목"
-                }
-              }
-            },
             "VOLUME": {
-              "shadow": {
-                "type": "calc_number",
-                "fields": {
-                  "VALUE": 10
-                }
-              }
-            },
-            "CONDITION": {
               "shadow": {
                 "type": "calc_number",
                 "fields": {
@@ -844,23 +828,7 @@
           "kind": "block",
           "type": "trade_sell",
           "inputs": {
-            "INVESTMENT": {
-              "shadow": {
-                "type": "calc_string",
-                "fields": {
-                  "VALUE": "현재 종목"
-                }
-              }
-            },
             "VOLUME": {
-              "shadow": {
-                "type": "calc_number",
-                "fields": {
-                  "VALUE": 10
-                }
-              }
-            },
-            "CONDITION": {
               "shadow": {
                 "type": "calc_number",
                 "fields": {
@@ -907,33 +875,6 @@
         },
         {
           "kind": "category",
-          "name": "거래 지표",
-          "colour": "#f39c12",
-          "contents": [
-            {
-              "kind": "label",
-              "text": "기본 지표"
-            },
-            {
-              "kind": "block",
-              "type": "trade_trade_info"
-            },
-            {
-              "kind": "label",
-              "text": "계산 지표"
-            },
-            {
-              "kind": "block",
-              "type": "trade_trade_calc_mid"
-            },
-            {
-              "kind": "block",
-              "type": "trade_trade_calc"
-            }
-          ]
-        },
-        {
-          "kind": "category",
           "name": "거래 연산자",
           "colour": "#f39c12",
           "contents": [
@@ -968,6 +909,33 @@
             {
               "kind": "block",
               "type": "trade_calc_min"
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "거래 지표",
+          "colour": "#f39c12",
+          "contents": [
+            {
+              "kind": "label",
+              "text": "기본 지표"
+            },
+            {
+              "kind": "block",
+              "type": "trade_trade_info"
+            },
+            {
+              "kind": "label",
+              "text": "계산 지표"
+            },
+            {
+              "kind": "block",
+              "type": "trade_trade_calc_mid"
+            },
+            {
+              "kind": "block",
+              "type": "trade_trade_calc"
             }
           ]
         },
