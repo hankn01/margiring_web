@@ -11,6 +11,13 @@
     
     z-index: 999;
   }
+  .SignUpModalWrapper {
+    position: absolute;
+    top: 25vh;
+    left: calc(50% - 275px);
+    
+    z-index: 1000;
+  }
  
   .MainFrame {
     width: 100%;

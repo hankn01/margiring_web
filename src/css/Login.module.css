@@ -77,6 +77,7 @@
     position: absolute;
     right: 32px;
     top: 32px;
+    cursor: pointer;
   }
 
   #SignUpButton{
@@ -102,6 +103,7 @@
     font-stretch: normal;
     font-style: normal;
     color: #fff;
+    cursor: pointer;
   }
   #SignInButton:hover{
     border-radius: 4px;
@@ -123,4 +125,8 @@
     top: 310px;
 
 
+  }
+  #SignUpLink{
+    font-weight: bold;
+    cursor: pointer;
   }

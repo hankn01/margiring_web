@@ -1,0 +1,13 @@
+#SignUpWrapper {
+    font-size: 14px;
+    width: 550px;
+    height: 370px;
+    border-radius: 8px;
+    background-color: #fff;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    
+
+  }

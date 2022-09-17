@@ -5,7 +5,9 @@ import {Link} from 'react-router-dom';
 import Header from './Header';
 import styles from './css/Mainscr.module.css';
 import LoginModalContext from './contexts/LoginModalContext';
+import SignUpModalContext from './contexts/SignUpModalContext';
 import Login from './Login';
+import SignUp from './SignUp';
 
 function Mainscr() {
     useEffect(() => {
@@ -67,6 +69,15 @@ function Mainscr() {
              {//<div className={`${styles.ModalWrapper}`}>{value.ModalOpen?<Login />:null}</div>
       }
             </LoginModalContext.Consumer> 
+            <SignUpModalContext.Consumer>
+             {value => (
+                <>
+                    {value.ShowModal?<div className={`${styles.SignUpModalWrapper}`}><SignUp /></div>:null}
+                </>
+             )}
+             {//<div className={`${styles.ModalWrapper}`}>{value.ModalOpen?<Login />:null}</div>
+      }
+            </SignUpModalContext.Consumer> 
 
         </>
     );
