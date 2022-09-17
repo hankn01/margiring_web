@@ -866,7 +866,19 @@ export function defineBlockInfo() {
       },
       {
         "type": "calc_percentage",
-        "message0": "'10'의 '10'%",
+        "message0": "%1 의 %2 %",
+        "args0": [
+          {
+            "type": "input_value",
+            "name": "VALUE1",
+            "check": "Number"
+          },
+          {
+            "type": "input_value",
+            "name": "VALUE2",
+            "check": "Number"
+          },
+        ],
         "colour": CALC_TIME_COLOUR,
         "output": "Number",
         "tooltip": "",

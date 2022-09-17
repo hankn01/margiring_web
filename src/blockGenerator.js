@@ -287,9 +287,11 @@ export function defineBlockGenerator() {
     return [code, Python.ORDER_FUNCTION_CALL]
   };
 
-  Python['calc_percentage'] = function() {
-    const code = 'print(\'hi there\')';
-    return code;
+  Python['calc_percentage'] = function(block) {
+    const value1 = Python.valueToCode(block, 'VALUE1', Python.ORDER_ATOMIC);
+    const value2 = Python.valueToCode(block, 'VALUE2', Python.ORDER_ATOMIC);
+    const code = value1 + ' * ' + value2 + ' * 0.01';
+    return [code, Python.ORDER_MULTIPLICATIVE];
   };
 
   Python['calc_string'] = function(block) {
