@@ -496,21 +496,6 @@ export function defineBlockGenerator() {
     return code;
   };
 
-  Python['trade_momentum_RSI'] = function() {
-    const code = 'print(\'my coin\')\n';
-    return code;
-  };
-
-  Python['trade_momentum_STO_OSC'] = function() {
-    const code = 'print(\'my coin\')\n';
-    return code;
-  };
-
-  Python['trade_momentum_RSI_STO'] = function() {
-    const code = 'print(\'my coin\')\n';
-    return code;
-  };
-
   Python['trade_moving_MACD'] = function() {
     const code = 'print(\'my coin\')\n';
     return code;
@@ -531,92 +516,12 @@ export function defineBlockGenerator() {
     return code;
   };
 
-  Python['trade_moving_MDI'] = function() {
-    const code = 'print(\'my coin\')\n';
-    return code;
-  };
-
-  Python['trade_moving_PDI'] = function() {
-    const code = 'print(\'my coin\')\n';
-    return code;
-  };
-
-  Python['trade_moving_CCI'] = function() {
-    const code = 'print(\'my coin\')\n';
-    return code;
-  };
-
-  Python['trade_moving_DPO'] = function() {
-    const code = 'print(\'my coin\')\n';
-    return code;
-  };
-
-  Python['trade_moving_STC'] = function() {
-    const code = 'print(\'my coin\')\n';
-    return code;
-  };
-
-  Python['trade_moving_ichimoku_conversion'] = function() {
-    const code = 'print(\'my coin\')\n';
-    return code;
-  };
-
-  Python['trade_moving_ichimoku_base'] = function() {
-    const code = 'print(\'my coin\')\n';
-    return code;
-  };
-
-  Python['trade_moving_ichimoku_span1'] = function() {
-    const code = 'print(\'my coin\')\n';
-    return code;
-  };
-
-  Python['trade_moving_ichimoku_span2'] = function() {
-    const code = 'print(\'my coin\')\n';
-    return code;
-  };
-
-  Python['trade_VIX_bollinger_ubb'] = function() {
-    const code = 'print(\'my coin\')\n';
-    return code;
-  };
-
-  Python['trade_VIX_bollinger_dbb'] = function() {
-    const code = 'print(\'my coin\')\n';
-    return code;
-  };
-
-  Python['trade_VIX_bollinger_mdd'] = function() {
-    const code = 'print(\'my coin\')\n';
-    return code;
-  };
-
-  Python['trade_VIX_bollinger_bandwidth'] = function() {
-    const code = 'print(\'my coin\')\n';
-    return code;
-  };
-
-  Python['trade_VIX_bollinger_position'] = function() {
-    const code = 'print(\'my coin\')\n';
-    return code;
-  };
-
-  Python['trade_volume_ADI'] = function() {
+  Python['trade_volume_VWAP'] = function() {
     const code = 'print(\'my coin\')\n';
     return code;
   };
 
   Python['trade_volume_OBV'] = function() {
-    const code = 'print(\'my coin\')\n';
-    return code;
-  };
-
-  Python['trade_volume_CMF'] = function() {
-    const code = 'print(\'my coin\')\n';
-    return code;
-  };
-
-  Python['trade_volume_VWAP'] = function() {
     const code = 'print(\'my coin\')\n';
     return code;
   };

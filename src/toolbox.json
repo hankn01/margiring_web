@@ -321,7 +321,7 @@
       },
       {
         "kind": "category",
-        "name": "계산/시간",
+        "name": "시간",
         "colour": "#f1c40f",
         "contents": [
             {
@@ -347,9 +347,20 @@
               "type": "time_specific"
             },
             {
-              "kind": "sep",
-              "gap": "48"
+              "kind": "block",
+              "type": "time_detial"
             },
+            {
+              "kind": "block",
+              "type": "time_day_week"
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "계산",
+          "colour": "#f1c40f",
+          "contents": [
             {
               "kind": "block",
               "type": "calc_number"
@@ -962,26 +973,7 @@
             },
             {
               "kind": "category",
-              "name": "모멘텀 지표",
-              "colour": "#f39c12",
-              "contents": [
-                {
-                  "kind": "block",
-                  "type": "trade_momentum_RSI"
-                },
-                {
-                  "kind": "block",
-                  "type": "trade_momentum_STO_OSC"
-                },
-                {
-                  "kind": "block",
-                  "type": "trade_momentum_RSI_STO"
-                }
-              ]
-            },
-            {
-              "kind": "category",
-              "name": "추세 지표",
+              "name": "보조 지표",
               "colour": "#f39c12",
               "contents": [
                 {
@@ -1002,89 +994,11 @@
                 },
                 {
                   "kind": "block",
-                  "type": "trade_moving_MDI"
-                },
-                {
-                  "kind": "block",
-                  "type": "trade_moving_PDI"
-                },
-                {
-                  "kind": "block",
-                  "type": "trade_moving_CCI"
-                },
-                {
-                  "kind": "block",
-                  "type": "trade_moving_DPO"
-                },
-                {
-                  "kind": "block",
-                  "type": "trade_moving_STC"
-                },
-                {
-                  "kind": "block",
-                  "type": "trade_moving_ichimoku_conversion"
-                },
-                {
-                  "kind": "block",
-                  "type": "trade_moving_ichimoku_base"
-                },
-                {
-                  "kind": "block",
-                  "type": "trade_moving_ichimoku_span1"
-                },
-                {
-                  "kind": "block",
-                  "type": "trade_moving_ichimoku_span2"
-                }
-              ]
-            },
-            {
-              "kind": "category",
-              "name": "변동성 지표",
-              "colour": "#f39c12",
-              "contents": [
-                {
-                  "kind": "block",
-                  "type": "trade_VIX_bollinger_ubb"
-                },
-                {
-                  "kind": "block",
-                  "type": "trade_VIX_bollinger_dbb"
-                },
-                {
-                  "kind": "block",
-                  "type": "trade_VIX_bollinger_mbb"
-                },
-                {
-                  "kind": "block",
-                  "type": "trade_VIX_bollinger_bandwidth"
-                },
-                {
-                  "kind": "block",
-                  "type": "trade_VIX_bollinger_position"
-                }
-              ]
-            },
-            {
-              "kind": "category",
-              "name": "볼륨 지표",
-              "colour": "#f39c12",
-              "contents": [
-                {
-                  "kind": "block",
-                  "type": "trade_volume_ADI"
+                  "type": "trade_volume_VWAP"
                 },
                 {
                   "kind": "block",
                   "type": "trade_volume_OBV"
-                },
-                {
-                  "kind": "block",
-                  "type": "trade_volume_CMF"
-                },
-                {
-                  "kind": "block",
-                  "type": "trade_volume_VWAP"
                 }
               ]
             }

@@ -575,7 +575,7 @@ export function defineBlockInfo() {
         "tooltip": "선택지가 참이 아닌지를 의미합니다. 선택지가 참이면 결과가 거짓이 되고, 그 반대면 참이 됩니다.",
         "helpUrl": ""
       },
-      // 계산/시간 블록
+      // 시간 블록
       {
         "type": "time_now",
         "message0": "현재",
@@ -614,6 +614,23 @@ export function defineBlockInfo() {
         "tooltip": "선택한 시간을 의미합니다.",
         "helpUrl": ""
       },
+      {
+        "type": "time_detial",
+        "message0": "'현재'의 '연도/월/일/시/분/요일'",
+        "output": "Time",
+        "colour": CALC_TIME_COLOUR,
+        "tooltip": "",
+        "helpUrl": ""
+      },
+      {
+        "type": "time_day_week",
+        "message0": "'월요일/화요일/수요일/목요일/금요일/토요일/일요일'",
+        "output": "Time",
+        "colour": CALC_TIME_COLOUR,
+        "tooltip": "요일을 가리킵니다. 실제 값은 월화수목금토일 순서대로 1234567입니다!",
+        "helpUrl": ""
+      },
+      // 계산 블록
       {
         "type": "calc_number",
         "message0": "%1",
@@ -779,6 +796,7 @@ export function defineBlockInfo() {
         "type": "calc_percentage",
         "message0": "'10'의 '10'%",
         "colour": CALC_TIME_COLOUR,
+        "output": "Number",
         "tooltip": "",
         "helpUrl": ""
       },
@@ -1315,33 +1333,6 @@ export function defineBlockInfo() {
         "helpUrl": ""
       },
       {
-        "type": "trade_momentum_RSI",
-        "message0": "'현재 종목'의 RSI",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_momentum_STO_OSC",
-        "message0": "'현재 종목'의 스토캐스틱 OSC",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_momentum_RSI_STO",
-        "message0": "'현재 종목'의 SRI 스토캐스틱",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
         "type": "trade_moving_MACD",
         "message0": "'현재 종목'의 MACD",
         "previousStatement": null,
@@ -1378,134 +1369,8 @@ export function defineBlockInfo() {
         "helpUrl": ""
       },
       {
-        "type": "trade_moving_MDI",
-        "message0": "'현재 종목'의 MDI",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_moving_PDI",
-        "message0": "'현재 종목'의 PDI",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_moving_CCI",
-        "message0": "'현재 종목'의 CCI",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_moving_DPO",
-        "message0": "'현재 종목'의 DPO",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_moving_STC",
-        "message0": "'현재 종목'의 STC",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_moving_ichimoku_conversion",
-        "message0": "'현재 종목'의 일목균형 전환선",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_moving_ichimoku_base",
-        "message0": "'현재 종목'의 일목균형 기준선",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_moving_ichimoku_span1",
-        "message0": "'현재 종목'의 일목균형 선행스팬1",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_moving_ichimoku_span2",
-        "message0": "'현재 종목'의 일목균형 선행스팬2",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_VIX_bollinger_ubb",
-        "message0": "'현재 종목'의 볼린저밴드 상단값",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_VIX_bollinger_dbb",
-        "message0": "'현재 종목'의 볼린저밴드 하단값",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_VIX_bollinger_mbb",
-        "message0": "'현재 종목'의 볼린저밴드 중앙값",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_VIX_bollinger_bandwidth",
-        "message0": "'현재 종목'의 볼린저밴드 밴드폭",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_VIX_bollinger_position",
-        "message0": "'현재 종목'의 볼린저밴드 위치",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_volume_ADI",
-        "message0": "'현재 종목'의 ADI",
+        "type": "trade_volume_VWAP",
+        "message0": "'현재 종목'의 VWAP",
         "previousStatement": null,
         "nextStatement": null,
         "colour": TRADE_COLOUR,
@@ -1515,24 +1380,6 @@ export function defineBlockInfo() {
       {
         "type": "trade_volume_OBV",
         "message0": "'현재 종목'의 OBV",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_volume_CMF",
-        "message0": "'현재 종목'의 CMF",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_volume_VWAP",
-        "message0": "'현재 종목'의 VWAP",
         "previousStatement": null,
         "nextStatement": null,
         "colour": TRADE_COLOUR,
