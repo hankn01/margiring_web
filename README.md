@@ -1,14 +1,12 @@
-# Getting Started with Create React App
+# 마지링 서비스
+## 개발 시 테스트 방법
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
+프로젝트에서 개발 시 테스트는 다음과 같이 수행할 수 있습니다.
 
 ### `npm start`
+### `yarn start`
 
-Runs the app in the development mode.\
+\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
