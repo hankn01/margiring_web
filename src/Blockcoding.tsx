@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, {useState} from 'react';
 //import {Link} from 'react-router-dom';
 import Backtest from './Backtest';
@@ -6,7 +7,8 @@ import CoinInfo from './CoinInfo';
 import Header from './Header';
 import { generateBlockToCode } from './codeGenerator';
 import styles from './css/Blockcoding.module.css';
-
+import LoginModalContext from './contexts/LoginModalContext';
+import Login from './Login';
 
 
 function Blockcoding() {
@@ -42,6 +44,16 @@ function Blockcoding() {
             {ShowModal?<Backtest ModalClose = {ModalClose}/> : null}
             </div>
             
+            <LoginModalContext.Consumer>
+             {value => (
+                <>
+                    {value.ShowModal?<div className={`${styles.ModalWrapper}`}><Login /></div>:null}
+                </>
+             )}
+             {//<div className={`${styles.ModalWrapper}`}>{value.ModalOpen?<Login />:null}</div>
+      }
+            </LoginModalContext.Consumer> 
+
             </>
             
         );

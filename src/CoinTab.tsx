@@ -34,7 +34,7 @@ return (
     <>
     <div id={`${styles.MenuDiv}`}>
         <ul className={`${styles.tabs}`}>
-        <li className={`${CurMenu === 0? 'active': ''}`} onClick={() => setCurMenu(0)}>원화</li>
+        <li className={`${CurMenu === 0? 'active': ''}`} onClick={() => {console.log("TEST0"); setCurMenu(0);}}>원화</li>
         <li className={`${CurMenu === 1? 'active': ''}`} onClick={() => setCurMenu(1)}>BTC</li>
         <li className={`${CurMenu === 2? 'active': ''}`} onClick={() => setCurMenu(2)}>USDT</li>
         <li className={`${CurMenu === 3? 'active': ''}`} onClick={() => setCurMenu(3)}>그룹</li>

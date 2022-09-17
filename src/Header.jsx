@@ -1,9 +1,12 @@
-import React from 'react';
+/* eslint-disable */
+
+import React, {useContext} from 'react';
 import {Link} from 'react-router-dom';
 import styles from './css/Header.module.css'
-
+import LoginModalContext from './contexts/LoginModalContext';
 
 function Header() {
+    
     return (
         <div className={`${styles.Header}`}> {/* 헤더 부분 div(위쪽) */}
                 <div id={`${styles.LogoDiv}`}> {/* 로고 아이콘(이미지) 들어갈 부분 */}
@@ -17,8 +20,11 @@ function Header() {
                 </Link>
                 </div>
                 
-
-                    <button id={`${styles.LogoutText}`}>로그아웃</button>
+                    <LoginModalContext.Consumer>
+                        {value=> (
+                             <button id={`${styles.LogoutText}`} onClick={() => {value.setShowModal(true)}}>로그인</button>
+                        )}
+                    </LoginModalContext.Consumer>
                 
         </div>
     );
