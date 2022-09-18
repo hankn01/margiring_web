@@ -1,7 +1,7 @@
 #SignUpWrapper {
     font-size: 14px;
     width: 550px;
-    height: 370px;
+    height: 600px;
     border-radius: 8px;
     background-color: #fff;
     position: absolute;
@@ -11,3 +11,55 @@
     
 
   }
+
+.TextBox{
+    width: 486px;
+    height: 48px;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    overflow: hidden;
+    text-align: left;
+    color: #8d8f93;
+    border-radius: 2px;
+    border: solid 1px #dbdde0;
+}
+
+#IDInput{
+  position: absolute;
+  top: 84px;
+  left: 32px;
+}
+
+#PasswordInput{
+  position: absolute;
+  left: 32px;
+  top: 148px;
+}
+
+#NameInput{
+  position: absolute;
+  left: 32px;
+  top: 212px;
+}
+
+#AgeInput{
+  position: absolute;
+  left: 32px;
+  top: 276px;
+}
+
+#NicknameInput{
+  position: absolute;
+  left: 32px;
+  top: 340px;
+}
+
+#SignUpTitleCaption{
+  position: absolute;
+  left: 32px;
+}
