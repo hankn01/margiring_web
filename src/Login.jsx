@@ -43,12 +43,12 @@ function Backtest({ModalClose}: any) {
                     </LoginModalContext.Consumer>
                     <br></br>
                     
-                    <input id={`${styles.IDInput}`}>
+                    <input id={`${styles.IDInput}`} placeholder="이메일 입력">
                     
                     </input>
                     <br></br>
                    
-                    <input type="password" id={`${styles.PasswordInput}`}>
+                    <input type="password" id={`${styles.PasswordInput}`} placeholder="비밀번호 입력">
                     </input>
                     <br>
                     </br>

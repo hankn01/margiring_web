@@ -16,6 +16,7 @@
   #CloseButton {
     position: absolute;
     right: 32px;
+    cursor: pointer;
   }
 
   .BacktestMiddleDiv {
@@ -252,6 +253,9 @@
     outline: none;
     z-index: 1;
   }
+  #WeeklyButtonDiv:hover{
+  border: solid 1px #2a323f;
+  }
   .MonthlyButton {
     width: 66px;
     height: 48px;
@@ -285,6 +289,9 @@
     outline: none;
     z-index: 1;
   }
+  #MonthlyButtonDiv:hover{
+    border: solid 1px #2a323f;
+  }
   #ThreeMonthButtonDiv {
     width: 66px;
     height: 48px;
@@ -296,6 +303,9 @@
     border: 1px solid #dbdde0;
     outline: none;
     z-index: 1;
+  }
+  #ThreeMonthButtonDiv:hover{
+    border: solid 1px #2a323f;
   }
   .ThreeMonthButton {
     width: 66px;

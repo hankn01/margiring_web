@@ -12,6 +12,24 @@
 
   }
 
+  #SignUpTitleCaption {
+    width: 131px;
+    height: 29px;
+    flex-grow: 0;
+    font-family: Pretendard;
+    font-size: 24px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #2a323f;
+    position: absolute;
+    top: 30px;
+    left: 32px;
+  }
+    
+
 .TextBox{
     width: 486px;
     height: 48px;
@@ -62,4 +80,15 @@
 #SignUpTitleCaption{
   position: absolute;
   left: 32px;
+}
+
+#CloseButton{
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  cursor: pointer;
+}
+
+#PasswordRetype{
+  
 }

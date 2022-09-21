@@ -28,29 +28,26 @@ function SignUp() {
                 
                 <br>
                 </br>
-                <input className={`${styles.TextBox}`} id={`${styles.IDInput}`}>
+                <input className={`${styles.TextBox}`} id={`${styles.IDInput}`} placeholder="이메일 주소 입력">
                 </input>
-                <a className={`${styles.Caption}`} id={`${styles.IDInputCaption}`}>메일 주소 입력</a>
                 <br>
                 </br> 
-                <input className={`${styles.TextBox}`} type="password" id={`${styles.PasswordInput}`}>
+                <input className={`${styles.TextBox}`} type="password" id={`${styles.PasswordInput}`} placeholder="비밀번호 입력" maxLength={25}>
                 </input>
-                <a className={`${styles.Caption}`} id={`${styles.PasswordInputCaption}`}>비밀번호 입력</a>
                 <br>
                 </br>
-                <input className={`${styles.TextBox}`} id={`${styles.NameInput}`}>
+                <input className={`${styles.TextBox}`} type="password" id={`${styles.PasswordRetype}`}placeholder="비밀번호 확인" maxLength={25}></input>
+                <a>패스워드 확인 넣을 자리</a>
+                <input className={`${styles.TextBox}`} id={`${styles.NameInput}`} placeholder="이름" maxLength={7}>
                 </input>
-                <a className={`${styles.Caption}`} id={`${styles.NameInputCaption}`}>이름 입력</a>
                 <br>
                 </br>
-                <input className={`${styles.TextBox}`} id={`${styles.AgeInput}`}>
+                <input className={`${styles.TextBox}`} id={`${styles.AgeInput}`} placeholder="나이">
                 </input>
-                <a className={`${styles.Caption}`} id={`${styles.AgeInputCaption}`}>나이 입력</a>
                 <br>
                 </br>
-                <input className={`${styles.TextBox}`} id={`${styles.NicknameInput}`}>
+                <input className={`${styles.TextBox}`} id={`${styles.NicknameInput}`} placeholder="닉네임">
                 </input>
-                <a className={`${styles.Caption}`} id={`${styles.NicknameInputCaption}`}>닉네임 입력</a>
             </div>
         </>
     );
