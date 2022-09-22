@@ -348,7 +348,7 @@
         },
         {
           "kind": "block",
-          "type": "time_detial",
+          "type": "time_detail",
           "inputs": {
             "TIME": {
               "shadow": {
