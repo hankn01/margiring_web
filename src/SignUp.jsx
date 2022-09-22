@@ -47,8 +47,9 @@ function SignUp() {
                 </input>
                 <br>
                 </br>
-                
-                <DatePicker selected={BirthDate} onChange={date => setBirthDate(date)} />
+                <div id={`${styles.DatePickerDiv}`}>
+                <DatePicker selected={BirthDate} onChange={date => setBirthDate(date)} popperPlacement="bottom"/>
+                </div>
                 <br>
                 </br>
                 <input className={`${styles.TextBox}`} id={`${styles.NicknameInput}`} placeholder="닉네임">

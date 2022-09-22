@@ -1,9 +1,14 @@
-.custom-react-datepicker__wrapper {
+.react-datepicker__wrapper {
     display: flex;
     font-display: row;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
+    position: absolute;
+    left: 32px;
+    top: 260px;
+    left: 32px;
+    top: 260px;
   }
 
   
@@ -23,8 +28,7 @@
     border-radius: 2px;
     border: solid 1px #dbdde0;
     position: absolute;
-    left: 32px;
-    top: 260px;
+  
   }
   .react-datepicker__input-container input:hover{
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.04);

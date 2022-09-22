@@ -159,3 +159,8 @@
   color: #8d8f93;
 }
 
+#DatePickerDiv{
+  position: absolute;
+  left: 32px;
+  top: 326px;
+}
