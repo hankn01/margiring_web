@@ -5,9 +5,9 @@ import BackTest from './Backtest';
 import Blockcoding from './Blockcoding'; //블록코딩 화면 컴포넌트(SPA 구현용)
 import Header from './Header';
 import Mainscr from './Mainscr'; //메인 화면 컴포넌트(SPA 구현용)
+import SignUpCancelConfirm from './SignUpCancelConfirm';
 import LoginModalContext from './contexts/LoginModalContext';
 import SignUpModalContext from './contexts/SignUpModalContext';
-
 import './App.css'; //App.css 파일은 기본 설정 삭제 후 현재 인터페이스에 맞게 변경 예정
 
 
@@ -25,6 +25,7 @@ function App() {
       <Route path="/block" element={<Blockcoding />} />
       <Route path="/header" element={<Header />} />
       <Route path="/backtest" element={<BackTest />} />
+      <Route path="/sc" element={<SignUpCancelConfirm />} />
     </Routes>
     </SignUpModalContext.Provider>
    </LoginModalContext.Provider>

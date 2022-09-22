@@ -8,6 +8,7 @@ import LoginModalContext from './contexts/LoginModalContext';
 import SignUpModalContext from './contexts/SignUpModalContext';
 import Login from './Login';
 import SignUp from './SignUp';
+import Footer from './Footer';
 
 function Mainscr() {
     useEffect(() => {
@@ -78,7 +79,7 @@ function Mainscr() {
              {//<div className={`${styles.ModalWrapper}`}>{value.ModalOpen?<Login />:null}</div>
       }
             </SignUpModalContext.Consumer> 
-
+        <Footer />
         </>
     );
 }

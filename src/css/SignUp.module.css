@@ -46,6 +46,18 @@
     border-radius: 2px;
     border: solid 1px #dbdde0;
 }
+.TextBox:hover{
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.04);
+  border: solid 1px;
+  background-color: #fff;
+}
+
+.TextBox:focus{
+  border-radius: 2px;
+  border: solid 1px #2a323f;
+  background-color: #fff;
+  outline:none;
+}
 
 #IDInput{
   position: absolute;
@@ -62,19 +74,19 @@
 #NameInput{
   position: absolute;
   left: 32px;
-  top: 212px;
+  top: 276px;
 }
 
 #AgeInput{
   position: absolute;
   left: 32px;
-  top: 276px;
+  top: 340px;
 }
 
 #NicknameInput{
   position: absolute;
   left: 32px;
-  top: 340px;
+  top: 404px;
 }
 
 #SignUpTitleCaption{
@@ -90,5 +102,60 @@
 }
 
 #PasswordRetype{
-  
+  position: absolute;
+  left: 32px;
+  top: 212px;
 }
+
+#SignUpButton{
+  position: absolute;
+  left: 32px;
+  top: 520px;
+  width: 240px;
+  height: 48px;
+  border-radius: 4px;
+  background-color: #1e78ff;
+  border: none;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  color: #fff;
+  cursor: pointer;
+}
+
+#SignUpButton:hover{
+  border-radius: 4px;
+  background-color: #3c8aff;
+}
+
+#SignUpButton:focus{
+  
+
+}
+
+#CancelButton{
+  position: absolute;
+  right: 32px;
+  top: 520px;
+  width: 240px;
+  height: 48px;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.16);
+  background-color: #fff;
+  border:none;
+  cursor: pointer;
+}
+
+#CancelButton:hover{
+  background-color: #f1f5f9;
+}
+
+#TermsCaption{
+  position: absolute;
+  right: 32px;
+  top: 460px;
+  color: #8d8f93;
+}
+
