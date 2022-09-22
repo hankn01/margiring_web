@@ -60,9 +60,14 @@ function SignUp() {
                 <button id={`${styles.SignUpButton}`}>
                         회원가입
                 </button>
-                <button id={`${styles.CancelButton}`}>
-                    취소
-                </button>
+                <SignUpModalContext.Consumer>
+                    {value => (
+                        <button id={`${styles.CancelButton}`} onClick={() => {value.setShowModal(false)}}>
+                        취소
+                    </button>
+                    )}
+                </SignUpModalContext.Consumer>
+               
             </div>
         </>
     );
