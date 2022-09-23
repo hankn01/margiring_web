@@ -1,18 +1,22 @@
 /* eslint-disable */
-
+// @ts-nocheck
 
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import {generateDummyCode} from './codeGenerator';
 import styles from './css/Backtest.module.css';
 import Loading from './Loading';
+import DatePicker from 'react-datepicker';
+
 
 function Backtest({ModalClose}: any) {
     const [TestCode, setTestCode] = useState("");
     const [ReceivedData, setReceivedData] = useState({"cumulative_yield": 0, "annualized_yield": 0, "annualized_volatility": 0, "sharpe_ratio": "백테스트 전", "MDD": 0});
     const [LoadingState, setLoadingState] = useState(false);
     const [BacktestComplete, setBacktestComplete] = useState(false);
-    
+    const [BacktestDate, setBacktestDate] = useState(new Date());
+
+
     useEffect(() => {
         const GeneratedCode = generateDummyCode();
         setTestCode(GeneratedCode);
@@ -59,6 +63,9 @@ function Backtest({ModalClose}: any) {
                         </div>
 
                     {/*<button className={`${styles.OtherTermButton}`}>직접 입력 </button>*/}
+                    </div>
+                    <div id={`${styles.InvestTermCustomDiv}`}>
+                        <DatePicker selected={BacktestDate} onChange={date => setBacktestDate(date)} popperPlacement="bottom"/>
                     </div>
                     <span className={`${styles.InvestFeeCaption}`}>수수료(%)</span>
                     <span className={`${styles.InvestSlippageCaption}`}>슬리피지(%)</span>
