@@ -439,6 +439,9 @@
     top: 3%;
     right: 2.5%;
   }
+  .BackTestExecuteButton:hover{
+    background-color: #3c8aff;
+  }
 #StrategyTitleCaption {
    position: absolute;
    top: 0px;
@@ -477,6 +480,9 @@
   letter-spacing: normal;
   text-align: center;
   color: #fff;
+}
+#ExecuteButton:hover{
+  background-color: #3c8aff;
 }
 #SummaryCaption{
   position:absolute;
