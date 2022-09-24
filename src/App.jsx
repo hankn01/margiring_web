@@ -5,6 +5,7 @@ import BackTest from './Backtest';
 import Blockcoding from './Blockcoding'; //블록코딩 화면 컴포넌트(SPA 구현용)
 import Header from './Header';
 import Mainscr from './Mainscr'; //메인 화면 컴포넌트(SPA 구현용)
+import Profile from './Profile';
 import SignUpCancelConfirm from './SignUpCancelConfirm';
 import LoginModalContext from './contexts/LoginModalContext';
 import SignUpModalContext from './contexts/SignUpModalContext';
@@ -26,6 +27,7 @@ function App() {
       <Route path="/header" element={<Header />} />
       <Route path="/backtest" element={<BackTest />} />
       <Route path="/sc" element={<SignUpCancelConfirm />} />
+      <Route path="/profile" element={<Profile />} />
     </Routes>
     </SignUpModalContext.Provider>
    </LoginModalContext.Provider>

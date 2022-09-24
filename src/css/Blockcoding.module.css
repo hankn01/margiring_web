@@ -216,6 +216,12 @@ background: #1B1F24;
     
     z-index: 999;
   }
+  .LoginModalWrapper{
+    position: absolute;
+    top: calc(50% - 275px);
+    left: calc(50% - 185px);
+    z-index: 1000;
+  }
   #CoinInfoDiv{
     height: 100%;
     overflow: scroll;

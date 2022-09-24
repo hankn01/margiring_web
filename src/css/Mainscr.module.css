@@ -6,10 +6,9 @@
   }
   .ModalWrapper {
     position: absolute;
-    top: 25vh;
-    left: calc(50% - 275px);
-    
-    z-index: 999;
+    top: calc(50% - 275px);
+    left: calc(50% - 185px);
+    z-index: 1000;
   }
   .SignUpModalWrapper {
     position: absolute;

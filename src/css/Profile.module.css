@@ -1,0 +1,12 @@
+.ProfileUnitDiv{
+    opacity: 1;  
+    overflow: hidden;
+    text-align: center;
+    position: absolute;
+    top: 64px;
+    width: 100%;
+    height: 262px;
+    flex-grow: 0;  
+    padding: 30px 59px 32px 60px;
+    background-color: #1b1f24;
+}

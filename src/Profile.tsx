@@ -5,10 +5,12 @@ function Profile() {
     return (
         <>
         TEST
-        <div className={`${styles.ListDiv}`}> {/* 알고리즘 리스트 div */}
+        <div className={`${styles.ProfileUnitDiv}`}> {/* 알고리즘 리스트 div */}
+            <span id={`${styles.ProfileInfoCaption}`}>프로필 정보</span>
             
-            <span id={`${styles.MyStrategyCaption}`}>My Strategy</span>
         </div>
         </>
     );
 }
+
+export default Profile;

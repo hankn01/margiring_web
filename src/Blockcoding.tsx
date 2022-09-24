@@ -47,7 +47,7 @@ function Blockcoding() {
             <LoginModalContext.Consumer>
              {value => (
                 <>
-                    {value.ShowModal?<div className={`${styles.ModalWrapper}`}><Login /></div>:null}
+                    {value.ShowModal?<div className={`${styles.LoginModalWrapper}`}><Login /></div>:null}
                 </>
              )}
              {//<div className={`${styles.ModalWrapper}`}>{value.ModalOpen?<Login />:null}</div>
