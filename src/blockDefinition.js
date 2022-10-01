@@ -1541,4 +1541,5 @@ export function defineBlockInfo() {
       },
     ]
   )
+
 }

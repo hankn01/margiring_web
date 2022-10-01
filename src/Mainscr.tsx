@@ -30,19 +30,50 @@ function Mainscr() {
             }
             
                 <div className={`${styles.ListContentDiv}`}> 
+                <div className={`${styles.StrategyOddElement}`}>
+                    <span className={`${styles.OuterDot}`}></span>
+                    <span className={`${styles.Dot}`}></span>
+                    <a className={`${styles.StrategyStatus}`}>검증전</a>
+                    <a className={`${styles.StrategyElementText}`}>Strategy 1</a>
+                    <a className={`${styles.StrategyElementRemove}`}>삭제하기</a>
+                    <button className={`${styles.StrategyCheckButton}`}>전략 검증하기</button>
+                </div>
+                <div className={`${styles.StrategyEvenElement}`}>
+                <span className={`${styles.OuterDot}`}></span>
+                <span className={`${styles.Dot}`}></span>
+                <a className={`${styles.StrategyStatus}`}>검증전</a>
+                <a className={`${styles.StrategyElementText}`}>Strategy 2</a>
+                <a className={`${styles.StrategyElementRemove}`}>삭제하기</a>
+                    <button className={`${styles.StrategyCheckButton}`}>전략 검증하기</button>
+
+                </div>
+                <div className={`${styles.StrategyOddElement}`}>
+                <span className={`${styles.OuterDot}`}></span>
+                <span className={`${styles.Dot}`}></span>
+                <a className={`${styles.StrategyStatus}`}>검증전</a>
+                <a className={`${styles.StrategyElementText}`}>Strategy 3</a>
+                <a className={`${styles.StrategyElementRemove}`}>삭제하기</a>
+                    <button className={`${styles.StrategyCheckButton}`}>전략 검증하기</button>
+
+                </div>
+                 {/* Create New Strategy 버튼을 누르면 블록코딩 화면으로 연결 */}
+                   
+                    <div className={`${styles.CreateStrategyButton}`}>
+                    <Link to ="./block">
+                        <div id={`${styles.CreateStrategyInner}`}>
+                        Create New Strategy
+                        </div>
+                        </ Link>
+                    </div>
+                    
+                
                     {/*<span className={`${styles.ListContentText}`}>Strategy 1</span>*/}
                     
                     {/*<button className={`${styles.ModifyButton}`}>수정하기</button>
                     <button className={`${styles.DeleteButton}`}>삭제하기</button>
     <button className={`${styles.TestExecuteButton}`}>전략 검증하기</button>*/}
                 </div>
-                <Link to ="./block"> {/* Create New Strategy 버튼을 누르면 블록코딩 화면으로 연결 */}
-                   
-                    <div className={`${styles.CreateStrategyButton}`}>
-                        Create New Strategy
-                    </div>
-                    
-                </Link>
+                
             </div>
             <div id={`${styles.MiddleContentWrap}`}>
             

@@ -620,4 +620,6 @@ export function defineBlockGenerator() {
     const code = 'print(\'my coin\')\n';
     return code;
   };
+
+
 }

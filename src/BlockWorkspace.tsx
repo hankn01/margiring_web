@@ -10,6 +10,7 @@ import { defineBlockInfo } from "./blockDefinition"
 import { defineBlockGenerator } from "./blockGenerator";
 import toolbox from "./toolbox.json"
 import { BlocklyWorkspace } from 'react-blockly';
+import { getAllByLabelText } from '@testing-library/react';
 
 
 //주의: BlocklyWorkspace와 이름 혼동하지 않도록 개발 시 주의하시기 바랍니다.
@@ -23,6 +24,8 @@ function BlockWorkspace() {
     useEffect(() => {
         defineBlockInfo();
         defineBlockGenerator();
+
+       // Blockly.Variables.createVariableButtonHandler(button.getTargetWorkspace(), null, 'String');
         const handelResize = () => {
             console.log("width height", window.innerWidth, window.innerHeight);
             setWidth(window.innerWidth);
@@ -32,9 +35,8 @@ function BlockWorkspace() {
 
           
         };
-
         
-        setBWorkspace(Blockly.inject("blocklyDiv", {
+        let BWorkspaceVar = Blockly.inject("blocklyDiv", {
             toolbox: toolbox,
             grid:
          {spacing: 20,
@@ -42,14 +44,24 @@ function BlockWorkspace() {
           colour: '#ccc',
           snap: true},
           trashcan: true
-        }));
+        })
+        console.log(BWorkspaceVar);
+        //let BWorkspaceDeepCopy = BWorkspaceVar.products.map(item => ({...item}));
+        setBWorkspace(BWorkspaceVar);
         
+       // BWorkspace.registerButtonCallback('CNV', function(button){alert("Fs");});
+       BWorkspaceVar.registerButtonCallback('CNV', function(button){Blockly.Variables.createVariableButtonHandler(BWorkspaceVar, null, 'Number');
+    })
+
        window.addEventListener("resize", handelResize);
        return () => {
         window.removeEventListener("resize", handelResize);
        }
+       
+       
     }, []);
 
+   
     return (
         <div>
             <div id="blocklyDiv" style={{width: (width-480)+"px", height: (height-120)+"px"}}></div>
