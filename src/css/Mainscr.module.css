@@ -366,7 +366,7 @@ height: 670px;
 
   #CreateStrategyInner{
     padding: 22px;
-    
+    position: relative;
     height: 100%;
     font-family: Pretendard;
     font-size: 16px;
@@ -378,7 +378,6 @@ height: 670px;
     text-align: center;
     color: #fff;
     cursor: pointer;
-    z-index: 999;
     text-decoration-line: none;
     text-decoration: none;
   }
@@ -451,5 +450,15 @@ height: 670px;
     opacity: 0.7;
     width: 16px;
     height: 16px;
+    border-radius: 50%;
+  }
+
+  #StrategyAddIcon {
+    position: absolute;
+    top: 22px;
+    left: 36.5%;
+    width: 20px;
+    height: 20px;
+    background-color: #1e78ff;
     border-radius: 50%;
   }
