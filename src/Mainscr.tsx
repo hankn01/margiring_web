@@ -63,8 +63,8 @@ function Mainscr() {
                         <div id={`${styles.CreateStrategyInner}`}>
                         <span id={`${styles.StrategyAddIcon}`}>
                         <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M3.3 8h1.384V4.684H8V3.299H4.684V0H3.299v3.3H0v1.384h3.3V8z" fill="#fff"/>
-</svg>
+                        <path d="M3.3 8h1.384V4.684H8V3.299H4.684V0H3.299v3.3H0v1.384h3.3V8z" fill="#fff"/>
+                        </svg>
                         </span>
                         Create New Strategy
                         </div>

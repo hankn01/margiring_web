@@ -563,3 +563,51 @@
   top: 164px; 
   z-index: 1200;
 }
+
+#MenuSelector{
+  position: absolute;
+  top: 31.5px;
+  left: 32px;
+  height: 38px;
+  width: 824px;
+  background-color:#f1f5f9;
+  border-radius: 4px;
+}
+
+#SummarySelect{
+  position: absolute;
+  left: 6px;
+  top: 4px;
+  width: 270px;
+  height: 30px;
+  padding-left: 123px;
+  padding-right: 122px;
+  padding-top: 6px;
+  padding-bottom: 7px;
+}
+
+#CompareSelect{
+  position: absolute;
+  left: 277px;
+  top: 4px;
+  width: 270px;
+  height: 30px;
+  padding-left: 111px;
+  padding-right: 110px;
+  padding-top: 6px;
+  padding-bottom: 7px;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.16);
+  background-color: #fff;
+}
+#StatSelect{
+  position: absolute;
+  left: 548px;
+  top: 4px;
+  width: 270px;
+  height: 30px;
+  padding-left: 111px;
+  padding-right: 110px;
+  padding-top: 6px;
+  padding-bottom: 7px;
+}
