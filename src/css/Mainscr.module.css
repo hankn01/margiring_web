@@ -170,7 +170,7 @@
     grid-column-start: 7;
     grid-column-end: 13;
    height: 64px;
-    padding: 22px;
+    
     background: rgba(17,13,45,0.7400000095367432);
     color: rgba(255, 255, 255, 1);
     opacity: 1;
@@ -365,7 +365,7 @@ height: 670px;
   }
 
   #CreateStrategyInner{
-    
+    padding: 22px;
     
     height: 100%;
     font-family: Pretendard;
@@ -377,6 +377,8 @@ height: 670px;
     letter-spacing: normal;
     text-align: center;
     color: #fff;
+    cursor: pointer;
+    z-index: 999;
     text-decoration-line: none;
     text-decoration: none;
   }
