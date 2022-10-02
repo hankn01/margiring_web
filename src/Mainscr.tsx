@@ -28,8 +28,19 @@ function Mainscr() {
             <span id={`${styles.MyStrategyCaption}`}>My Strategy</span>
             {//<span id={`${styles.StrategyCountCaption}`}>0</span>
             }
-            
+                 <div id={`${styles.StrategyContentMenu}`}>
+                <div id={`${styles.AllStrategyButton}`}>
+                    전체
+                </div>
+                <div id={`${styles.BeforeBacktestButton}`}>
+                    검증전
+                </div>
+                <div id={`${styles.AfterBacktestButton}`}>
+                    검증완료
+                </div>
+            </div>
                 <div className={`${styles.ListContentDiv}`}> 
+               
                 <div className={`${styles.StrategyOddElement}`}>
                     <span className={`${styles.OuterDot}`}></span>
                     <span className={`${styles.Dot}`}></span>
