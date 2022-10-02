@@ -7,12 +7,27 @@ import "react-datepicker/dist/react-datepicker.css";
 import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 import styles from './css/SignUp.module.css';
 import "./css/react-datepicker.css";
+import axios from 'axios';
 //회원 가입 모달 화면이 출력되는 코드입니다.
 
 //SignUp 함수형 컴포넌트
 function SignUp() {
     const [BirthDate, setBirthDate] = useState(new Date());
-    
+    function FormSubmitHandler() {
+        event.preventDefault();
+        console.log("SUBMIT BUTTON TEST");
+        
+    }
+    function SignUpApplicate(Email, Name, Nickname, Password, Age) {
+        const sendData = {email: Email, name: Name, nickname: Nickname, password: Password, age: Age};
+        axios
+        .post("http://backendserver-env.eba-gg774wd2.ap-northeast-2.elasticbeanstalk.com/users", sendData)
+        .then((response) => {
+            console.log(response.status);
+            console.log(response.data);
+        })
+        .catch((e)=>console.log('ERR:(',e));
+    };
     //return하여 출력되는 화면
     return (
         <>
@@ -31,7 +46,7 @@ function SignUp() {
                             </>)
                         }
                 </SignUpModalContext.Consumer>
-                
+                <form onSubmit={FormSubmitHandler}>
                 <br>
                 </br>
                 <input className={`${styles.TextBox}`} id={`${styles.IDInput}`} placeholder="이메일 주소 입력">
@@ -57,9 +72,10 @@ function SignUp() {
                 <br>
                 </br>
                 <a id={`${styles.TermsCaption}`}>회원가입을 완료하시는 경우 마지링 회원약관에 동의하는 것으로 간주됩니다.</a>
-                <button id={`${styles.SignUpButton}`}>
+                <button id={`${styles.SignUpButton}`} type="submit">
                         회원가입
                 </button>
+                </form>
                 <SignUpModalContext.Consumer>
                     {value => (
                         <button id={`${styles.CancelButton}`} onClick={() => {value.setShowModal(false)}}>
