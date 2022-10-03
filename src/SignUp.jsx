@@ -120,6 +120,7 @@ function SignUp() {
                 </input>
                 <br>
                 </br>
+                <div id={`${styles.DOBCaption}`}>생년월일</div>
                 <div id={`${styles.DatePickerDiv}`}>
                 <DatePicker selected={BirthDate} onChange={date => setBirthDate(date)} popperPlacement="bottom"/>
                 </div>
