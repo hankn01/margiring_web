@@ -13,13 +13,67 @@ import axios from 'axios';
 //SignUp 함수형 컴포넌트
 function SignUp() {
     const [BirthDate, setBirthDate] = useState(new Date());
+    const [Email, setEmail] = useState();
+    const [Name, setName] = useState();
+    const [Password, setPassword] = useState();
+    const [Passcheck, setPasscheck] = useState();
+    const [Nickname, setNickname] = useState();
+      
+
+    function IsAdult(DOB) {
+        const DateOf18YearsAgo = new Date();
+        DateOf18YearsAgo.setFullYear(DateOf18YearsAgo.getFullYear() - 18);
+        return DOB <= DateOf18YearsAgo;
+    }
+
+    const EmailHandler = (e) => {
+        e.preventDefault();
+        setEmail(e.target.value);
+        var reg_email = /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/;
+        if(!reg_email.test(Email))
+        {
+            console.log("이메일 형식 잘못됨");
+        }
+        
+        
+
+    }
+
+    const NameHandler = (e) => {
+        e.preventDefault();
+        setName(e.target.value);
+    }
+
+    const PasswordHandler = (e) => {
+        e.preventDefault();
+        setPassword(e.target.value);
+        if(Password!==Passcheck)
+        {
+            console.log("비밀번호 불일치");
+        }
+    }
+
+    const PasscheckHandler = (e) => {
+        e.preventDefault();
+        setPasscheck(e.target.value);
+        if(Password!==Passcheck)
+        {
+            console.log("비밀번호 불일치");
+        }
+    }
+
+    const NicknameHandler = (e) => {
+        e.preventDefault();
+        setNickname(e.target.value);
+    }
+
     function FormSubmitHandler() {
         event.preventDefault();
         console.log("SUBMIT BUTTON TEST");
-        
-    }
-    function SignUpApplicate(Email, Name, Nickname, Password, Age) {
-        const sendData = {email: Email, name: Name, nickname: Nickname, password: Password, age: Age};
+        if(IsAdult(BirthDate)==true)
+        {
+            const sendData = {email: Email, name: Name, nickname: Nickname, password: Password, age: 30};
+        console.log(sendData);
         axios
         .post("http://backendserver-env.eba-gg774wd2.ap-northeast-2.elasticbeanstalk.com/users", sendData)
         .then((response) => {
@@ -27,7 +81,11 @@ function SignUp() {
             console.log(response.data);
         })
         .catch((e)=>console.log('ERR:(',e));
-    };
+        } else{
+            console.log("만 18세 미만 가입 금지");
+        }
+        
+    }
     //return하여 출력되는 화면
     return (
         <>
@@ -49,16 +107,16 @@ function SignUp() {
                 <form onSubmit={FormSubmitHandler}>
                 <br>
                 </br>
-                <input className={`${styles.TextBox}`} id={`${styles.IDInput}`} placeholder="이메일 주소 입력">
+                <input className={`${styles.TextBox}`} id={`${styles.IDInput}`} placeholder="이메일 주소 입력" type="email" value={Email} onChange={EmailHandler}>
                 </input>
                 <br>
                 </br> 
-                <input className={`${styles.TextBox}`} type="password" id={`${styles.PasswordInput}`} placeholder="비밀번호 입력" maxLength={25}>
+                <input className={`${styles.TextBox}`} type="password" id={`${styles.PasswordInput}`} placeholder="비밀번호 입력" maxLength={25} value={Password} onChange={PasswordHandler}>
                 </input>
                 <br>
                 </br>
-                <input className={`${styles.TextBox}`} type="password" id={`${styles.PasswordRetype}`}placeholder="비밀번호 확인" maxLength={25}></input>
-                <input className={`${styles.TextBox}`} id={`${styles.NameInput}`} placeholder="이름" maxLength={7}>
+                <input className={`${styles.TextBox}`} type="password" id={`${styles.PasswordRetype}`}placeholder="비밀번호 확인" maxLength={25} value={Passcheck} onChange={PasscheckHandler}></input>
+                <input className={`${styles.TextBox}`} id={`${styles.NameInput}`} placeholder="이름" maxLength={7} value={Name} onChange={NameHandler}>
                 </input>
                 <br>
                 </br>
@@ -67,7 +125,7 @@ function SignUp() {
                 </div>
                 <br>
                 </br>
-                <input className={`${styles.TextBox}`} id={`${styles.NicknameInput}`} placeholder="닉네임">
+                <input className={`${styles.TextBox}`} id={`${styles.NicknameInput}`} placeholder="닉네임" value={Nickname} onChange={NicknameHandler}>
                 </input>
                 <br>
                 </br>
