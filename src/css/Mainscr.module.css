@@ -6,14 +6,14 @@
   }
   .ModalWrapper {
     position: absolute;
-    top: calc(50% - 275px);
-    left: calc(50% - 185px);
+    top: calc(50% - 185px);
+    left: calc(50% - 275px);
     z-index: 1000;
   }
   .SignUpModalWrapper {
     position: absolute;
     top: calc(50% - 300px);;
-    left: calc(50% - 185px);
+    left: calc(50% - 275px);
     
     z-index: 1000;
   }

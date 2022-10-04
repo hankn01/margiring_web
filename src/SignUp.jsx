@@ -70,20 +70,28 @@ function SignUp() {
     function FormSubmitHandler() {
         event.preventDefault();
         console.log("SUBMIT BUTTON TEST");
-        if(IsAdult(BirthDate)==true)
+        if(Email!==null&&Password!==null&&Passcheck!==null&&Name!==null&&Nickname!==null)
         {
-            const sendData = {email: Email, name: Name, nickname: Nickname, password: Password, age: 30};
-        console.log(sendData);
-        axios
-        .post("http://backendserver-env.eba-gg774wd2.ap-northeast-2.elasticbeanstalk.com/users", sendData)
-        .then((response) => {
-            console.log(response.status);
-            console.log(response.data);
-        })
-        .catch((e)=>console.log('ERR:(',e));
-        } else{
-            console.log("만 18세 미만 가입 금지");
+            if(IsAdult(BirthDate)==true)
+            {
+                const sendData = {email: Email, name: Name, nickname: Nickname, password: Password, age: 30};
+            console.log(sendData);
+            axios
+            .post("http://backendserver-env.eba-gg774wd2.ap-northeast-2.elasticbeanstalk.com/users", sendData)
+            .then((response) => {
+                console.log(response.status);
+                console.log(response.data);
+            })
+            .catch((e)=>console.log('ERR:(',e));
+            } else{
+                console.log("만 18세 미만 가입 금지");
+            }
         }
+        else {
+            console.log("미입력된 정보 존재");
+        }
+
+       
         
     }
     //return하여 출력되는 화면
