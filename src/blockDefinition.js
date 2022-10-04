@@ -575,7 +575,7 @@ export function defineBlockInfo() {
         "tooltip": "선택지가 참이 아닌지를 의미합니다. 선택지가 참이면 결과가 거짓이 되고, 그 반대면 참이 됩니다.",
         "helpUrl": ""
       },
-      // 계산/시간 블록
+      // 시간 블록
       {
         "type": "time_now",
         "message0": "현재",
@@ -614,6 +614,95 @@ export function defineBlockInfo() {
         "tooltip": "선택한 시간을 의미합니다.",
         "helpUrl": ""
       },
+      {
+        "type": "time_detial",
+        "message0": "%1의 %2",
+        "args0": [
+          {
+            "type": "input_value",
+            "name": "TIME"
+          },
+          {
+            "type": "field_dropdown",
+            "name": "OPTION",
+            "options": [
+              [
+                "연도",
+                "OPTION1"
+              ],
+              [
+                "월",
+                "OPTION2"
+              ],
+              [
+                "일",
+                "OPTION3"
+              ],
+              [
+                "시",
+                "OPTION4"
+              ],
+              [
+                "분",
+                "OPTION5"
+              ],
+              [
+                "요일",
+                "OPTION6"
+              ]
+            ]
+          }
+        ],
+        "output": "Time",
+        "colour": CALC_TIME_COLOUR,
+        "tooltip": "선택한 시간의 상세 정보를 의미합니다.",
+        "helpUrl": ""
+      },
+      {
+        "type": "time_day_week",
+        "message0": "%1",
+        "args0": [
+          {
+            "type": "field_dropdown",
+            "name": "OPTION",
+            "options": [
+              [
+                "월요일",
+                "OPTION1"
+              ],
+              [
+                "화요일",
+                "OPTION2"
+              ],
+              [
+                "수요일",
+                "OPTION3"
+              ],
+              [
+                "목요일",
+                "OPTION4"
+              ],
+              [
+                "금요일",
+                "OPTION5"
+              ],
+              [
+                "토요일",
+                "OPTION6"
+              ],
+              [
+                "일요일",
+                "OPTION7"
+              ]
+            ]
+          }
+        ],
+        "output": "Time",
+        "colour": CALC_TIME_COLOUR,
+        "tooltip": "요일을 가리킵니다. 실제 값은 월화수목금토일 순서대로 1234567입니다!",
+        "helpUrl": ""
+      },
+      // 계산 블록
       {
         "type": "calc_number",
         "message0": "%1",
@@ -777,8 +866,21 @@ export function defineBlockInfo() {
       },
       {
         "type": "calc_percentage",
-        "message0": "'10'의 '10'%",
+        "message0": "%1 의 %2 %",
+        "args0": [
+          {
+            "type": "input_value",
+            "name": "VALUE1",
+            "check": "Number"
+          },
+          {
+            "type": "input_value",
+            "name": "VALUE2",
+            "check": "Number"
+          },
+        ],
         "colour": CALC_TIME_COLOUR,
+        "output": "Number",
         "tooltip": "",
         "helpUrl": ""
       },
@@ -874,8 +976,14 @@ export function defineBlockInfo() {
         "message0": "%1 의 값",
         "args0": [
           {
-            "type": "input_value",
-            "name": "VARIABLE"
+            "type": "field_dropdown",
+            "name": "VARIABLE",
+            "options": [
+              [
+                "변수",
+                "OPTION1"
+              ]
+            ]
           }
         ],
         "output": null,
@@ -889,8 +997,14 @@ export function defineBlockInfo() {
         "message0": "%1 의 값을 %2 으로 정하기",
         "args0": [
           {
-            "type": "input_value",
-            "name": "VARIABLE"
+            "type": "field_dropdown",
+            "name": "VARIABLE",
+            "options": [
+              [
+                "변수",
+                "OPTION1"
+              ]
+            ]
           },
           {
             "type": "input_value",
@@ -910,8 +1024,14 @@ export function defineBlockInfo() {
         "message0": "%1 의 값을 %2 만큼 더하기",
         "args0": [
           {
-            "type": "input_value",
-            "name": "VARIABLE"
+            "type": "field_dropdown",
+            "name": "VARIABLE",
+            "options": [
+              [
+                "변수",
+                "OPTION1"
+              ]
+            ]
           },
           {
             "type": "input_value",
@@ -931,8 +1051,14 @@ export function defineBlockInfo() {
         "message0": "%1 의 %2 번째 항목",
         "args0": [
           {
-            "type": "input_value",
-            "name": "LIST"
+            "type": "field_dropdown",
+            "name": "LIST",
+            "options": [
+              [
+                "리스트",
+                "OPTION1"
+              ]
+            ]
           },
           {
             "type": "input_value",
@@ -953,8 +1079,14 @@ export function defineBlockInfo() {
         "message0": "%1 에 %2 항목을 추가하기",
         "args0": [
           {
-            "type": "input_value",
-            "name": "LIST"
+            "type": "field_dropdown",
+            "name": "LIST",
+            "options": [
+              [
+                "리스트",
+                "OPTION1"
+              ]
+            ]
           },
           {
             "type": "input_value",
@@ -974,8 +1106,14 @@ export function defineBlockInfo() {
         "message0": "%1 에서 %2 번째 항목을 삭제하기",
         "args0": [
           {
-            "type": "input_value",
-            "name": "LIST"
+            "type": "field_dropdown",
+            "name": "LIST",
+            "options": [
+              [
+                "리스트",
+                "OPTION1"
+              ]
+            ]
           },
           {
             "type": "input_value",
@@ -993,8 +1131,14 @@ export function defineBlockInfo() {
         "message0": "%1 의 %2 번째에 %3 항목을 넣기",
         "args0": [
           {
-            "type": "input_value",
-            "name": "LIST"
+            "type": "field_dropdown",
+            "name": "LIST",
+            "options": [
+              [
+                "리스트",
+                "OPTION1"
+              ]
+            ]
           },
           {
             "type": "input_value",
@@ -1019,8 +1163,14 @@ export function defineBlockInfo() {
         "message0": "%1 의 %2 번째 항목을 %3 (으)로 바꾸기",
         "args0": [
           {
-            "type": "input_value",
-            "name": "LIST"
+            "type": "field_dropdown",
+            "name": "LIST",
+            "options": [
+              [
+                "리스트",
+                "OPTION1"
+              ]
+            ]
           },
           {
             "type": "input_value",
@@ -1045,9 +1195,15 @@ export function defineBlockInfo() {
         "message0": "%1 항목 수",
         "args0": [
           {
-            "type": "input_value",
-            "name": "LIST"
-          }
+            "type": "field_dropdown",
+            "name": "LIST",
+            "options": [
+              [
+                "리스트",
+                "OPTION1"
+              ]
+            ]
+          },
         ],
         "output": "Number",
         "colour": DATA_COLOUR,
@@ -1060,8 +1216,14 @@ export function defineBlockInfo() {
         "message0": "%1 에 %2 (이)가 포함되어 있는가?",
         "args0": [
           {
-            "type": "input_value",
-            "name": "LIST"
+            "type": "field_dropdown",
+            "name": "LIST",
+            "options": [
+              [
+                "리스트",
+                "OPTION1"
+              ]
+            ]
           },
           {
             "type": "input_value",
@@ -1080,8 +1242,14 @@ export function defineBlockInfo() {
         "colour": FUNCTION_COLOUR,
         "args0": [
           {
-            "type": "input_value",
-            "name": "FUNCTION"
+            "type": "field_dropdown",
+            "name": "FUNCTION",
+            "options": [
+              [
+                "함수",
+                "OPTION1"
+              ]
+            ]
           }
         ],
         "inputsInline": true,
@@ -1094,59 +1262,77 @@ export function defineBlockInfo() {
       {
         "kind": "block",
         "type": "trade_buy",
-        "message0": "%1 종목을 %2 코인 매수 (단, %3 분 뒤에 체결이 안 되면 취소)",
+        "message0": "%1 종목을 %2 원 매수",
         "args0": [
           {
-            "type": "input_value",
+            "type": "field_dropdown",
             "name": "INVESTMENT",
-            "check": "String"
+            "options": [
+              [
+                "현재 종목",
+                "OPTION1"
+              ]
+            ]
           },
           {
             "type": "input_value",
             "name": "VOLUME",
-            "check": "Number"
-          },
-          {
-            "type": "input_value",
-            "name": "CONDITION",
             "check": "Number"
           }
         ],
         "previousStatement": null,
         "nextStatement": null,
         "colour": TRADE_COLOUR,
-        "tooltip": "선택한 종목을 일정량 매수합니다. 체결 취소 조건을 추가할 수 있습니다. 기본 취소 시간은 체결이 안 된 지 10분입니다.",
+        "tooltip": "선택한 종목을 일정 금액 매수합니다.",
         "helpUrl": ""
       },
       {
         "kind": "block",
         "type": "trade_sell",
-        "message0": "%1 종목을 %2 코인 매도 (단, %3 분 뒤에 체결이 안 되면 취소)",
+        "message0": "%1 종목을 %2 코인 매도",
         "args0": [
           {
-            "type": "input_value",
+            "type": "field_dropdown",
             "name": "INVESTMENT",
-            "check": "String"
+            "options": [
+              [
+                "현재 종목",
+                "OPTION1"
+              ]
+            ]
           },
           {
             "type": "input_value",
             "name": "VOLUME",
             "check": "Number"
-          },
-          {
-            "type": "input_value",
-            "name": "CONDITION"
           }
         ],
         "previousStatement": null,
         "nextStatement": null,
         "colour": TRADE_COLOUR,
-        "tooltip": "선택한 종목을 일정량 매도합니다. 체결 취소 조건을 추가할 수 있습니다. 기본 취소 시간은 체결이 안 된 지 10분입니다.",
+        "tooltip": "선택한 종목을 일정 금액 매도합니다.",
         "helpUrl": ""
       },
       {
         "type": "trade_rebalance",
-        "message0": "'현재 종목' 종목의 비중을 '10'원으로 맞추기",
+        "message0": "%1 종목의 비중을 %2 원으로 맞추기",
+        "args0": [
+          {
+            "type": "field_dropdown",
+            "name": "INVESTMENT",
+            "options": [
+              [
+                "현재 종목",
+                "OPTION1"
+              ]
+            ]
+          },
+          {
+            "type": "input_value",
+            "name": "VOLUME",
+            "check": "Number"
+          }
+        ],
         "previousStatement": null,
         "nextStatement": null,
         "colour": TRADE_COLOUR,
@@ -1192,9 +1378,8 @@ export function defineBlockInfo() {
       },
       {
         "type": "trade_my_cash",
-        "message0": "내 자산",
-        "previousStatement": null,
-        "nextStatement": null,
+        "message0": "내 현금",
+        "output": "Number",
         "colour": TRADE_COLOUR,
         "tooltip": "",
         "helpUrl": ""
@@ -1205,10 +1390,15 @@ export function defineBlockInfo() {
         "message0": "내가 보유한 %1 코인 수",
         "args0": [
           {
-            "type": "field_input",
+            "type": "field_dropdown",
             "name": "INVESTMENT",
-            "text": "현재 종목"
-          }
+            "options": [
+              [
+                "현재 종목",
+                "OPTION1"
+              ]
+            ]
+          },
         ],
         "output": "Number",
         "colour": TRADE_COLOUR,
@@ -1216,325 +1406,397 @@ export function defineBlockInfo() {
         "helpUrl": ""
       },
       {
-        "type": "trade_trade_info",
-        "message0": "'거래 정보'의 '종복 정보/거래 시간/주식 수/주 당 가격'",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_trade_calc_mid",
-        "message0": "'현재 종목'의 주가중심선",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_trade_calc",
-        "message0": "'현재 종목'의 '피벗기준선/피벗1/2차 지지/저항선'",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
         "type": "trade_calc_time_value",
-        "message0": "'지표'의 '현재'의 값",
-        "previousStatement": null,
-        "nextStatement": null,
+        "message0": "%1 의 %2 분 전의 값",
+        "args0": [
+          {
+            "type": "input_value",
+            "name": "INDEX",
+            "check": "Index"
+          },
+          {
+            "type": "input_value",
+            "name": "TIME",
+            "check": "Number"
+          }
+        ],
+        "output": "Number",
         "colour": TRADE_COLOUR,
         "tooltip": "",
         "helpUrl": ""
       },
       {
         "type": "trade_calc_SMA",
-        "message0": "'지표'의 '10'분 동안의 이동평균값",
-        "previousStatement": null,
-        "nextStatement": null,
+        "message0": "%1 의 %2 분 동안의 이동평균값",
+        "args0": [
+          {
+            "type": "input_value",
+            "name": "INDEX",
+            "check": "Index"
+          },
+          {
+            "type": "input_value",
+            "name": "TIME",
+            "check": "Number"
+          }
+        ],
+        "output": "Number",
         "colour": TRADE_COLOUR,
         "tooltip": "",
         "helpUrl": ""
       },
       {
         "type": "trade_calc_EMA",
-        "message0": "'지표'의 '10'분 동안의 지수이동평균값",
-        "previousStatement": null,
-        "nextStatement": null,
+        "message0": "%1 의 %2 분 동안의 지수이동평균값",
+        "args0": [
+          {
+            "type": "input_value",
+            "name": "INDEX",
+            "check": "Index"
+          },
+          {
+            "type": "input_value",
+            "name": "TIME",
+            "check": "Number"
+          }
+        ],
+        "output": "Number",
         "colour": TRADE_COLOUR,
         "tooltip": "",
         "helpUrl": ""
       },
       {
         "type": "trade_calc_sum",
-        "message0": "'지표'의 '10'분 동안의 기간총합",
-        "previousStatement": null,
-        "nextStatement": null,
+        "message0": "%1 의 %2 분 동안의 기간총합",
+        "args0": [
+          {
+            "type": "input_value",
+            "name": "INDEX",
+            "check": "Index"
+          },
+          {
+            "type": "input_value",
+            "name": "TIME",
+            "check": "Number"
+          }
+        ],
+        "output": "Number",
         "colour": TRADE_COLOUR,
         "tooltip": "",
         "helpUrl": ""
       },
       {
         "type": "trade_calc_diff_amount",
-        "message0": "'지표'의 '10'분 대비 변화량",
-        "previousStatement": null,
-        "nextStatement": null,
+        "message0": "%1 의 %2 분 대비 변화량",
+        "args0": [
+          {
+            "type": "input_value",
+            "name": "INDEX",
+            "check": "Index"
+          },
+          {
+            "type": "input_value",
+            "name": "TIME",
+            "check": "Number"
+          }
+        ],
+        "output": "Number",
         "colour": TRADE_COLOUR,
         "tooltip": "",
         "helpUrl": ""
       },
       {
         "type": "trade_calc_diff_rate",
-        "message0": "'지표'의 '10'분 대비 변화율",
-        "previousStatement": null,
-        "nextStatement": null,
+        "message0": "%1 의 %2 분 대비 변화율",
+        "args0": [
+          {
+            "type": "input_value",
+            "name": "INDEX",
+            "check": "Index"
+          },
+          {
+            "type": "input_value",
+            "name": "TIME",
+            "check": "Number"
+          }
+        ],
+        "output": "Number",
         "colour": TRADE_COLOUR,
         "tooltip": "",
         "helpUrl": ""
       },
       {
         "type": "trade_calc_max",
-        "message0": "'지표'의 '10'분 동안의 최곳값",
-        "previousStatement": null,
-        "nextStatement": null,
+        "message0": "%1 의 %2 분 동안의 최곳값",
+        "args0": [
+          {
+            "type": "input_value",
+            "name": "INDEX",
+            "check": "Index"
+          },
+          {
+            "type": "input_value",
+            "name": "TIME",
+            "check": "Number"
+          }
+        ],
+        "output": "Number",
         "colour": TRADE_COLOUR,
         "tooltip": "",
         "helpUrl": ""
       },
       {
         "type": "trade_calc_min",
-        "message0": "'지표'의 '10'분 동안의 최젓값",
-        "previousStatement": null,
-        "nextStatement": null,
+        "message0": "%1 의 %2 분 동안의 최젓값",
+        "args0": [
+          {
+            "type": "input_value",
+            "name": "INDEX",
+            "check": "Index"
+          },
+          {
+            "type": "input_value",
+            "name": "TIME",
+            "check": "Number"
+          }
+        ],
+        "output": "Number",
         "colour": TRADE_COLOUR,
         "tooltip": "",
         "helpUrl": ""
       },
       {
-        "type": "trade_momentum_RSI",
-        "message0": "'현재 종목'의 RSI",
-        "previousStatement": null,
-        "nextStatement": null,
+        "type": "trade_trade_info",
+        "message0": "%1 의 %2",
+        "args0": [
+          {
+            "type": "field_dropdown",
+            "name": "INVESTMENT",
+            "options": [
+              [
+                "현재 종목",
+                "OPTION1"
+              ]
+            ]
+          },
+          {
+            "type": "field_dropdown",
+            "name": "OPTION",
+            "options": [
+              [
+                "거래량",
+                "OPTION1"
+              ],
+              [
+                "거래대금",
+                "OPTION2"
+              ],
+              [
+                "시가",
+                "OPTION3"
+              ],
+              [
+                "고가",
+                "OPTION4"
+              ],
+              [
+                "저가",
+                "OPTION5"
+              ],
+              [
+                "종가",
+                "OPTION6"
+              ]
+            ]
+          }
+        ],
+        "output": "Index",
         "colour": TRADE_COLOUR,
         "tooltip": "",
         "helpUrl": ""
       },
       {
-        "type": "trade_momentum_STO_OSC",
-        "message0": "'현재 종목'의 스토캐스틱 OSC",
-        "previousStatement": null,
-        "nextStatement": null,
+        "type": "trade_trade_calc_mid",
+        "message0": "%1의 주가중심선",
+        "args0": [
+          {
+            "type": "field_dropdown",
+            "name": "INVESTMENT",
+            "options": [
+              [
+                "현재 종목",
+                "OPTION1"
+              ]
+            ]
+          },
+        ],
+        "output": "Index",
         "colour": TRADE_COLOUR,
         "tooltip": "",
         "helpUrl": ""
       },
       {
-        "type": "trade_momentum_RSI_STO",
-        "message0": "'현재 종목'의 SRI 스토캐스틱",
-        "previousStatement": null,
-        "nextStatement": null,
+        "type": "trade_trade_calc",
+        "message0": "%1의 %2",
+        "args0": [
+          {
+            "type": "field_dropdown",
+            "name": "INVESTMENT",
+            "options": [
+              [
+                "현재 종목",
+                "OPTION1"
+              ]
+            ]
+          },
+          {
+            "type": "field_dropdown",
+            "name": "OPTION",
+            "options": [
+              [
+                "피벗 기준선",
+                "OPTION1"
+              ],
+              [
+                "피벗 1차 지지선",
+                "OPTION2"
+              ],
+              [
+                "피벗 1차 저항선",
+                "OPTION3"
+              ],
+              [
+                "피벗 2차 지지선",
+                "OPTION4"
+              ],
+              [
+                "피벗 2차 저항선",
+                "OPTION5"
+              ]
+            ]
+          }
+        ],
+        "output": "Index",
         "colour": TRADE_COLOUR,
         "tooltip": "",
         "helpUrl": ""
       },
       {
         "type": "trade_moving_MACD",
-        "message0": "'현재 종목'의 MACD",
-        "previousStatement": null,
-        "nextStatement": null,
+        "message0": "%1 의 MACD",
+        "args0": [
+          {
+            "type": "field_dropdown",
+            "name": "INVESTMENT",
+            "options": [
+              [
+                "현재 종목",
+                "OPTION1"
+              ]
+            ]
+          }
+        ],
+        "output": "Index",
         "colour": TRADE_COLOUR,
         "tooltip": "",
         "helpUrl": ""
       },
       {
         "type": "trade_moving_MACD_SIG",
-        "message0": "'현재 종목'의 MACD_SIG",
-        "previousStatement": null,
-        "nextStatement": null,
+        "message0": "%1 의 MACD_SIG",
+        "args0": [
+          {
+            "type": "field_dropdown",
+            "name": "INVESTMENT",
+            "options": [
+              [
+                "현재 종목",
+                "OPTION1"
+              ]
+            ]
+          }
+        ],
+        "output": "Index",
         "colour": TRADE_COLOUR,
         "tooltip": "",
         "helpUrl": ""
       },
       {
         "type": "trade_moving_MACD_OSC",
-        "message0": "'현재 종목'의 MACD_OSC",
-        "previousStatement": null,
-        "nextStatement": null,
+        "message0": "%1 의 MACD_OSC",
+        "args0": [
+          {
+            "type": "field_dropdown",
+            "name": "INVESTMENT",
+            "options": [
+              [
+                "현재 종목",
+                "OPTION1"
+              ]
+            ]
+          }
+        ],
+        "output": "Index",
         "colour": TRADE_COLOUR,
         "tooltip": "",
         "helpUrl": ""
       },
       {
         "type": "trade_moving_ADX",
-        "message0": "'현재 종목'의 ADX",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_moving_MDI",
-        "message0": "'현재 종목'의 MDI",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_moving_PDI",
-        "message0": "'현재 종목'의 PDI",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_moving_CCI",
-        "message0": "'현재 종목'의 CCI",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_moving_DPO",
-        "message0": "'현재 종목'의 DPO",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_moving_STC",
-        "message0": "'현재 종목'의 STC",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_moving_ichimoku_conversion",
-        "message0": "'현재 종목'의 일목균형 전환선",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_moving_ichimoku_base",
-        "message0": "'현재 종목'의 일목균형 기준선",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_moving_ichimoku_span1",
-        "message0": "'현재 종목'의 일목균형 선행스팬1",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_moving_ichimoku_span2",
-        "message0": "'현재 종목'의 일목균형 선행스팬2",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_VIX_bollinger_ubb",
-        "message0": "'현재 종목'의 볼린저밴드 상단값",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_VIX_bollinger_dbb",
-        "message0": "'현재 종목'의 볼린저밴드 하단값",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_VIX_bollinger_mbb",
-        "message0": "'현재 종목'의 볼린저밴드 중앙값",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_VIX_bollinger_bandwidth",
-        "message0": "'현재 종목'의 볼린저밴드 밴드폭",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_VIX_bollinger_position",
-        "message0": "'현재 종목'의 볼린저밴드 위치",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_volume_ADI",
-        "message0": "'현재 종목'의 ADI",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_volume_OBV",
-        "message0": "'현재 종목'의 OBV",
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": TRADE_COLOUR,
-        "tooltip": "",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_volume_CMF",
-        "message0": "'현재 종목'의 CMF",
-        "previousStatement": null,
-        "nextStatement": null,
+        "message0": "%1 의 ADX",
+        "args0": [
+          {
+            "type": "field_dropdown",
+            "name": "INVESTMENT",
+            "options": [
+              [
+                "현재 종목",
+                "OPTION1"
+              ]
+            ]
+          }
+        ],
+        "output": "Index",
         "colour": TRADE_COLOUR,
         "tooltip": "",
         "helpUrl": ""
       },
       {
         "type": "trade_volume_VWAP",
-        "message0": "'현재 종목'의 VWAP",
-        "previousStatement": null,
-        "nextStatement": null,
+        "message0": "%1 의 VWAP",
+        "args0": [
+          {
+            "type": "field_dropdown",
+            "name": "INVESTMENT",
+            "options": [
+              [
+                "현재 종목",
+                "OPTION1"
+              ]
+            ]
+          }
+        ],
+        "output": "Index",
+        "colour": TRADE_COLOUR,
+        "tooltip": "",
+        "helpUrl": ""
+      },
+      {
+        "type": "trade_volume_OBV",
+        "message0": "%1 의 OBV",
+        "args0": [
+          {
+            "type": "field_dropdown",
+            "name": "INVESTMENT",
+            "options": [
+              [
+                "현재 종목",
+                "OPTION1"
+              ]
+            ]
+          }
+        ],
+        "output": "Index",
         "colour": TRADE_COLOUR,
         "tooltip": "",
         "helpUrl": ""
