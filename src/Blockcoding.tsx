@@ -8,7 +8,9 @@ import Header from './Header';
 import { generateBlockToCode } from './codeGenerator';
 import styles from './css/Blockcoding.module.css';
 import LoginModalContext from './contexts/LoginModalContext';
+import SignUpModalContext from './contexts/SignUpModalContext';
 import Login from './Login';
+import SignUp from './SignUp';
 
 
 function Blockcoding() {
@@ -47,13 +49,21 @@ function Blockcoding() {
             <LoginModalContext.Consumer>
              {value => (
                 <>
-                    {value.ShowModal?<div className={`${styles.ModalWrapper}`}><Login /></div>:null}
+                    {value.ShowModal?<div className={`${styles.LoginModalWrapper}`}><Login /></div>:null}
                 </>
              )}
              {//<div className={`${styles.ModalWrapper}`}>{value.ModalOpen?<Login />:null}</div>
       }
             </LoginModalContext.Consumer> 
-
+            <SignUpModalContext.Consumer>
+             {value => (
+                <>
+                    {value.ShowModal?<div className={`${styles.SignUpModalWrapper}`}><SignUp /></div>:null}
+                </>
+             )}
+             {//<div className={`${styles.ModalWrapper}`}>{value.ModalOpen?<Login />:null}</div>
+      }
+            </SignUpModalContext.Consumer> 
             </>
             
         );

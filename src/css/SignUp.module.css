@@ -1,0 +1,182 @@
+#SignUpWrapper {
+    font-size: 14px;
+    width: 550px;
+    height: 600px;
+    border-radius: 8px;
+    background-color: #fff;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    
+
+  }
+
+  #SignUpTitleCaption {
+    width: 131px;
+    height: 29px;
+    flex-grow: 0;
+    font-family: Pretendard;
+    font-size: 24px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #2a323f;
+    position: absolute;
+    top: 30px;
+    left: 32px;
+  }
+    
+
+.TextBox{
+    width: 486px;
+    height: 48px;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    overflow: hidden;
+    text-align: left;
+    color: #8d8f93;
+    border-radius: 2px;
+    border: solid 1px #dbdde0;
+}
+.TextBox:hover{
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.04);
+  border: solid 1px;
+  background-color: #fff;
+}
+
+.TextBox:focus{
+  border-radius: 2px;
+  border: solid 1px #2a323f;
+  background-color: #fff;
+  outline:none;
+}
+
+#IDInput{
+  position: absolute;
+  top: 84px;
+  left: 32px;
+}
+
+#PasswordInput{
+  position: absolute;
+  left: 32px;
+  top: 148px;
+}
+
+#NameInput{
+  position: absolute;
+  left: 32px;
+  top: 276px;
+}
+
+#AgeInput{
+  position: absolute;
+  left: 32px;
+  top: 340px;
+}
+
+#NicknameInput{
+  position: absolute;
+  left: 32px;
+  top: 404px;
+}
+
+#SignUpTitleCaption{
+  position: absolute;
+  left: 32px;
+}
+
+#CloseButton{
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  cursor: pointer;
+}
+
+#PasswordRetype{
+  position: absolute;
+  left: 32px;
+  top: 212px;
+}
+
+#SignUpButton{
+  position: absolute;
+  left: 32px;
+  top: 520px;
+  width: 240px;
+  height: 48px;
+  border-radius: 4px;
+  background-color: #1e78ff;
+  border: none;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  color: #fff;
+  cursor: pointer;
+}
+
+#SignUpButton:hover{
+  border-radius: 4px;
+  background-color: #3c8aff;
+}
+
+#SignUpButton:focus{
+  
+
+}
+
+#CancelButton{
+  position: absolute;
+  right: 32px;
+  top: 520px;
+  width: 240px;
+  height: 48px;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.16);
+  background-color: #fff;
+  border:none;
+  cursor: pointer;
+}
+
+#CancelButton:hover{
+  background-color: #f1f5f9;
+}
+
+#TermsCaption{
+  position: absolute;
+  right: 32px;
+  top: 460px;
+  color: #8d8f93;
+}
+
+#DatePickerDiv{
+  position: absolute;
+  right: 432px;
+  top: 326px;
+}
+
+#DOBCaption {
+  position: absolute;
+  top: 354px;
+  left: 34px;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  overflow: hidden;
+  text-align: left;
+  color: #8d8f93;
+ }

@@ -1,0 +1,47 @@
+.ProfileUnitDiv{
+    opacity: 1;  
+    overflow: hidden;
+    text-align: center;
+    position: absolute;
+    top: 64px;
+    width: 100%;
+    height: 64px;
+    flex-grow: 0;  
+    padding: 30px 59px 32px 60px;
+    background-color: #1b1f24;
+}
+
+#ProfileInfoCaption{
+    color:white;
+    position: absolute;
+    left: 24px;
+    top: 20px;
+    font-family: Pretendard;
+    font-size: 18px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: left;
+}
+
+#ProfileMenuWrapper{
+    position: absolute;
+    top: 220px;
+    width: 90%;
+    left: 5%;
+}
+
+.ProfileMenuButtonDiv{
+    background-color: #f9a825;
+    height: 6rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+    text-align:left;
+    padding: 1.75rem;
+    font-size: 2rem;
+    font-family: Noto Sans;
+    color: white;
+    cursor: pointer;
+}

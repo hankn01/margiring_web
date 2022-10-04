@@ -1,18 +1,22 @@
 /* eslint-disable */
-
+// @ts-nocheck
 
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import {generateDummyCode} from './codeGenerator';
 import styles from './css/Backtest.module.css';
 import Loading from './Loading';
+import DatePicker from 'react-datepicker';
+
 
 function Backtest({ModalClose}: any) {
     const [TestCode, setTestCode] = useState("");
     const [ReceivedData, setReceivedData] = useState({"cumulative_yield": 0, "annualized_yield": 0, "annualized_volatility": 0, "sharpe_ratio": "백테스트 전", "MDD": 0});
     const [LoadingState, setLoadingState] = useState(false);
     const [BacktestComplete, setBacktestComplete] = useState(false);
-    
+    const [BacktestDate, setBacktestDate] = useState(new Date());
+
+
     useEffect(() => {
         const GeneratedCode = generateDummyCode();
         setTestCode(GeneratedCode);
@@ -39,11 +43,11 @@ function Backtest({ModalClose}: any) {
             <div className={`${styles.BacktestUpperDiv}`}>
                 <div id={`${styles.BacktestPanel}`}>
                     <h1 id={`${styles.StrategyTitleCaption}`}>전략 검증하기</h1>
-    <div id={`${styles.CloseButton}`} onClick={ModalClose}>
-    <svg x="100" y="30" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path id="CloseButton" d="m4 4 16 16M4 20 20 4" stroke="#495262" stroke-width="1.5"/>
-    </svg>
-    </div>
+            <div id={`${styles.CloseButton}`} onClick={ModalClose}>
+            <svg x="100" y="30" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path id="CloseButton" d="m4 4 16 16M4 20 20 4" stroke="#495262" stroke-width="1.5"/>
+            </svg>
+            </div>
                     <span className={`${styles.InvestAmountCaption}`}>투자금액</span>
                     <span className={`${styles.TenThousandWonCaption}`}>만 원</span>
                     <div id={`${styles.InvestTermDiv}`}>
@@ -60,6 +64,11 @@ function Backtest({ModalClose}: any) {
 
                     {/*<button className={`${styles.OtherTermButton}`}>직접 입력 </button>*/}
                     </div>
+                    <div id={`${styles.InvestTermCustomDiv}`}>
+                        <DatePicker selected={BacktestDate} onChange={date => setBacktestDate(date)} popperPlacement="bottom"/>
+                        
+
+                    </div>
                     <span className={`${styles.InvestFeeCaption}`}>수수료(%)</span>
                     <span className={`${styles.InvestSlippageCaption}`}>슬리피지(%)</span>
                     <input id={`${styles.InvestSlippageInput}`}></input>
@@ -73,6 +82,19 @@ function Backtest({ModalClose}: any) {
                 </div>
             </div>
             <div className={`${styles.BacktestMiddleDiv}`}>
+                <div id={`${styles.MenuSelector}`}>
+                    <div id={`${styles.SummarySelect}`}>
+                        요약
+                    </div>
+                    <div id={`${styles.CompareSelect}`}>
+                        비교분석
+                    </div>
+                    <div id={`${styles.StatSelect}`}>
+                        매매통계
+                    </div>
+                    
+
+                </div>
                 <span id={`${styles.SummaryCaption}`}>성과 요약</span>
                 <span id={`${styles.SummaryDesc}`}>전략의 성과는 동일 비중 투자 방식으로 계산되었습니다.</span>
                 {BacktestComplete?

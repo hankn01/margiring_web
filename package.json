@@ -11,9 +11,10 @@
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "axios": "^0.27.2",
+    "babel-plugin-react-remove-properties": "^0.3.0",
     "blockly": "^8.0.4",
     "bootstrap": "^5.2.0",
-    "cypress": "^10.4.0",
+    "cypress": "^10.9.0",
     "jqwidgets-framework": "^14.0.0",
     "jqwidgets-ng": "^14.1.17",
     "jqwidgets-scripts": "^14.0.0",
@@ -54,12 +55,14 @@
     ]
   },
   "devDependencies": {
+    "@types/react-datepicker": "^4.4.2",
     "@typescript-eslint/eslint-plugin": "^5.30.7",
     "eslint": "^8.20.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-unused-imports": "^2.0.0",
     "prettier": "^2.7.1",
-    "prettier-plugin-tailwindcss": "^0.1.12"
+    "prettier-plugin-tailwindcss": "^0.1.12",
+    "react-datepicker": "^4.8.0"
   }
 }

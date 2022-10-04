@@ -6,10 +6,16 @@
   }
   .ModalWrapper {
     position: absolute;
-    top: 25vh;
-    left: 25vw;
+    top: calc(50% - 185px);
+    left: calc(50% - 275px);
+    z-index: 1000;
+  }
+  .SignUpModalWrapper {
+    position: absolute;
+    top: calc(50% - 300px);;
+    left: calc(50% - 275px);
     
-    z-index: 999;
+    z-index: 1000;
   }
  
   .MainFrame {
@@ -85,7 +91,7 @@
   height: 262px;
   flex-grow: 0;
   
-  padding: 30px 59px 32px 60px;
+  padding: 30px 59px 32px 0px;
   background-color: #1b1f24;
   }
   #MyStrategyCaption{
@@ -161,17 +167,15 @@
     text-align: center;
   }
   .CreateStrategyButton {
-    width: 95%;
-    height: 64px;
-    padding: 22px;
+    grid-column-start: 7;
+    grid-column-end: 13;
+   height: 64px;
+    
     background: rgba(17,13,45,0.7400000095367432);
     color: rgba(255, 255, 255, 1);
     opacity: 1;
-    position: absolute;
-    top: 86px;
-    left: 60px;
-    overflow: hidden;
-    display: inline-block;
+    
+    
     border-radius: 8px;
     border: solid 1px #474e59;
     font-family: Pretendard;
@@ -304,3 +308,233 @@ height: 670px;
     grid-template-columns: 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667%;
     grid-column-gap: 24px;
   }
+
+  .ListContentDiv{
+    position: absolute;
+    
+    top: 86px;
+    
+    width: 99.5%;
+    margin-right: 3.125%;
+    margin-left: 3.125%;
+    display: grid;
+    grid-template-columns: 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667%;
+    grid-column-gap: 24px;
+    grid-row-gap: 16px;
+  }
+  .StrategyOddElement{
+    position: relative;
+    grid-column-start: 1;
+	grid-column-end: 7;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(42, 50, 63, 0.08);
+  background-color: #2f363e;
+  height: 64px;
+  font-family: Pretendard;
+  font-size: 18px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+  
+
+  }
+  .StrategyEvenElement{
+    position: relative;
+    grid-column-start: 7;
+	grid-column-end: 13;
+ 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(42, 50, 63, 0.08);
+  background-color: #2f363e;
+  height: 64px;
+  font-family: Pretendard;
+  font-size: 18px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+
+  }
+
+  #CreateStrategyInner{
+    padding: 22px;
+    position: relative;
+    height: 100%;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    text-decoration-line: none;
+    text-decoration: none;
+  }
+
+  .StrategyCheckButton{
+    position: absolute;
+    top: 11px;
+    right: 12px;
+    height: 42px;
+    width: 120px;
+    background-color: #1e78ff;
+    border:none;
+    border-radius: 4px;
+    font-family: Pretendard;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #fff;
+  }
+
+  .StrategyCheckButton:hover{
+    background-color: #3c8aff;
+    cursor:pointer;
+  }
+
+  .StrategyElementText{
+    position: absolute;
+    top: 22px;
+    left: 16.9%;
+  }
+
+  .StrategyElementRemove{
+    position: absolute;
+    right: 162px;
+    top: 23px;
+    font-size: 14px;
+    color: #8ba2bc;
+  }
+  .StrategyElementRemove:hover{
+    text-decoration: underline;
+    cursor:pointer;
+  }
+
+  .StrategyStatus{
+    position: absolute;
+    left: 51px;
+    top: 22px;
+    color: #1e78ff;
+  }
+
+  .Dot{
+    position: absolute;
+    top: 28px;
+    left: 28px;
+    background-color: #3586ff;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+  }
+
+  .OuterDot{
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    background-color: #1f262d;
+    opacity: 0.7;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+  }
+
+  #StrategyAddIcon {
+    position: absolute;
+    top: 22px;
+    left: 36.5%;
+    width: 20px;
+    height: 20px;
+    background-color: #1e78ff;
+    border-radius: 50%;
+  }
+
+  #StrategyContentMenu {
+    position: absolute;
+    left: 86.5%;
+    background-color: #2f363e;
+    border-radius: 8px;
+    width: 199px;
+    height: 38px;
+    box-shadow: 0 4px 8px 0 rgba(42, 50, 63, 0.08);
+  }
+
+  #AllStrategyButton {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 49px;
+    padding-top: 0.4em;
+    padding-bottom: 0.5em;
+  height: 30px;
+  flex-grow: 0;
+
+  border-radius: 2px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.16);
+  background-color: #fff;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000;
+  }
+
+  #BeforeBacktestButton {
+    position: absolute;
+    left: 70px;
+    top: 4px;
+    width: 49px;
+  height: 30px;
+  flex-grow: 0;
+  padding-top: 0.4em;
+  padding-bottom: 0.5em;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #8ba2bc;
+  }
+
+  #AfterBacktestButton {
+    position: absolute;
+    right: 20px;
+    top: 4px;
+    width: 49px;
+  height: 30px;
+  flex-grow: 0;
+  padding-top: 0.4em;
+  padding-bottom: 0.5em;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #8ba2bc;
+
+
+  }
+

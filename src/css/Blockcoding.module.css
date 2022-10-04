@@ -149,7 +149,7 @@ background: #1B1F24;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
-
+    cursor:pointer;
   }
   #StrategyTestButton:hover {
 
@@ -211,12 +211,26 @@ background: #1B1F24;
   }
   .ModalWrapper {
     position: absolute;
-    top: 25vh;
-    left: 25vw;
+    top: calc(50% - 45vh);
+    left: calc(50% - 444px);
     
     z-index: 999;
+  }
+  .LoginModalWrapper{
+    position: absolute;
+    top: calc(50% - 185px);
+    left: calc(50% - 275px);
+    z-index: 1000;
   }
   #CoinInfoDiv{
     height: 100%;
     overflow: scroll;
+  }
+
+  .SignUpModalWrapper {
+    position: absolute;
+    top: calc(50% - 300px);;
+    left: calc(50% - 275px);
+    
+    z-index: 1000;
   }

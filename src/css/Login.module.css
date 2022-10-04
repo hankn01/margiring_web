@@ -50,6 +50,19 @@
     border-radius: 2px;
     border: solid 1px #dbdde0;
   }
+  #IDInput:hover{
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.04);
+    border: solid 1px #bfc1c5;
+    background-color: #fff;
+  }
+
+  #IDInput:focus{
+    border-radius: 2px;
+    border: solid 1px #2a323f;
+    background-color: #fff;
+    outline:none;
+  }
+  
 
   #PasswordInput {
     width: 486px;
@@ -73,10 +86,24 @@
     border: solid 1px #dbdde0;
   }
 
+  #PasswordInput:hover{
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.04);
+    border: solid 1px #bfc1c5;
+    background-color: #fff;
+  }
+
+  #PasswordInput:focus{
+    border-radius: 2px;
+    border: solid 1px #2a323f;
+    background-color: #fff;
+    outline:none;
+  }
+
   #CloseButton{
     position: absolute;
     right: 32px;
     top: 32px;
+    cursor: pointer;
   }
 
   #SignUpButton{
@@ -102,6 +129,7 @@
     font-stretch: normal;
     font-style: normal;
     color: #fff;
+    cursor: pointer;
   }
   #SignInButton:hover{
     border-radius: 4px;
@@ -115,6 +143,11 @@
     position: absolute;
     right: 32px;
     top: 210px;
+    cursor:pointer;
+  }
+
+  #FindPassword:hover{
+    text-decoration: underline;
   }
 
   #SignUpCaption{
@@ -123,4 +156,12 @@
     top: 310px;
 
 
+  }
+  #SignUpLink{
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  #SignUpLink:hover{
+    text-decoration: underline;
   }

@@ -16,6 +16,7 @@
   #CloseButton {
     position: absolute;
     right: 32px;
+    cursor: pointer;
   }
 
   .BacktestMiddleDiv {
@@ -107,6 +108,16 @@
     color: #8d8f93;
     border-radius: 2px;
     border: solid 1px #dbdde0;
+  }
+  #InvestSlippageInput:hover{
+      border-radius: 2px;
+      border: solid 1px #dbdde0;
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.04);
+  }
+  #InvestSlippageInput:focus{
+      border-radius: 2px;
+      border: solid 1px #2a323f;
+      outline: none;
   }
   .InvestTaxCaption {
     width: 56px;
@@ -252,6 +263,9 @@
     outline: none;
     z-index: 1;
   }
+  #WeeklyButtonDiv:hover{
+  border: solid 1px #2a323f;
+  }
   .MonthlyButton {
     width: 66px;
     height: 48px;
@@ -285,6 +299,9 @@
     outline: none;
     z-index: 1;
   }
+  #MonthlyButtonDiv:hover{
+    border: solid 1px #2a323f;
+  }
   #ThreeMonthButtonDiv {
     width: 66px;
     height: 48px;
@@ -296,6 +313,9 @@
     border: 1px solid #dbdde0;
     outline: none;
     z-index: 1;
+  }
+  #ThreeMonthButtonDiv:hover{
+    border: solid 1px #2a323f;
   }
   .ThreeMonthButton {
     width: 66px;
@@ -346,6 +366,16 @@
     border-radius: 2px;
     border: solid 1px #dbdde0;
   }
+  .TaxInput:hover{
+    border-radius: 2px;
+    border: solid 1px #dbdde0;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.04);
+  }
+  .TaxInput:focus{
+    border-radius: 2px;
+    border: solid 1px #2a323f;
+    outline: none;
+  }
   .FeeInput {
     width: 400px;
     height: 46px;
@@ -359,6 +389,17 @@
     border-radius: 2px;
     border: solid 1px #dbdde0;
   }
+  .FeeInput:hover{
+    border-radius: 2px;
+    border: solid 1px #dbdde0;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.04);
+  }
+  .FeeInput:focus{
+    border-radius: 2px;
+    border: solid 1px #2a323f;
+    outline: none;
+  }
+
   .TenThousandWonCaption {
     width: 32px;
     color: rgba(0,0,0,1);
@@ -398,6 +439,9 @@
     top: 3%;
     right: 2.5%;
   }
+  .BackTestExecuteButton:hover{
+    background-color: #3c8aff;
+  }
 #StrategyTitleCaption {
    position: absolute;
    top: 0px;
@@ -436,6 +480,9 @@
   letter-spacing: normal;
   text-align: center;
   color: #fff;
+}
+#ExecuteButton:hover{
+  background-color: #3c8aff;
 }
 #SummaryCaption{
   position:absolute;
@@ -511,3 +558,57 @@
   left: 32px;
 }
 
+#InvestTermCustomDiv{
+  position: absolute;
+  top: 164px; 
+  z-index: 1200;
+}
+
+#MenuSelector{
+  position: absolute;
+  top: 31.5px;
+  left: 32px;
+  height: 38px;
+  width: 824px;
+  background-color:#f1f5f9;
+  border-radius: 4px;
+}
+
+#SummarySelect{
+  position: absolute;
+  left: 6px;
+  top: 4px;
+  width: 270px;
+  height: 30px;
+  padding-left: 123px;
+  padding-right: 122px;
+  padding-top: 6px;
+  padding-bottom: 7px;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.16);
+  background-color: #fff;
+}
+
+#CompareSelect{
+  position: absolute;
+  left: 277px;
+  top: 4px;
+  width: 270px;
+  height: 30px;
+  padding-left: 111px;
+  padding-right: 110px;
+  padding-top: 6px;
+  padding-bottom: 7px;
+  
+}
+#StatSelect{
+  position: absolute;
+  left: 548px;
+  top: 4px;
+  width: 270px;
+  height: 30px;
+  padding-left: 111px;
+  padding-right: 110px;
+  padding-top: 6px;
+  padding-bottom: 7px;
+}
