@@ -456,13 +456,19 @@ export function defineBlockGenerator() {
   }
 
   // 거래 블록
-  Python['trade_buy'] = function() {
-    const code = 'print(\'my coin\')\n';
+  Python['trade_buy'] = function(block) {
+    const investment = block.getFieldValue('INVESTMENT');
+    const volume = Python.valueToCode(block, 'VOLUME', Python.ORDER_ATOMIC);
+    const code = 'order(symbol(' + investment + '), ' + volume + ')\n'
+                + 'buying()';
     return code;
   };
 
-  Python['trade_sell'] = function() {
-    const code = 'print(\'my coin\')\n';
+  Python['trade_sell'] = function(block) {
+    const investment = block.getFieldValue('INVESTMENT');
+    const volume = Python.valueToCode(block, 'VOLUME', Python.ORDER_ATOMIC);
+    const code = 'order(symbol(' + investment + '), ' + volume + ')\n'
+        + 'selling()';
     return code;
   };
 
@@ -541,22 +547,22 @@ export function defineBlockGenerator() {
     return code;
   };
 
-  Python['trade_moving_MACD'] = function() {
+  Python['trade_moving_MACD'] = function() { // talib : MACD()
     const code = 'print(\'my coin\')\n';
     return code;
   };
 
-  Python['trade_moving_MACD_SIG'] = function() {
+  Python['trade_moving_MACD_SIG'] = function() { // talib : MA(MACD())
     const code = 'print(\'my coin\')\n';
     return code;
   };
 
-  Python['trade_moving_MACD_OSC'] = function() {
+  Python['trade_moving_MACD_OSC'] = function() { // MACD() - MA(MACD())
     const code = 'print(\'my coin\')\n';
     return code;
   };
 
-  Python['trade_moving_ADX'] = function() {
+  Python['trade_moving_ADX'] = function() { // ADX()
     const code = 'print(\'my coin\')\n';
     return code;
   };
