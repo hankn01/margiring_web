@@ -234,3 +234,10 @@ background: #1B1F24;
     
     z-index: 1000;
   }
+
+  #NoLoginCaption {
+    position: absolute;
+    bottom: 1.3rem;
+    right: 160px;
+    color: #fff;
+  }

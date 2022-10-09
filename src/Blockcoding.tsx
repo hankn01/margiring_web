@@ -24,7 +24,10 @@ function Blockcoding() {
                 <Header /> {/* 헤더 부분 */}
                 <div id={`${styles.AlgoNameBar}`}>
                     <span id={`${styles.AlgoNameText}`}>
-                        알고리즘 트레이딩 프로젝트 이름 (예시)
+                        나의 투자 전략 알고리즘
+                    </span>
+                    <span id={`${styles.NoLoginCaption}`}>
+                        비로그인 사용자입니다. 작성한 알고리즘이 고객님의 브라우저에 보관되므로 데이터가 유실될 수 있습니다. 저장하려면 로그인하세요.
                     </span>
                     <button id={`${styles.StrategyTestButton}`} onClick={() => {generateBlockToCode(); setShowModal(true)}}>전략 검증하기</button>
                     

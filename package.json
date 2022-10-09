@@ -15,6 +15,7 @@
     "blockly": "^8.0.4",
     "bootstrap": "^5.2.0",
     "cypress": "^10.9.0",
+    "framer-motion": "^7.5.3",
     "jqwidgets-framework": "^14.0.0",
     "jqwidgets-ng": "^14.1.17",
     "jqwidgets-scripts": "^14.0.0",
