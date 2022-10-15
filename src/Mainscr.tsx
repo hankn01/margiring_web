@@ -21,6 +21,7 @@ function Mainscr() {
         <>   
         
         <div className={`${styles.MainFrame}`}> {/* 스크린 전체 div */}
+            
             <Header /> {/* 헤더 부분 */}
             
             <div className={`${styles.ListDiv}`}> {/* 알고리즘 리스트 div */}
@@ -111,6 +112,7 @@ function Mainscr() {
         <LoginModalContext.Consumer>
              {value => (
                 <>
+                    {value.ShowModal?<div className={`${styles.ModalContainer}`}></div>:null}
                     {value.ShowModal?<div className={`${styles.ModalWrapper}`}><Login /></div>:null}
                 </>
              )}

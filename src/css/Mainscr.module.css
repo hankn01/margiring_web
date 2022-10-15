@@ -8,7 +8,7 @@
     position: absolute;
     top: calc(50% - 185px);
     left: calc(50% - 275px);
-    z-index: 1000;
+    z-index: 4000;
   }
   .SignUpModalWrapper {
     position: absolute;
@@ -22,11 +22,13 @@
     width: 100%;
     height: 1080px;
     background: rgba(255,255,255,1);
+    
     opacity: 1;
     position: relative;
     top: 0px;
     left: 0px;
     overflow: hidden;
+    
   }
   .Header {
     
@@ -538,3 +540,14 @@ height: 670px;
 
   }
 
+.ModalContainer{
+  background: rgba(0,0,0,.5);
+  display: block;
+  /* this is how we cover the entire page */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3000;
+}

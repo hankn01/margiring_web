@@ -28,6 +28,7 @@ function BlockWorkspace() {
     const handelResize = () => {
       console.log("width height", window.innerWidth, window.innerHeight);
       setWidth(window.innerWidth);
+      
       setHeight(window.innerHeight);
 
       Blockly.svgResize(BWorkspace);
