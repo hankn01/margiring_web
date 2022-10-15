@@ -9,15 +9,20 @@ import { generateBlockToCode } from './codeGenerator';
 import styles from './css/Blockcoding.module.css';
 import LoginModalContext from './contexts/LoginModalContext';
 import SignUpModalContext from './contexts/SignUpModalContext';
+import BacktestModalContext from './contexts/BacktestModalContext';
 import Login from './Login';
 import SignUp from './SignUp';
-
+import styled from "styled-components";
 
 function Blockcoding() {
+    styled(Backtest)`
+        z-index: 3500;
+        `;
         const [ShowModal, setShowModal] = useState(false);
         const ModalClose = () => {
             setShowModal(false);
         }
+        
         return (
             <>
             <div className={`${styles.MainFrame}`}>
@@ -46,13 +51,16 @@ function Blockcoding() {
                 </div>
                 
             </div>
+
             <div className={`${styles.ModalWrapper}`}>
-            {ShowModal?<Backtest ModalClose = {ModalClose}/> : null}
+            {ShowModal?<div className={`${styles.BacktestModalInnerWrapper}`}><Backtest ModalClose = {ModalClose}/></div>: null}
+            {ShowModal?<div className={`${styles.ModalContainer}`}></div>:null}
             </div>
-            
+
             <LoginModalContext.Consumer>
              {value => (
                 <>
+                    {value.ShowModal?<div className={`${styles.ModalContainer}`}></div>:null}
                     {value.ShowModal?<div className={`${styles.LoginModalWrapper}`}><Login /></div>:null}
                 </>
              )}
@@ -62,12 +70,15 @@ function Blockcoding() {
             <SignUpModalContext.Consumer>
              {value => (
                 <>
+                    {value.ShowModal?<div className={`${styles.ModalContainer}`}></div>:null}
                     {value.ShowModal?<div className={`${styles.SignUpModalWrapper}`}><SignUp /></div>:null}
                 </>
              )}
              {//<div className={`${styles.ModalWrapper}`}>{value.ModalOpen?<Login />:null}</div>
       }
             </SignUpModalContext.Consumer> 
+
+            
             </>
             
         );

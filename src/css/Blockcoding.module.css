@@ -220,7 +220,7 @@ background: #1B1F24;
     position: absolute;
     top: calc(50% - 185px);
     left: calc(50% - 275px);
-    z-index: 1000;
+    z-index: 4000;
   }
   #CoinInfoDiv{
     height: 100%;
@@ -232,7 +232,7 @@ background: #1B1F24;
     top: calc(50% - 300px);;
     left: calc(50% - 275px);
     
-    z-index: 1000;
+    z-index: 4500;
   }
 
   #NoLoginCaption {
@@ -240,4 +240,20 @@ background: #1B1F24;
     bottom: 1.3rem;
     right: 160px;
     color: #fff;
+  }
+
+  .ModalContainer{
+    background: rgba(0,0,0,.5);
+    display: block;
+    /* this is how we cover the entire page */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+  }
+
+  .BacktestModalInnerWrapper{
+    z-index: 3500;
   }
