@@ -417,6 +417,26 @@ function WonCoinList() {
           </tr>
         </thead>
         <tbody>
+          {LoadOriginalData === null ? (
+            <tr>
+              <td>"Loading..."</td>
+            </tr>
+          ) : (
+            LoadOriginalData.map((item) => {
+            return(
+              <tr>
+                <td>{item ? item.currency : null}</td>
+                <td>{item ? item.last : null}</td>
+                <td>{item ? item.last : null}</td>
+                <td>{item ? item.volume : null}</td>
+              </tr>
+            );
+            })
+          )}
+
+          {/*
+
+
           <tr>
             <td>{LoadOriginalData ? LoadOriginalData[100].currency : null}</td>
             <td>{LoadOriginalData ? LoadOriginalData[100].last : null}</td>
@@ -428,6 +448,22 @@ function WonCoinList() {
             </td>
             <td>{LoadOriginalData ? LoadOriginalData[100].volume : null}</td>
           </tr>
+
+          <tr>
+            <td>{LoadOriginalData ? LoadOriginalData[100].currency : null}</td>
+            <td>{LoadOriginalData ? LoadOriginalData[100].last : null}</td>
+            <td>
+              {LoadOriginalData
+                ? LoadOriginalData[100].last -
+                  LoadOriginalData[100].yesterday_last
+                : null}
+            </td>
+            <td>{LoadOriginalData ? LoadOriginalData[100].volume : null}</td>
+          </tr>
+
+
+              */}
+
           {
             //LoadOriginalData.map((ElementData) => {
             //<DataToTable LoadData={LoadOriginalData} />;
