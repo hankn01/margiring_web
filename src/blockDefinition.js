@@ -699,7 +699,7 @@ export function defineBlockInfo() {
         ],
         "output": "Time",
         "colour": CALC_TIME_COLOUR,
-        "tooltip": "요일을 가리킵니다. 실제 값은 월화수목금토일 순서대로 1234567입니다!",
+        "tooltip": "요일을 가리킵니다. 실제 값은 월화수목금토일 순서대로 1234567입니다.",
         "helpUrl": ""
       },
       // 계산 블록
@@ -881,7 +881,7 @@ export function defineBlockInfo() {
         ],
         "colour": CALC_TIME_COLOUR,
         "output": "Number",
-        "tooltip": "",
+        "tooltip": "앞 숫자의 뒤 숫자만큼의 백분율 값을 의미합니다.",
         "helpUrl": ""
       },
       {
@@ -1310,7 +1310,7 @@ export function defineBlockInfo() {
         "previousStatement": null,
         "nextStatement": null,
         "colour": TRADE_COLOUR,
-        "tooltip": "선택한 종목을 일정 금액 매도합니다.",
+        "tooltip": "선택한 종목의 보유 비중을 일정 금액으로 맞춥니다. 나머지 종목은 전부 매도합니다. 해당 종목을 더 많이 가지고 있으면 매도하고, 더 적게 가지고 있으면 매수합니다.선택한 종목을 일정 금액 매도합니다.",
         "helpUrl": ""
       },
       {
@@ -1336,7 +1336,7 @@ export function defineBlockInfo() {
         "previousStatement": null,
         "nextStatement": null,
         "colour": TRADE_COLOUR,
-        "tooltip": "",
+        "tooltip": "선택한 종목의 보유 비중을 일정 금액으로 맞춥니다. 나머지 종목은 전부 매도합니다. 해당 종목을 더 많이 가지고 있으면 매도하고, 더 적게 가지고 있으면 매수합니다.",
         "helpUrl": ""
       },
       {
@@ -1381,7 +1381,7 @@ export function defineBlockInfo() {
         "message0": "내 현금",
         "output": "Number",
         "colour": TRADE_COLOUR,
-        "tooltip": "",
+        "tooltip": "현재 내 현금을 의미합니다.",
         "helpUrl": ""
       },
       {
@@ -1402,7 +1402,7 @@ export function defineBlockInfo() {
         ],
         "output": "Number",
         "colour": TRADE_COLOUR,
-        "tooltip": "현재 내 자산을 의미합니다.",
+        "tooltip": "현재 내가 보유한 선택한 종목의 금액을 의미합니다.",
         "helpUrl": ""
       },
       {
@@ -1422,7 +1422,7 @@ export function defineBlockInfo() {
         ],
         "output": "Number",
         "colour": TRADE_COLOUR,
-        "tooltip": "",
+        "tooltip": "선택한 지표의 특정 시각의 값을 의미합니다.",
         "helpUrl": ""
       },
       {
@@ -1442,7 +1442,7 @@ export function defineBlockInfo() {
         ],
         "output": "Number",
         "colour": TRADE_COLOUR,
-        "tooltip": "",
+        "tooltip": "선택한 지표의 특정 시간 동안의 이동편균값을 의미합니다.",
         "helpUrl": ""
       },
       {
@@ -1462,7 +1462,7 @@ export function defineBlockInfo() {
         ],
         "output": "Number",
         "colour": TRADE_COLOUR,
-        "tooltip": "",
+        "tooltip": "선택한 지표의 특정 시간 동안의 지수이동평균값을 의미합니다.",
         "helpUrl": ""
       },
       {
@@ -1482,7 +1482,7 @@ export function defineBlockInfo() {
         ],
         "output": "Number",
         "colour": TRADE_COLOUR,
-        "tooltip": "",
+        "tooltip": "선택한 지표의 특정 시간 동안의 총합을 의미합니다.",
         "helpUrl": ""
       },
       {
@@ -1502,7 +1502,7 @@ export function defineBlockInfo() {
         ],
         "output": "Number",
         "colour": TRADE_COLOUR,
-        "tooltip": "",
+        "tooltip": "선택한 지표의 특정 시간 전 대비 변화한 값을 의미합니다.",
         "helpUrl": ""
       },
       {
@@ -1522,7 +1522,7 @@ export function defineBlockInfo() {
         ],
         "output": "Number",
         "colour": TRADE_COLOUR,
-        "tooltip": "",
+        "tooltip": "선택한 지표의 특정 시간 전 대비 변화한 비율을 의미합니다.",
         "helpUrl": ""
       },
       {
@@ -1542,7 +1542,7 @@ export function defineBlockInfo() {
         ],
         "output": "Number",
         "colour": TRADE_COLOUR,
-        "tooltip": "",
+        "tooltip": "선택한 지표의 특정 시간 동안의 최곳값을 의미합니다.",
         "helpUrl": ""
       },
       {
@@ -1562,7 +1562,7 @@ export function defineBlockInfo() {
         ],
         "output": "Number",
         "colour": TRADE_COLOUR,
-        "tooltip": "",
+        "tooltip": "선택한 지표의 특정 시간 동안의 최젓값을 의미합니다.",
         "helpUrl": ""
       },
       {
@@ -1612,7 +1612,7 @@ export function defineBlockInfo() {
         ],
         "output": "Index",
         "colour": TRADE_COLOUR,
-        "tooltip": "",
+        "tooltip": "선택한 종목의 거래량/거래대금/시가/고가/저가/종가 값을 의미합니다. 거래 연산자 안에 들어가야 합니다.",
         "helpUrl": ""
       },
       {
@@ -1632,7 +1632,7 @@ export function defineBlockInfo() {
         ],
         "output": "Index",
         "colour": TRADE_COLOUR,
-        "tooltip": "",
+        "tooltip": "선택한 종목의 주가중심선 값을 의미합니다. 거래 연산자 안에 들어가야 합니다.",
         "helpUrl": ""
       },
       {
@@ -1678,7 +1678,7 @@ export function defineBlockInfo() {
         ],
         "output": "Index",
         "colour": TRADE_COLOUR,
-        "tooltip": "",
+        "tooltip": "선택한 종목의 피벗기준선/피벗 1차 지지선/피벗 2차 지지선/피벗 1차 저항선/피벗 2차 저항선 값을 의미합니다. 거래 연산자 안에 들어가야 합니다.",
         "helpUrl": ""
       },
       {
@@ -1698,7 +1698,7 @@ export function defineBlockInfo() {
         ],
         "output": "Index",
         "colour": TRADE_COLOUR,
-        "tooltip": "",
+        "tooltip": "선택한 종목의 MACD 지표 값을 의미합니다. 거래 연산자 안에 들어가야 합니다.",
         "helpUrl": ""
       },
       {
@@ -1718,7 +1718,7 @@ export function defineBlockInfo() {
         ],
         "output": "Index",
         "colour": TRADE_COLOUR,
-        "tooltip": "",
+        "tooltip": "선택한 종목의 MACD SIG 지표 값을 의미합니다. 거래 연산자 안에 들어가야 합니다.",
         "helpUrl": ""
       },
       {
@@ -1738,7 +1738,7 @@ export function defineBlockInfo() {
         ],
         "output": "Index",
         "colour": TRADE_COLOUR,
-        "tooltip": "",
+        "tooltip": "선택한 종목의 MACD OSC 지표 값을 의미합니다. 거래 연산자 안에 들어가야 합니다.",
         "helpUrl": ""
       },
       {
@@ -1758,7 +1758,7 @@ export function defineBlockInfo() {
         ],
         "output": "Index",
         "colour": TRADE_COLOUR,
-        "tooltip": "",
+        "tooltip": "선택한 종목의 ADX 지표 값을 의미합니다. 거래 연산자 안에 들어가야 합니다.",
         "helpUrl": ""
       },
       {
@@ -1778,7 +1778,7 @@ export function defineBlockInfo() {
         ],
         "output": "Index",
         "colour": TRADE_COLOUR,
-        "tooltip": "",
+        "tooltip": "선택한 종목의 VWAP 지표 값을 의미합니다. 거래 연산자 안에 들어가야 합니다.",
         "helpUrl": ""
       },
       {
@@ -1798,7 +1798,7 @@ export function defineBlockInfo() {
         ],
         "output": "Index",
         "colour": TRADE_COLOUR,
-        "tooltip": "",
+        "tooltip": "선택한 종목의 OBV 지표 값을 의미합니다. 거래 연산자 안에 들어가야 합니다.",
         "helpUrl": ""
       },
     ]
