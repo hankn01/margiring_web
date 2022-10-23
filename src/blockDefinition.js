@@ -615,7 +615,7 @@ export function defineBlockInfo() {
         "helpUrl": ""
       },
       {
-        "type": "time_detial",
+        "type": "time_detail",
         "message0": "%1의 %2",
         "args0": [
           {
