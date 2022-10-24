@@ -176,14 +176,6 @@ export function defineBlockInfo() {
         "tooltip": "특정 종목이 매도되었을 때 실행됩니다.",
         "helpUrl": ""
       },
-      {
-        "type": "event_trade_info",
-        "message0": "해당 거래정보",
-        "output": "TradeInfo",
-        "colour": EVENT_COLOUR,
-        "tooltip": "\"매도 시\", \"매수 시\" 블록과 같이 쓰여 해당 거래 정보를 가리킵니다.",
-        "helpUrl": ""
-      },
       // 흐름 블록
       {
         "kind": "block",
@@ -1337,35 +1329,6 @@ export function defineBlockInfo() {
         "nextStatement": null,
         "colour": TRADE_COLOUR,
         "tooltip": "선택한 종목의 보유 비중을 일정 금액으로 맞춥니다. 나머지 종목은 전부 매도합니다. 해당 종목을 더 많이 가지고 있으면 매도하고, 더 적게 가지고 있으면 매수합니다.",
-        "helpUrl": ""
-      },
-      {
-        "type": "trade_is_selling",
-        "message0": "%1 가 %2",
-        "args0": [
-          {
-            "type": "input_value",
-            "name": "TRADEINFO",
-            "check": "TradeInfo"
-          },
-          {
-            "type": "field_dropdown",
-            "name": "VALUE",
-            "options": [
-              [
-                "매수",
-                "OPTION1"
-              ],
-              [
-                "매도",
-                "OPTION2"
-              ]
-            ]
-          }
-        ],
-        "output": "Boolean",
-        "colour": TRADE_COLOUR,
-        "tooltip": "선택한 거래 정보가 매수되었는지, 혹은 매도되었는지를 의미합니다.",
         "helpUrl": ""
       },
       {
