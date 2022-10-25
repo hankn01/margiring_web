@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 //import {Link} from 'react-router-dom';
 import Backtest from './Backtest';
 import BlockWorkspace from './BlockWorkspace';
@@ -13,15 +13,39 @@ import BacktestModalContext from './contexts/BacktestModalContext';
 import Login from './Login';
 import SignUp from './SignUp';
 import styled from "styled-components";
+import Cookies from 'universal-cookie';
+
+const cookies = new Cookies();
+
+function NonLoginUserCaption() {
+    return (
+        <span id={`${styles.NoLoginCaption}`}>
+            비로그인 사용자입니다. 작성한 알고리즘이 고객님의 브라우저에 보관되므로 데이터가 유실될 수 있습니다. 저장하려면 로그인하세요.
+        </span>
+    );
+}
+
+
 
 function Blockcoding() {
-    styled(Backtest)`
-        z-index: 3500;
-        `;
+  
+ 
         const [ShowModal, setShowModal] = useState(false);
+        const [IsLoggedIn, setIsLoggedIn] = useState(false);
         const ModalClose = () => {
             setShowModal(false);
         }
+        
+        useEffect(() => {
+            if(cookies.get('userToken')!==undefined)
+            {
+                setIsLoggedIn(true);
+            }
+            else
+            {
+                setIsLoggedIn(false);
+            }
+        });
         
         return (
             <>
@@ -31,9 +55,10 @@ function Blockcoding() {
                     <span id={`${styles.AlgoNameText}`}>
                         나의 투자 전략 알고리즘
                     </span>
-                    <span id={`${styles.NoLoginCaption}`}>
-                        비로그인 사용자입니다. 작성한 알고리즘이 고객님의 브라우저에 보관되므로 데이터가 유실될 수 있습니다. 저장하려면 로그인하세요.
-                    </span>
+                   
+                   {//비로그인 사용자용 캡션
+                   }
+                   {!IsLoggedIn?<NonLoginUserCaption />:null}
                     <button id={`${styles.StrategyTestButton}`} onClick={() => {setShowModal(true)}}>전략 검증하기</button>
                     {/*동작 이상으로 인해 일시적으로 generateCode를 삭제하였습니다. 수정 후 추가 바랍니다.*/}
                     
