@@ -190,6 +190,28 @@
   text-align: center;
   color: #fff;
   }
+  .CreateStrategyButton_NoLogged {
+    grid-column-start: 1;
+    grid-column-end: 13;
+   height: 64px;
+    
+    background: rgba(17,13,45,0.7400000095367432);
+    color: rgba(255, 255, 255, 1);
+    opacity: 1;
+    
+    
+    border-radius: 8px;
+    border: solid 1px #474e59;
+    font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #fff;
+  }
   .RankDiv {
     width: 35%;
     top: 375px;
@@ -550,4 +572,10 @@ height: 670px;
   right: 0;
   bottom: 0;
   z-index: 3000;
+}
+#AlgorithmLostCaption{
+  color: #fff;
+  grid-column-start: 1;
+  grid-column-end: 13;
+  text-align: right;
 }
