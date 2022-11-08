@@ -1,13 +1,24 @@
 import Blockly from "blockly";
 
 export function defineBlockInfo() {
+  // const EVENT_COLOUR = "#27ae60";
+  // const FLOW_COLOUR = "#70a1ff";
+  // const TRADE_COLOUR = "#f39c12";
+  // const BOOL_COLOUR = "#3742fa";
+  // const CALC_TIME_COLOUR = "#f1c40f";
+  // const DATA_COLOUR = "58b19f";
+  
   const EVENT_COLOUR = "#27ae60";
   const FLOW_COLOUR = "#70a1ff";
-  const TRADE_COLOUR = "#f39c12";
-  const BOOL_COLOUR = "#3742fa";
-  const CALC_TIME_COLOUR = "#f1c40f";
   const DATA_COLOUR = "58b19f";
   const FUNCTION_COLOUR = "9b59b6";
+  const BOOLEAN_COLOUR = "#3742fa";
+  const TIME_COLOUR = "#218c74";
+  const NUMBER_COLOUR = "f39c12";
+  const STRING_COLOUR = "#c56e06";
+  const TRADE_COLOUR = "#f1c40f";
+  const INDEX_COLOUR = "#cd6133";
+
 
   Blockly.defineBlocksWithJsonArray(
     [
@@ -368,7 +379,7 @@ export function defineBlockInfo() {
         "type": "bool_true",
         "message0": "참",
         "output": "Boolean",
-        "colour": BOOL_COLOUR,
+        "colour": BOOLEAN_COLOUR,
         "tooltip": "일부 \"흐름\" 블록들의 이행에 활용됩니다.",
         "helpUrl": ""
       },
@@ -376,7 +387,7 @@ export function defineBlockInfo() {
         "type": "bool_false",
         "message0": "거짓",
         "output": "Boolean",
-        "colour": BOOL_COLOUR,
+        "colour": BOOLEAN_COLOUR,
         "tooltip": "일부 \"흐름\" 블록들의 불이행에 활용됩니다.",
         "helpUrl": ""
       },
@@ -397,7 +408,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Boolean",
-        "colour": BOOL_COLOUR,
+        "colour": BOOLEAN_COLOUR,
         "tooltip": "두 선택지가 같은지를 의미합니다.",
         "helpUrl": ""
       },
@@ -418,7 +429,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Boolean",
-        "colour": BOOL_COLOUR,
+        "colour": BOOLEAN_COLOUR,
         "tooltip": "두 선택지가 다른지를 의미합니다.",
         "helpUrl": ""
       },
@@ -441,7 +452,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Boolean",
-        "colour": BOOL_COLOUR,
+        "colour": BOOLEAN_COLOUR,
         "tooltip": "앞 숫자가 뒤 숫자보다 큰지를 의미합니다.",
         "helpUrl": ""
       },
@@ -464,7 +475,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Boolean",
-        "colour": BOOL_COLOUR,
+        "colour": BOOLEAN_COLOUR,
         "tooltip": "앞 숫자가 뒤 숫자보다 작은지를 의미합니다.",
         "helpUrl": ""
       },
@@ -487,7 +498,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Boolean",
-        "colour": BOOL_COLOUR,
+        "colour": BOOLEAN_COLOUR,
         "tooltip": "앞 숫자가 뒤 숫자보다 크거나 같은지를 의미합니다.",
         "helpUrl": ""
       },
@@ -510,7 +521,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Boolean",
-        "colour": BOOL_COLOUR,
+        "colour": BOOLEAN_COLOUR,
         "tooltip": "앞 숫자가 뒤 숫자보다 작거나 같은지를 의미합니다.",
         "helpUrl": ""
       },
@@ -533,7 +544,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Boolean",
-        "colour": BOOL_COLOUR,
+        "colour": BOOLEAN_COLOUR,
         "tooltip": "두 선택지가 모두 참인지를 의미합니다.",
         "helpUrl": ""
       },
@@ -556,7 +567,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Boolean",
-        "colour": BOOL_COLOUR,
+        "colour": BOOLEAN_COLOUR,
         "tooltip": "두 선택지 중 하나 이상이 참인지를 의미합니다.",
         "helpUrl": ""
       },
@@ -571,7 +582,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Boolean",
-        "colour": BOOL_COLOUR,
+        "colour": BOOLEAN_COLOUR,
         "tooltip": "선택지가 참이 아닌지를 의미합니다. 선택지가 참이면 결과가 거짓이 되고, 그 반대면 참이 됩니다.",
         "helpUrl": ""
       },
@@ -580,7 +591,7 @@ export function defineBlockInfo() {
         "type": "time_now",
         "message0": "현재",
         "output": "Time",
-        "colour": CALC_TIME_COLOUR,
+        "colour": TIME_COLOUR,
         "tooltip": "현재 시간을 의미합니다.",
         "helpUrl": ""
       },
@@ -595,7 +606,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Time",
-        "colour": CALC_TIME_COLOUR,
+        "colour": TIME_COLOUR,
         "tooltip": "입력한 시간 만큼 전 시간을 의미합니다.",
         "helpUrl": ""
       },
@@ -610,7 +621,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Time",
-        "colour": CALC_TIME_COLOUR,
+        "colour": TIME_COLOUR,
         "tooltip": "선택한 시간을 의미합니다.",
         "helpUrl": ""
       },
@@ -654,7 +665,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Time",
-        "colour": CALC_TIME_COLOUR,
+        "colour": TIME_COLOUR,
         "tooltip": "선택한 시간의 상세 정보를 의미합니다.",
         "helpUrl": ""
       },
@@ -698,7 +709,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Time",
-        "colour": CALC_TIME_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "요일을 가리킵니다. 실제 값은 월화수목금토일 순서대로 1234567입니다!",
         "helpUrl": ""
       },
@@ -714,7 +725,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Number",
-        "colour": CALC_TIME_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "입력한 숫자의 값을 의미합니다.",
         "helpUrl": ""
       },
@@ -736,7 +747,7 @@ export function defineBlockInfo() {
         ],
         "inputsInline": true,
         "output": "Number",
-        "colour": CALC_TIME_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "두 숫자를 더한 값을 의미합니다.",
         "helpUrl": ""
       },
@@ -758,7 +769,7 @@ export function defineBlockInfo() {
         ],
         "inputsInline": true,
         "output": "Number",
-        "colour": CALC_TIME_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "앞 숫자에서 뒤 숫자를 뺀 값을 의미합니다.",
         "helpUrl": ""
       },
@@ -780,7 +791,7 @@ export function defineBlockInfo() {
         ],
         "inputsInline": true,
         "output": "Number",
-        "colour": CALC_TIME_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "두 숫자를 곱한 값을 의미합니다.",
         "helpUrl": ""
       },
@@ -802,7 +813,7 @@ export function defineBlockInfo() {
         ],
         "inputsInline": true,
         "output": "Number",
-        "colour": CALC_TIME_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "앞 숫자에서 뒤 숫자를 나눈 값을 의미합니다.",
         "helpUrl": ""
       },
@@ -838,7 +849,7 @@ export function defineBlockInfo() {
         ],
         "inputsInline": true,
         "output": "Number",
-        "colour": CALC_TIME_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "앞 숫자에서 뒤 숫자를 나눴을 때의 몫이나 나머지를 의미합니다.",
         "helpUrl": ""
       },
@@ -860,7 +871,7 @@ export function defineBlockInfo() {
         ],
         "inputsInline": true,
         "output": "Number",
-        "colour": CALC_TIME_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "앞 숫자와 뒤 숫자 사이의 무작위 정수를 의미합니다. 매 실행마다 달라집니다.",
         "helpUrl": ""
       },
@@ -879,7 +890,7 @@ export function defineBlockInfo() {
             "check": "Number"
           },
         ],
-        "colour": CALC_TIME_COLOUR,
+        "colour": NUMBER_COLOUR,
         "output": "Number",
         "tooltip": "",
         "helpUrl": ""
@@ -895,7 +906,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "String",
-        "colour": CALC_TIME_COLOUR,
+        "colour": STRING_COLOUR,
         "tooltip": "입력한 글을 의미합니다.",
         "helpUrl": ""
       },
@@ -917,7 +928,7 @@ export function defineBlockInfo() {
         ],
         "inputsInline": true,
         "output": "String",
-        "colour": CALC_TIME_COLOUR,
+        "colour": STRING_COLOUR,
         "tooltip": "두 글을 이어 붙인 글을 의미합니다.",
         "helpUrl": ""
       },
@@ -939,7 +950,7 @@ export function defineBlockInfo() {
         ],
         "inputsInline": true,
         "output": "String",
-        "colour": CALC_TIME_COLOUR,
+        "colour": STRING_COLOUR,
         "tooltip": "작성한 글의 작성한 숫자번째의 글자를 의미합니다.",
         "helpUrl": ""
       },
@@ -966,7 +977,7 @@ export function defineBlockInfo() {
         ],
         "inputsInline": true,
         "output": "String",
-        "colour": CALC_TIME_COLOUR,
+        "colour": STRING_COLOUR,
         "tooltip": "작성한 글의 작성한 앞 숫자부터 뒤 숫자까지의 글을 의미합니다.",
         "helpUrl": ""
       },
@@ -1364,7 +1375,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Boolean",
-        "colour": TRADE_COLOUR,
+        "colour": BOOLEAN_COLOUR,
         "tooltip": "선택한 거래 정보가 매수되었는지, 혹은 매도되었는지를 의미합니다.",
         "helpUrl": ""
       },
@@ -1372,7 +1383,7 @@ export function defineBlockInfo() {
         "type": "trade_my_budget",
         "message0": "내 자산",
         "output": "Number",
-        "colour": TRADE_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "현재 내 자산을 의미합니다.",
         "helpUrl": ""
       },
@@ -1380,7 +1391,7 @@ export function defineBlockInfo() {
         "type": "trade_my_cash",
         "message0": "내 현금",
         "output": "Number",
-        "colour": TRADE_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "",
         "helpUrl": ""
       },
@@ -1401,7 +1412,7 @@ export function defineBlockInfo() {
           },
         ],
         "output": "Number",
-        "colour": TRADE_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "현재 내 자산을 의미합니다.",
         "helpUrl": ""
       },
@@ -1421,7 +1432,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Number",
-        "colour": TRADE_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "",
         "helpUrl": ""
       },
@@ -1441,7 +1452,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Number",
-        "colour": TRADE_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "",
         "helpUrl": ""
       },
@@ -1461,7 +1472,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Number",
-        "colour": TRADE_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "",
         "helpUrl": ""
       },
@@ -1481,7 +1492,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Number",
-        "colour": TRADE_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "",
         "helpUrl": ""
       },
@@ -1501,7 +1512,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Number",
-        "colour": TRADE_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "",
         "helpUrl": ""
       },
@@ -1521,7 +1532,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Number",
-        "colour": TRADE_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "",
         "helpUrl": ""
       },
@@ -1541,7 +1552,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Number",
-        "colour": TRADE_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "",
         "helpUrl": ""
       },
@@ -1561,7 +1572,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Number",
-        "colour": TRADE_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "",
         "helpUrl": ""
       },
@@ -1611,7 +1622,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Index",
-        "colour": TRADE_COLOUR,
+        "colour": INDEX_COLOUR,
         "tooltip": "",
         "helpUrl": ""
       },
@@ -1631,7 +1642,7 @@ export function defineBlockInfo() {
           },
         ],
         "output": "Index",
-        "colour": TRADE_COLOUR,
+        "colour": INDEX_COLOUR,
         "tooltip": "",
         "helpUrl": ""
       },
@@ -1677,7 +1688,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Index",
-        "colour": TRADE_COLOUR,
+        "colour": INDEX_COLOUR,
         "tooltip": "",
         "helpUrl": ""
       },
@@ -1697,7 +1708,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Index",
-        "colour": TRADE_COLOUR,
+        "colour": INDEX_COLOUR,
         "tooltip": "",
         "helpUrl": ""
       },
@@ -1717,7 +1728,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Index",
-        "colour": TRADE_COLOUR,
+        "colour": INDEX_COLOUR,
         "tooltip": "",
         "helpUrl": ""
       },
@@ -1737,7 +1748,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Index",
-        "colour": TRADE_COLOUR,
+        "colour": INDEX_COLOUR,
         "tooltip": "",
         "helpUrl": ""
       },
@@ -1757,7 +1768,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Index",
-        "colour": TRADE_COLOUR,
+        "colour": INDEX_COLOUR,
         "tooltip": "",
         "helpUrl": ""
       },
@@ -1777,7 +1788,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Index",
-        "colour": TRADE_COLOUR,
+        "colour": INDEX_COLOUR,
         "tooltip": "",
         "helpUrl": ""
       },
@@ -1797,7 +1808,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Index",
-        "colour": TRADE_COLOUR,
+        "colour": INDEX_COLOUR,
         "tooltip": "",
         "helpUrl": ""
       },
