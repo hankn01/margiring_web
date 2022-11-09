@@ -3,6 +3,7 @@
 import React, {useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import Header from './Header';
+import AlgorithmListDiv from './AlgorithmListDiv';
 import styles from './css/Mainscr.module.css';
 import LoginModalContext from './contexts/LoginModalContext';
 import SignUpModalContext from './contexts/SignUpModalContext';
@@ -139,7 +140,7 @@ function Mainscr() {
         <div className={`${styles.MainFrame}`}> {/* 스크린 전체 div */}
             
             <Header /> {/* 헤더 부분 */}
-            
+            <AlgorithmListDiv />
            
             <div id={`${styles.MiddleContentWrap}`}>
             

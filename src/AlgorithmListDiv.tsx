@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import Cookies from 'universal-cookie';
+import AlgorithmCardList from './AlgorithmCardList';
 import styles from './css/AlgorithmListDiv.module.css';
 
 function AlgorithmListDiv() {
@@ -32,6 +33,9 @@ const cookies = new Cookies();
                                 
                                 <div className={`${styles.ListContentDiv}`}> 
                                 <span></span>
+                                <AlgorithmCardList />
+                                <AlgorithmCardList />
+                                <AlgorithmCardList />
                                 <div className={`${styles.StrategyOddElement}`}>
                                     <span className={`${styles.OuterDot}`}></span>
                                     <span className={`${styles.Dot}`}></span>
