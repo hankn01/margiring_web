@@ -18,6 +18,26 @@
 
   }
 
+  .StrategyEvenElement{
+    position: relative;
+    grid-column-start: 7;
+	grid-column-end: 13;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(42, 50, 63, 0.08);
+    background-color: #2f363e;
+    height: 64px;
+    font-family: Pretendard;
+    font-size: 18px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+  }
+
+
   .Dot{
     position: absolute;
     top: 28px;
@@ -60,6 +80,11 @@
     color: #8ba2bc;
   }
 
+  .StrategyElementRemove:hover{
+    text-decoration: underline;
+    cursor:pointer;
+  }
+  
   .StrategyCheckButton{
     position: absolute;
     top: 11px;
@@ -78,4 +103,9 @@
     letter-spacing: normal;
     text-align: center;
     color: #fff;
+  }
+
+  .StrategyCheckButton:hover{
+    background-color: #3c8aff;
+    cursor:pointer;
   }

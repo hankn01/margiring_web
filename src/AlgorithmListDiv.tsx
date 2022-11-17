@@ -1,12 +1,26 @@
+/* eslint-disable */
+// @ts-nocheck
+
 import React from 'react';
+import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 import Cookies from 'universal-cookie';
 import AlgorithmCardList from './AlgorithmCardList';
 import styles from './css/AlgorithmListDiv.module.css';
 
-function AlgorithmListDiv() {
+const AlgorithmListDiv = (props) => {
 const cookies = new Cookies();
 
+let idx_num = 0;
+
+//let x = JSON.parse(JSON.stringify(props.list[0]));
+
+
+let x = [...props.list];
+console.log(x[0]);
+const AlgoListShow = props.list.map((Item, key)=><AlgorithmCardList index={key} id={Item._id} />);
+
+//console.log("아이템 수신"+props.list[0]._id);
     return (
 
 <div className={`${styles.ListDiv}`}> {/* 알고리즘 리스트 div */}
@@ -28,44 +42,17 @@ const cookies = new Cookies();
                 </div>
             </div>
             
-            <span></span>
+            
             {cookies.get('userToken')!==undefined? 
                                 
                                 <div className={`${styles.ListContentDiv}`}> 
-                                <span></span>
-                                <AlgorithmCardList />
-                                <AlgorithmCardList />
-                                <AlgorithmCardList />
-                                <div className={`${styles.StrategyOddElement}`}>
-                                    <span className={`${styles.OuterDot}`}></span>
-                                    <span className={`${styles.Dot}`}></span>
-                                    <a className={`${styles.StrategyStatus}`}>검증전</a>
-                                    <a className={`${styles.StrategyElementText}`}>Strategy 1</a>
-                                    <a className={`${styles.StrategyElementRemove}`}>삭제하기</a>
-                                    <button className={`${styles.StrategyCheckButton}`}>전략 검증하기</button>
-                                </div>
-                                <div className={`${styles.StrategyEvenElement}`}>
-                                <span className={`${styles.OuterDot}`}></span>
-                                <span className={`${styles.Dot}`}></span>
-                                <a className={`${styles.StrategyStatus}`}>검증전</a>
-                                <a className={`${styles.StrategyElementText}`}>Strategy 2</a>
-                                <a className={`${styles.StrategyElementRemove}`}>삭제하기</a>
-                                    <button className={`${styles.StrategyCheckButton}`}>전략 검증하기</button>
-                
-                                </div>
-                                <div className={`${styles.StrategyOddElement}`}>
-                                <span className={`${styles.OuterDot}`}></span>
-                                <span className={`${styles.Dot}`}></span>
-                                <a className={`${styles.StrategyStatus}`}>검증전</a>
-                                <a className={`${styles.StrategyElementText}`}>Strategy 3</a>
-                                <a className={`${styles.StrategyElementRemove}`}>삭제하기</a>
-                                    <button className={`${styles.StrategyCheckButton}`}>전략 검증하기</button>
-                
-                                </div>
-                                 {/* Create New Strategy 버튼을 누르면 블록코딩 화면으로 연결 */}
-                                                
-                                   
-                                    <div className={`${styles.CreateStrategyButton}`}>
+                                
+                                    
+                                   {AlgoListShow}
+                                
+                                
+                                
+                                   <div className={`${styles.CreateStrategyButton}`}>
                                     <Link to ="./block_newalgo">
                                         <div id={`${styles.CreateStrategyInner}`}>
                                         <span id={`${styles.StrategyAddIcon}`}>
@@ -80,6 +67,11 @@ const cookies = new Cookies();
                                     
                                     
                                     </div>
+                                
+                                 {/* Create New Strategy 버튼을 누르면 블록코딩 화면으로 연결 */}
+                                                
+                                   
+                                   
                                     
                                 
                                     {/*<span className={`${styles.ListContentText}`}>Strategy 1</span>*/}
@@ -116,5 +108,11 @@ const cookies = new Cookies();
 
     );
 }
+
+AlgorithmListDiv.propTypes = {
+    list: PropTypes.array.isRequired
+};
+
+
 
 export default AlgorithmListDiv;

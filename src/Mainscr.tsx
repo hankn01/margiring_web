@@ -50,13 +50,13 @@ function Mainscr() {
         
         let UserToken = cookies.get('userToken');
         setUserToken(UserToken);
-        console.log(UserToken);
+        //console.log(UserToken);
         if(UserToken!==undefined) {
             axios.get("http://backendserver-env.eba-gg774wd2.ap-northeast-2.elasticbeanstalk.com/pycode", { headers: {
                 Authorization: 'Bearer '+UserToken
             }}).then((response) => {
                 AlgoList = response.data
-                console.log(AlgoList);
+                //console.log(AlgoList);
                 setAlgorithmList(AlgoList);
                 
                 
@@ -73,13 +73,13 @@ function Mainscr() {
             
             for(var i=0;i<AlgorithmList.length;i++)
             {
-                console.log(AlgorithmList[i]);
+                //console.log(AlgorithmList[i]);
                 AlgoRequest[i] = axios.get("http://backendserver-env.eba-gg774wd2.ap-northeast-2.elasticbeanstalk.com/pycode/"+AlgorithmList[i], { headers: {
                     Authorization: 'Bearer '+UserToken
                 }});
     
                 
-                console.log(AlgoRequestAll);
+                //console.log(AlgoRequestAll);
                 
             }
             setAlgoRequestAll([...AlgoRequest]);
@@ -94,9 +94,9 @@ function Mainscr() {
                     //console.log(FinalList);
                     setCardResultList(FinalList);
                     
-                    console.log(CardResultList);
-                    console.log(typeof CardResultList);
-                    console.log(CardResultList[0].progname);
+                    //console.log(CardResultList);
+                    //console.log(typeof CardResultList);
+                    //console.log(CardResultList[0].progname);
                 })
                 
             ).catch((errors) => {
@@ -129,8 +129,8 @@ function Mainscr() {
     }, [UserToken, AlgorithmList.length, AlgoRequestAll.length]);
 
     
-                        console.log(AlgorithmList);
-                        console.log(AlgoRequestAll);
+                        //console.log(AlgorithmList);
+                        //console.log(AlgoRequestAll);
                         console.log(CardResultList);
 
 
@@ -140,7 +140,7 @@ function Mainscr() {
         <div className={`${styles.MainFrame}`}> {/* 스크린 전체 div */}
             
             <Header /> {/* 헤더 부분 */}
-            <AlgorithmListDiv />
+            <AlgorithmListDiv list={CardResultList}/>
            
             <div id={`${styles.MiddleContentWrap}`}>
             
