@@ -13,10 +13,14 @@ import Footer from './Footer';
 import Cookies from 'universal-cookie';
 import axios from 'axios';
 import { useState } from 'react';
+import styled from "styled-components";
 
 const cookies = new Cookies();
 //const [UserToken, setUserToken] = useState();
 //const [] = useState();
+
+
+
 function NewStrategyButton() {
     
 
@@ -46,6 +50,10 @@ function Mainscr() {
     let AlgoList;
     let tempReq;
     let AlgoRequest;
+
+    
+
+
     useEffect(() => {
         
         let UserToken = cookies.get('userToken');
@@ -63,7 +71,7 @@ function Mainscr() {
             })
         }
    
-    
+       
         AlgoRequest = [];
         if(AlgorithmList!==undefined&&AlgorithmList.length!==0)
         {
@@ -134,6 +142,17 @@ function Mainscr() {
                         console.log(CardResultList);
 
 
+    const MiddleWrap = styled.div`
+    position: absolute;
+    top: ${(86+60*(AlgorithmList.length/2+1)+16*((AlgorithmList.length)/2+1)+124)}px;
+    width: 99.5%;
+    margin-right: 3.125%;
+    margin-left: 3.125%;
+    display: grid;
+    grid-template-columns: 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667%;
+    grid-column-gap: 24px;
+    `;
+
     return (
         <>   
         
@@ -142,7 +161,8 @@ function Mainscr() {
             <Header /> {/* 헤더 부분 */}
             <AlgorithmListDiv list={CardResultList}/>
            
-            <div id={`${styles.MiddleContentWrap}`}>
+           <MiddleWrap>
+            
             
 
                 {/* 암호화폐 뉴스 표시 div */}
@@ -157,7 +177,8 @@ function Mainscr() {
                     <iframe src="https://cryptorank.io/" width="100%" height="850" scrolling="yes" frameBorder="0"></iframe>
                     </div>
                 
-            </div>
+            
+            </MiddleWrap>
         </div>
         <LoginModalContext.Consumer>
              {value => (

@@ -7,6 +7,7 @@ import {Link} from 'react-router-dom';
 import Cookies from 'universal-cookie';
 import AlgorithmCardList from './AlgorithmCardList';
 import styles from './css/AlgorithmListDiv.module.css';
+import styled, {css} from "styled-components";
 
 const AlgorithmListDiv = (props) => {
 const cookies = new Cookies();
@@ -20,11 +21,26 @@ let x = [...props.list];
 console.log(x[0]);
 const AlgoListShow = props.list.map((Item, key)=><AlgorithmCardList index={key} id={Item._id} />);
 
+const StyledDiv = styled.div` 
+    opacity: 1;
+    overflow: hidden;
+    text-align: center;
+    position: absolute;
+    top: 64px;
+    width: 100%;
+    
+
+    height: ${(86+60*(props.list.length/2+1)+16*((props.list.length)/2+1)+32)}px;
+    flex-grow: 0;
+    padding: 30px 59px 32px 0px;
+    background-color: #1b1f24;
+`
+
 //console.log("아이템 수신"+props.list[0]._id);
     return (
 
-<div className={`${styles.ListDiv}`}> {/* 알고리즘 리스트 div */}
-            
+//<div className={`${styles.ListDiv}`}> {/* 알고리즘 리스트 div */}
+            <StyledDiv>
             <span id={`${styles.MyStrategyCaption}`}>My Strategy</span>
             {//<span id={`${styles.StrategyCountCaption}`}>0</span>
             }
@@ -103,8 +119,9 @@ const AlgoListShow = props.list.map((Item, key)=><AlgorithmCardList index={key} 
             </div>
             </div>
             }
-                
-            </div>
+        </StyledDiv>        
+//</div>
+
 
     );
 }
