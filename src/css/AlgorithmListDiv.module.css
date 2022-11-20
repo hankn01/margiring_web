@@ -169,7 +169,7 @@
     text-align: center;
   }
   .CreateStrategyButton {
-    grid-column-start: 7;
+    grid-column-start: 1;
     grid-column-end: 13;
    height: 64px;
     

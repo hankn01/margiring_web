@@ -1,7 +1,8 @@
 #FooterFont {
     font-size: 10px;
     color: #999999;
-    position: absolute;
     text-align: center;
     width: 100%;
+    position: absolute;
+    top: 2000px;
 }

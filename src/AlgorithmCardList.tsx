@@ -36,7 +36,7 @@ const AlgorithmCardList = (props) => {
                 <a className={`${styles.StrategyStatus}`}>검증전</a>
                 <a className={`${styles.StrategyElementText}`}>{props.id}</a>
                 <a className={`${styles.StrategyElementRemove}`}>삭제하기</a>
-                <button className={`${styles.StrategyCheckButton}`}>전략 검증하기</button>
+                <button className={`${styles.StrategyCheckButton}`}>전략 수정하기</button>
             </div>
             : <div className={`${styles.StrategyEvenElement}`}>
             <span className={`${styles.OuterDot}`}></span>
@@ -44,7 +44,7 @@ const AlgorithmCardList = (props) => {
             <a className={`${styles.StrategyStatus}`}>검증전</a>
             <a className={`${styles.StrategyElementText}`}>{props.id}</a>
             <a className={`${styles.StrategyElementRemove}`}>삭제하기</a>
-            <button className={`${styles.StrategyCheckButton}`}>전략 검증하기</button>
+            <button className={`${styles.StrategyCheckButton}`}>전략 수정하기</button>
         </div>
 
             }

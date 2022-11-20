@@ -21,6 +21,7 @@ const cookies = new Cookies();
 
 
 
+
 function NewStrategyButton() {
     
 
@@ -146,6 +147,7 @@ function Mainscr() {
     position: absolute;
     top: ${(86+60*(AlgorithmList.length/2+1)+16*((AlgorithmList.length)/2+1)+124)}px;
     width: 99.5%;
+    height: 670px;
     margin-right: 3.125%;
     margin-left: 3.125%;
     display: grid;
@@ -153,10 +155,40 @@ function Mainscr() {
     grid-column-gap: 24px;
     `;
 
+
+    const FooterDiv = styled.div`
+    font-size: 10px;
+    color: #999999;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: ${980+64*(CardResultList.length/2)+16*(CardResultList.length/2-1)}px;
+    `;
+    
+    const FooterDiv_NonLogin = styled.div`
+    font-size: 10px;
+    color: #999999;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: ${1000+64*(CardResultList.length/2)+16*(CardResultList.length/2-1)}px;
+    `;
+
+    const MainFrameDiv = styled.div`
+    width: 100%;
+    height: ${980+64*(CardResultList.length/2)+16*(CardResultList.length/2-1)}px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    `
+
     return (
         <>   
         
-        <div className={`${styles.MainFrame}`}> {/* 스크린 전체 div */}
+        <MainFrameDiv>{/* 스크린 전체 div */}
             
             <Header /> {/* 헤더 부분 */}
             <AlgorithmListDiv list={CardResultList}/>
@@ -179,7 +211,7 @@ function Mainscr() {
                 
             
             </MiddleWrap>
-        </div>
+            </MainFrameDiv>
         <LoginModalContext.Consumer>
              {value => (
                 <>
@@ -199,7 +231,50 @@ function Mainscr() {
              {//<div className={`${styles.ModalWrapper}`}>{value.ModalOpen?<Login />:null}</div>
       }
             </SignUpModalContext.Consumer> 
-        <Footer />
+
+
+        {UserToken?<FooterDiv>
+        마지링은 블록 코딩을 이용한 투자의 수익률 및 안정성을 안내해 드리기 위한 플랫폼으로 모든 투자는 손실이 발생할 수 있으며, 마지링은 손실에 대한 법적 책임이 없습니다.
+        <br>
+        </br>
+        마지링은 백테스팅에 대한 추천 결과만 제공하며, 모든 투자의 판단과 책임은 투자자에게 있습니다.
+        <br>
+        </br>
+        <br>
+        </br>
+        마지링
+        <br>
+        </br>
+        서울특별시 강남구 테헤란로 311, 7층
+        <br>
+        </br>
+        Copyright © 2022 Margiring. All rights reserved.
+        <br>
+        </br>
+        </FooterDiv>:
+        <FooterDiv_NonLogin>
+        마지링은 블록 코딩을 이용한 투자의 수익률 및 안정성을 안내해 드리기 위한 플랫폼으로 모든 투자는 손실이 발생할 수 있으며, 마지링은 손실에 대한 법적 책임이 없습니다.
+        <br>
+        </br>
+        마지링은 백테스팅에 대한 추천 결과만 제공하며, 모든 투자의 판단과 책임은 투자자에게 있습니다.
+        <br>
+        </br>
+        <br>
+        </br>
+        마지링
+        <br>
+        </br>
+        서울특별시 강남구 테헤란로 311, 7층
+        <br>
+        </br>
+        Copyright © 2022 Margiring. All rights reserved.
+        <br>
+        </br>
+
+
+        </FooterDiv_NonLogin>
+        }
+        
         </>
     );
 }
