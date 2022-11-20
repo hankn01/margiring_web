@@ -112,3 +112,12 @@
     opacity: 1;
     text-align: center;
 }
+
+#MargiringLogo {
+  position: absolute;
+  top: -16px;
+  left: 20px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
