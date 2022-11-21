@@ -64,11 +64,12 @@ function Login() {
         cookies.set("userToken", response.data.token, {
           path: "/",
           expires: expires,
+          credentials: true,
         });
         //localStorage.setItem("userToken", JSON.stringify(response.data.token));
         console.log(cookies.get("userToken"));
       })
-      .catch((e) => console.log(e));
+      .catch((e) => console.error(e));
     /*
     axios({
       url: "http://backendserver-env.eba-gg774wd2.ap-northeast-2.elasticbeanstalk.com/users/login",
