@@ -74,7 +74,7 @@ function SignUp() {
         {
             if(IsAdult(BirthDate)==true)
             {
-                const sendData = {email: Email, name: Name, nickname: Nickname, password: Password, age: 30};
+                const sendData = {email: Email, name: Name, nickname: Nickname, password: Password, birth: "1990-01-01"};
             console.log(sendData);
             axios
             .post("http://backendserver-env.eba-gg774wd2.ap-northeast-2.elasticbeanstalk.com/users", sendData)

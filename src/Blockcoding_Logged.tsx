@@ -2,7 +2,7 @@
 import React, {useEffect, useState} from 'react';
 //import {Link} from 'react-router-dom';
 import Backtest from './Backtest';
-import BlockWorkspace from './BlockWorkspace';
+import BlockWorkspace_Logged from './BlockWorkspace_Logged';
 import CoinInfo from './CoinInfo';
 import Header from './Header';
 import { generateBlockToCode } from './codeGenerator';
@@ -27,7 +27,7 @@ function NonLoginUserCaption() {
 
 
 
-function Blockcoding() {
+function Blockcoding_Logged() {
   
  
         const [ShowModal, setShowModal] = useState(false);
@@ -68,7 +68,7 @@ function Blockcoding() {
                 
                 <div className={`${styles.MiddleContentDiv}`}>
                     <div className={`${styles.BlockCodingDiv}`}>
-                        <BlockWorkspace /> {/* Blockly Toolbox 및 블록 부분 */}
+                        <BlockWorkspace_Logged /> {/* Blockly Toolbox 및 블록 부분 */}
                     </div>
                     <div id={`${styles.CoinInfoDiv}`}>
                     <CoinInfo />
@@ -109,4 +109,4 @@ function Blockcoding() {
         );
 }
 
-export default Blockcoding;
+export default Blockcoding_Logged;
