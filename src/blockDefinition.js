@@ -664,8 +664,8 @@ export function defineBlockInfo() {
             ]
           }
         ],
-        "output": "Time",
-        "colour": TIME_COLOUR,
+        "output": "NUMBER",
+        "colour": NUMBER_COLOUR,
         "tooltip": "선택한 시간의 상세 정보를 의미합니다.",
         "helpUrl": ""
       },
