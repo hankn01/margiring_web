@@ -1300,7 +1300,7 @@ export function defineBlockInfo() {
       {
         "kind": "block",
         "type": "trade_sell",
-        "message0": "%1 종목을 %2 코인 매도",
+        "message0": "%1 종목을 %2 원 매도",
         "args0": [
           {
             "type": "field_dropdown",
