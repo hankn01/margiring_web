@@ -207,28 +207,85 @@ export function defineBlockGenerator() {
     const code = 'not ' + value;
     return [code, Python.ORDER_LOGICAL_NOT]
   };
-  // 계산/시간 블록
+  // 시간 블록
   Python['time_now'] = function() {
-    const code = 'datetime.datetime.now().strftime(\'%Y/%m/%d %H:%M\')';
+    const code = 'datetime.datetime.now()';
     return [code, Python.ORDER_ATOMIC]
   };
 
   Python['time_minutes_ago'] = function(block) {
     const value = Python.valueToCode(block, 'VALUE', Python.ORDER_ATOMIC);
-    const code = '(datetime.datetime.now() + '
+    const code = 'datetime.datetime.now() + '
                 + 'datetime.timedelta(minutes=-'
                 + value
-                + ').strftime(\'%Y/%m/%d %H:%M\')';
+                + ')';
     return [code, Python.ORDER_ATOMIC]
   };
 
   Python['time_specific'] = function(block) {
-    const time = Python.valueToCode(block, 'TIME', Python.ORDER_ATOMIC);
+    const time = block.getFieldValue('TIME');
     const format_data = '%Y/%m/%d %H:%M';
     const code = 'datetime.strptime(' + time + ', ' + format_data + ')';
     return [code, Python.ORDER_ATOMIC]
   };
 
+  Python['time_detail'] = function(block) {
+    const time = Python.valueToCode(block, 'TIME', Python.ORDER_ATOMIC);
+    const option = block.getFieldValue('OPTION');
+    let code = '(' + time + ').';
+    switch (option) {
+      case 'OPTION1': // 연도
+        code += 'year';
+        break;
+      case 'OPTION2': // 월
+        code += 'month';
+        break;
+      case 'OPTION3': // 일
+        code += 'day';
+        break;
+      case 'OPTION4': // 시
+        code += 'hour';
+        break;
+      case 'OPTION5': // 븐
+        code += 'minute';
+        break;
+      case 'OPTION6': // 요일
+        code += 'weekday() + 1';
+        break;
+    }
+    
+    return [code, Python.ORDER_MEMBER]
+  };
+
+  Python['time_day_week'] = function(block) {
+    const option = block.getFieldValue('OPTION');
+    let code;
+    switch (option) {
+      case 'OPTION1': // 월요일
+        code = '1';
+        break;
+      case 'OPTION2': // 화요일
+        code = '2';
+        break;
+      case 'OPTION3': // 수요일
+        code = '3';
+        break;
+      case 'OPTION4': // 목요일
+        code = '4';
+        break;
+      case 'OPTION5': // 금요일
+        code = '5';
+        break;
+      case 'OPTION6': // 토요일
+        code = '6';
+        break;
+      case 'OPTION7': // 일요일
+        code = '7';
+        break;
+    }
+    return [code, Python.ORDER_ATOMIC]
+  };
+  // 계산 블록
   Python['calc_number'] = function(block) {
     const value = block.getFieldValue('VALUE');
     const code = value;
@@ -399,13 +456,19 @@ export function defineBlockGenerator() {
   }
 
   // 거래 블록
-  Python['trade_buy'] = function() {
-    const code = 'print(\'my coin\')\n';
+  Python['trade_buy'] = function(block) {
+    const investment = block.getFieldValue('INVESTMENT');
+    const volume = Python.valueToCode(block, 'VOLUME', Python.ORDER_ATOMIC);
+    const code = 'order(symbol(' + investment + '), ' + volume + ')\n'
+                + 'buying()';
     return code;
   };
 
-  Python['trade_sell'] = function() {
-    const code = 'print(\'my coin\')\n';
+  Python['trade_sell'] = function(block) {
+    const investment = block.getFieldValue('INVESTMENT');
+    const volume = Python.valueToCode(block, 'VOLUME', Python.ORDER_ATOMIC);
+    const code = 'order(symbol(' + investment + '), ' + volume + ')\n'
+        + 'selling()';
     return code;
   };
 
@@ -484,22 +547,22 @@ export function defineBlockGenerator() {
     return code;
   };
 
-  Python['trade_moving_MACD'] = function() {
+  Python['trade_moving_MACD'] = function() { // talib : MACD()
     const code = 'print(\'my coin\')\n';
     return code;
   };
 
-  Python['trade_moving_MACD_SIG'] = function() {
+  Python['trade_moving_MACD_SIG'] = function() { // talib : MA(MACD())
     const code = 'print(\'my coin\')\n';
     return code;
   };
 
-  Python['trade_moving_MACD_OSC'] = function() {
+  Python['trade_moving_MACD_OSC'] = function() { // MACD() - MA(MACD())
     const code = 'print(\'my coin\')\n';
     return code;
   };
 
-  Python['trade_moving_ADX'] = function() {
+  Python['trade_moving_ADX'] = function() { // ADX()
     const code = 'print(\'my coin\')\n';
     return code;
   };

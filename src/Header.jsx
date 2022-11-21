@@ -4,6 +4,7 @@ import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./css/Header.module.css";
 import LoginModalContext from "./contexts/LoginModalContext";
+import companyLogo from "./static/img/MARGIRING_logo.png";
 import Cookies from "universal-cookie";
 import { useState } from "react";
 const cookies = new Cookies();

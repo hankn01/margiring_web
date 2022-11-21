@@ -7,7 +7,22 @@
 import Blockly from "blockly"
 import Python from "blockly/python_compressed"
 
-export function generateBlockToCode() {
+/**
+ * environ 오브젝트 형식
+ * {
+ *  'capital': number,
+ *  'commission': number,
+ *  'period': datetime,
+ *  'slippage': number
+ * }
+ * @param {object} environ 백테스팅 조건 오브젝트
+ */
+export function generateBlockToCode(environ = null) {
+
+    if (environ == null) {
+        return;
+    }
+
     let code = 
 `import random
 import datetime

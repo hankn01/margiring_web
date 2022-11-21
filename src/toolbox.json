@@ -37,10 +37,6 @@
         {
           "kind": "block",
           "type": "event_selling"
-        },
-        {
-          "kind": "block",
-          "type": "event_trade_info"
         }
       ]
     },
@@ -348,7 +344,7 @@
         },
         {
           "kind": "block",
-          "type": "time_detial",
+          "type": "time_detail",
           "inputs": {
             "TIME": {
               "shadow": {
@@ -775,17 +771,6 @@
                 "fields": {
                   "VALUE": "10"
                 }
-              }
-            }
-          }
-        },
-        {
-          "kind": "block",
-          "type": "trade_is_selling",
-          "inputs": {
-            "TRADEINFO": {
-              "block": {
-                "type": "event_trade_info"
               }
             }
           }
