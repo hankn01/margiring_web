@@ -322,7 +322,7 @@
     {
       "kind": "category",
       "name": "시간",
-      "colour": "#f1c40f",
+      "colour": "#218c74",
       "contents": [
         {
           "kind": "block",
