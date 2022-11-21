@@ -318,7 +318,7 @@
     {
       "kind": "category",
       "name": "시간",
-      "colour": "#f1c40f",
+      "colour": "#218c74",
       "contents": [
         {
           "kind": "block",
@@ -608,128 +608,6 @@
     },
     {
       "kind": "category",
-      "name": "자료",
-      "colour": "#58B19F",
-      "contents": [
-        {
-          "kind": "block",
-          "type": "data_variable"
-        },
-        {
-          "kind": "block",
-          "type": "data_variable_set",
-          "inputs": {
-            "VALUE": {
-              "shadow": {
-                "type": "calc_number",
-                "fields": {
-                  "VALUE": "10"
-                }
-              }
-            }
-          }
-        },
-        {
-          "kind": "block",
-          "type": "data_variable_add",
-          "inputs": {
-            "VALUE": {
-              "shadow": {
-                "type": "calc_number",
-                "fields": {
-                  "VALUE": "10"
-                }
-              }
-            }
-          }
-        },
-        {
-          "kind": "sep",
-          "gap": "48"
-        },
-        {
-          "kind": "block",
-          "type": "data_list_index",
-          "inputs": {
-            "INDEX": {
-              "shadow": {
-                "type": "calc_number",
-                "fields": {
-                  "VALUE": "10"
-                }
-              }
-            }
-          }
-        },
-        {
-          "kind": "block",
-          "type": "data_list_append"
-        },
-        {
-          "kind": "block",
-          "type": "data_list_pop",
-          "inputs": {
-            "INDEX": {
-              "shadow": {
-                "type": "calc_number",
-                "fields": {
-                  "VALUE": "10"
-                }
-              }
-            }
-          }
-        },
-        {
-          "kind": "block",
-          "type": "data_list_put_in",
-          "inputs": {
-            "INDEX": {
-              "shadow": {
-                "type": "calc_number",
-                "fields": {
-                  "VALUE": "10"
-                }
-              }
-            }
-          }
-        },
-        {
-          "kind": "block",
-          "type": "data_list_set_index",
-          "inputs": {
-            "INDEX": {
-              "shadow": {
-                "type": "calc_number",
-                "fields": {
-                  "VALUE": "10"
-                }
-              }
-            }
-          }
-        },
-        {
-          "kind": "block",
-          "type": "data_list_length"
-        },
-        {
-          "kind": "block",
-          "type": "data_list_have"
-        }
-      ]
-    },
-    {
-      "kind": "category",
-      "name": "함수",
-      "colour": "#9b59b6",
-      "contents": [
-        {
-          "kind": "block",
-          "type": "function_call"
-        }
-      ]
-    },
-    {
-      "kind": "category",
       "name": "거래",
       "colour": "#f39c12",
       "contents": [
@@ -1010,47 +888,46 @@
               "kind": "block",
               "type": "trade_volume_OBV"
             }
-        ]
-      },
-
-      {
-        "kind": "category",
-        "name": "변수",
-        "colour": "#70a1ff",
-        "contents": [
-          {
-            "kind": "button",
-            "text": "새 변수 만들기",
-            "callbackKey":"CNV"
-          },
-          {
-            
-            "kind": "block",
-            "type": "variables_set",
-            "fields": {
-              "VAR" : {
-                "name": "변수",
-                "id": "8DX,h4((,xLys-.a6IIk"
-                
-              }
-            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "name": "변수",
+      "colour": "#70a1ff",
+      "contents": [
+        {
+          "kind": "button",
+          "text": "새 변수 만들기",
+          "callbackKey":"CNV"
+        },
+        {
           
-
-          },
-          {
-            "kind": "block",
-            "type": "variables_get",
-            "fields": {
-              "VAR" : {
-                "name": "변수",
-                "id": "8DX,h4((,xLys-.a6IIk"
-              }
+          "kind": "block",
+          "type": "variables_set",
+          "fields": {
+            "VAR" : {
+              "name": "변수",
+              "id": "8DX,h4((,xLys-.a6IIk"
+              
             }
           }
-          
-        ]
-      }
-    ]
-  }
+        
+
+        },
+        {
+          "kind": "block",
+          "type": "variables_get",
+          "fields": {
+            "VAR" : {
+              "name": "변수",
+              "id": "8DX,h4((,xLys-.a6IIk"
+            }
+          }
+        }
+        
+      ]
+    }
   ]
 }
