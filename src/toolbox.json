@@ -914,47 +914,46 @@
               "kind": "block",
               "type": "trade_volume_OBV"
             }
-        ]
-      },
-
-      {
-        "kind": "category",
-        "name": "변수",
-        "colour": "#70a1ff",
-        "contents": [
-          {
-            "kind": "button",
-            "text": "새 변수 만들기",
-            "callbackKey":"CNV"
-          },
-          {
-            
-            "kind": "block",
-            "type": "variables_set",
-            "fields": {
-              "VAR" : {
-                "name": "변수",
-                "id": "8DX,h4((,xLys-.a6IIk"
-                
-              }
-            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "name": "변수",
+      "colour": "#70a1ff",
+      "contents": [
+        {
+          "kind": "button",
+          "text": "새 변수 만들기",
+          "callbackKey":"CNV"
+        },
+        {
           
-
-          },
-          {
-            "kind": "block",
-            "type": "variables_get",
-            "fields": {
-              "VAR" : {
-                "name": "변수",
-                "id": "8DX,h4((,xLys-.a6IIk"
-              }
+          "kind": "block",
+          "type": "variables_set",
+          "fields": {
+            "VAR" : {
+              "name": "변수",
+              "id": "8DX,h4((,xLys-.a6IIk"
+              
             }
           }
-          
-        ]
-      }
-    ]
-  }
+        
+
+        },
+        {
+          "kind": "block",
+          "type": "variables_get",
+          "fields": {
+            "VAR" : {
+              "name": "변수",
+              "id": "8DX,h4((,xLys-.a6IIk"
+            }
+          }
+        }
+        
+      ]
+    }
   ]
 }
