@@ -41,7 +41,7 @@ function Login() {
     axios
       .post(
         "http://backendserver-env.eba-gg774wd2.ap-northeast-2.elasticbeanstalk.com/users/login",
-        sendData
+        sendData,{withCredentials: true}
       )
       .then((response) => {
         console.log(cookies.get("userToken"));
