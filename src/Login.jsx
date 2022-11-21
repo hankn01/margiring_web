@@ -69,7 +69,7 @@ function Login() {
         //localStorage.setItem("userToken", JSON.stringify(response.data.token));
         console.log(cookies.get("userToken"));
       })
-      .catch((e) => console.error(e));
+      .catch(error => {console.log(error)});
     /*
     axios({
       url: "http://backendserver-env.eba-gg774wd2.ap-northeast-2.elasticbeanstalk.com/users/login",
