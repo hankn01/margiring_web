@@ -612,17 +612,6 @@
     },
     {
       "kind": "category",
-      "name": "함수",
-      "colour": "#9b59b6",
-      "contents": [
-        {
-          "kind": "block",
-          "type": "function_call"
-        }
-      ]
-    },
-    {
-      "kind": "category",
       "name": "거래",
       "colour": "#f39c12",
       "contents": [
