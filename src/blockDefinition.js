@@ -1,13 +1,24 @@
 import Blockly from "blockly";
 
 export function defineBlockInfo() {
+  // const EVENT_COLOUR = "#27ae60";
+  // const FLOW_COLOUR = "#70a1ff";
+  // const TRADE_COLOUR = "#f39c12";
+  // const BOOL_COLOUR = "#3742fa";
+  // const CALC_TIME_COLOUR = "#f1c40f";
+  // const DATA_COLOUR = "58b19f";
+  
   const EVENT_COLOUR = "#27ae60";
   const FLOW_COLOUR = "#70a1ff";
-  const TRADE_COLOUR = "#f39c12";
-  const BOOL_COLOUR = "#3742fa";
-  const CALC_TIME_COLOUR = "#f1c40f";
   const DATA_COLOUR = "58b19f";
   const FUNCTION_COLOUR = "9b59b6";
+  const BOOLEAN_COLOUR = "#3742fa";
+  const TIME_COLOUR = "#218c74";
+  const NUMBER_COLOUR = "f39c12";
+  const STRING_COLOUR = "#c56e06";
+  const TRADE_COLOUR = "#f1c40f";
+  const INDEX_COLOUR = "#cd6133";
+
 
   Blockly.defineBlocksWithJsonArray(
     [
@@ -360,7 +371,7 @@ export function defineBlockInfo() {
         "type": "bool_true",
         "message0": "참",
         "output": "Boolean",
-        "colour": BOOL_COLOUR,
+        "colour": BOOLEAN_COLOUR,
         "tooltip": "일부 \"흐름\" 블록들의 이행에 활용됩니다.",
         "helpUrl": ""
       },
@@ -368,7 +379,7 @@ export function defineBlockInfo() {
         "type": "bool_false",
         "message0": "거짓",
         "output": "Boolean",
-        "colour": BOOL_COLOUR,
+        "colour": BOOLEAN_COLOUR,
         "tooltip": "일부 \"흐름\" 블록들의 불이행에 활용됩니다.",
         "helpUrl": ""
       },
@@ -389,7 +400,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Boolean",
-        "colour": BOOL_COLOUR,
+        "colour": BOOLEAN_COLOUR,
         "tooltip": "두 선택지가 같은지를 의미합니다.",
         "helpUrl": ""
       },
@@ -410,7 +421,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Boolean",
-        "colour": BOOL_COLOUR,
+        "colour": BOOLEAN_COLOUR,
         "tooltip": "두 선택지가 다른지를 의미합니다.",
         "helpUrl": ""
       },
@@ -433,7 +444,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Boolean",
-        "colour": BOOL_COLOUR,
+        "colour": BOOLEAN_COLOUR,
         "tooltip": "앞 숫자가 뒤 숫자보다 큰지를 의미합니다.",
         "helpUrl": ""
       },
@@ -456,7 +467,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Boolean",
-        "colour": BOOL_COLOUR,
+        "colour": BOOLEAN_COLOUR,
         "tooltip": "앞 숫자가 뒤 숫자보다 작은지를 의미합니다.",
         "helpUrl": ""
       },
@@ -479,7 +490,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Boolean",
-        "colour": BOOL_COLOUR,
+        "colour": BOOLEAN_COLOUR,
         "tooltip": "앞 숫자가 뒤 숫자보다 크거나 같은지를 의미합니다.",
         "helpUrl": ""
       },
@@ -502,7 +513,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Boolean",
-        "colour": BOOL_COLOUR,
+        "colour": BOOLEAN_COLOUR,
         "tooltip": "앞 숫자가 뒤 숫자보다 작거나 같은지를 의미합니다.",
         "helpUrl": ""
       },
@@ -525,7 +536,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Boolean",
-        "colour": BOOL_COLOUR,
+        "colour": BOOLEAN_COLOUR,
         "tooltip": "두 선택지가 모두 참인지를 의미합니다.",
         "helpUrl": ""
       },
@@ -548,7 +559,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Boolean",
-        "colour": BOOL_COLOUR,
+        "colour": BOOLEAN_COLOUR,
         "tooltip": "두 선택지 중 하나 이상이 참인지를 의미합니다.",
         "helpUrl": ""
       },
@@ -563,7 +574,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Boolean",
-        "colour": BOOL_COLOUR,
+        "colour": BOOLEAN_COLOUR,
         "tooltip": "선택지가 참이 아닌지를 의미합니다. 선택지가 참이면 결과가 거짓이 되고, 그 반대면 참이 됩니다.",
         "helpUrl": ""
       },
@@ -572,7 +583,7 @@ export function defineBlockInfo() {
         "type": "time_now",
         "message0": "현재",
         "output": "Time",
-        "colour": CALC_TIME_COLOUR,
+        "colour": TIME_COLOUR,
         "tooltip": "현재 시간을 의미합니다.",
         "helpUrl": ""
       },
@@ -587,7 +598,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Time",
-        "colour": CALC_TIME_COLOUR,
+        "colour": TIME_COLOUR,
         "tooltip": "입력한 시간 만큼 전 시간을 의미합니다.",
         "helpUrl": ""
       },
@@ -602,7 +613,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Time",
-        "colour": CALC_TIME_COLOUR,
+        "colour": TIME_COLOUR,
         "tooltip": "선택한 시간을 의미합니다.",
         "helpUrl": ""
       },
@@ -645,8 +656,8 @@ export function defineBlockInfo() {
             ]
           }
         ],
-        "output": "Time",
-        "colour": CALC_TIME_COLOUR,
+        "output": "NUMBER",
+        "colour": NUMBER_COLOUR,
         "tooltip": "선택한 시간의 상세 정보를 의미합니다.",
         "helpUrl": ""
       },
@@ -689,8 +700,8 @@ export function defineBlockInfo() {
             ]
           }
         ],
-        "output": "Time",
-        "colour": CALC_TIME_COLOUR,
+        "output": "Number",
+        "colour": NUMBER_COLOUR,
         "tooltip": "요일을 가리킵니다. 실제 값은 월화수목금토일 순서대로 1234567입니다.",
         "helpUrl": ""
       },
@@ -706,7 +717,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Number",
-        "colour": CALC_TIME_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "입력한 숫자의 값을 의미합니다.",
         "helpUrl": ""
       },
@@ -728,7 +739,7 @@ export function defineBlockInfo() {
         ],
         "inputsInline": true,
         "output": "Number",
-        "colour": CALC_TIME_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "두 숫자를 더한 값을 의미합니다.",
         "helpUrl": ""
       },
@@ -750,7 +761,7 @@ export function defineBlockInfo() {
         ],
         "inputsInline": true,
         "output": "Number",
-        "colour": CALC_TIME_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "앞 숫자에서 뒤 숫자를 뺀 값을 의미합니다.",
         "helpUrl": ""
       },
@@ -772,7 +783,7 @@ export function defineBlockInfo() {
         ],
         "inputsInline": true,
         "output": "Number",
-        "colour": CALC_TIME_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "두 숫자를 곱한 값을 의미합니다.",
         "helpUrl": ""
       },
@@ -794,7 +805,7 @@ export function defineBlockInfo() {
         ],
         "inputsInline": true,
         "output": "Number",
-        "colour": CALC_TIME_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "앞 숫자에서 뒤 숫자를 나눈 값을 의미합니다.",
         "helpUrl": ""
       },
@@ -830,7 +841,7 @@ export function defineBlockInfo() {
         ],
         "inputsInline": true,
         "output": "Number",
-        "colour": CALC_TIME_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "앞 숫자에서 뒤 숫자를 나눴을 때의 몫이나 나머지를 의미합니다.",
         "helpUrl": ""
       },
@@ -852,7 +863,7 @@ export function defineBlockInfo() {
         ],
         "inputsInline": true,
         "output": "Number",
-        "colour": CALC_TIME_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "앞 숫자와 뒤 숫자 사이의 무작위 정수를 의미합니다. 매 실행마다 달라집니다.",
         "helpUrl": ""
       },
@@ -871,7 +882,7 @@ export function defineBlockInfo() {
             "check": "Number"
           },
         ],
-        "colour": CALC_TIME_COLOUR,
+        "colour": NUMBER_COLOUR,
         "output": "Number",
         "tooltip": "앞 숫자의 뒤 숫자만큼의 백분율 값을 의미합니다.",
         "helpUrl": ""
@@ -887,7 +898,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "String",
-        "colour": CALC_TIME_COLOUR,
+        "colour": STRING_COLOUR,
         "tooltip": "입력한 글을 의미합니다.",
         "helpUrl": ""
       },
@@ -909,7 +920,7 @@ export function defineBlockInfo() {
         ],
         "inputsInline": true,
         "output": "String",
-        "colour": CALC_TIME_COLOUR,
+        "colour": STRING_COLOUR,
         "tooltip": "두 글을 이어 붙인 글을 의미합니다.",
         "helpUrl": ""
       },
@@ -931,7 +942,7 @@ export function defineBlockInfo() {
         ],
         "inputsInline": true,
         "output": "String",
-        "colour": CALC_TIME_COLOUR,
+        "colour": STRING_COLOUR,
         "tooltip": "작성한 글의 작성한 숫자번째의 글자를 의미합니다.",
         "helpUrl": ""
       },
@@ -958,7 +969,7 @@ export function defineBlockInfo() {
         ],
         "inputsInline": true,
         "output": "String",
-        "colour": CALC_TIME_COLOUR,
+        "colour": STRING_COLOUR,
         "tooltip": "작성한 글의 작성한 앞 숫자부터 뒤 숫자까지의 글을 의미합니다.",
         "helpUrl": ""
       },
@@ -1281,7 +1292,7 @@ export function defineBlockInfo() {
       {
         "kind": "block",
         "type": "trade_sell",
-        "message0": "%1 종목을 %2 코인 매도",
+        "message0": "%1 종목을 %2 원 매도",
         "args0": [
           {
             "type": "field_dropdown",
@@ -1335,7 +1346,7 @@ export function defineBlockInfo() {
         "type": "trade_my_budget",
         "message0": "내 자산",
         "output": "Number",
-        "colour": TRADE_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "현재 내 자산을 의미합니다.",
         "helpUrl": ""
       },
@@ -1343,7 +1354,7 @@ export function defineBlockInfo() {
         "type": "trade_my_cash",
         "message0": "내 현금",
         "output": "Number",
-        "colour": TRADE_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "현재 내 현금을 의미합니다.",
         "helpUrl": ""
       },
@@ -1364,7 +1375,7 @@ export function defineBlockInfo() {
           },
         ],
         "output": "Number",
-        "colour": TRADE_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "현재 내가 보유한 선택한 종목의 금액을 의미합니다.",
         "helpUrl": ""
       },
@@ -1384,7 +1395,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Number",
-        "colour": TRADE_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "선택한 지표의 특정 시각의 값을 의미합니다.",
         "helpUrl": ""
       },
@@ -1404,7 +1415,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Number",
-        "colour": TRADE_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "선택한 지표의 특정 시간 동안의 이동편균값을 의미합니다.",
         "helpUrl": ""
       },
@@ -1424,7 +1435,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Number",
-        "colour": TRADE_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "선택한 지표의 특정 시간 동안의 지수이동평균값을 의미합니다.",
         "helpUrl": ""
       },
@@ -1444,7 +1455,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Number",
-        "colour": TRADE_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "선택한 지표의 특정 시간 동안의 총합을 의미합니다.",
         "helpUrl": ""
       },
@@ -1464,7 +1475,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Number",
-        "colour": TRADE_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "선택한 지표의 특정 시간 전 대비 변화한 값을 의미합니다.",
         "helpUrl": ""
       },
@@ -1484,7 +1495,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Number",
-        "colour": TRADE_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "선택한 지표의 특정 시간 전 대비 변화한 비율을 의미합니다.",
         "helpUrl": ""
       },
@@ -1504,7 +1515,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Number",
-        "colour": TRADE_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "선택한 지표의 특정 시간 동안의 최곳값을 의미합니다.",
         "helpUrl": ""
       },
@@ -1524,7 +1535,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Number",
-        "colour": TRADE_COLOUR,
+        "colour": NUMBER_COLOUR,
         "tooltip": "선택한 지표의 특정 시간 동안의 최젓값을 의미합니다.",
         "helpUrl": ""
       },
@@ -1574,7 +1585,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Index",
-        "colour": TRADE_COLOUR,
+        "colour": INDEX_COLOUR,
         "tooltip": "선택한 종목의 거래량/거래대금/시가/고가/저가/종가 값을 의미합니다. 거래 연산자 안에 들어가야 합니다.",
         "helpUrl": ""
       },
@@ -1594,7 +1605,7 @@ export function defineBlockInfo() {
           },
         ],
         "output": "Index",
-        "colour": TRADE_COLOUR,
+        "colour": INDEX_COLOUR,
         "tooltip": "선택한 종목의 주가중심선 값을 의미합니다. 거래 연산자 안에 들어가야 합니다.",
         "helpUrl": ""
       },
@@ -1640,7 +1651,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Index",
-        "colour": TRADE_COLOUR,
+        "colour": INDEX_COLOUR,
         "tooltip": "선택한 종목의 피벗기준선/피벗 1차 지지선/피벗 2차 지지선/피벗 1차 저항선/피벗 2차 저항선 값을 의미합니다. 거래 연산자 안에 들어가야 합니다.",
         "helpUrl": ""
       },
@@ -1660,7 +1671,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Index",
-        "colour": TRADE_COLOUR,
+        "colour": INDEX_COLOUR,
         "tooltip": "선택한 종목의 MACD 지표 값을 의미합니다. 거래 연산자 안에 들어가야 합니다.",
         "helpUrl": ""
       },
@@ -1680,7 +1691,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Index",
-        "colour": TRADE_COLOUR,
+        "colour": INDEX_COLOUR,
         "tooltip": "선택한 종목의 MACD SIG 지표 값을 의미합니다. 거래 연산자 안에 들어가야 합니다.",
         "helpUrl": ""
       },
@@ -1700,7 +1711,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Index",
-        "colour": TRADE_COLOUR,
+        "colour": INDEX_COLOUR,
         "tooltip": "선택한 종목의 MACD OSC 지표 값을 의미합니다. 거래 연산자 안에 들어가야 합니다.",
         "helpUrl": ""
       },
@@ -1720,7 +1731,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Index",
-        "colour": TRADE_COLOUR,
+        "colour": INDEX_COLOUR,
         "tooltip": "선택한 종목의 ADX 지표 값을 의미합니다. 거래 연산자 안에 들어가야 합니다.",
         "helpUrl": ""
       },
@@ -1740,7 +1751,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Index",
-        "colour": TRADE_COLOUR,
+        "colour": INDEX_COLOUR,
         "tooltip": "선택한 종목의 VWAP 지표 값을 의미합니다. 거래 연산자 안에 들어가야 합니다.",
         "helpUrl": ""
       },
@@ -1760,7 +1771,7 @@ export function defineBlockInfo() {
           }
         ],
         "output": "Index",
-        "colour": TRADE_COLOUR,
+        "colour": INDEX_COLOUR,
         "tooltip": "선택한 종목의 OBV 지표 값을 의미합니다. 거래 연산자 안에 들어가야 합니다.",
         "helpUrl": ""
       },
