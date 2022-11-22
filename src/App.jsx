@@ -3,6 +3,7 @@ import { AnimatePresence } from "framer-motion"; //화면 전환 모션을 위�
 import { Routes, Route } from "react-router-dom";
 import BackTest from "./Backtest";
 import Blockcoding from "./Blockcoding"; //블록코딩 화면 컴포넌트(SPA 구현용)
+import Blockcoding_Logged from "./Blockcoding_Logged";
 import Blockcoding_Newfile from "./Blockcoding_Newfile";
 import Header from "./Header";
 import Mainscr from "./Mainscr"; //메인 화면 컴포넌트(SPA 구현용)
@@ -34,6 +35,10 @@ function App() {
               <Route path="/" element={<Mainscr />} />
               <Route path="/block" element={<Blockcoding />} />
               <Route path="/block_newalgo" element={<Blockcoding_Newfile />} />
+              <Route
+                path="/block_edit/:algoid"
+                element={<Blockcoding_Logged />}
+              />
               <Route path="/header" element={<Header />} />
               <Route path="/backtest" element={<BackTest />} />
               <Route path="/sc" element={<SignUpCancelConfirm />} />

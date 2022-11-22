@@ -5,7 +5,8 @@ import PropTypes from 'prop-types';
 import styles from './css/AlgorithmCardList.module.css';
 import axios from 'axios';
 import Cookies from 'universal-cookie';
-
+import { useNavigate } from 'react-router-dom';
+import {Link} from "react-router-dom";
 const cookies = new Cookies();
 
 function DELETEAlgorithm(PycodeID) {
@@ -25,6 +26,15 @@ function DELETEAlgorithm(PycodeID) {
         }
     )
 }
+
+function EDITAlgorithm(PycodeID) {
+    let UserToken = cookies.get("userToken");
+    const Navigate = useNavigate();
+    Navigate(`/block_edit/${PycodeID}`);
+    
+
+}
+
 
 
 const AlgorithmCardList = (props) => {
@@ -60,7 +70,9 @@ const AlgorithmCardList = (props) => {
                 <a className={`${styles.StrategyStatus}`}>검증전</a>
                 <a className={`${styles.StrategyElementText}`}>{props.id}</a>
                 <a className={`${styles.StrategyElementRemove}`} onClick={()=>{DELETEAlgorithm(props.id)}}>삭제하기</a>
+                <Link to={"/block_edit/"+props.id}>
                 <button className={`${styles.StrategyCheckButton}`}>전략 수정하기</button>
+                </Link>
             </div>
             : <div className={`${styles.StrategyEvenElement}`}>
             <span className={`${styles.OuterDot}`}></span>
@@ -68,7 +80,9 @@ const AlgorithmCardList = (props) => {
             <a className={`${styles.StrategyStatus}`}>검증전</a>
             <a className={`${styles.StrategyElementText}`}>{props.id}</a>
             <a className={`${styles.StrategyElementRemove}`} onClick={()=>{DELETEAlgorithm(props.id)}}>삭제하기</a>
+            <Link to={"/block_edit/"+props.id}>
             <button className={`${styles.StrategyCheckButton}`}>전략 수정하기</button>
+            </Link>
         </div>
 
             }

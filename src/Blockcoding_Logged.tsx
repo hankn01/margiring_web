@@ -14,8 +14,9 @@ import Login from './Login';
 import SignUp from './SignUp';
 import styled from "styled-components";
 import Cookies from 'universal-cookie';
+import { useParams } from 'react-router-dom';
 
-const cookies = new Cookies();
+const cookiesk = new Cookies();
 
 function NonLoginUserCaption() {
     return (
@@ -29,15 +30,17 @@ function NonLoginUserCaption() {
 
 function Blockcoding_Logged() {
   
- 
+
         const [ShowModal, setShowModal] = useState(false);
         const [IsLoggedIn, setIsLoggedIn] = useState(false);
+        const [AlgorithmID, setAlgorithmID] = useState();
         const ModalClose = () => {
             setShowModal(false);
         }
-        
+        const Params = useParams();
+
         useEffect(() => {
-            if(cookies.get('userToken')!==undefined)
+            if(cookiesk.get('userToken')!==undefined)
             {
                 setIsLoggedIn(true);
             }
@@ -68,7 +71,7 @@ function Blockcoding_Logged() {
                 
                 <div className={`${styles.MiddleContentDiv}`}>
                     <div className={`${styles.BlockCodingDiv}`}>
-                        <BlockWorkspace_Logged /> {/* Blockly Toolbox 및 블록 부분 */}
+                        <BlockWorkspace_Logged id={`${Params.algoid}`}/> {/* Blockly Toolbox 및 블록 부분 */}
                     </div>
                     <div id={`${styles.CoinInfoDiv}`}>
                     <CoinInfo />

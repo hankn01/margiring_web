@@ -13,15 +13,23 @@ import { BlocklyWorkspace } from "react-blockly";
 import { getAllByLabelText } from "@testing-library/react";
 import axios from "axios";
 import {useLocation} from "react-router-dom";
-
+import Cookies from 'universal-cookie';
 
 const cookies = new Cookies();
 //주의: BlocklyWorkspace와 이름 혼동하지 않도록 개발 시 주의하시기 바랍니다.
+const TempUserToken = cookies.get("userToken");
 
+let RecordAlgorithm;
+let SendAlgorithm;
 
-
-
-function BlockWorkspace_Logged() {
+function SaveWS() {
+  const saveWorkspace = Blockly.serialization.workspaces.save(
+    Blockly.common.getMainWorkspace()
+  );
+  console.log(JSON.stringify(saveWorkspace));
+  setSendA(JSON.stringify(saveWorkspace));
+}
+function BlockWorkspace_Logged(id) {
   const [BWorkspace, setBWorkspace] = useState<Blockly.WorkspaceSvg>();
   const [width, setWidth] = useState(window.innerWidth);
   const [height, setHeight] = useState(window.innerHeight);
@@ -29,9 +37,11 @@ function BlockWorkspace_Logged() {
   const [UserToken, setUserToken] = useState();
   const [BlockCode, setBlockCode] = useState();
   const [CodeHash, setCodeHash] = useState("");
-  
+  const [AlgorithmCode, setAlgorithmCode] = useState();
+  const [SendA, setSendA] = useState();
 
   console.log("BWorkspace : ", BWorkspace);
+
 
   useEffect(() => {
     defineBlockInfo();
@@ -43,6 +53,9 @@ function BlockWorkspace_Logged() {
       setHeight(window.innerHeight);
 
       Blockly.svgResize(BWorkspace);
+
+  
+
     };
 
     console.log("toolbox : ", toolbox);
@@ -56,7 +69,28 @@ function BlockWorkspace_Logged() {
     setBWorkspace({ BWorkspaceVar });
 
     console.log(window.location.pathname);
+    let AlgoCode;
+    console.log(id.id);
+    
+    console.log(TempUserToken);
+    axios.get("http://backendserver-env.eba-gg774wd2.ap-northeast-2.elasticbeanstalk.com/pycode/"+id.id,
+    { headers: {
+      Authorization: 'Bearer '+TempUserToken
+  }}
+    ).then((response) => {
+      
+      AlgoCode = response.data;
+      //console.log(AlgoCode);
+      RecordAlgorithm = AlgoCode;
+      console.log(RecordAlgorithm.code);
+    }).catch((error) => {
+      console.log(error);
+    })
 
+    
+  
+
+/*
     axios.get(
       "http://backendserver-env.eba-gg774wd2.ap-northeast-2.elasticbeanstalk.com/pycode/"+CodeHash, {headers: {
           Authorization: 'Bearer '+UserToken
@@ -66,11 +100,16 @@ function BlockWorkspace_Logged() {
       console.log(response.code);
       setBlockCode(response.code);
     })
-
-      Blockly.serialization.workspaces.load(
-        JSON.parse(BlockCode),
-        BWorkspaceVar
-      );
+*/
+      
+  if(RecordAlgorithm)
+  {
+     Blockly.serialization.workspaces.load(
+     JSON.parse(RecordAlgorithm.code),
+     BWorkspaceVar
+   );
+  }
+  BWorkspaceVar.render();
     // BWorkspace.registerButtonCallback('CNV', function(button){alert("Fs");});
     BWorkspaceVar.registerButtonCallback("CNV", function (button) {
       Blockly.Variables.createVariableButtonHandler(
@@ -80,20 +119,101 @@ function BlockWorkspace_Logged() {
       );
     });
 
+    
     window.addEventListener("resize", handelResize);
     return () => {
-      const saveWorkspace = Blockly.serialization.workspaces.save(
+      
+
+      let saveWorkspace = Blockly.serialization.workspaces.save(
         Blockly.common.getMainWorkspace()
       );
-      window.localStorage.setItem(
-        "SAVE_WORK_SPACE",
-        JSON.stringify(saveWorkspace)
-      );
-      console.log("saveWorkspace : ", saveWorkspace);
+      //console.log(JSON.stringify(saveWorkspace));
+      setSendA(JSON.stringify(saveWorkspace));
+
+
+
+      //console.log(SendA);
+      console.log(RecordAlgorithm.progname);
+      console.log(RecordAlgorithm.publicview);
+      console.log(RecordAlgorithm.result);
+      console.log(RecordAlgorithm.owner);
+      console.log(id.id);
+   if(SendA)
+   {
+    axios({
+      method: 'put',
+      url: "http://backendserver-env.eba-gg774wd2.ap-northeast-2.elasticbeanstalk.com/pycode/"+id.id,
+      headers: {
+        Authorization: 'Bearer '+TempUserToken
+    }, data: {
+      "code": SendA,
+      "progname": RecordAlgorithm.progname,
+      "publicview": RecordAlgorithm.publicview,
+      "result": RecordAlgorithm.result,
+      "owner": RecordAlgorithm.owner,
+    }
+
+    }).then((response) => {
+      console.log(response);
+    }).catch((error) => {console.log(error);})
+    //console.log(saveWorkspace);
+   }
+
       window.removeEventListener("resize", handelResize);
     };
   }, []);
 
+  useEffect(() => {
+    let inid = setInterval(() => {
+      
+      let saveWorkspace = Blockly.serialization.workspaces.save(
+        Blockly.common.getMainWorkspace()
+      );
+      //console.log(JSON.stringify(saveWorkspace));
+      setSendA(JSON.stringify(saveWorkspace));
+
+
+
+      //console.log(SendA);
+      console.log(RecordAlgorithm.progname);
+      console.log(RecordAlgorithm.publicview);
+      console.log(RecordAlgorithm.result);
+      console.log(RecordAlgorithm.owner);
+      console.log(id.id);
+   if(SendA)
+   {
+    axios({
+      method: 'put',
+      url: "http://backendserver-env.eba-gg774wd2.ap-northeast-2.elasticbeanstalk.com/pycode/"+id.id,
+      headers: {
+        Authorization: 'Bearer '+TempUserToken
+    }, data: {
+      "code": SendA,
+      "progname": RecordAlgorithm.progname,
+      "publicview": RecordAlgorithm.publicview,
+      "result": RecordAlgorithm.result,
+      "owner": RecordAlgorithm.owner,
+    }
+
+    }).then((response) => {
+      console.log(response);
+    }).catch((error) => {console.log(error);})
+    //console.log(saveWorkspace);
+   }
+
+
+    }, 5000);
+    return () => clearInterval(inid);
+    
+  });
+  
+
+
+  console.log(id.id);
+  console.log(TempUserToken);
+  console.log(RecordAlgorithm);
+  console.log(SendA);
+  
   return (
     <div>
       <div
