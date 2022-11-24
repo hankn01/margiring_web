@@ -209,7 +209,7 @@ window.localStorage.getItem("SAVE_WORK_SPACE_LOGIN"+id.id) &&
    }
 
 
-    }, 1000);
+    }, 300);
     return () => clearInterval(inid);
     
   });
