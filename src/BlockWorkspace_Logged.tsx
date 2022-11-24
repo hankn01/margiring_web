@@ -102,13 +102,11 @@ function BlockWorkspace_Logged(id) {
     })
 */
       
-  if(RecordAlgorithm)
-  {
-     Blockly.serialization.workspaces.load(
-     JSON.parse(RecordAlgorithm.code),
-     BWorkspaceVar
-   );
-  }
+window.localStorage.getItem("SAVE_WORK_SPACE_LOGIN"+id.id) &&
+      Blockly.serialization.workspaces.load(
+        JSON.parse(window.localStorage.getItem("SAVE_WORK_SPACE_LOGIN"+id.id)),
+        BWorkspaceVar
+      );
   BWorkspaceVar.render();
     // BWorkspace.registerButtonCallback('CNV', function(button){alert("Fs");});
     BWorkspaceVar.registerButtonCallback("CNV", function (button) {
@@ -118,6 +116,7 @@ function BlockWorkspace_Logged(id) {
         "Number"
       );
     });
+    
 
     
     window.addEventListener("resize", handelResize);
@@ -127,6 +126,14 @@ function BlockWorkspace_Logged(id) {
       let saveWorkspace = Blockly.serialization.workspaces.save(
         Blockly.common.getMainWorkspace()
       );
+
+   
+      window.localStorage.setItem(
+        "SAVE_WORK_SPACE_LOGIN"+id.id,
+        JSON.stringify(saveWorkspace)
+      );
+      console.log("saveWorkspace : ", saveWorkspace);
+
       //console.log(JSON.stringify(saveWorkspace));
       setSendA(JSON.stringify(saveWorkspace));
 
@@ -162,7 +169,7 @@ function BlockWorkspace_Logged(id) {
       window.removeEventListener("resize", handelResize);
     };
   }, []);
-
+  
   useEffect(() => {
     let inid = setInterval(() => {
       
@@ -202,7 +209,7 @@ function BlockWorkspace_Logged(id) {
    }
 
 
-    }, 5000);
+    }, 1000);
     return () => clearInterval(inid);
     
   });
