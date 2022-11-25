@@ -191,8 +191,9 @@
   color: #fff;
   }
   .CreateStrategyButton_NoLogged {
-    grid-column-start: 1;
-    grid-column-end: 13;
+    position: absolute;
+    width: calc(100% - 55px);
+    margin-right: 25px;
    height: 64px;
     
     background: rgba(17,13,45,0.7400000095367432);
@@ -488,7 +489,7 @@ height: 670px;
 
   #StrategyContentMenu {
     position: absolute;
-    left: 86.5%;
+    right: 25px;
     background-color: #2f363e;
     border-radius: 8px;
     width: 199px;
@@ -574,7 +575,11 @@ height: 670px;
   z-index: 3000;
 }
 #AlgorithmLostCaption{
+  position: absolute;
+  top: 75px;
+  left: 10px;
   color: #fff;
+  
   grid-column-start: 1;
   grid-column-end: 13;
   text-align: right;
