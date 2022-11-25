@@ -494,7 +494,7 @@ height: 670px;
     right: 25px;
     background-color: #2f363e;
     border-radius: 8px;
-    width: 199px;
+    width: 240px;
     height: 38px;
     box-shadow: 0 4px 8px 0 rgba(42, 50, 63, 0.08);
   }
@@ -547,11 +547,12 @@ height: 670px;
     position: absolute;
     right: 20px;
     top: 4px;
-    width: 49px;
+    width: 60px;
   height: 30px;
   flex-grow: 0;
   padding-top: 0.4em;
   padding-bottom: 0.5em;
+  
   font-family: Pretendard;
   font-size: 14px;
   font-weight: 600;
