@@ -36,7 +36,7 @@
 <br><br>
 
 #  🛠️  아키텍처
-
+<img src="/uploads/f15aa47fa7c30cee88f33d4e72731aa6/아키텍처.png">
 
 # 개발자용 테스트 방법
 
