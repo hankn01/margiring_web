@@ -99,7 +99,7 @@
   #MyStrategyCaption{
     position: absolute;
     left: 60px;
-    width: 136px;
+    width: 200px;
     height: 34px;
     flex-grow: 0;
     margin: 0 8px 0 0;
@@ -170,9 +170,9 @@
   }
   .CreateStrategyButton {
     grid-column-start: 1;
-    grid-column-end: 12;
-    margin-right: 25px;
-    padding-right: 25px;
+    grid-column-end: 13;
+    
+    
    height: 64px;
     
     background: rgba(17,13,45,0.7400000095367432);
@@ -340,9 +340,10 @@ height: 670px;
     position: absolute;
     
     top: 86px;
-    
-    width: 99.5%;
-    margin-right: 3.125%;
+    margin-right: 25px;
+    width: calc(100% - 120px);
+    padding-right: 25px;
+    margin-right: 25px;
     margin-left: 3.125%;
     display: grid;
     grid-template-columns: 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667% 6.6666667%;
