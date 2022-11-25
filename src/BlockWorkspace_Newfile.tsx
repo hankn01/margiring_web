@@ -66,7 +66,7 @@ function BlockWorkspace() {
       );
         
       axios.post(
-        "http://backendserver-env.eba-gg774wd2.ap-northeast-2.elasticbeanstalk.com/pycode",
+        "https://www.margserver.ml/pycode",
         {
           
           "code": JSON.stringify(saveWorkspace),

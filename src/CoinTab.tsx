@@ -15,7 +15,7 @@ import WonCoinList from './WonCoinList';
 
 
 const MenuList:any = {
-    0: <WonCoinList />,
+    0: <></>,
     1: <BTCCoinList />,
     2: <USDTCoinList />,
     3: <GroupCoinList />,
