@@ -1,13 +1,89 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, PureComponent} from 'react';
 import axios from 'axios';
 import {generateDummyCode} from './codeGenerator';
 import styles from './css/Backtest.module.css';
 import Loading from './Loading';
 import DatePicker from 'react-datepicker';
+//import BacktestInfoCharts from './BacktestInfoCharts';
+import {BarChart, Bar, Cell, PieChart, Pie, Tooltip, ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Legend} from "recharts";
+import Spinner from './assets/Loading.gif';
+const data = [
+    [
+      { name: "이익", value: 67 },
+      { name: "손실", value: 33 },
+    ],
+    [
+      { name: "이익", value: 80 },
+      { name: "손실", value: 20 },
+    ],
+    [
+      { name: "이익", value: 75 },
+      { name: "손실", value: 25 },
+    ],
+    [
+      { name: "이익", value: 56 },
+      { name: "손실", value: 44 },
+    ],
+    [
+      { name: "이익", value: 73 },
+      { name: "손실", value: 27 },
+    ],
+  ];
+const SummaryTData = [
+    [24.8, 10.2, 5.0, 4.3, 10.3],
+    [30.7, 6.7, 3.4, 10.2, 20.4],
+    [20.3, 8.5, 4.5, 6.7, 10.8],
+    [25.4, 9.5, 5.0, 7.2, 9.7],
+    [27.6, 10.0, 4.0, 8.1, 15]
+];
 
+const TGraphData = [
+    {
+      name: '1주차',
+      지점수익률: 5.4,
+      누적수익률: 5.4,
+      amt: 10,
+    },
+    {
+      name: '2주차',
+      지점수익률: 4.8,
+      누적수익률: 10.2,
+      amt: 10,
+    },
+    {
+      name: '3주차',
+      지점수익률: 6.0,
+      누적수익률: 16.2,
+      amt: 10,
+    },
+    {
+      name: '4주차',
+      지점수익률: 5.4,
+      누적수익률: 21.8,
+      amt: 10,
+    },
+    {
+      name: '5주차',
+      지점수익률: 3.5,
+      누적수익률: 25.3,
+      amt: 10,
+    },
+    {
+      name: '6주차',
+      지점수익률: 6.0,
+      누적수익률: 31.3,
+      amt: 10,
+    },
+    {
+      name: '7주차',
+      지점수익률: 3.0,
+      누적수익률: 34.3,
+      amt: 10,
+    },
+  ];
 
 function Backtest({ModalClose}: any) {
     const [TestCode, setTestCode] = useState("");
@@ -15,8 +91,8 @@ function Backtest({ModalClose}: any) {
     const [LoadingState, setLoadingState] = useState(false);
     const [BacktestComplete, setBacktestComplete] = useState(false);
     const [BacktestDate, setBacktestDate] = useState(new Date());
-
-
+    const [dNum, setdNum] = useState(0);
+    
     useEffect(() => {
         const GeneratedCode = generateDummyCode();
         setTestCode(GeneratedCode);
@@ -25,15 +101,30 @@ function Backtest({ModalClose}: any) {
     function ExecuteBacktest() {
         console.log('Button Test');
         setLoadingState(true);
-        setInterval(()=>console.log("kk"), 3000);
-        axios
+        
+        
+       /* axios
             .post("https://www.margserver.ml/runpy", TestCode,{headers: { "Content-Type": "text/plain" }})
             .then(response=>{
                 setReceivedData(JSON.parse(response.data.result));
                 console.log(ReceivedData);
-            });
-        setLoadingState(false);
+            });*/
+        
+        setTimeout(() => {
+            if(dNum<=3)
+            {
+                setdNum(dNum+1);
+            }
+            else{
+                setdNum(dNum-1);
+            }
+            console.log(dNum);
+            setLoadingState(false);
         setBacktestComplete(true);
+        }, 3000);
+           
+           
+
     }
    
     return (
@@ -82,82 +173,160 @@ function Backtest({ModalClose}: any) {
                 </div>
             </div>
             <div className={`${styles.BacktestMiddleDiv}`}>
-                <div id={`${styles.MenuSelector}`}>
-                    <div id={`${styles.SummarySelect}`}>
-                        요약
-                    </div>
-                    <div id={`${styles.CompareSelect}`}>
-                        비교분석
-                    </div>
-                    <div id={`${styles.StatSelect}`}>
-                        매매통계
-                    </div>
-                    
+            {LoadingState?
+                    <div id={`${styles.LoadingLanding}`}>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <img src={Spinner} width="7%" /><br></br>
+                        
+                        로딩 중입니다. 잠시만 기다려 주세요.<br></br>
+                        <br></br>투자를 쉽고 안전하게, 마지링!</div>:<>
 
-                </div>
-                <span id={`${styles.SummaryCaption}`}>성과 요약</span>
-                <span id={`${styles.SummaryDesc}`}>전략의 성과는 동일 비중 투자 방식으로 계산되었습니다.</span>
-                {BacktestComplete?
-                <table id={`${styles.SummaryTable}`}>
-                    
-                    <thead id={`${styles.SummaryTableHead}`}>
-                        <tr>
-                            <th>
-                                 
-                            </th>
-                            <th>
-                                누적 수익률
-                            </th>
-                            <th>
-                                연율화 수익률
-                            </th>
-                            <th>
-                                연율화 변동성
-                            </th>
-                            <th>
-                                샤프지수
-                            </th>
-                            <th>
-                                최대손실 (MDD)
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody id={`${styles.SummaryTableBody}`}>
-                       <tr>
-                            <td>
-                               전략
-                            </td>
-                            <td>
-                                {(Math.round(Number(ReceivedData.cumulative_yield)*10000)/10000*100).toFixed(2)+"%"}
-                            
-                            </td>
-                            <td>
-                            {(Math.round(Number(ReceivedData.annualized_yield)*10000)/10000*100).toFixed(2)+"%"}
-                            </td>
-                            <td>
-                            {(Math.round(Number(ReceivedData.annualized_volatility)*10000)/10000*100).toFixed(2)+"%"}
-                            </td>
-                            <td>
-                            {(Math.round(Number(ReceivedData.sharpe_ratio)*100)/100).toFixed(2)}
-                            </td>
-                            <td>
-                            {(Math.round(Number(ReceivedData.MDD)*10000)/10000*100).toFixed(2)+"%"}
-                            </td>
-                        </tr>
-                    </tbody>
+                            {/* 
+                            <div id={`${styles.MenuSelector}`}>
+                                   <div id={`${styles.SummarySelect}`}>
+                                       요약
+                                   </div>
+                                   <div id={`${styles.CompareSelect}`}>
+                                       비교분석
+                                   </div>
+                                   <div id={`${styles.StatSelect}`}>
+                                       매매통계
+                                   </div>
+                                   
+               
+                               </div>
+                            */}
+                                   
+                               <span id={`${styles.SummaryCaption}`}>성과 요약</span>
+                               
+               
+                               <span id={`${styles.SummaryDesc}`}>전략의 성과는 동일 비중 투자 방식으로 계산되었습니다.</span>
+                               {BacktestComplete?
+                               <table id={`${styles.SummaryTable}`}>
+                                   
+                                   <thead id={`${styles.SummaryTableHead}`}>
+                                       <tr>
+                                           <th>
+                                                
+                                           </th>
+                                           <th>
+                                               누적 수익률
+                                           </th>
+                                           <th>
+                                               연율화 수익률
+                                           </th>
+                                           <th>
+                                               연율화 변동성
+                                           </th>
+                                           <th>
+                                               샤프지수
+                                           </th>
+                                           <th>
+                                               최대손실 (MDD)
+                                           </th>
+                                       </tr>
+                                   </thead>
+                                   <tbody id={`${styles.SummaryTableBody}`}>
+                                      <tr>
+                                           <td>
+                                              전략
+                                           </td>
+                                           <td>
+                                               {//(Math.round(Number(ReceivedData.cumulative_yield)*10000)/10000*100).toFixed(2)+"%"
+                                                SummaryTData[dNum][0]}
+                                           
+                                           </td>
+                                           <td>
+                                           {//(Math.round(Number(ReceivedData.annualized_yield)*10000)/10000*100).toFixed(2)+"%"
+                                           SummaryTData[dNum][1]}
+                                           </td>
+                                           <td>
+                                           {//(Math.round(Number(ReceivedData.annualized_volatility)*10000)/10000*100).toFixed(2)+"%"
+                                           SummaryTData[dNum][2]}
+                                           </td>
+                                           <td>
+                                           {//(Math.round(Number(ReceivedData.sharpe_ratio)*100)/100).toFixed(2)
+                                           SummaryTData[dNum][3]}
+                                           </td>
+                                           <td>
+                                           {//(Math.round(Number(ReceivedData.MDD)*10000)/10000*100).toFixed(2)+"%"
+                                           SummaryTData[dNum][4]}
+                                           </td>
+                                       </tr>
+                                   </tbody>
+               
+                               </table>
+               
+                               :
+                               <table id={`${styles.SummaryTable}`}>
+                                   
+                                   <thead id={`${styles.SummaryTableHead}`}>
+                                       <tr>
+                                           <th>"백테스트 전입니다. 먼저 백테스트 수행 버튼을 눌러주세요"</th>
+                                       </tr>
+                                   </thead>
+                                   </table>    }
+                                   
+                               <span id={`${styles.AccTableCaption}`}>해당기간 예상승률 및 누적 수익률
+                               {BacktestComplete? 
+                               
+                               <PieChart width={1000} height={400}>
+                     <Pie
+                       dataKey="value"
+                       isAnimationActive={false}
+                       data={data[dNum]}
+                       cx={200}
+                       cy={200}
+                       outerRadius={80}
+                       fill="#8884d8"
+                       label
+                     />
+                     <Tooltip />
+                   </PieChart>
+                 
+      
+                   : <table id={`${styles.SummaryTable}`}>
+                                   
+                                   <thead id={`${styles.SummaryTableHead}`}>
+                                       <tr>
+                                           <th>"백테스트 전입니다. 먼저 백테스트 수행 버튼을 눌러주세요"</th>
+                                       </tr>
+                                   </thead>
+                                   </table>}
+                              
+                               
+                               </span> </>}
 
-                </table>
+               <div id={`${styles.BChartDiv}`}>
+               {BacktestComplete?  
+               <BarChart
+               width={500}
+               height={300}
+               data={TGraphData}
+               margin={{
+                 top: 5,
+                 right: 30,
+                 left: 20,
+                 bottom: 5,
+               }}
+             >
+               <CartesianGrid strokeDasharray="3 3" />
+               <XAxis dataKey="name" />
+               <YAxis />
+               <Tooltip />
+               <Legend />
+               <Bar dataKey="누적수익률" fill="#8884d8" />
+               <Bar dataKey="지점수익률" fill="#82ca9d" />
+             </BarChart>:null
+                   }
 
-                :
-                <table id={`${styles.SummaryTable}`}>
-                    
-                    <thead id={`${styles.SummaryTableHead}`}>
-                        <tr>
-                            <th>"백테스트 전입니다. 먼저 백테스트 수행 버튼을 눌러주세요"</th>
-                        </tr>
-                    </thead>
-                    </table>    }
-                <span id={`${styles.AccTableCaption}`}>누적 수익률</span>
+               </div>
         </div>
            
             <div className={`${styles.name}`}></div>

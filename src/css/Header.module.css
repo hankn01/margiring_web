@@ -21,21 +21,22 @@
   object-fit: contain;
 }
 #LogoutDiv {
-    width: 73px;
+    width: 100px;
   height: 36px;
   flex-grow: 0;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
+  font-size: 5px;
   gap: 10px;
   margin: 0 0 0 1711.1px;
-  padding: 8px 12px;
+  padding: 2px 12px;
   border-radius: 4px;
   background-color: #20242a;
 }
 #LogoutText {
-    width: 73px;
+    width: 100px;
   height: 36px;
   position: absolute;
   top: 14px;
@@ -49,7 +50,7 @@
   margin: 0 0 0 1711.1px;
   padding-top: 8px;
   padding-bottom: 8px;
-  padding-left: calc(40px - 1.5rem);
+  padding-left: calc(48px - 1.5rem);
   border-radius: 4px;
   border-style: hidden;
   background-color: #20242a;
