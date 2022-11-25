@@ -38,6 +38,16 @@
 #  🛠️  아키텍처
 <img src="/uploads/f15aa47fa7c30cee88f33d4e72731aa6/아키텍처.png">
 
+현재 Monolithic으로 백엔드 서버 서비스중으로 향후 MSA로 전환 가능.
+백엔드 서버의 경우 NestJS 및 Node.js로 구현되어 있음.
+Upbit 및 각종 거래소로부터 수집된 지표 자료들을 DynamoDB 및 S3에 저장하며, 백엔드 서버를 Elastic Beanstalk로 운영함.
+수집된 데이터들은 Zipline Ingest 라이브러리를 통해 백테스트를 진행하며 결과값을 프론트엔드로 전송함.
+Front End 서버의 경우 AWS Amplify로 서비스 중이며 HTTPS REST API를 통해 AWS의 백엔드 서버로 접근 가능.
+반응형 웹 서비스로 데스크톱 PC(Windows, macOS, Linux 등) 및 모바일 환경 모두에서 실행이 가능
+# 🎓 이 프로젝트를 통한 발전
++ 웹 프론트엔드 개발 및 프로젝트 리딩(Project Management)
++ 금융 분야 라이브러리 Zipline 활용 및 분석
++ 사용자가 원하는 니즈 파악 및 알고리즘 실행<br><br>
 # 개발자용 테스트 방법
 
 프로젝트에서 개발 시 테스트는 다음과 같이 수행할 수 있습니다.
