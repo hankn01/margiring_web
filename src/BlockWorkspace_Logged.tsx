@@ -73,7 +73,7 @@ function BlockWorkspace_Logged(id) {
     console.log(id.id);
     
     console.log(TempUserToken);
-    axios.get("http://backendserver-env.eba-gg774wd2.ap-northeast-2.elasticbeanstalk.com/pycode/"+id.id,
+    axios.get("https://www.margserver.ml/pycode/"+id.id,
     { headers: {
       Authorization: 'Bearer '+TempUserToken
   }}
@@ -149,7 +149,7 @@ window.localStorage.getItem("SAVE_WORK_SPACE_LOGIN"+id.id) &&
    {
     axios({
       method: 'put',
-      url: "http://backendserver-env.eba-gg774wd2.ap-northeast-2.elasticbeanstalk.com/pycode/"+id.id,
+      url: "https://www.margserver.ml/pycode/"+id.id,
       headers: {
         Authorization: 'Bearer '+TempUserToken
     }, data: {
@@ -191,7 +191,7 @@ window.localStorage.getItem("SAVE_WORK_SPACE_LOGIN"+id.id) &&
    {
     axios({
       method: 'put',
-      url: "http://backendserver-env.eba-gg774wd2.ap-northeast-2.elasticbeanstalk.com/pycode/"+id.id,
+      url: "https://www.margserver.ml/pycode/"+id.id,
       headers: {
         Authorization: 'Bearer '+TempUserToken
     }, data: {

@@ -27,7 +27,7 @@ function Backtest({ModalClose}: any) {
         setLoadingState(true);
         setInterval(()=>console.log("kk"), 3000);
         axios
-            .post("http://backendserver-env.eba-gg774wd2.ap-northeast-2.elasticbeanstalk.com/runpy", TestCode,{headers: { "Content-Type": "text/plain" }})
+            .post("https://www.margserver.ml/runpy", TestCode,{headers: { "Content-Type": "text/plain" }})
             .then(response=>{
                 setReceivedData(JSON.parse(response.data.result));
                 console.log(ReceivedData);

@@ -61,7 +61,7 @@ function Mainscr() {
         setUserToken(UserToken);
         //console.log(UserToken);
         if(UserToken!==undefined) {
-            axios.get("http://backendserver-env.eba-gg774wd2.ap-northeast-2.elasticbeanstalk.com/pycode", { headers: {
+            axios.get("https://www.margserver.ml/pycode", { headers: {
                 Authorization: 'Bearer '+UserToken
             }}).then((response) => {
                 AlgoList = response.data
@@ -83,7 +83,7 @@ function Mainscr() {
             for(var i=0;i<AlgorithmList.length;i++)
             {
                 //console.log(AlgorithmList[i]);
-                AlgoRequest[i] = axios.get("http://backendserver-env.eba-gg774wd2.ap-northeast-2.elasticbeanstalk.com/pycode/"+AlgorithmList[i], { headers: {
+                AlgoRequest[i] = axios.get("https://www.margserver.ml/pycode/"+AlgorithmList[i], { headers: {
                     Authorization: 'Bearer '+UserToken
                 }});
     
