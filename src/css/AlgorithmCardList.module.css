@@ -1,7 +1,7 @@
 .StrategyOddElement{
     position: relative;
     grid-column-start: 1;
-	grid-column-end: 7;
+	grid-column-end: 6;
     border-radius: 8px;
     box-shadow: 0 4px 8px 0 rgba(42, 50, 63, 0.08);
     background-color: #2f363e;
@@ -20,8 +20,8 @@
 
   .StrategyEvenElement{
     position: relative;
-    grid-column-start: 7;
-	grid-column-end: 13;
+    grid-column-start: 6;
+	grid-column-end: 12;
     border-radius: 8px;
     box-shadow: 0 4px 8px 0 rgba(42, 50, 63, 0.08);
     background-color: #2f363e;

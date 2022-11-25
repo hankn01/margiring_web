@@ -170,7 +170,9 @@
   }
   .CreateStrategyButton {
     grid-column-start: 1;
-    grid-column-end: 13;
+    grid-column-end: 12;
+    margin-right: 25px;
+    padding-right: 25px;
    height: 64px;
     
     background: rgba(17,13,45,0.7400000095367432);
