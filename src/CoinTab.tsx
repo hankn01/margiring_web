@@ -15,7 +15,7 @@ import WonCoinList from './WonCoinList';
 
 
 const MenuList:any = {
-    0: <></>,
+    0: <WonCoinList />,
     1: <BTCCoinList />,
     2: <USDTCoinList />,
     3: <GroupCoinList />,
@@ -35,9 +35,14 @@ return (
     <div id={`${styles.MenuDiv}`}>
         <ul className={`${styles.tabs}`}>
         <li className={`${CurMenu === 0? 'active': ''}`} onClick={() => {console.log("TEST0"); setCurMenu(0);}}>원화</li>
-        <li className={`${CurMenu === 1? 'active': ''}`} onClick={() => setCurMenu(1)}>BTC</li>
-        <li className={`${CurMenu === 2? 'active': ''}`} onClick={() => setCurMenu(2)}>USDT</li>
-        <li className={`${CurMenu === 3? 'active': ''}`} onClick={() => setCurMenu(3)}>그룹</li>
+        {//<li className={`${CurMenu === 1? 'active': ''}`} onClick={() => setCurMenu(1)}>BTC</li>
+        }
+        {
+        //<li className={`${CurMenu === 2? 'active': ''}`} onClick={() => setCurMenu(2)}>USDT</li>
+        }
+        
+        {//<li className={`${CurMenu === 3? 'active': ''}`} onClick={() => setCurMenu(3)}>그룹</li>
+}
         {/* <li className={`${CurMenu === 3? 'active': ''}`} onClick={() => setCurMenu(3)}>보유</li>
         <li className={`${CurMenu === 4? 'active': ''}`} onClick={() => setCurMenu(4)}>관심</li>*/
         //중간평가 이후 로그인 기능 개발 후 활성화 예정입니다.
