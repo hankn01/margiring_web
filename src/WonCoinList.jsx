@@ -427,6 +427,73 @@ function WonCoinList() {
   );
 }
 
+
+
+
 export default WonCoinList;
 
 //TODO: 중간평가 완료 후 실제 리스트로 구현하고 실제 사용 가능한 모듈로 대체하여야 합니다.
+
+
+{
+/*
+<tbody>
+          {LoadOriginalData === null ? (
+            <tr>
+              <td>"Loading..."</td>
+            </tr>
+          ) : (
+            LoadOriginalData.map((item) => {
+            return(
+              <tr>
+                <td>{item ? item.currency : null}</td>
+                <td>{item ? item.last : null}</td>
+                <td>{item ? item.last : null}</td>
+                <td>{item ? item.volume : null}</td>
+              </tr>
+            );
+            })
+          )}
+
+          {/*
+
+
+          <tr>
+            <td>{LoadOriginalData ? LoadOriginalData[100].currency : null}</td>
+            <td>{LoadOriginalData ? LoadOriginalData[100].last : null}</td>
+            <td>
+              {LoadOriginalData
+                ? LoadOriginalData[100].last -
+                  LoadOriginalData[100].yesterday_last
+                : null}
+            </td>
+            <td>{LoadOriginalData ? LoadOriginalData[100].volume : null}</td>
+          </tr>
+
+          <tr>
+            <td>{LoadOriginalData ? LoadOriginalData[100].currency : null}</td>
+            <td>{LoadOriginalData ? LoadOriginalData[100].last : null}</td>
+            <td>
+              {LoadOriginalData
+                ? LoadOriginalData[100].last -
+                  LoadOriginalData[100].yesterday_last
+                : null}
+            </td>
+            <td>{LoadOriginalData ? LoadOriginalData[100].volume : null}</td>
+          </tr>
+
+
+              */}
+
+              {
+                //LoadOriginalData.map((ElementData) => {
+                //<DataToTable LoadData={LoadOriginalData} />;
+                //})}
+              }
+            {//</tbody>}
+
+
+
+
+
+}

@@ -83,7 +83,18 @@ function CoinInfo()
                 <div id={`${styles.DNHR}`}></div>
                 <div className={`${styles.CoinNewsDiv}`}>
                     <span className={`${styles.CoinNews}`}>부테린 이더리움 창시자 &quot;가상자산, 실제 쓰일 수 있도록 변해야&quot;</span>
+                    <br></br>
+                    <br></br>
+                    
+                    <span className={`${styles.CoinNews}`}>NFT 시장의 대표주자로 부상 '플로우(FLOW)' [한경 코알라]</span>
+                   
+                    <br></br>
+                    <br></br>
+
+                    <span className={`${styles.CoinNews}`}>구찌, 슈퍼구찌 NFT 발매 예정 외 암호화폐·가상통화 뉴스와이어 [블록체인 외신 뉴스브리핑]</span>
+
                 </div>
+               
 
 
 
