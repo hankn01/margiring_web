@@ -17,6 +17,7 @@
     "bootstrap": "^5.2.0",
     "cypress": "^10.9.0",
     "framer-motion": "^7.5.3",
+    "http-proxy-middleware": "^2.0.6",
     "jqwidgets-framework": "^14.0.0",
     "jqwidgets-ng": "^14.1.17",
     "jqwidgets-scripts": "^14.0.0",
